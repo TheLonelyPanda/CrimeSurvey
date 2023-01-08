@@ -5,7 +5,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<link rel="stylesheet" href="<?php echo base_url() . 'css/loginStyle.css' ?>">
-    <script type="text/javascript" src="<?php echo base_url() . "js/loginJs.js" ?>"></script> 
+
+	<link rel="stylesheet" href="<?php echo base_url() . "js/css/cupertino/jquery-ui-1.9.2.custom.min.css" ?>">
+    <link rel="stylesheet" href="<?php echo base_url() . "semantic/semantic.min.css" ?>">        
+    <link rel="stylesheet" href="<?php echo base_url() . 'plugins/jquery-confirm/css/jquery-confirm.css' ?>">
+        
+    <link rel="stylesheet" href="<?php echo base_url() . 'css/horpak-style.css' ?>">
+        
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-1.12.3.js" ?>"></script>        
     <script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-ui-1.11.4.custom.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . 'plugins/jquery-confirm/js/jquery-confirm.js' ?>"></script>
@@ -28,7 +34,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5> 
-           		   		<input type="text" class="input" name="user_name" placeholder="username">
+           		   		<input type="text" class="input" name="user_name">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -37,12 +43,32 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input" name="pwd" placeholder="password"> 
+           		    	<input type="password" class="input" name="pwd"> 
             	   </div>
             	</div>
-            	<input type="submit" class="btn btn-form-login" value="Login" data-url="<?= site_url('user/submitLogin')?>">
+            	<input type="btn" class="btn btn-form-login" value="Login" data-url="<?= site_url('user/submitLogin')?>">
             </form>
         </div>
     </div>
 </body>
+<script type="text/javascript">
+	const inputs = document.querySelectorAll(".input");
+	function addcl(){
+		let parent = this.parentNode.parentNode;
+		parent.classList.add("focus");
+	}
+
+	function remcl(){
+		let parent = this.parentNode.parentNode;
+		if(this.value == ""){
+			parent.classList.remove("focus");
+		}
+	}
+
+
+	inputs.forEach(input => {
+		input.addEventListener("focus", addcl);
+		input.addEventListener("blur", remcl);
+	});
+</script>
 </html>

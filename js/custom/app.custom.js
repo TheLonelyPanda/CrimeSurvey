@@ -98,7 +98,8 @@
          }
 	}).on('click', '.btn-form-login', function () {
 	      	var element = this;
-	        var restUrl = $(element).attr('data-url');      	              
+	        var restUrl = $(element).attr('data-url');    
+			console.log("restUrl"+restUrl);              
 	        $.ajax({
 	           url: restUrl,
 	           data: $(FormSeletor).serialize(),

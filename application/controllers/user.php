@@ -23,8 +23,8 @@ class User extends CI_Controller {
 		$user_name=$this->input->post('user_name');
 		$pwd=$this->input->post('pwd');
 		$this->load->model('datamodel');
-		$this->datamodel->table_name='p_user';
-		$this->datamodel->condition=" where user_name='$user_name' and user_pass='$pwd'  and user_status='A'" ;		
+		$this->datamodel->table_name='new_user';
+		$this->datamodel->condition=" where username='$user_name' and password='$pwd'" ;		
 		$list_data=$this->datamodel->list_data();	
 		$u_pwd="";
 		$u_am_id="";		
@@ -32,9 +32,9 @@ class User extends CI_Controller {
 		$user_level="";
 		$have_data=false;			
 		foreach ($list_data as $row){
-	    	$u_am_id= $row->code_id;
-	    	$u_pwd= $row->user_pass;
-	    	$user_level=$row->user_level;
+	    	$u_am_id= $row->id;
+	    	$u_pwd= $row->password;
+	    	$user_level=$row->level;
 	    	$have_data=true;	    			
 		}
 		if($have_data && $u_pwd==$pwd){
@@ -54,18 +54,12 @@ class User extends CI_Controller {
 	}
 
    
-	public function formLogin(){						
+	public function login(){						
 		$data['user_name']="";
 		$data['h_back']="";
 		$data['u_disp']="";
 		$data['pwd']="";	
 		$data['h_flag']="list";
-
-		$this->load->model("datamodel");
-		$this->datamodel->table_name='t_activity';
-		$this->datamodel->sql=" select * from t_activity ta ,p_profile1 pp where ta.profile_id=pp.code_id order by ta.code_id desc limit 0,50 ";   
-		$data['omg']=$this->datamodel->list_data_sql();
-
 		$this->load->view('login', $data);
 	}
 		
@@ -78,14 +72,14 @@ class User extends CI_Controller {
 		$this->session->unset_userdata('master_id');
 		$this->session->unset_userdata('topic_id');						
 		$this->functionhelper->jsonHeader();
-        $this->functionhelper->jsonResponseFormSuccess('ออกจากระบบเรียบร้อยแล้ว', 'ท่านได้ออกจากระบบเรียบร้อยแล้ว', '',site_url('user/formLogin'));		
+        $this->functionhelper->jsonResponseFormSuccess('ออกจากระบบเรียบร้อยแล้ว', 'ท่านได้ออกจากระบบเรียบร้อยแล้ว', '',site_url('user/login'));		
 	}
 
 	function isLogin(){	
 			
 		$user_name=$this->session->userdata('u_am_name');
 		if($user_name==''){				
-			$this->formLogin('w');
+			$this->login('w');
 			return false;
 		}else{			
 			return $user_name;
