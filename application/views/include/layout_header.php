@@ -52,7 +52,7 @@ $u_fname=$this->session->userdata('u_am_name');
 
 
 			<div class="computer tablet only row">            	
-                <div class="ui inverted fixed menu navbar grid blue stackable">                
+                <div class="ui inverted fixed menu navbar grid gray stackable">                
 			      	<?if($h_back==""){?>
 			          <a href="javascript:void(0)" class="brand item"><i class="home icon big"></i>เมนูหลัก</a>			          
 			        <?}else{?>  

@@ -1,4 +1,4 @@
- var FormSeletor = '.ui.form.app';
+ var FormSeletor = '.a.form.app';
  
  
  $.datepicker.regional['th'] ={
