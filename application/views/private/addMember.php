@@ -74,21 +74,30 @@
 	  </a>
 		<!-- begin #content -->
 		<div class="menu">
-            <a class="menu-item" href="<?= site_url('main/addMember') ?>">
-            <div class="image menu-icon" align="center">
-                <i class="user add icon huge olive "></i><br />
-                Add User
-            </div>
-            <a class="menu-item" href="<?= site_url('main/survey') ?>">
-            <div class="image menu-icon" align="center">
-                <i class="file text outline icon huge olive "></i><br />
-                Survey
-            </div>
-            <a class="menu-item" href="<?= site_url('main/export') ?>">
-            <div class="image menu-icon" align="center">
-                <i class="share square icon huge olive "></i><br />
-                Export Survey
-            </div>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>username</th>
+				<th>password</th>
+				<th>level</th>
+				<th>name</th>
+				<th>surname</th>
+				<th>email</th>
+				<th>mobile</th>
+			</tr>
+			<?php foreach ($list_user as $row) { ?>
+				<tr>
+					<td><?php echo $row->id; ?></td>
+					<td><?php echo $row->username; ?></td>
+					<td><?php echo $row->password; ?></td>
+					<td><?php echo $row->level; ?></td>
+					<td><?php echo $row->name; ?></td>
+					<td><?php echo $row->surname; ?></td>
+					<td><?php echo $row->email; ?></td>
+					<td><?php echo $row->mobile; ?></td>
+				</tr>
+			<?php } ?>
+		</table>
         </div>
 		<!-- end #content -->
 		
