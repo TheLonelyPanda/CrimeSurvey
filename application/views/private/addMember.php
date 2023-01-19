@@ -11,7 +11,7 @@
 	<meta content="" name="author" />
 	
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
-    <link rel="stylesheet" href="<?php echo base_url() . 'css/menu.css' ?>">
+    <link rel="stylesheet" href="<?php echo base_url() . 'css/addMember.css' ?>">
     <link rel="stylesheet" href="<?php echo base_url() . "js/css/cupertino/jquery-ui-1.9.2.custom.min.css" ?>">
         <link rel="stylesheet" href="<?php echo base_url() . "semantic/semantic.min.css" ?>">        
         <link rel="stylesheet" href="<?php echo base_url() . 'plugins/jquery-confirm/css/jquery-confirm.css' ?>">
@@ -73,32 +73,36 @@
 		<!-- end #header -->
 	  </a>
 		<!-- begin #content -->
-		<div class="menu">
-		<table>
-			<tr>
-				<th>id</th>
-				<th>username</th>
-				<th>password</th>
-				<th>level</th>
-				<th>name</th>
-				<th>surname</th>
-				<th>email</th>
-				<th>mobile</th>
-			</tr>
-			<?php foreach ($list_user as $row) { ?>
-				<tr>
-					<td><?php echo $row->id; ?></td>
-					<td><?php echo $row->username; ?></td>
-					<td><?php echo $row->password; ?></td>
-					<td><?php echo $row->level; ?></td>
-					<td><?php echo $row->name; ?></td>
-					<td><?php echo $row->surname; ?></td>
-					<td><?php echo $row->email; ?></td>
-					<td><?php echo $row->mobile; ?></td>
-				</tr>
-			<?php } ?>
-		</table>
-        </div>
+		<div class="body">
+			<table>
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>username</th>
+						<th>password</th>
+						<th>level</th>
+						<th>name</th>
+						<th>surname</th>
+						<th>email</th>
+						<th>mobile</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($list_user as $row) { ?>
+						<tr>
+							<td><?php echo $row->id; ?></td>
+							<td><?php echo $row->username; ?></td>
+							<td><?php echo $row->password; ?></td>
+							<td><?php echo $row->level; ?></td>
+							<td><?php echo $row->name; ?></td>
+							<td><?php echo $row->surname; ?></td>
+							<td><?php echo $row->email; ?></td>
+							<td><?php echo $row->mobile; ?></td>
+						</tr>
+					<?php } ?>
+				</tbody>
+			</table>
+		</div>
 		<!-- end #content -->
 		
 	</div>
