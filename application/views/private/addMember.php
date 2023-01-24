@@ -85,6 +85,7 @@
 						<th>surname</th>
 						<th>email</th>
 						<th>mobile</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -98,6 +99,8 @@
 							<td><?php echo $row->surname; ?></td>
 							<td><?php echo $row->email; ?></td>
 							<td><?php echo $row->mobile; ?></td>
+							<td><a href="#modal-edit" type="button" data-toggle="modal"><i class="edit icon large" style="color:orange"></i></a>
+	        				<a href="<?=site_url('/admin/deleteUser/'.$row->username)?>" ><i class="delete icon large" style="color:red"></i></a></td>
 						</tr>
 					<?php } ?>
 				</tbody>
@@ -107,6 +110,67 @@
 		
 	</div>
 	<!-- end page container -->
+	<div class="modal fade" id="modal-edit">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">บันทึกผลการสืบสวน สอบสวน</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-5 m-b-15">
+							<label class="col-form-label">วันเวลาในการสืบสวน</label>
+							<div class="input-group date" id="datetimepicker1">
+								<input type="text" class="form-control" value="02/07/2022 14:22" />
+								<div class="input-group-addon">
+									<i class="fa fa-calendar"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 m-b-15">
+							<label class="col-form-label">รายงานผลการสืบสวน สอบสวน</label>
+							<textarea class="form-control" rows="3"
+								placeholder="รายงานผลการสืบสวน สอบสวน"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 m-b-15">
+							<label class="col-form-label">เอกสารหลักฐานในการสืบสวน</label>
+							<input class="form-control form-control-lg" id="formFileLg" type="file" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 m-b-15">
+							<label class="col-form-label">เอกสารสำนวน</label>
+							<input class="form-control form-control-lg" id="formFileLg" type="file" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 m-b-15">
+							<label class="col-form-label">เอกสารเพิ่มเติมหรือหลักฐานอื่น (ถ้ามี)</label>
+							<input class="form-control form-control-lg" id="formFileLg" type="file" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 m-b-15">
+							<label class="col-form-label">ขออนุมัติยื่นฟ้อง</label>
+								<div>
+									<input type="radio" name="optionsRadios" value="option1" checked="">&nbsp;ใช่ &nbsp;&nbsp;
+									<input type="radio" name="optionsRadios" value="option2">&nbsp;ไม่
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="index.html" class="btn width-100 btn-default" data-dismiss="modal">ยกเลิก</a>
+					<a href="index.html" class="btn width-100 btn-default" data-dismiss="modal">ตกลง</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	
 	<!-- ================== BEGIN BASE JS ================== -->

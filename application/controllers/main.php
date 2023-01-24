@@ -71,7 +71,7 @@ class Main extends CI_Controller {
     }
     
     public function addMember() {
-		//$user_name=$this->is_login();
+		//$user_name=$this->isLogin();
 		//if($user_name != false){
 			$data['u_disp']=$this->session->userdata('user_name');					
 			$data['h_flag']="list";
