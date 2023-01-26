@@ -7010,9 +7010,9 @@ a.list-group-item-danger:hover {
 }
 @media (min-width: 768px) {
 	.modal-dialog {
-		width: 600px;
+		width: 80%;
 		margin: 30px auto;
-		max-width: 600px;
+		max-width: 80%;
 	}
 	.modal-message .modal-dialog {
 		max-width: 100%;
