@@ -76,103 +76,70 @@
 		<div class="panel container" style="margin-top : 10px;">
 		<h1 class="page-header" style="margin-top : 10px;">แก้ไข User</h1>
 			<div class="body">
-				<table class="table table-bordered table-hover table-striped table-td-valign-middle">
-					<thead>
-						<tr class="inverse">
-							<th class="text-center">id</th>
-							<th class="text-center">username</th>
-							<th class="text-center">password</th>
-							<th class="text-center">level</th>
-							<th class="text-center">name</th>
-							<th class="text-center">surname</th>
-							<th class="text-center">email</th>
-							<th class="text-center">mobile</th>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php foreach ($list_user as $row) { ?>
-							<tr>
-								<td><?php echo $row->id; ?></td>
-								<td><?php echo $row->username; ?></td>
-								<td><?php echo $row->password; ?></td>
-								<td><?php echo $row->level; ?></td>
-								<td><?php echo $row->name; ?></td>
-								<td><?php echo $row->surname; ?></td>
-								<td><?php echo $row->email; ?></td>
-								<td><?php echo $row->mobile; ?></td>
-								<td>
-								<a href="javascript:void(0)" type="button" data-toggle="modal" data-target="#modal-edit" data-id=<?php echo $row->id; ?> data-username=<?php echo $row->username; ?> 
-								data-password=<?php echo $row->password; ?> data-level=<?php echo $row->level; ?> data-name=<?php echo $row->name; ?> data-surname=<?php echo $row->surname; ?>
-								data-email=<?php echo $row->email; ?> data-mobile=<?php echo $row->mobile; ?>><i class="edit icon large" style="color:orange"></i></a>
-								<a href="<?=site_url('/admin/deleteUser/'.$row->username)?>" ><i class="delete icon large" style="color:red"></i></a></td>
-							</tr>
-						<?php } ?>
-					</tbody>
-				</table>
+				<form class="a form app form-horizontal" id="form-data" method="post" >
+					<label for="wight"><u>ส่วนที่ 1 ข้อมูลเกี่ยวกับผู้ตอบแบบสอบถาม</u></label>
+					<div class="p-fluid p-formgrid p-grid">
+						<div class="p-field p-col">
+						<label for="wight">1.1 ข้อมูลบุคคลของผู้ตอบแบบสอบถาม </label>
+							<div class="row">
+								<label for="1111" class="col-form-label">1.1.1 เพศ &nbsp</label>
+								<label class="radio-inline col-form-label">
+									<input type="radio" id="11111" name="S1_1_1_1" value="1"> (1) ชาย
+								</label>
+								<label class="radio-inline col-form-label">
+									<input type="radio" id="11112" name="S1_1_1_1" value="2"> (2) หญิง
+								</label>
+								<label class="radio-inline col-form-label">
+									<input type="radio" id="11113" name="S1_1_1_1" value="3"> (3) เพศทางเลือก
+								</label>
+							</div>
+							<div class="row">
+								<label for="1112" class="col-form-label">1.1.2 อายุ</label>
+								<div class="col-lg-3" >
+									<input type="text" class="form-control" name="S1_1_1_2" />
+								</div>
+								<div class="col-form-label inputTextFix" >
+									ปี (เต็มปีบริบูรณ์)
+								</div>
+							</div>
+							<div class="row">
+								<label for="1111" class="col-form-label">1.1.3 รายได้</label>
+								<div class="col-lg-12" >
+									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
+										<input type="radio" id="11131" name="S1_1_1_3" value="1"> (1) ต่ำกว่า 15,000 บาท
+									</label>
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11132" name="S1_1_1_3" value="2"> (2) 15,001-25,000 บาท
+									</label>
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11133" name="S1_1_1_3" value="3"> (3) 25,001-35,000 บาท
+									</label>
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11134" name="S1_1_1_3" value="4"> (4) 35,001-45,000 บาท
+									</label>
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11135" name="S1_1_1_3" value="5"> (5) 45,001-55,000 บาท
+									</label>
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11136" name="S1_1_1_3" value="6"> (6) 55,001-65,000 บาท
+									</label>
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11137" name="S1_1_1_3" value="7"> (7) 65,001-75,000 บาท
+									</label>
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11138" name="S1_1_1_3" value="8"> (8) มากกว่า 75,000 บาท
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 		<!-- end #content -->
 		
 	</div>
 	<!-- end page container -->
-	<div class="modal fade" id="modal-edit">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title">แก้ไข user</h4>
-				</div>
-				<form class="a form app" id="form-data" method="post" >
-				<input type="hidden" id="modalId" name="id">
-					<div class="ui form">
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Username</label>
-									<input type="text" class="input" id="modalUsername" name="username"/>
-								</div>
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Password</label>
-									<input type="text" class="input" id="modalPassword" name="password"/>
-								</div>
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Name</label>
-									<input type="text" class="input" id="modalName" name="name"/>
-								</div>
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Surname</label>
-									<input type="text" class="input" id="modalSurname" name="surname"/>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">E-mail</label>
-									<input type="text" class="input" id="modalEmail" name="email"/>
-								</div>
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Mobile Number</label>
-									<input type="text" class="input" id="modalMobile" name="mobile"/>
-								</div>
-								<div class="col-lg-2 m-b-15">
-									<label class="col-form-label">Level</label>
-									<select class="default-select2 input "  id="modalLevel" name="level">
-										<option value="ADMIN">Admin</option>
-										<option value="USER">User</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<a href="index.html" class="btn width-100 btn-default" data-dismiss="modal">ยกเลิก</a>
-						<a class="btn width-100 btn-default btn-form-save" value="Save" data-url="<?= site_url('admin/editUser')?>">Save</a>
-					</div>
-
-				</form>
-			</div>
-		</div>
-	</div>
 
 
 	
@@ -195,27 +162,6 @@
 		    App.init();
 		});
 
-		$('#modal-edit').on('show.bs.modal', function (event) {
-			var button = $(event.relatedTarget) // Button that triggered the modal
-			var id = button.data('id')
-			var username = button.data('username') 
-			var password = button.data('password')
-			var level = button.data('level')
-			var name = button.data('name')
-			var surname = button.data('surname')
-			var email = button.data('email')
-			var mobile = button.data('mobile')
-			var modal = $(this)
-			var select = document.getElementById('modalLevel');
-  			select.value = level;
-			modal.find('#modalId').val(id);
-			modal.find('#modalUsername').val(username);
-			modal.find('#modalPassword').val(password);
-			modal.find('#modalName').val(name);
-			modal.find('#modalSurname').val(surname);
-			modal.find('#modalEmail').val(email);
-			modal.find('#modalMobile').val(mobile);
-		})
 	</script>
 </body>
 </html>

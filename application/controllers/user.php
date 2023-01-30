@@ -39,7 +39,7 @@ class User extends CI_Controller {
 		}
 		if($have_data && $u_pwd==$pwd){
 			$siteURL=site_url('main/index');
-			if($user_level=="A") { //chk is admin
+			if($user_level=="ADMIN") { //chk is admin
 				$siteURL=site_url('admin/index');	
 			}				
 			$this->session->set_userdata('user_name',$user_name);

@@ -437,7 +437,9 @@ table.dataTable thead .sorting_desc_disabled:after,
     text-rendering: auto;
 }
 
-
+.inputTextFix{
+    padding-top: calc(.375rem + 1px);
+}
 /* 1.2 Pace Loader */
 
 .page-loader {
@@ -1000,6 +1002,7 @@ table.dataTable thead .sorting_desc_disabled:after,
 
 .navbar-default {
     background: #fff;
+    border-bottom: 1px solid #52565a;
 }
 .navbar-default .navbar-brand {
     color: #333;
@@ -3930,7 +3933,8 @@ table.dataTable thead .sorting_desc_disabled:after,
 /* 7.1 Predefined Classes */
 
 .row { margin: 0 -10px; }
-.row > [class*="col-"] {  padding: 0 10px; }
+.row > [class*="col-"] {  padding-right: 10px;
+    padding-left: 10px; }
 
 .row.col-xs-with-border > [class*="col-"] + [class*="col-"] {
 	border-left: 1px solid #ebeced;

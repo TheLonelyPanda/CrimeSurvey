@@ -60,32 +60,16 @@ class Main extends CI_Controller {
 	        $this->load->view('/private/index', $data);	        
 		}
     }
-    public function survey() {
+    public function surveyFrom6() {
 		//$user_name=$this->is_login();
 		//if($user_name != false){
 			$data['u_disp']=$this->session->userdata('user_name');					
 			$data['h_flag']="list";		  
 			$data['h_back']="main/index";  	        
-	        $this->load->view('/private/survey', $data);       
+	        $this->load->view('/private/surveyFrom6', $data);       
 		//}
     }
-    
-    public function addMember() {
-		//$user_name=$this->isLogin();
-		//if($user_name != false){
-			$data['u_disp']=$this->session->userdata('user_name');					
-			$data['h_flag']="list";
-			$data['h_back']="";		    
-			
-			$this->load->model("datamodel");
-			$this->datamodel->table_name='new_user';
-			$this->datamodel->condition=" where 1=1";		
-			$list_user=$this->datamodel->list_data();
-			$data['list_user']=$list_user;
-
-	        $this->load->view('/private/addMember', $data);        
-		//}
-    }    
+       
 
 	public function export() {
 		//$user_name=$this->is_login();
