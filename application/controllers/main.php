@@ -60,6 +60,57 @@ class Main extends CI_Controller {
 	        $this->load->view('/private/index', $data);	        
 		}
     }
+
+	public function surveyFrom1() {
+		//$user_name=$this->is_login();
+		//if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	        
+	        $this->load->view('/private/surveyFrom1', $data);       
+		//}
+    }
+
+	public function surveyFrom2() {
+		//$user_name=$this->is_login();
+		//if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	        
+	        $this->load->view('/private/surveyFrom2', $data);       
+		//}
+    }
+
+	public function surveyFrom3() {
+		//$user_name=$this->is_login();
+		//if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	        
+	        $this->load->view('/private/surveyFrom3', $data);       
+		//}
+    }
+
+	public function surveyFrom4() {
+		//$user_name=$this->is_login();
+		//if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	        
+	        $this->load->view('/private/surveyFrom4', $data);       
+		//}
+    }
+
+	public function surveyFrom5() {
+		//$user_name=$this->is_login();
+		//if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	        
+	        $this->load->view('/private/surveyFrom5', $data);       
+		//}
+    }
+
     public function surveyFrom6() {
 		//$user_name=$this->is_login();
 		//if($user_name != false){
