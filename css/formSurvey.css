@@ -6,7 +6,7 @@
 .tg {
   border-collapse: collapse;
   border-spacing: 0;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .tg td {
@@ -69,6 +69,10 @@
 .bg{
   background-color: #8080808a;
   font-weight: 600;
+}
+
+.subhead{
+  background-color: #cccccc8a;
 }
 
 .tg .tg-0laa {
