@@ -23,7 +23,7 @@ class User extends CI_Controller {
 		$user_name=$this->input->post('user_name');
 		$pwd=$this->input->post('pwd');
 		$this->load->model('datamodel');
-		$this->datamodel->table_name='new_user';
+		$this->datamodel->table_name='p_user';
 		$this->datamodel->condition=" where username='$user_name' and password='$pwd'" ;		
 		$list_data=$this->datamodel->list_data();	
 		$u_pwd="";
@@ -38,10 +38,7 @@ class User extends CI_Controller {
 	    	$have_data=true;	    			
 		}
 		if($have_data && $u_pwd==$pwd){
-			$siteURL=site_url('main/index');
-			if($user_level=="ADMIN") { //chk is admin
-				$siteURL=site_url('admin/index');	
-			}				
+			$siteURL=site_url('main/index');			
 			$this->session->set_userdata('user_name',$user_name);
 			$this->session->set_userdata('u_am_id',$u_am_id);
 			$this->session->set_userdata('u_level',$user_level);		

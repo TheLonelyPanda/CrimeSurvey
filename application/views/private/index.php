@@ -19,11 +19,16 @@
 	<link href="http://fonts.googleapis.com/css?family=Nunito:400,300,700" rel="stylesheet" id="fontFamilySrc" />
     
     <link href="../assets/plugins/bootstrap/bootstrap-4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/font-awesome/5.1/css/all.css" rel="stylesheet" />
 	<link href="../assets/css/animate.min.css" rel="stylesheet" />
 	<link href="../assets/css/style.min.css" rel="stylesheet" />
+	
+	<link href="../assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-1.12.3.js" ?>"></script>        
     <script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-ui-1.11.4.custom.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . 'plugins/jquery-confirm/js/jquery-confirm.js' ?>"></script>
+	
 	<script type="text/javascript" src="<?php echo base_url() . "js/custom/app.custom.js" ?>"></script> 
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
@@ -62,6 +67,9 @@
 							<span class="hidden-xs"><?=$u_disp ?></span> <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu pull-right">
+							<? if($u_level == 'ADMIN'){ ?>
+								<li><a href="<?= site_url('admin/addMember')?>">แก้ไข User</a></li>
+							<?}?>
                             <li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout')?>">Log Out</a></li>
 						</ul>
 					</li>
@@ -73,23 +81,41 @@
 		<!-- end #header -->
 	  </a>
 		<!-- begin #content -->
-		<div class="menu">
-            <a class="menu-item" href="<?= site_url('main/addMember') ?>">
-            <div class="image menu-icon" align="center">
-                <i class="user add icon huge olive "></i><br />
-                Add User
-            </div>
-            <a class="menu-item" href="<?= site_url('main/survey') ?>">
-            <div class="image menu-icon" align="center">
-                <i class="file text outline icon huge olive "></i><br />
-                Survey
-            </div>
-            <a class="menu-item" href="<?= site_url('main/export') ?>">
-            <div class="image menu-icon" align="center">
-                <i class="share square icon huge olive "></i><br />
-                Export Survey
-            </div>
-        </div>
+		<div class="panel container" style="margin-top : 10px;">
+		<h1 class="page-header" style="margin-top : 10px;">ลิสแบบสำรวจ</h1>
+			<div class="body">
+			<a href="<?= site_url('main/survey/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> เพิ่มแบบสอบถาม</a>
+							</br></br>
+				<table id="data-table" data-order='[[1,"asc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
+					<thead>
+						<tr class="inverse">
+							<th class="text-center">แบบสอบถามลำดับที่</th>
+							<th class="text-center">บ้านเลขที่</th>
+							<th class="text-center">จังหวัด</th>
+							<th class="text-center">เพศ</th>
+							<th class="text-center">อายุ</th>
+							<th class="text-center">แก้ไข</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ($list_data as $row) { ?>
+							<tr>
+								<td class="text-center"><?php echo $row->profile_id; ?></td>
+								<td class="text-center"><?php echo $row->A2; ?></td>
+								<td class="text-center"><?php echo $row->A4_1; ?></td>
+								<td class="text-center"><?php if($row->{'1_1_1'} == '1'){echo 'ชาย';}elseif($row->{'1_1_1'} == '2'){echo 'หญิง';}else{echo 'เพศทางเลือก';} ?></td>
+								<td class="text-center"><?php echo $row->{'1_1_2'}; ?></td>
+								<td class="text-center">
+								<a href="javascript:void(0)" data-url="<?=site_url('/main/exportData/'.$row->profile_id)?>" class="btn-form-save"><i class="share square icon large" style="color:green"></i></a>
+								<a href="<?= site_url('main/survey/'.$row->profile_id)?>" type="button"><i class="edit icon large" style="color:orange"></i></a>
+								<a href="javascript:void(0)" data-url="<?=site_url('/main/deleteData/'.$row->profile_id)?>" class="btn-form-delete"><i class="delete icon large" style="color:red"></i></a>
+								</td>
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
 		<!-- end #content -->
 		
 	</div>
@@ -98,6 +124,10 @@
 	
 	<!-- ================== BEGIN BASE JS ================== -->
 	<script src="../assets/plugins/bootstrap/bootstrap-4.1.1/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+	<script src="../assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="../assets/js/page-table-manage.demo.min.js"></script>
 	<!--[if lt IE 9]>
 		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
 		<script src="../assets/crossbrowserjs/respond.min.js"></script>
@@ -113,7 +143,9 @@
 	<script>
 		$(document).ready(function() {
 		    App.init();
+			PageDemo.init();
 		});
+
 	</script>
 </body>
 </html>

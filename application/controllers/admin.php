@@ -17,35 +17,17 @@ class Admin extends CI_Controller {
         $this->load->library('functionhelper');
         $this->load->library('session');
     }
-    public function index() {
-		$user_name=$this->isLogin();
-		if($user_name != false){
-			$data['u_disp']=$this->session->userdata('user_name');					
-			$data['h_flag']="list";		
-			$data['h_back']="";    	        
-
-	        $this->load->view('/private/admin', $data);	        
-		}
-    }
-    public function survey() {
-		//$user_name=$this->is_login();
-		//if($user_name != false){
-			$data['u_disp']=$this->session->userdata('user_name');					
-			$data['h_flag']="list";		  
-			$data['h_back']="main/index";  	        
-	        $this->load->view('/private/survey', $data);       
-		//}
-    }
     
     public function addMember() {
 		$user_name=$this->isLogin();
 		if($user_name != false){
-			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['u_disp']=$this->session->userdata('user_name');
+			$data['u_level']=$this->session->userdata('u_level');					
 			$data['h_flag']="list";
 			$data['h_back']="";		    
 			
 			$this->load->model("datamodel");
-			$this->datamodel->table_name='new_user';
+			$this->datamodel->table_name='p_user';
 			$this->datamodel->condition=" where 1=1";		
 			$list_user=$this->datamodel->list_data();
 			$data['list_user']=$list_user;
@@ -54,41 +36,74 @@ class Admin extends CI_Controller {
 		}
     }    
 
-	public function export() {
-		//$user_name=$this->is_login();
-		//if($user_name != false){
-			$data['u_disp']=$this->session->userdata('user_name');					
-			$data['h_flag']="list";		  
-			$data['h_back']="main/index";  	        
-	        $this->load->view('/private/export', $data);       
-		//}
-    }    
 
-
-
-     public function editUser(){
+    public function editUser(){
 		$user_name=$this->isLogin();
 		if($user_name != false){    	
 			$this->load->model("datamodel");
-			$this->datamodel->table_name='new_user';
+			$this->datamodel->table_name='p_user';
 			$this->datamodel->pk_name='id';
-			$this->datamodel->pk_value=$this->input->post('id');
+			$this->datamodel->pk_value=$this->input->post('e_id');
 			$obj=new MyDto();
-			$obj->username=$this->input->post('username');
-			$obj->password=$this->input->post('password');
-			$obj->level=$this->input->post('level');
-			$obj->name=$this->input->post('name');
-			$obj->surname=$this->input->post('surname');
-			$obj->email=$this->input->post('email');
-			$obj->mobile=$this->input->post('mobile');
+			$obj->username=$this->input->post('e_username');
+			$obj->password=$this->input->post('e_password');
+			$obj->level=$this->input->post('e_level');
+			$obj->name=$this->input->post('e_name');
+			$obj->surname=$this->input->post('e_surname');
+			$obj->email=$this->input->post('e_email');
+			$obj->mobile=$this->input->post('e_mobile');
 
 			$this->datamodel->update($obj);					
 	        $this->functionhelper->jsonHeader();
-	        $this->functionhelper->jsonResponseFormData('บันทึกข้อมูลเรียบร้อยแล้ว', '', '',$obj);		
+	        $this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('admin/addMember'),$obj);		
 
-			//$this->load->view('/private/addMember');
 		}   
-    }     
+    }  
+	
+	public function addUser(){
+		$user_name=$this->isLogin();
+		if($user_name != false){    	
+			$username_input=$this->input->post('a_username');
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='p_user';
+			$this->datamodel->condition=" where username='$username_input' " ;		
+			$count=$this->datamodel->list_data_count();
+			if($count == 0){
+				$obj=new MyDto();
+				$obj->username=$username_input;
+				$obj->password=$this->input->post('a_password');
+				$obj->level=$this->input->post('a_level');
+				$obj->name=$this->input->post('a_name');
+				$obj->surname=$this->input->post('a_surname');
+				$obj->email=$this->input->post('a_email');
+				$obj->mobile=$this->input->post('a_mobile');
+
+				$this->datamodel->insert($obj);					
+				$this->functionhelper->jsonHeader();
+				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('admin/addMember'),$obj);	
+			}else{
+				$this->functionhelper->jsonHeader();
+				$this->functionhelper->jsonResponseFormFail('มีชื่อ User เดียวกันอยู่ในระบบอยู่แล้ว', 'กรุณาเปลี่ยน user name ใหม่ไม่ให้ซ้ำกัน', '','');	
+			}
+
+		}   
+    }
+
+	public function deleteUser($id) {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="user";		  
+			$data['h_back']="admin/addMember";  	        
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='p_user';
+			$this->datamodel->pk_name='id';
+			$this->datamodel->pk_value=$id;	
+			$this->datamodel->delete();
+			$this->functionhelper->jsonHeader();
+			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('admin/addMember'));      
+		}
+    }
 
      
 
