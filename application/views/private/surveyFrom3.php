@@ -24,38 +24,51 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.1.1 การเดินตามลำพังในละแวกที่พักอาศัยในตอนกลางวัน</td>
-						<td class="tg-0laa"><input type="radio" id="4_2111" name="4_S2_1_1" value="5"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2112" name="4_S2_1_1" value="4"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2113" name="4_S2_1_1" value="3"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2114" name="4_S2_1_1" value="2"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2115" name="4_S2_1_1" value="1"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2115" name="3_S2_2_1_1" value="5"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2114" name="3_S2_2_1_1" value="4"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2113" name="3_S2_2_1_1" value="3"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2112" name="3_S2_2_1_1" value="2"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2111" name="3_S2_2_1_1" value="1"></td>
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.1.2 การเดินตามลำพังในละแวกที่พักอาศัยในตอนกลางคืน</td>
-						<td class="tg-0laa"><input type="radio" id="4_2121" name="4_S2_1_2" value="5"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2122" name="4_S2_1_2" value="4"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2123" name="4_S2_1_2" value="3"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2124" name="4_S2_1_2" value="2"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2125" name="4_S2_1_2" value="1"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2125" name="3_S2_2_1_2" value="5"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2124" name="3_S2_2_1_2" value="4"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2123" name="3_S2_2_1_2" value="3"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2122" name="3_S2_2_1_2" value="2"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2121" name="3_S2_2_1_2" value="1"></td>
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.1.3 เมื่อต้องอยู่บ้านคนเดียวในเวลากลางวัน </td>
-						<td class="tg-0laa"><input type="radio" id="4_2131" name="4_S2_1_3" value="5"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2132" name="4_S2_1_3" value="4"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2133" name="4_S2_1_3" value="3"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2134" name="4_S2_1_3" value="2"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2135" name="4_S2_1_3" value="1"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2135" name="3_S2_2_1_3" value="5"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2134" name="3_S2_2_1_3" value="4"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2133" name="3_S2_2_1_3" value="3"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2132" name="3_S2_2_1_3" value="2"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2131" name="3_S2_2_1_3" value="1"></td>
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.1.4 เมื่อต้องอยู่บ้านคนเดียวในเวลากลางคืน</td>
-						<td class="tg-0laa"><input type="radio" id="4_2141" name="4_S2_1_4" value="5"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2142" name="4_S2_1_4" value="4"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2143" name="4_S2_1_4" value="3"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2144" name="4_S2_1_4" value="2"></td>
-						<td class="tg-0laa"><input type="radio" id="4_2145" name="4_S2_1_4" value="1"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2145" name="3_S2_2_1_4" value="5"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2144" name="3_S2_2_1_4" value="4"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2143" name="3_S2_2_1_4" value="3"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2142" name="3_S2_2_1_4" value="2"></td>
+						<td class="tg-0laa"><input type="radio" id="3_2141" name="3_S2_2_1_4" value="1"></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
 </div>
+
+
+<script>
+	if('<?=$u_check_new_survey_panic_in_crimes?>'!='0'){
+			$(function() {
+				document.getElementById("3_211<?=$d_surveyPanicInCrimes->S2_2_1_1?>").checked = true;
+				document.getElementById("3_212<?=$d_surveyPanicInCrimes->S2_2_1_2?>").checked = true;
+				document.getElementById("3_213<?=$d_surveyPanicInCrimes->S2_2_1_3?>").checked = true;
+				document.getElementById("3_214<?=$d_surveyPanicInCrimes->S2_2_1_4?>").checked = true;
+
+			});
+		};
+</script>

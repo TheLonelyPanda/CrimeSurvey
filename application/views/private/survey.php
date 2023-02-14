@@ -19,9 +19,9 @@
 
 	<link href="http://fonts.googleapis.com/css?family=Nunito:400,300,700" rel="stylesheet" id="fontFamilySrc" />
 
-	<link href="<?php echo base_url() .'assets/plugins/bootstrap/bootstrap-4.1.1/css/bootstrap.min.css'  ?>" rel='stylesheet'/>
-	<link href="<?php echo base_url() .'assets/css/animate.min.css'  ?>" rel='stylesheet'/>
-	<link href="<?php echo base_url() .'assets/css/style.min.css'  ?>" rel='stylesheet'/>
+	<link href="<?php echo base_url() . 'assets/plugins/bootstrap/bootstrap-4.1.1/css/bootstrap.min.css'  ?>" rel='stylesheet' />
+	<link href="<?php echo base_url() . 'assets/css/animate.min.css'  ?>" rel='stylesheet' />
+	<link href="<?php echo base_url() . 'assets/css/style.min.css'  ?>" rel='stylesheet' />
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-1.12.3.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-ui-1.11.4.custom.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . 'plugins/jquery-confirm/js/jquery-confirm.js' ?>"></script>
@@ -53,7 +53,7 @@
 			<div class="container-fluid">
 				<!-- begin mobile sidebar expand / collapse button -->
 				<div class="navbar-header">
-					<a href="<?= site_url('main/index') ?>" class="navbar-brand"><img src="<?php echo base_url() .'/img/logo.png'?>" class="logo" alt="" />สํานักงานกิจการยุติธรรม</a>
+					<a href="<?= site_url('main/index') ?>" class="navbar-brand"><img src="<?php echo base_url() . '/img/logo.png' ?>" class="logo" alt="" />สํานักงานกิจการยุติธรรม</a>
 				</div>
 				<!-- end mobile sidebar expand / collapse button -->
 
@@ -64,9 +64,9 @@
 							<span class="hidden-xs"><?= $u_disp ?></span> <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu pull-right">
-							<? if($u_level == 'ADMIN'){ ?>
-								<li><a href="<?= site_url('admin/addMember')?>">แก้ไข User</a></li>
-							<?}?>
+							<? if ($u_level == 'ADMIN') { ?>
+								<li><a href="<?= site_url('admin/addMember') ?>">แก้ไข User</a></li>
+							<? } ?>
 							<li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout') ?>">Log Out</a></li>
 						</ul>
 					</li>
@@ -83,10 +83,10 @@
 			<div class="body">
 				<form class="a form app form-horizontal" id="form-data" method="post">
 					<div class="line" style="float: right;">
-							<label for="2" class="col-form-label nText">แบบสอบถามลำดับที่</label>
-							<div class="col-lg-4 " >
-								<input type="text" class="form-control" name="1_TEXT" value=<?=$u_now_id?> readonly />
-							</div>
+						<label for="2" class="col-form-label nText">แบบสอบถามลำดับที่</label>
+						<div class="col-lg-4 ">
+							<input type="text" class="form-control" name="1_TEXT" value=<?= $u_now_id ?> readonly />
+						</div>
 					</div>
 					</br>
 
@@ -95,26 +95,26 @@
 						<div class="p-field p-col">
 
 							<div class="row">
-									<label for="A1" class="col-form-label">A1 ข้อมูลส่วนบุคคล</label></br>
+								<label for="A1" class="col-form-label">A1 ข้อมูลส่วนบุคคล</label></br>
 							</div>
 							<div class="row indent">
-									<label for="A2" class="col-form-label nText">A2 บ้านเลขที่</label>
-									<div class="col-lg-3 " >
-										<input type="text" class="form-control" id="A2" name="A2"/>
-									</div>
+								<label for="A2" class="col-form-label nText">A2 บ้านเลขที่</label>
+								<div class="col-lg-3 ">
+									<input type="text" class="form-control" id="A2" name="A2" />
+								</div>
 							</div>
 							<div class="row indent">
-									<label for="A3_1" class="col-form-label nText">A3 พิกัดบ้าน (NS)</label>
-									<div class="col-lg-3 " >
-										<input type="text" class="form-control" id="A3_1" name="A3_1" />
-									</div>
-									<label for="A3_2" class="col-form-label nText">พิกัดบ้าน (EW)</label>
-									<div class="col-lg-3 " >
-										<input type="text" class="form-control" id="A3_2" name="A3_2" />
-									</div>
+								<label for="A3_1" class="col-form-label nText">A3 พิกัดบ้าน (NS)</label>
+								<div class="col-lg-3 ">
+									<input type="text" class="form-control" id="A3_1" name="A3_1" />
+								</div>
+								<label for="A3_2" class="col-form-label nText">พิกัดบ้าน (EW)</label>
+								<div class="col-lg-3 ">
+									<input type="text" class="form-control" id="A3_2" name="A3_2" />
+								</div>
 							</div>
 							<div class="row">
-									<label for="A1" class="nText">หมายเหตุ : ข้อมูลที่จัดเก็บจากการสำรวจครั้งนี้จะถูกเก็บไว้เป็นความลับ และถูกนำมาใช้วิเคราะห์ในภาพรวมเพื่อประโยชน์สำหรับการดำเนินงานของสำนักงานกิจการยุติธรรม กระทรวงยุติธรรม เท่านั้น</label></br>
+								<label for="A1" class="nText">หมายเหตุ : ข้อมูลที่จัดเก็บจากการสำรวจครั้งนี้จะถูกเก็บไว้เป็นความลับ และถูกนำมาใช้วิเคราะห์ในภาพรวมเพื่อประโยชน์สำหรับการดำเนินงานของสำนักงานกิจการยุติธรรม กระทรวงยุติธรรม เท่านั้น</label></br>
 							</div>
 
 							<div class="row">
@@ -128,7 +128,7 @@
 										<div class="row" style=" padding-top: 13px;">
 											<label class="radio-inline " style="align-self: center;">เขต</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-											<select name="amphure_id_1" id="amphure_1" class="form-control" readonly>
+												<select name="amphure_id_1" id="amphure_1" class="form-control" readonly>
 													<option value="">เลือกเขต</option>
 												</select>
 											</label>
@@ -136,7 +136,7 @@
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">แขวง</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-											<select name="district_id_1" id="district_1" class="form-control" readonly>
+												<select name="district_id_1" id="district_1" class="form-control" readonly>
 													<option value="">เลือกแขวง</option>
 												</select>
 											</label>
@@ -156,9 +156,9 @@
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="province_id" id="province" class="form-control" readonly>
 													<option value="">เลือกจังหวัด</option>
-													<?foreach ($d_province as $result){?>
-														<option value="<?=$result->id?>"><?=$result->name_th?></option>
-													<?}?>
+													<? foreach ($d_province as $result) { ?>
+														<option value="<?= $result->name_th ?>"><?= $result->name_th ?></option>
+													<? } ?>
 												</select>
 											</label>
 										</div>
@@ -521,7 +521,7 @@
 
 							<div class="row">
 								<div class="col-lg-1.5" style="margin-left: auto; margin-right: 0;">
-									<a value="Save" data-url="<?= site_url('main/saveSurvey')?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
+									<a value="Save" data-url="<?= site_url('main/saveSurvey/true') ?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
 									<a href="<?= site_url('/main/index/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
@@ -541,50 +541,50 @@
 
 
 	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="<?php echo base_url() .'/assets/plugins/bootstrap/bootstrap-4.1.1/js/bootstrap.bundle.min.js'?>"></script>
+	<script src="<?php echo base_url() . '/assets/plugins/bootstrap/bootstrap-4.1.1/js/bootstrap.bundle.min.js' ?>"></script>
 
-	<script src="<?php echo base_url() .'/assets/plugins/slimscroll/jquery.slimscroll.min.js'?>"></script>
+	<script src="<?php echo base_url() . '/assets/plugins/slimscroll/jquery.slimscroll.min.js' ?>"></script>
 	<!-- ================== END BASE JS ================== -->
 
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 
-	<script src="<?php echo base_url() .'/assets/js/apps.min.js'?>"></script>
+	<script src="<?php echo base_url() . '/assets/js/apps.min.js' ?>"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 
 	<script>
 		$(document).ready(function() {
 			App.init();
-			
+
 		});
 
-		
+
 		$('input[name="A4"]').on('change', function() {
-				if ($(this).val() === '1') {
-					$('select[name="amphure_id_1"]').prop('readonly', false);
-					$('select[name="district_id_1"]').prop('readonly', false);
-					$('input[name="A4_1_TEXT_3"]').prop('readonly', false);
-					$('select[name="province_id"]').prop('readonly', true);
-					$('select[name="amphure_id"]').prop('readonly', true);
-					$('select[name="district_id"]').prop('readonly', true);
-					$('input[name="A4_2_TEXT_4"]').prop('readonly', true);
-					$('input[name="A4_2_TEXT_5"]').prop('readonly', true);
-				} else {
-					$('select[name="amphure_id_1"]').prop('readonly', true);
-					$('select[name="district_id_1"]').prop('readonly', true);
-					$('input[name="A4_1_TEXT_3"]').prop('readonly', true);
-					$('select[name="province_id"]').prop('readonly', false);
-					$('select[name="amphure_id"]').prop('readonly', false);
-					$('select[name="district_id"]').prop('readonly', false);
-					$('input[name="A4_2_TEXT_4"]').prop('readonly', false);
-					$('input[name="A4_2_TEXT_5"]').prop('readonly', false);
-				}
-			});
+			if ($(this).val() === '1') {
+				$('select[name="amphure_id_1"]').prop('readonly', false);
+				$('select[name="district_id_1"]').prop('readonly', false);
+				$('input[name="A4_1_TEXT_3"]').prop('readonly', false);
+				$('select[name="province_id"]').prop('readonly', true);
+				$('select[name="amphure_id"]').prop('readonly', true);
+				$('select[name="district_id"]').prop('readonly', true);
+				$('input[name="A4_2_TEXT_4"]').prop('readonly', true);
+				$('input[name="A4_2_TEXT_5"]').prop('readonly', true);
+			} else {
+				$('select[name="amphure_id_1"]').prop('readonly', true);
+				$('select[name="district_id_1"]').prop('readonly', true);
+				$('input[name="A4_1_TEXT_3"]').prop('readonly', true);
+				$('select[name="province_id"]').prop('readonly', false);
+				$('select[name="amphure_id"]').prop('readonly', false);
+				$('select[name="district_id"]').prop('readonly', false);
+				$('input[name="A4_2_TEXT_4"]').prop('readonly', false);
+				$('input[name="A4_2_TEXT_5"]').prop('readonly', false);
+			}
+		});
 
 		$(function() {
 			var includes = $('[data-include]')
 			$.each(includes, function() {
 				var file = $(this).data('include')
-				$(this).load(file)
+				$(this).load(file + '/<?= $u_send_profile ?>')
 			})
 		});
 
@@ -651,23 +651,24 @@
 				$('input[name="1_1_5_TEXT"]').prop('readonly', true);
 			}
 		});
-		
+
 		$('input[name="1_2"]').on('change', function() {
-				if ($(this).val() === '9') {
-					$('input[name="1_2_TEXT"]').prop('readonly', false);
-				} else {
-					$('input[name="1_2_TEXT"]').prop('readonly', true);
-				}
-			});
+			if ($(this).val() === '9') {
+				$('input[name="1_2_TEXT"]').prop('readonly', false);
+			} else {
+				$('input[name="1_2_TEXT"]').prop('readonly', true);
+			}
+		});
 
 
-			$('input[name="1_3"]').on('change', function() {
-				if ($(this).val() === '6') {
-					$('input[name="1_3_TEXT"]').prop('readonly', false);
-				} else {
-					$('input[name="1_3_TEXT"]').prop('readonly', true);
-				}
-			});
+		$('input[name="1_3"]').on('change', function() {
+			if ($(this).val() === '6') {
+				$('input[name="1_3_TEXT"]').prop('readonly', false);
+			} else {
+				$('input[name="1_3_TEXT"]').prop('readonly', true);
+			}
+		});
+		
 
 		$(function() {
 			var provinceObject = $('#province');
@@ -677,12 +678,17 @@
 			// on change province
 			provinceObject.on('change', function() {
 				var provinceId = $(this).val();
-				amphureObject.html('<option value="">เลือกอำเภอ</option>');
-				<?foreach ($d_amphures as $resultamp){?>
-					if(provinceId == <? echo $resultamp->province_id ?>){
-						amphureObject.append('<option value="<?=$resultamp->id?>"><?=$resultamp->name_th?></option>')
+				<? foreach ($d_province as $resultpro) { ?>
+					if (provinceId == '<? echo $resultpro->name_th ?>') {
+						provinceId = '<? echo $resultpro->id ?>';
 					}
-				<?}?>
+				<? } ?>
+				amphureObject.html('<option value="">เลือกอำเภอ</option>');
+				<? foreach ($d_amphures as $resultamp) { ?>
+					if (provinceId == <? echo $resultamp->province_id ?>) {
+						amphureObject.append('<option value="<?= $resultamp->name_th ?>"><?= $resultamp->name_th ?></option>')
+					}
+				<? } ?>
 				districtObject.html('<option value="">เลือกตำบล</option>');
 
 			});
@@ -690,13 +696,17 @@
 			// on change amphure amphure_id
 			amphureObject.on('change', function() {
 				var amphureId = $(this).val();
-
-				districtObject.html('<option value="">เลือกตำบล</option>');
-				<?foreach ($d_districts as $resultdis){?>
-					if(amphureId == <? echo $resultdis->amphure_id ?>){
-						districtObject.append('<option value="<?=$resultdis->id?>"><?=$resultdis->name_th?></option>')
+				<? foreach ($d_amphures as $resultamp) { ?>
+					if (amphureId == '<? echo $resultamp->name_th ?>') {
+						amphureId = '<? echo $resultamp->id ?>';
 					}
-				<?}?>
+				<? } ?>
+				districtObject.html('<option value="">เลือกตำบล</option>');
+				<? foreach ($d_districts as $resultdis) { ?>
+					if (amphureId == <? echo $resultdis->amphure_id ?>) {
+						districtObject.append('<option value="<?= $resultdis->name_th ?>"><?= $resultdis->name_th ?></option>')
+					}
+				<? } ?>
 			});
 		});
 
@@ -706,89 +716,86 @@
 
 			// on change province
 			amphureObject.html('<option value="">เลือกอำเภอ</option>');
-				<?foreach ($d_amphures as $resultamp){?>
-					if(1 == <? echo $resultamp->province_id ?>){
-						amphureObject.append('<option value="<?=$resultamp->id?>"><?=$resultamp->name_th?></option>')
-					}
-				<?}?>
-				districtObject.html('<option value="">เลือกตำบล</option>');
+			<? foreach ($d_amphures as $resultamp) { ?>
+				if (1 == <? echo $resultamp->province_id ?>) {
+					amphureObject.append('<option value="<?= $resultamp->name_th ?>"><?= $resultamp->name_th ?></option>')
+				}
+			<? } ?>
+			districtObject.html('<option value="">เลือกตำบล</option>');
 
 			// on change amphure amphure_id
 			amphureObject.on('change', function() {
 				var amphureId = $(this).val();
-
-				districtObject.html('<option value="">เลือกตำบล</option>');
-				<?foreach ($d_districts as $resultdis){?>
-					if(amphureId == <? echo $resultdis->amphure_id ?>){
-						districtObject.append('<option value="<?=$resultdis->id?>"><?=$resultdis->name_th?></option>')
+				<? foreach ($d_amphures as $resultamp) { ?>
+					if (amphureId == '<? echo $resultamp->name_th ?>') {
+						amphureId = '<? echo $resultamp->id ?>';
 					}
-				<?}?>
+				<? } ?>
+				districtObject.html('<option value="">เลือกตำบล</option>');
+				<? foreach ($d_districts as $resultdis) { ?>
+					if (amphureId == <? echo $resultdis->amphure_id ?>) {
+						districtObject.append('<option value="<?= $resultdis->name_th ?>"><?= $resultdis->name_th ?></option>')
+					}
+				<? } ?>
 			});
 		});
 
-		$(function() {
-			document.getElementById("A2").value = '<?=$d_surveyProfile->A2?>';
-			document.getElementById("A3_1").value = '<?=$d_surveyProfile->A3_1?>';
-			document.getElementById("A3_2").value = '<?=$d_surveyProfile->A3_2?>';
-			document.getElementById("A4<?=$d_surveyProfile->A4?>").checked = true;
-			$('input[name="A4"]').val('<?=$d_surveyProfile->A4?>').change();
-			if('<?=$d_surveyProfile->A4?>'== '2'){
-				<?foreach ($d_province as $resultampa){
-					if($resultampa->name_th == $d_surveyProfile->A4_1){
-						$pv = $resultampa->id;
-					}
-				}?>
-				$("#province").val('<?=$pv?>').change();
-				<?foreach ($d_amphures as $resultampb){
-					if($resultampb->name_th == $d_surveyProfile->A4_2){
-						$ap = $resultampb->id;
-					}
-				}?>
-				$("#amphure").val('<?=$ap?>').change();
-				<?foreach ($d_districts as $resultampc){
-					if($resultampc->name_th == $d_surveyProfile->A4_3){
-						$dt = $resultampc->id;
-					}
-				}?>
-				$("#district").val('<?=$dt?>').change();
-				document.getElementById("A4_42").value = '<?=$d_surveyProfile->A4_4?>';
-				document.getElementById("A4_52").value = '<?=$d_surveyProfile->A4_5?>';
-			}else{
-				<?foreach ($d_amphures as $resultampb){
-					if($resultampb->name_th == $d_surveyProfile->A4_2){
-						$ap = $resultampb->id;
-					}
-				}?>
-				$("#amphure_1").val('<?=$ap?>').change();
-				<?foreach ($d_districts as $resultampc){
-					if($resultampc->name_th == $d_surveyProfile->A4_3){
-						$dt = $resultampc->id;
-					}
-				}?>
-				$("#district_1").val('<?=$dt?>').change();
-				document.getElementById("A4_41").value = '<?=$d_surveyProfile->A4_4?>';
-			}
+		if ('<?= $u_check_new_survey_profile ?>' != '0') {
+			$(function() {
+				document.getElementById("A2").value = '<?= $d_surveyProfile->A2 ?>';
+				document.getElementById("A3_1").value = '<?= $d_surveyProfile->A3_1 ?>';
+				document.getElementById("A3_2").value = '<?= $d_surveyProfile->A3_2 ?>';
+				document.getElementById("A4<?= $d_surveyProfile->A4 ?>").checked = true;
+				$('input[name="A4"]').val('<?= $d_surveyProfile->A4 ?>').change();
+				if ('<?= $d_surveyProfile->A4 ?>' == '2') {
+					$("#province").val('<?= $d_surveyProfile->A4_1 ?>').change();
+					$("#amphure").val('<?= $d_surveyProfile->A4_2 ?>').change();
+					$("#district").val('<?= $d_surveyProfile->A4_3 ?>').change();
+					document.getElementById("A4_42").value = '<?= $d_surveyProfile->A4_4 ?>';
+					document.getElementById("A4_52").value = '<?= $d_surveyProfile->A4_5 ?>';
+				} else {
+					$("#amphure_1").val('<?= $d_surveyProfile->A4_2 ?>').change();
+					$("#district_1").val('<?= $d_surveyProfile->A4_3 ?>').change();
+					document.getElementById("A4_41").value = '<?= $d_surveyProfile->A4_4 ?>';
+				}
 
-			document.getElementById("1111<?=$d_surveyProfile->{'1_1_1'}?>").checked = true;
-			document.getElementById("1112").value = '<?=$d_surveyProfile->{'1_1_2'}?>';
-			document.getElementById("1113<?=$d_surveyProfile->{'1_1_3'}?>").checked = true;
-			document.getElementById("1114<?=$d_surveyProfile->{'1_1_4'}?>").checked = true;
-			$('input[name="1_1_4"]').val('<?=$d_surveyProfile->{'1_1_4'}?>').change();
-			document.getElementById("1114_text").value = '<?=$d_surveyProfile->{'1_1_4_text'}?>';
-			document.getElementById("1115<?=$d_surveyProfile->{'1_1_5'}?>").checked = true;
-			$('input[name="1_1_5"]').val('<?=$d_surveyProfile->{'1_1_5'}?>').change();
-			document.getElementById("1115_text").value = '<?=$d_surveyProfile->{'1_1_5_text'}?>';
-			document.getElementById("1116<?=$d_surveyProfile->{'1_1_6'}?>").checked = true;
+				document.getElementById("1111<?= $d_surveyProfile->{'1_1_1'} ?>").checked = true;
+				document.getElementById("1112").value = '<?= $d_surveyProfile->{'1_1_2'} ?>';
+				document.getElementById("1113<?= $d_surveyProfile->{'1_1_3'} ?>").checked = true;
+				document.getElementById("1114<?= $d_surveyProfile->{'1_1_4'} ?>").checked = true;
+				if (<?= $d_surveyProfile->{'1_1_4'} ?> == '8') {
+					$('input[name="1_1_4_TEXT"]').prop('readonly', false);
+				} else {
+					$('input[name="1_1_4_TEXT"]').prop('readonly', true);
+				}
+				document.getElementById("1114_text").value = '<?= $d_surveyProfile->{'1_1_4_text'} ?>';
+				document.getElementById("1115<?= $d_surveyProfile->{'1_1_5'} ?>").checked = true;
+				if (<?= $d_surveyProfile->{'1_1_5'} ?> == '10') {
+					$('input[name="1_1_5_TEXT"]').prop('readonly', false);
+				} else {
+					$('input[name="1_1_5_TEXT"]').prop('readonly', true);
+				}
+				document.getElementById("1115_text").value = '<?= $d_surveyProfile->{'1_1_5_text'} ?>';
+				document.getElementById("1116<?= $d_surveyProfile->{'1_1_6'} ?>").checked = true;
 
-			document.getElementById("112<?=$d_surveyProfile->{'1_2'}?>").checked = true;
-			$('input[name="1_2"]').val('<?=$d_surveyProfile->{'1_2'}?>').change();
-			document.getElementById("112_text").value = '<?=$d_surveyProfile->{'1_2_text'}?>';
+				document.getElementById("112<?= $d_surveyProfile->{'1_2'} ?>").checked = true;
+				if (<?= $d_surveyProfile->{'1_2'} ?> == '9') {
+					$('input[name="1_2_TEXT"]').prop('readonly', false);
+				} else {
+					$('input[name="1_2_TEXT"]').prop('readonly', true);
+				}
+				document.getElementById("112_text").value = '<?= $d_surveyProfile->{'1_2_text'} ?>';
 
-			document.getElementById("113<?=$d_surveyProfile->{'1_3'}?>").checked = true;
-			$('input[name="1_3"]').val('<?=$d_surveyProfile->{'1_3'}?>').change();
-			document.getElementById("113_text").value = '<?=$d_surveyProfile->{'1_3_text'}?>';
-			
-		});
+				document.getElementById("113<?= $d_surveyProfile->{'1_3'} ?>").checked = true;
+				if (<?= $d_surveyProfile->{'1_3'} ?> == '6') {
+					$('input[name="1_3_TEXT"]').prop('readonly', false);
+				} else {
+					$('input[name="1_3_TEXT"]').prop('readonly', true);
+				}
+				document.getElementById("113_text").value = '<?= $d_surveyProfile->{'1_3_text'} ?>';
+
+			});
+		};
 	</script>
 </body>
 
