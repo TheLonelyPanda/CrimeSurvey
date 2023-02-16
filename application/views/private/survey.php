@@ -521,7 +521,7 @@
 
 							<div class="row">
 								<div class="col-lg-1.5" style="margin-left: auto; margin-right: 0;">
-									<a value="Save" data-url="<?= site_url('main/saveSurvey/true') ?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
+									<a value="Save" data-url="<?= site_url('main/saveSurvey') ?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
 									<a href="<?= site_url('/main/index/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>

@@ -405,7 +405,7 @@ class Main extends CI_Controller {
 		$this->load->view('/private/survey', $data);       
 	}
 
-	public function saveSurvey($showAlert){
+	public function saveSurvey(){
 		$user_name=$this->isLogin();
 		if($user_name != false){    
 			$profileId = $this->input->post('1_TEXT');
@@ -593,9 +593,79 @@ class Main extends CI_Controller {
 				$this->datamodel->update($objdSurveyTrustInJustic);
 			}
 			
-			if($showAlert == 'true'){
-				$this->functionhelper->jsonHeader();
-				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/index'),$objProfile);	
+			
+			$this->functionhelper->jsonHeader();
+			$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/index'),$objProfile);	
+
+		} 
+    }
+
+	public function saveSurvey1S3(){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$objProfile=new MyDto();
+			$objProfile->{'1_1_1'} = $this->input->post('1_1_1');
+			$objProfile->{'1_1_2'} = $this->input->post('1_1_2');
+			$objProfile->{'1_1_3'} = $this->input->post('1_1_3');
+			$objProfile->{'1_1_4'} = $this->input->post('1_1_4');
+			$objProfile->{'1_1_4_text'} = $this->input->post('1_1_4_TEXT');
+			$objProfile->{'1_1_5'} = $this->input->post('1_1_5');
+			$objProfile->{'1_1_5_text'} = $this->input->post('1_1_5_TEXT');
+			$objProfile->{'1_1_6'} = $this->input->post('1_1_6');
+			$objProfile->{'1_2'} = $this->input->post('1_2');
+			$objProfile->{'1_2_text'} = $this->input->post('1_2_TEXT');
+			$objProfile->{'1_3'} = $this->input->post('1_3');
+			$objProfile->{'1_3_text'} = $this->input->post('1_3_TEXT');
+			if($this->chkHave($profileId,'survey_profile')=='0'){
+				$this->datamodel->insert($objProfile);
+			}else{
+				$this->datamodel->update($objProfile);
+			}
+
+		} 
+    }
+
+	public function saveSurvey1($profileId,$masterId,$loop){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_victims';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$objdSurveyVictims=new MyDto();
+			$objdSurveyVictims->profile_id = $profileId;
+			$objdSurveyVictims->S2_2_1 = $this->input->post('5_S2_2_1');
+			$objdSurveyVictims->S2_2_2 = $this->input->post('5_S2_2_2');
+	
+			if($this->chkHave($profileId,'survey_victims') == 0){
+				$this->datamodel->insert($objdSurveyVictims);
+			}else{
+				$this->datamodel->update($objdSurveyVictims);
+			}
+
+		} 
+    }
+
+	public function saveSurvey1S4($profileId,$masterId,$loop){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$objdSurveyVictimsCrimes=new MyDto();
+			$objdSurveyVictimsCrimes->profile_id = $profileId;
+			$objdSurveyVictimsCrimes->S2_2_1 = $this->input->post('5_S2_2_1');
+			$objdSurveyVictimsCrimes->S2_2_2 = $this->input->post('5_S2_2_2');
+	
+			if($this->chkHave($profileId,'survey_victims_crimes') == 0){
+				$this->datamodel->insert($objdSurveyVictimsCrimes);
+			}else{
+				$this->datamodel->update($objdSurveyVictimsCrimes);
 			}
 
 		} 

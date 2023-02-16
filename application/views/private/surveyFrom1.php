@@ -226,7 +226,7 @@
 				<div class="col-lg-12">
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_411" name="1_S4_1" value="2">จำได้ ระบุ
+							<input type="radio" id="1_411" name="1_S4_1" value="1">จำได้ ระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
 							<input type="text" class="form-control" name="1_S4_1_TEXT" readonly />
@@ -289,34 +289,34 @@
 				<label for="431" class="col-form-label">4.3.1 ความเสียหายต่อชีวิต ร่างกาย</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_4311" name="1_S4_3_1" value="1"> (1) ไม่มี
+						<input type="radio" id="1_4311" name="1_S4_3_1" value="1" disabled> (1) ไม่มี
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4312" name="1_S4_3_1" value="2"> (2) ไม่ได้รับบาดเจ็บ
+						<input type="radio" id="1_4312" name="1_S4_3_1" value="2" disabled> (2) ไม่ได้รับบาดเจ็บ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-4">
-						<input type="radio" id="1_4313" name="1_S4_3_1" value="3"> (3) ได้รับบาดเจ็บเล็กน้อย ไม่ถึงกับต้องรักษาตัว
+						<input type="radio" id="1_4313" name="1_S4_3_1" value="3" disabled> (3) ได้รับบาดเจ็บเล็กน้อย ไม่ถึงกับต้องรักษาตัว
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4314" name="1_S4_3_1" value="4"> (4) รักษาตัวไม่เกิน 7 วัน
+						<input type="radio" id="1_4314" name="1_S4_3_1" value="4" disabled> (4) รักษาตัวไม่เกิน 7 วัน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4315" name="1_S4_3_1" value="5"> (5) รักษาตัว 8-20 วัน
+						<input type="radio" id="1_4315" name="1_S4_3_1" value="5" disabled> (5) รักษาตัว 8-20 วัน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4316" name="1_S4_3_1" value="6"> (6) รักษาตัวเกินกว่า 20 วัน (สาหัส)
+						<input type="radio" id="1_4316" name="1_S4_3_1" value="6" disabled> (6) รักษาตัวเกินกว่า 20 วัน (สาหัส)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4317" name="1_S4_3_1" value="7"> (7) เสียโฉม พิการ หรือทุพลภาพเป็นกรถาวร
+						<input type="radio" id="1_4317" name="1_S4_3_1" value="7" disabled> (7) เสียโฉม พิการ หรือทุพลภาพเป็นกรถาวร
 					</label>
-					<label class="radio-inline col-form-label  col-lg-12	">
-						<input type="radio" id="1_4318" name="1_S4_3_1" value="8"> (8) ได้รับอันตรายทางจิตใจจนถึงขั้นเข้ารับการบำบัดทางจิต
-					</label>
-					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4319" name="1_S4_3_1" value="9"> (9) ได้รับอันตรายต่อสุขภาพ เจ็บป่วย
+					<label class="radio-inline col-form-label  col-lg-12">
+						<input type="radio" id="1_4318" name="1_S4_3_1" value="8" disabled> (8) ได้รับอันตรายทางจิตใจจนถึงขั้นเข้ารับการบำบัดทางจิต
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_43110" name="1_S4_3_1" value="10"> (10) เสียชีวิต
+						<input type="radio" id="1_4319" name="1_S4_3_1" value="9" disabled> (9) ได้รับอันตรายต่อสุขภาพ เจ็บป่วย
+					</label>
+					<label class="radio-inline col-form-label  col-lg-3">
+						<input type="radio" id="1_43110" name="1_S4_3_1" value="10" disabled> (10) เสียชีวิต
 					</label>
 
 				</div>
@@ -326,11 +326,11 @@
 				<label for="432" class="col-form-label">4.3.2 ความเสียหายทรัพย์ถูกประทุษร้าย</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4321" name="1_S4_3_2" value="1"> (1) ไม่มี
+						<input type="radio" id="1_4321" name="1_S4_3_2" value="1" disabled> (1) ไม่มี
 					</label>
-					<label class="col-form-label">จำนวน
+					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4322" name="1_S4_3_2" value="2"> (2) มี เป็นมูลค่า
+							<input type="radio" id="1_4322" name="1_S4_3_2" value="2" disabled> (2) มี เป็นมูลค่า
 						</label>
 						<label class="radio-inline col-form-label  col-lg-6">
 							<input type="text" class="form-control" name="1_S4_3_2_TEXT" readonly />
@@ -348,7 +348,7 @@
 
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4331" name="1_S4_3_3" value="1"> (1) ค่ารักษาพยาบาล จำนวน
+							<input type="radio" id="1_4331" name="1_S4_3_3" value="1" disabled> (1) ค่ารักษาพยาบาล จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-5">
 							<input type="text" class="form-control" name="1_S4_3_3_1_TEXT" readonly />
@@ -359,7 +359,7 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4332" name="1_S4_3_3" value="2"> (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ)
+							<input type="radio" id="1_4332" name="1_S4_3_3" value="2" disabled> (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
 							<input type="text" class="form-control" name="1_S4_3_3_2_TEXT" readonly />
@@ -370,7 +370,7 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4333" name="1_S4_3_3" value="3"> (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ) จำนวน
+							<input type="radio" id="1_4333" name="1_S4_3_3" value="3" disabled> (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ) จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-2">
 							<input type="text" class="form-control" name="1_S4_3_3_3_TEXT" readonly />
@@ -381,7 +381,7 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4334" name="1_S4_3_3" value="4"> (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
+							<input type="radio" id="1_4334" name="1_S4_3_3" value="4" disabled> (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-4">
 							<input type="text" class="form-control" name="1_S4_3_3_4_TEXT" readonly />
@@ -392,7 +392,7 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4335" name="1_S4_3_3" value="5"> (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
+							<input type="radio" id="1_4335" name="1_S4_3_3" value="5" disabled> (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
 							<input type="text" class="form-control" name="1_S4_3_3_5_TEXT" readonly />
@@ -403,7 +403,7 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4336" name="1_S4_3_3" value="6"> (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
+							<input type="radio" id="1_4336" name="1_S4_3_3" value="6" disabled> (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-4">
 							<input type="text" class="form-control" name="1_S4_3_3_6_TEXT" readonly />
@@ -414,7 +414,7 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4337" name="1_S4_3_3" value="7"> (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
+							<input type="radio" id="1_4337" name="1_S4_3_3" value="7" disabled> (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
 							<input type="text" class="form-control" name="1_S4_3_3_7_TEXT" readonly />
@@ -424,7 +424,7 @@
 						</label>
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4338" name="1_S4_3_3" value="8"> (8) ไม่มีความสูญเสีย/ค่าเสียหายจากมูลค่าที่เกิดขึ้น
+						<input type="radio" id="1_4338" name="1_S4_3_3" value="8" disabled> (8) ไม่มีความสูญเสีย/ค่าเสียหายจากมูลค่าที่เกิดขึ้น
 					</label>
 				</div>
 			</div>
@@ -667,7 +667,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<textarea type="text" class="form-control" id="1_45" rows="3" name="1_S4_5_TEXT"></textarea>
+					<textarea type="text" class="form-control" id="1_45" rows="3" name="1_S4_5"></textarea>
 				</div>
 			</div>
 
@@ -681,17 +681,17 @@
 				</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="radio" id="1_46111" name="1_S4_6_1_1" value="1"> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="radio" id="1_46111" name="1_S4_6_1_1" value="1" disabled> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_46112" name="1_S4_6_1_1" value="2"> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="radio" id="1_46112" name="1_S4_6_1_1" value="2" disabled> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_46113" name="1_S4_6_1_1" value="3"> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
+						<input type="radio" id="1_46113" name="1_S4_6_1_1" value="3" disabled> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
 					</label>
 					<label class="col-form-label col-lg-12" style="margin-left: -5px;">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_46114" name="1_S4_6_1_1" value="4"> (4) อื่นๆ โปรดระบุ
+							<input type="radio" id="1_46114" name="1_S4_6_1_1" value="4" disabled> (4) อื่นๆ โปรดระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
 							<input type="text" class="form-control" name="1_S4_6_1_1_TEXT" readonly />
@@ -702,66 +702,66 @@
 
 			<div class="row" style="margin-left: 10px;">
 				<label for="461" class="col-form-label">
-					<input type="radio" id="1_4612" name="1_S4_6_2" value="1"> 4.6.2 มีการแจ้งต่อเจ้าหน้าที่
+					<input type="radio" id="1_4612" name="1_S4_6_2" value="1"> 4.6.2 ไม่มีการแจ้งต่อเจ้าหน้าที่
 				</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="checkbox" id="1_46211" name="1_S4_6_2_1" value="1"> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="checkbox" id="1_46211" name="1_S4_6_2_1" value="1" disabled> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46212" name="1_S4_6_2_1" value="2"> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="checkbox" id="1_46212" name="1_S4_6_2_2" value="1" disabled> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46213" name="1_S4_6_2_1" value="3"> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
+						<input type="checkbox" id="1_46213" name="1_S4_6_2_3" value="1" disabled> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46214" name="1_S4_6_2_1" value="4"> (4) ได้แจ้งเหตุต่อผู้มีหน้าที่รับผิดชอบที่เกี่ยวข้องแล้ว เช่น ฝ่ายรักษาความปลอดภัย หัวหน้างาน
+						<input type="checkbox" id="1_46214" name="1_S4_6_2_4" value="1" disabled> (4) ได้แจ้งเหตุต่อผู้มีหน้าที่รับผิดชอบที่เกี่ยวข้องแล้ว เช่น ฝ่ายรักษาความปลอดภัย หัวหน้างาน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46215" name="1_S4_6_2_1" value="5"> (5) มีเจ้าหน้าที่หรือบุคคลอื่นมาให้การช่วยเหลือไกล่เกลี่ยสามารถตกลงกับผู้กระทำผิดได้
+						<input type="checkbox" id="1_46215" name="1_S4_6_2_5" value="1" disabled> (5) มีเจ้าหน้าที่หรือบุคคลอื่นมาให้การช่วยเหลือไกล่เกลี่ยสามารถตกลงกับผู้กระทำผิดได้
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46216" name="1_S4_6_2_1" value="6"> (6) ถูกข่มขู่ จากผู้กระทำผิดหรือผู้เกี่ยวข้อง
+						<input type="checkbox" id="1_46216" name="1_S4_6_2_6" value="1" disabled> (6) ถูกข่มขู่ จากผู้กระทำผิดหรือผู้เกี่ยวข้อง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46217" name="1_S4_6_2_1" value="7"> (7) กลัวว่าจะถูกแก้แค้น หรือถูกทำร้ายจากผู้กระทำผิดหรือผู้เกี่ยวข้อง
+						<input type="checkbox" id="1_46217" name="1_S4_6_2_7" value="1" disabled> (7) กลัวว่าจะถูกแก้แค้น หรือถูกทำร้ายจากผู้กระทำผิดหรือผู้เกี่ยวข้อง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46218" name="1_S4_6_2_1" value="8"> (8) เป็นคนกันเอง/สนิทสนมคุ้นเคยกับผู้กระทำผิด
+						<input type="checkbox" id="1_46218" name="1_S4_6_2_8" value="1" disabled> (8) เป็นคนกันเอง/สนิทสนมคุ้นเคยกับผู้กระทำผิด
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_46219" name="1_S4_6_2_1" value="9"> (9) เป็นเหตุการณ์ที่น่าอับอาย กลัวว่าจะเสื่อมเสียชื่อเสียง
+						<input type="checkbox" id="1_46219" name="1_S4_6_2_9" value="1" disabled> (9) เป็นเหตุการณ์ที่น่าอับอาย กลัวว่าจะเสื่อมเสียชื่อเสียง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462110" name="1_S4_6_2_1" value="10"> (10) สงสาร/เห็นใจผู้กระทำผิด (เนื่องจากผู้กระทำผิดเป็นเด็ก/พิการ/ยากจน เป็นต้น)
+						<input type="checkbox" id="1_462110" name="1_S4_6_2_10" value="1" disabled> (10) สงสาร/เห็นใจผู้กระทำผิด (เนื่องจากผู้กระทำผิดเป็นเด็ก/พิการ/ยากจน เป็นต้น)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462111" name="1_S4_6_2_1" value="11"> (11) ยุ่งยาก ไม่อยากเป็นคดีความ ไม่อยากขึ้นโรงขึ้นศาล
+						<input type="checkbox" id="1_462111" name="1_S4_6_2_11" value="1" disabled> (11) ยุ่งยาก ไม่อยากเป็นคดีความ ไม่อยากขึ้นโรงขึ้นศาล
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462112" name="1_S4_6_2_1" value="12"> (12) ไม่สะดวก ไม่มีเวลาแจ้งเหตุกับเจ้าหน้าที่
+						<input type="checkbox" id="1_462112" name="1_S4_6_2_12" value="1" disabled> (12) ไม่สะดวก ไม่มีเวลาแจ้งเหตุกับเจ้าหน้าที่
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462113" name="1_S4_6_2_1" value="13"> (13) ขาดพยานหลักฐาน
+						<input type="checkbox" id="1_462113" name="1_S4_6_2_13" value="1" disabled> (13) ขาดพยานหลักฐาน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462114" name="1_S4_6_2_1" value="14"> (14) คิดว่าเจ้าหน้าที่ตำรวจไม่สามารถติดตามผู้กระทำผิดมาดำเนินคดีได้
+						<input type="checkbox" id="1_462114" name="1_S4_6_2_14" value="1" disabled> (14) คิดว่าเจ้าหน้าที่ตำรวจไม่สามารถติดตามผู้กระทำผิดมาดำเนินคดีได้
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462115" name="1_S4_6_2_1" value="15"> (15) มีความรู้สึกไม่ดีกับเจ้าหน้าที่ตำรวจหรือไม่ไว้วางใจเจ้าหน้าที่
+						<input type="checkbox" id="1_462115" name="1_S4_6_2_15" value="1" disabled> (15) มีความรู้สึกไม่ดีกับเจ้าหน้าที่ตำรวจหรือไม่ไว้วางใจเจ้าหน้าที่
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462116" name="1_S4_6_2_1" value="16"> (16) ไม่เชื่อมั่นในประสิทธิภาพการปฏิบัติงานของเจ้าหน้าที่
+						<input type="checkbox" id="1_462116" name="1_S4_6_2_16" value="1" disabled> (16) ไม่เชื่อมั่นในประสิทธิภาพการปฏิบัติงานของเจ้าหน้าที่
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_462117" name="1_S4_6_2_1" value="17"> (17) ผู้กระทำผิดเป็นเจ้าหน้าที่รัฐหรือผู้มีอิทธิพล (รวมถึงลูกหลาน/ญาติ/คนใกล้ชิด)
+						<input type="checkbox" id="1_462117" name="1_S4_6_2_17" value="1" disabled> (17) ผู้กระทำผิดเป็นเจ้าหน้าที่รัฐหรือผู้มีอิทธิพล (รวมถึงลูกหลาน/ญาติ/คนใกล้ชิด)
 					</label>
 					<label class="col-form-label col-lg-12" style="margin-left: -5px;">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="checkbox" id="1_462118" name="1_S4_6_2_1" value="18"> (18) อื่นๆ (ระบุ)
+							<input type="checkbox" id="1_462118" name="1_S4_6_2_18" value="1" disabled> (18) อื่นๆ (ระบุ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
-							<input type="text" class="form-control" name="1_S4_6_2_1_TEXT" readonly />
+							<input type="text" class="form-control" name="1_S4_6_2_18_TEXT" readonly />
 						</label>
 					</label>
 				</div>
@@ -1224,6 +1224,26 @@
 				}
 			});
 
+			$('input[name="1_S4_3"]').on('change', function() {
+				if ($(this).val() === '1') {
+					$('input[name="1_S4_3_1"]').prop('disabled', false);
+					$('input[name="1_S4_3_2"]').prop('disabled', false);
+					$('input[name="1_S4_3_3"]').prop('disabled', false);
+				} else {
+					$('input[name="1_S4_3_1"]').prop('disabled', true);
+					$('input[name="1_S4_3_2"]').prop('disabled', true);
+					$('input[name="1_S4_3_2_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_3_3"]').prop('disabled', true);
+					$('input[name="1_S4_3_3_1_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_3_3_2_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_3_3_3_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_3_3_4_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_3_3_5_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_3_3_6_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_3_3_7_TEXT"]').prop('readonly', true);
+				}
+			});
+
 			$('input[name="1_S4_3_2"]').on('change', function() {
 				if ($(this).val() === '2') {
 					$('input[name="1_S4_3_2_TEXT"]').prop('readonly', false);
@@ -1300,6 +1320,86 @@
 				}
 			});
 
+			$('input[name="1_S4_6_1"]').on('change', function() {
+				if ($(this).val() === '1') {
+					$('input[name="1_S4_6_2"]').prop('checked', false);
+					$('input[name="1_S4_6_2_1"]').prop('checked', false);
+					$('input[name="1_S4_6_2_2"]').prop('checked', false);
+					$('input[name="1_S4_6_2_3"]').prop('checked', false);
+					$('input[name="1_S4_6_2_4"]').prop('checked', false);
+					$('input[name="1_S4_6_2_5"]').prop('checked', false);
+					$('input[name="1_S4_6_2_6"]').prop('checked', false);
+					$('input[name="1_S4_6_2_7"]').prop('checked', false);
+					$('input[name="1_S4_6_2_8"]').prop('checked', false);
+					$('input[name="1_S4_6_2_9"]').prop('checked', false);
+					$('input[name="1_S4_6_2_10"]').prop('checked', false);
+					$('input[name="1_S4_6_2_11"]').prop('checked', false);
+					$('input[name="1_S4_6_2_12"]').prop('checked', false);
+					$('input[name="1_S4_6_2_13"]').prop('checked', false);
+					$('input[name="1_S4_6_2_14"]').prop('checked', false);
+					$('input[name="1_S4_6_2_15"]').prop('checked', false);
+					$('input[name="1_S4_6_2_16"]').prop('checked', false);
+					$('input[name="1_S4_6_2_17"]').prop('checked', false);
+					$('input[name="1_S4_6_2_18"]').prop('checked', false);
+
+					$('input[name="1_S4_6_2_1"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_2"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_3"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_4"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_5"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_6"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_7"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_8"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_9"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_10"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_11"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_12"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_13"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_14"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_15"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_16"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_17"]').prop('disabled', true);
+					$('input[name="1_S4_6_2_18"]').prop('disabled', true);
+
+					$('input[name="1_S4_6_1_1"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_18_TEXT"]').prop('readonly', true);
+
+					
+					
+				}
+			});
+
+			$('input[name="1_S4_6_2"]').on('change', function() {
+				if ($(this).val() === '1') {
+					$('input[name="1_S4_6_1"]').prop('checked', false);
+					$('input[name="1_S4_6_1_1"]').prop('checked', false);
+					$('input[name="1_S4_6_1_1_TEXT"]').prop('readonly', true);
+
+					$('input[name="1_S4_6_2_1"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_2"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_3"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_4"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_5"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_6"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_7"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_8"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_9"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_10"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_11"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_12"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_13"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_14"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_15"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_16"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_17"]').prop('disabled', false);
+					$('input[name="1_S4_6_2_18"]').prop('disabled', false);
+
+					$('input[name="1_S4_6_1_1"]').prop('disabled', true);
+				}
+			});
+
+			
+
 			$('input[name="1_S4_6_1_1"]').on('change', function() {
 				if ($(this).val() === '4') {
 					$('input[name="1_S4_6_1_1_TEXT"]').prop('readonly', false);
@@ -1307,6 +1407,16 @@
 					$('input[name="1_S4_6_1_1_TEXT"]').prop('readonly', true);
 				}
 			});
+
+			$('input[name="1_S4_6_2_18"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_S4_6_2_18_TEXT"]').prop('readonly', false);
+				} else {
+					$('input[name="1_S4_6_2_18_TEXT"]').prop('readonly', true);
+				}
+			});
+
+			
 
 			$('input[id="1_462118"]').on('change', function() {
 				if ($(this).is(":checked")) {
