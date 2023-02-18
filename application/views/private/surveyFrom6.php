@@ -477,50 +477,56 @@
 		<script>
 	if('<?=$u_check_new_survey_trust_in_justic?>'!='0'){
 			$(function() {
-				document.getElementById("6_211<?=$d_surveyTrustInJustic->S2_1_1?>").checked = true;
-				document.getElementById("6_212<?=$d_surveyTrustInJustic->S2_1_2?>").checked = true;
-				document.getElementById("6_213<?=$d_surveyTrustInJustic->S2_1_3?>").checked = true;
-				document.getElementById("6_214<?=$d_surveyTrustInJustic->S2_1_4?>").checked = true;
-				document.getElementById("6_221<?=$d_surveyTrustInJustic->S2_2_1?>").checked = true;
-				document.getElementById("6_222<?=$d_surveyTrustInJustic->S2_2_2?>").checked = true;
-				document.getElementById("6_223<?=$d_surveyTrustInJustic->S2_2_3?>").checked = true;
-				document.getElementById("6_224<?=$d_surveyTrustInJustic->S2_2_4?>").checked = true;
-				document.getElementById("6_231<?=$d_surveyTrustInJustic->S2_3_1?>").checked = true;
-				document.getElementById("6_232<?=$d_surveyTrustInJustic->S2_3_2?>").checked = true;
-				document.getElementById("6_233<?=$d_surveyTrustInJustic->S2_3_3?>").checked = true;
-				document.getElementById("6_234<?=$d_surveyTrustInJustic->S2_3_4?>").checked = true;
-				document.getElementById("6_241<?=$d_surveyTrustInJustic->S2_4_1?>").checked = true;
-				document.getElementById("6_242<?=$d_surveyTrustInJustic->S2_4_2?>").checked = true;
-				document.getElementById("6_243<?=$d_surveyTrustInJustic->S2_4_3?>").checked = true;
-				document.getElementById("6_244<?=$d_surveyTrustInJustic->S2_4_4?>").checked = true;
+				checkId(document.getElementById("6_211<?=$d_surveyTrustInJustic->S2_1_1?>"));
+				checkId(document.getElementById("6_212<?=$d_surveyTrustInJustic->S2_1_2?>"));
+				checkId(document.getElementById("6_213<?=$d_surveyTrustInJustic->S2_1_3?>"));
+				checkId(document.getElementById("6_214<?=$d_surveyTrustInJustic->S2_1_4?>"));
+				checkId(document.getElementById("6_221<?=$d_surveyTrustInJustic->S2_2_1?>"));
+				checkId(document.getElementById("6_222<?=$d_surveyTrustInJustic->S2_2_2?>"));
+				checkId(document.getElementById("6_223<?=$d_surveyTrustInJustic->S2_2_3?>"));
+				checkId(document.getElementById("6_224<?=$d_surveyTrustInJustic->S2_2_4?>"));
+				checkId(document.getElementById("6_231<?=$d_surveyTrustInJustic->S2_3_1?>"));
+				checkId(document.getElementById("6_232<?=$d_surveyTrustInJustic->S2_3_2?>"));
+				checkId(document.getElementById("6_233<?=$d_surveyTrustInJustic->S2_3_3?>"));
+				checkId(document.getElementById("6_234<?=$d_surveyTrustInJustic->S2_3_4?>"));
+				checkId(document.getElementById("6_241<?=$d_surveyTrustInJustic->S2_4_1?>"));
+				checkId(document.getElementById("6_242<?=$d_surveyTrustInJustic->S2_4_2?>"));
+				checkId(document.getElementById("6_243<?=$d_surveyTrustInJustic->S2_4_3?>"));
+				checkId(document.getElementById("6_244<?=$d_surveyTrustInJustic->S2_4_4?>"));
 				document.getElementById("6_25").value = '<?=$d_surveyTrustInJustic->S2_5?>';
-				document.getElementById("6_311<?=$d_surveyTrustInJustic->S3_1_1?>").checked = true;
-				document.getElementById("6_312<?=$d_surveyTrustInJustic->S3_1_2?>").checked = true;
-				document.getElementById("6_313<?=$d_surveyTrustInJustic->S3_1_3?>").checked = true;
-				document.getElementById("6_314<?=$d_surveyTrustInJustic->S3_1_4?>").checked = true;
-				document.getElementById("6_315<?=$d_surveyTrustInJustic->S3_1_5?>").checked = true;
-				document.getElementById("6_321<?=$d_surveyTrustInJustic->S3_2_1?>").checked = true;
-				document.getElementById("6_322<?=$d_surveyTrustInJustic->S3_2_2?>").checked = true;
-				document.getElementById("6_323<?=$d_surveyTrustInJustic->S3_2_3?>").checked = true;
-				document.getElementById("6_324<?=$d_surveyTrustInJustic->S3_2_4?>").checked = true;
-				document.getElementById("6_325<?=$d_surveyTrustInJustic->S3_2_5?>").checked = true;
-				document.getElementById("6_331<?=$d_surveyTrustInJustic->S3_3_1?>").checked = true;
-				document.getElementById("6_332<?=$d_surveyTrustInJustic->S3_3_2?>").checked = true;
-				document.getElementById("6_333<?=$d_surveyTrustInJustic->S3_3_3?>").checked = true;
-				document.getElementById("6_334<?=$d_surveyTrustInJustic->S3_3_4?>").checked = true;
-				document.getElementById("6_335<?=$d_surveyTrustInJustic->S3_3_5?>").checked = true;
-				document.getElementById("6_341<?=$d_surveyTrustInJustic->S3_4_1?>").checked = true;
-				document.getElementById("6_342<?=$d_surveyTrustInJustic->S3_4_2?>").checked = true;
-				document.getElementById("6_343<?=$d_surveyTrustInJustic->S3_4_3?>").checked = true;
-				document.getElementById("6_344<?=$d_surveyTrustInJustic->S3_4_4?>").checked = true;
-				document.getElementById("6_345<?=$d_surveyTrustInJustic->S3_4_5?>").checked = true;
-				document.getElementById("6_351<?=$d_surveyTrustInJustic->S3_5_1?>").checked = true;
-				document.getElementById("6_352<?=$d_surveyTrustInJustic->S3_5_2?>").checked = true;
-				document.getElementById("6_353<?=$d_surveyTrustInJustic->S3_5_3?>").checked = true;
-				document.getElementById("6_354<?=$d_surveyTrustInJustic->S3_5_4?>").checked = true;
-				document.getElementById("6_355<?=$d_surveyTrustInJustic->S3_5_5?>").checked = true;
+				checkId(document.getElementById("6_311<?=$d_surveyTrustInJustic->S3_1_1?>"));
+				checkId(document.getElementById("6_312<?=$d_surveyTrustInJustic->S3_1_2?>"));
+				checkId(document.getElementById("6_313<?=$d_surveyTrustInJustic->S3_1_3?>"));
+				checkId(document.getElementById("6_314<?=$d_surveyTrustInJustic->S3_1_4?>"));
+				checkId(document.getElementById("6_315<?=$d_surveyTrustInJustic->S3_1_5?>"));
+				checkId(document.getElementById("6_321<?=$d_surveyTrustInJustic->S3_2_1?>"));
+				checkId(document.getElementById("6_322<?=$d_surveyTrustInJustic->S3_2_2?>"));
+				checkId(document.getElementById("6_323<?=$d_surveyTrustInJustic->S3_2_3?>"));
+				checkId(document.getElementById("6_324<?=$d_surveyTrustInJustic->S3_2_4?>"));
+				checkId(document.getElementById("6_325<?=$d_surveyTrustInJustic->S3_2_5?>"));
+				checkId(document.getElementById("6_331<?=$d_surveyTrustInJustic->S3_3_1?>"));
+				checkId(document.getElementById("6_332<?=$d_surveyTrustInJustic->S3_3_2?>"));
+				checkId(document.getElementById("6_333<?=$d_surveyTrustInJustic->S3_3_3?>"));
+				checkId(document.getElementById("6_334<?=$d_surveyTrustInJustic->S3_3_4?>"));
+				checkId(document.getElementById("6_335<?=$d_surveyTrustInJustic->S3_3_5?>"));
+				checkId(document.getElementById("6_341<?=$d_surveyTrustInJustic->S3_4_1?>"));
+				checkId(document.getElementById("6_342<?=$d_surveyTrustInJustic->S3_4_2?>"));
+				checkId(document.getElementById("6_343<?=$d_surveyTrustInJustic->S3_4_3?>"));
+				checkId(document.getElementById("6_344<?=$d_surveyTrustInJustic->S3_4_4?>"));
+				checkId(document.getElementById("6_345<?=$d_surveyTrustInJustic->S3_4_5?>"));
+				checkId(document.getElementById("6_351<?=$d_surveyTrustInJustic->S3_5_1?>"));
+				checkId(document.getElementById("6_352<?=$d_surveyTrustInJustic->S3_5_2?>"));
+				checkId(document.getElementById("6_353<?=$d_surveyTrustInJustic->S3_5_3?>"));
+				checkId(document.getElementById("6_354<?=$d_surveyTrustInJustic->S3_5_4?>"));
+				checkId(document.getElementById("6_355<?=$d_surveyTrustInJustic->S3_5_5?>"));
 				document.getElementById("6_36").value = '<?=$d_surveyTrustInJustic->S3_6?>';
 				
 			});
 		};
+
+		function checkId(id){
+				if(id != null){
+					id.checked = true;
+				}
+			};
 </script>

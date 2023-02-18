@@ -128,7 +128,7 @@
 										<div class="row" style=" padding-top: 13px;">
 											<label class="radio-inline " style="align-self: center;">เขต</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<select name="amphure_id_1" id="amphure_1" class="form-control" readonly>
+												<select name="amphure_id_1" id="amphure_1" class="form-control" disabled>
 													<option value="">เลือกเขต</option>
 												</select>
 											</label>
@@ -136,7 +136,7 @@
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">แขวง</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<select name="district_id_1" id="district_1" class="form-control" readonly>
+												<select name="district_id_1" id="district_1" class="form-control" disabled>
 													<option value="">เลือกแขวง</option>
 												</select>
 											</label>
@@ -154,7 +154,7 @@
 											<input type="radio" id="A42" name="A4" value="2">
 											<label class="radio-inline" style="align-self: center;">(A4.2) จังหวัดอื่นๆ (ระบุ)</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<select name="province_id" id="province" class="form-control" readonly>
+												<select name="province_id" id="province" class="form-control" disabled>
 													<option value="">เลือกจังหวัด</option>
 													<? foreach ($d_province as $result) { ?>
 														<option value="<?= $result->name_th ?>"><?= $result->name_th ?></option>
@@ -165,7 +165,7 @@
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">อำเภอ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<select name="amphure_id" id="amphure" class="form-control" readonly>
+												<select name="amphure_id" id="amphure" class="form-control" disabled>
 													<option value="">เลือกอำเภอ</option>
 												</select>
 											</label>
@@ -173,7 +173,7 @@
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">ตำบล</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<select name="district_id" id="district" class="form-control" readonly>
+												<select name="district_id" id="district" class="form-control" disabled>
 													<option value="">เลือกตำบล</option>
 												</select>
 											</label>
@@ -521,7 +521,7 @@
 
 							<div class="row">
 								<div class="col-lg-1.5" style="margin-left: auto; margin-right: 0;">
-									<a value="Save" data-url="<?= site_url('main/saveSurvey') ?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
+									<a value="Save" data-url="<?= site_url('main/saveSurvey/false') ?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
 									<a href="<?= site_url('/main/index/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
@@ -560,21 +560,21 @@
 
 		$('input[name="A4"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('select[name="amphure_id_1"]').prop('readonly', false);
-				$('select[name="district_id_1"]').prop('readonly', false);
+				$('select[name="amphure_id_1"]').prop('disabled', false);
+				$('select[name="district_id_1"]').prop('disabled', false);
 				$('input[name="A4_1_TEXT_3"]').prop('readonly', false);
-				$('select[name="province_id"]').prop('readonly', true);
-				$('select[name="amphure_id"]').prop('readonly', true);
-				$('select[name="district_id"]').prop('readonly', true);
+				$('select[name="province_id"]').prop('disabled', true);
+				$('select[name="amphure_id"]').prop('disabled', true);
+				$('select[name="district_id"]').prop('disabled', true);
 				$('input[name="A4_2_TEXT_4"]').prop('readonly', true);
 				$('input[name="A4_2_TEXT_5"]').prop('readonly', true);
 			} else {
-				$('select[name="amphure_id_1"]').prop('readonly', true);
-				$('select[name="district_id_1"]').prop('readonly', true);
+				$('select[name="amphure_id_1"]').prop('disabled', true);
+				$('select[name="district_id_1"]').prop('disabled', true);
 				$('input[name="A4_1_TEXT_3"]').prop('readonly', true);
-				$('select[name="province_id"]').prop('readonly', false);
-				$('select[name="amphure_id"]').prop('readonly', false);
-				$('select[name="district_id"]').prop('readonly', false);
+				$('select[name="province_id"]').prop('disabled', false);
+				$('select[name="amphure_id"]').prop('disabled', false);
+				$('select[name="district_id"]').prop('disabled', false);
 				$('input[name="A4_2_TEXT_4"]').prop('readonly', false);
 				$('input[name="A4_2_TEXT_5"]').prop('readonly', false);
 			}
@@ -584,7 +584,7 @@
 			var includes = $('[data-include]')
 			$.each(includes, function() {
 				var file = $(this).data('include')
-				$(this).load(file + '/<?= $u_send_profile ?>')
+				$(this).load(file + '/<?= $u_now_id ?>')
 			})
 		});
 
@@ -745,8 +745,26 @@
 				document.getElementById("A2").value = '<?= $d_surveyProfile->A2 ?>';
 				document.getElementById("A3_1").value = '<?= $d_surveyProfile->A3_1 ?>';
 				document.getElementById("A3_2").value = '<?= $d_surveyProfile->A3_2 ?>';
-				document.getElementById("A4<?= $d_surveyProfile->A4 ?>").checked = true;
-				$('input[name="A4"]').val('<?= $d_surveyProfile->A4 ?>').change();
+				checkId(document.getElementById("A4<?= $d_surveyProfile->A4 ?>"));
+				if ('<?= $d_surveyProfile->A4 ?>' == '1') {
+					$('select[name="amphure_id_1"]').prop('disabled', false);
+					$('select[name="district_id_1"]').prop('disabled', false);
+					$('input[name="A4_1_TEXT_3"]').prop('readonly', false);
+					$('select[name="province_id"]').prop('disabled', true);
+					$('select[name="amphure_id"]').prop('disabled', true);
+					$('select[name="district_id"]').prop('disabled', true);
+					$('input[name="A4_2_TEXT_4"]').prop('readonly', true);
+					$('input[name="A4_2_TEXT_5"]').prop('readonly', true);
+				} else {
+					$('select[name="amphure_id_1"]').prop('disabled', true);
+					$('select[name="district_id_1"]').prop('disabled', true);
+					$('input[name="A4_1_TEXT_3"]').prop('readonly', true);
+					$('select[name="province_id"]').prop('disabled', false);
+					$('select[name="amphure_id"]').prop('disabled', false);
+					$('select[name="district_id"]').prop('disabled', false);
+					$('input[name="A4_2_TEXT_4"]').prop('readonly', false);
+					$('input[name="A4_2_TEXT_5"]').prop('readonly', false);
+				}
 				if ('<?= $d_surveyProfile->A4 ?>' == '2') {
 					$("#province").val('<?= $d_surveyProfile->A4_1 ?>').change();
 					$("#amphure").val('<?= $d_surveyProfile->A4_2 ?>').change();
@@ -759,35 +777,35 @@
 					document.getElementById("A4_41").value = '<?= $d_surveyProfile->A4_4 ?>';
 				}
 
-				document.getElementById("1111<?= $d_surveyProfile->{'1_1_1'} ?>").checked = true;
+				checkId(document.getElementById("1111<?= $d_surveyProfile->{'1_1_1'} ?>"));
 				document.getElementById("1112").value = '<?= $d_surveyProfile->{'1_1_2'} ?>';
-				document.getElementById("1113<?= $d_surveyProfile->{'1_1_3'} ?>").checked = true;
-				document.getElementById("1114<?= $d_surveyProfile->{'1_1_4'} ?>").checked = true;
-				if (<?= $d_surveyProfile->{'1_1_4'} ?> == '8') {
+				checkId(document.getElementById("1113<?= $d_surveyProfile->{'1_1_3'} ?>"));
+				checkId(document.getElementById("1114<?= $d_surveyProfile->{'1_1_4'} ?>"));
+				if ('<?= $d_surveyProfile->{'1_1_4'} ?>' == '8') {
 					$('input[name="1_1_4_TEXT"]').prop('readonly', false);
 				} else {
 					$('input[name="1_1_4_TEXT"]').prop('readonly', true);
 				}
 				document.getElementById("1114_text").value = '<?= $d_surveyProfile->{'1_1_4_text'} ?>';
-				document.getElementById("1115<?= $d_surveyProfile->{'1_1_5'} ?>").checked = true;
-				if (<?= $d_surveyProfile->{'1_1_5'} ?> == '10') {
+				checkId(document.getElementById("1115<?= $d_surveyProfile->{'1_1_5'} ?>"));
+				if ('<?= $d_surveyProfile->{'1_1_5'} ?>' == '10') {
 					$('input[name="1_1_5_TEXT"]').prop('readonly', false);
 				} else {
 					$('input[name="1_1_5_TEXT"]').prop('readonly', true);
 				}
 				document.getElementById("1115_text").value = '<?= $d_surveyProfile->{'1_1_5_text'} ?>';
-				document.getElementById("1116<?= $d_surveyProfile->{'1_1_6'} ?>").checked = true;
+				checkId(document.getElementById("1116<?= $d_surveyProfile->{'1_1_6'} ?>"));
 
-				document.getElementById("112<?= $d_surveyProfile->{'1_2'} ?>").checked = true;
-				if (<?= $d_surveyProfile->{'1_2'} ?> == '9') {
+				checkId(document.getElementById("112<?= $d_surveyProfile->{'1_2'} ?>"));
+				if ('<?= $d_surveyProfile->{'1_2'} ?>' == '9') {
 					$('input[name="1_2_TEXT"]').prop('readonly', false);
 				} else {
 					$('input[name="1_2_TEXT"]').prop('readonly', true);
 				}
 				document.getElementById("112_text").value = '<?= $d_surveyProfile->{'1_2_text'} ?>';
 
-				document.getElementById("113<?= $d_surveyProfile->{'1_3'} ?>").checked = true;
-				if (<?= $d_surveyProfile->{'1_3'} ?> == '6') {
+				checkId(document.getElementById("113<?= $d_surveyProfile->{'1_3'} ?>"));
+				if ('<?= $d_surveyProfile->{'1_3'} ?>' == '6') {
 					$('input[name="1_3_TEXT"]').prop('readonly', false);
 				} else {
 					$('input[name="1_3_TEXT"]').prop('readonly', true);
@@ -796,6 +814,12 @@
 
 			});
 		};
+
+		function checkId(id){
+				if(id != null){
+					id.checked = true;
+				}
+			};
 	</script>
 </body>
 

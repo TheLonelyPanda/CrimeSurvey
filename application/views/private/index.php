@@ -86,7 +86,7 @@
 			<div class="body">
 			<a href="<?= site_url('main/survey/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> เพิ่มแบบสอบถาม</a>
 							</br></br>
-				<table id="data-table" data-order='[[1,"asc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
+				<table id="data-table" data-order='[[0,"desc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
 					<thead>
 						<tr class="inverse">
 							<th class="text-center">แบบสอบถามลำดับที่</th>

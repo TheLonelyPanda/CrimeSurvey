@@ -100,7 +100,7 @@
 								<input type="radio" id="211" name="S2_1" value="1"> (1) เชื่อมั่นน้อย
 							</label>
 							<label class="radio-inline col-form-label  col-lg-3">
-								<input type="radio" id="210" name="S2_1" value="0"> (0) ไม่เชื่อมั่นเลย
+								<input type="radio" id="210" name="S2_1" value="99"> (0) ไม่เชื่อมั่นเลย
 							</label>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 								<input type="radio" id="221" name="S2_2" value="1"> (1) เชื่อมั่นน้อย
 							</label>
 							<label class="radio-inline col-form-label  col-lg-3">
-								<input type="radio" id="220" name="S2_2" value="0"> (0) ไม่เชื่อมั่นเลย
+								<input type="radio" id="220" name="S2_2" value="99"> (0) ไม่เชื่อมั่นเลย
 							</label>
 						</div>
 					</div>
@@ -148,7 +148,7 @@
 								<input type="radio" id="231" name="S2_3" value="1"> (1) เชื่อมั่นน้อย
 							</label>
 							<label class="radio-inline col-form-label  col-lg-3">
-								<input type="radio" id="230" name="S2_3" value="0"> (0) ไม่เชื่อมั่นเลย
+								<input type="radio" id="230" name="S2_3" value="99"> (0) ไม่เชื่อมั่นเลย
 							</label>
 						</div>
 					</div>

@@ -319,39 +319,45 @@
 <script>
 	if('<?=$u_check_new_survey_knowledge_laws?>'!='0'){
 			$(function() {
-				document.getElementById("2_211<?=$d_surveyKnowledgeLaws->S2_1_1?>").checked = true;
-				document.getElementById("2_212<?=$d_surveyKnowledgeLaws->S2_1_2?>").checked = true;
-				document.getElementById("2_213<?=$d_surveyKnowledgeLaws->S2_1_3?>").checked = true;
-				document.getElementById("2_214<?=$d_surveyKnowledgeLaws->S2_1_4?>").checked = true;
-				document.getElementById("2_215<?=$d_surveyKnowledgeLaws->S2_1_5?>").checked = true;
-				document.getElementById("2_216<?=$d_surveyKnowledgeLaws->S2_1_6?>").checked = true;
-				document.getElementById("2_217<?=$d_surveyKnowledgeLaws->S2_1_7?>").checked = true;
-				document.getElementById("2_218<?=$d_surveyKnowledgeLaws->S2_1_8?>").checked = true;
-				document.getElementById("2_219<?=$d_surveyKnowledgeLaws->S2_1_9?>").checked = true;
-				document.getElementById("2_2110_<?=$d_surveyKnowledgeLaws->S2_1_10?>").checked = true;
-				document.getElementById("2_2111_<?=$d_surveyKnowledgeLaws->S2_1_11?>").checked = true;
-				document.getElementById("2_2112_<?=$d_surveyKnowledgeLaws->S2_1_12?>").checked = true;
-				document.getElementById("2_221<?=$d_surveyKnowledgeLaws->S2_2_1?>").checked = true;
-				document.getElementById("2_222<?=$d_surveyKnowledgeLaws->S2_2_2?>").checked = true;
-				document.getElementById("2_223<?=$d_surveyKnowledgeLaws->S2_2_3?>").checked = true;
-				document.getElementById("2_224<?=$d_surveyKnowledgeLaws->S2_2_4?>").checked = true;
-				document.getElementById("2_225<?=$d_surveyKnowledgeLaws->S2_2_5?>").checked = true;
-				document.getElementById("2_226<?=$d_surveyKnowledgeLaws->S2_2_6?>").checked = true;
-				document.getElementById("2_227<?=$d_surveyKnowledgeLaws->S2_2_7?>").checked = true;
-				document.getElementById("2_228<?=$d_surveyKnowledgeLaws->S2_2_8?>").checked = true;
-				document.getElementById("2_231<?=$d_surveyKnowledgeLaws->S2_3_1?>").checked = true;
-				document.getElementById("2_232<?=$d_surveyKnowledgeLaws->S2_3_2?>").checked = true;
-				document.getElementById("2_233<?=$d_surveyKnowledgeLaws->S2_3_3?>").checked = true;
-				document.getElementById("2_234<?=$d_surveyKnowledgeLaws->S2_3_4?>").checked = true;
-				document.getElementById("2_235<?=$d_surveyKnowledgeLaws->S2_3_5?>").checked = true;
-				document.getElementById("2_236<?=$d_surveyKnowledgeLaws->S2_3_6?>").checked = true;
-				document.getElementById("2_237<?=$d_surveyKnowledgeLaws->S2_3_7?>").checked = true;
-				document.getElementById("2_238<?=$d_surveyKnowledgeLaws->S2_3_8?>").checked = true;
-				document.getElementById("2_239<?=$d_surveyKnowledgeLaws->S2_3_9?>").checked = true;
+				checkId(document.getElementById("2_211<?=$d_surveyKnowledgeLaws->S2_1_1?>"));
+				checkId(document.getElementById("2_212<?=$d_surveyKnowledgeLaws->S2_1_2?>"));
+				checkId(document.getElementById("2_213<?=$d_surveyKnowledgeLaws->S2_1_3?>"));
+				checkId(document.getElementById("2_214<?=$d_surveyKnowledgeLaws->S2_1_4?>"));
+				checkId(document.getElementById("2_215<?=$d_surveyKnowledgeLaws->S2_1_5?>"));
+				checkId(document.getElementById("2_216<?=$d_surveyKnowledgeLaws->S2_1_6?>"));
+				checkId(document.getElementById("2_217<?=$d_surveyKnowledgeLaws->S2_1_7?>"));
+				checkId(document.getElementById("2_218<?=$d_surveyKnowledgeLaws->S2_1_8?>"));
+				checkId(document.getElementById("2_219<?=$d_surveyKnowledgeLaws->S2_1_9?>"));
+				checkId(document.getElementById("2_2110_<?=$d_surveyKnowledgeLaws->S2_1_10?>"));
+				checkId(document.getElementById("2_2111_<?=$d_surveyKnowledgeLaws->S2_1_11?>"));
+				checkId(document.getElementById("2_2112_<?=$d_surveyKnowledgeLaws->S2_1_12?>"));
+				checkId(document.getElementById("2_221<?=$d_surveyKnowledgeLaws->S2_2_1?>"));
+				checkId(document.getElementById("2_222<?=$d_surveyKnowledgeLaws->S2_2_2?>"));
+				checkId(document.getElementById("2_223<?=$d_surveyKnowledgeLaws->S2_2_3?>"));
+				checkId(document.getElementById("2_224<?=$d_surveyKnowledgeLaws->S2_2_4?>"));
+				checkId(document.getElementById("2_225<?=$d_surveyKnowledgeLaws->S2_2_5?>"));
+				checkId(document.getElementById("2_226<?=$d_surveyKnowledgeLaws->S2_2_6?>"));
+				checkId(document.getElementById("2_227<?=$d_surveyKnowledgeLaws->S2_2_7?>"));
+				checkId(document.getElementById("2_228<?=$d_surveyKnowledgeLaws->S2_2_8?>"));
+				checkId(document.getElementById("2_231<?=$d_surveyKnowledgeLaws->S2_3_1?>"));
+				checkId(document.getElementById("2_232<?=$d_surveyKnowledgeLaws->S2_3_2?>"));
+				checkId(document.getElementById("2_233<?=$d_surveyKnowledgeLaws->S2_3_3?>"));
+				checkId(document.getElementById("2_234<?=$d_surveyKnowledgeLaws->S2_3_4?>"));
+				checkId(document.getElementById("2_235<?=$d_surveyKnowledgeLaws->S2_3_5?>"));
+				checkId(document.getElementById("2_236<?=$d_surveyKnowledgeLaws->S2_3_6?>"));
+				checkId(document.getElementById("2_237<?=$d_surveyKnowledgeLaws->S2_3_7?>"));
+				checkId(document.getElementById("2_238<?=$d_surveyKnowledgeLaws->S2_3_8?>"));
+				checkId(document.getElementById("2_239<?=$d_surveyKnowledgeLaws->S2_3_9?>"));
 
 				document.getElementById("2_24").value = '<?=$d_surveyKnowledgeLaws->S2_4?>';
 				document.getElementById("2_25").value = '<?=$d_surveyKnowledgeLaws->S2_5?>';
 				
 			});
 		};
+
+		function checkId(id){
+				if(id != null){
+					id.checked = true;
+				}
+			};
 </script>

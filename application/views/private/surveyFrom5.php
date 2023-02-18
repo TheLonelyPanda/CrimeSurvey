@@ -41,8 +41,8 @@
 
 	if('<?=$u_check_new_survey_sdgs?>'!='0'){
 			$(function() {
-				document.getElementById("5_21<?=$d_surveySdgs->S2_2_1?>").checked = true;
-				if (<?= $d_surveySdgs->S2_2_1 ?> == '1') {
+				checkId(document.getElementById("5_21<?=$d_surveySdgs->S2_2_1?>"));
+				if ('<?= $d_surveySdgs->S2_2_1 ?>' == '1') {
 					$('input[name="5_S2_2_2"]').prop('readonly', false);
 				} else {
 					$('input[name="5_S2_2_2"]').prop('readonly', true);
@@ -51,4 +51,10 @@
 
 			});
 		};
+
+		function checkId(id){
+				if(id != null){
+					id.checked = true;
+				}
+			};
 </script>

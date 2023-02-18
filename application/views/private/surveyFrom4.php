@@ -19,7 +19,7 @@
 			<input type="radio" id="4_211" name="4_S2_2_1" value="1"> (1) เชื่อมั่นน้อย
 		</label>
 		<label class="radio-inline col-form-label  col-lg-3">
-			<input type="radio" id="4_210" name="4_S2_2_1" value="0"> (0) ไม่เชื่อมั่นเลย
+			<input type="radio" id="4_210" name="4_S2_2_1" value="99"> (0) ไม่เชื่อมั่นเลย
 		</label>
 	</div>
 </div>
@@ -43,7 +43,7 @@
 			<input type="radio" id="4_221" name="4_S2_2_2" value="1"> (1) เชื่อมั่นน้อย
 		</label>
 		<label class="radio-inline col-form-label  col-lg-3">
-			<input type="radio" id="4_220" name="4_S2_2_2" value="0"> (0) ไม่เชื่อมั่นเลย
+			<input type="radio" id="4_220" name="4_S2_2_2" value="99"> (0) ไม่เชื่อมั่นเลย
 		</label>
 	</div>
 </div>
@@ -67,7 +67,7 @@
 			<input type="radio" id="4_231" name="4_S2_2_3" value="1"> (1) เชื่อมั่นน้อย
 		</label>
 		<label class="radio-inline col-form-label  col-lg-3">
-			<input type="radio" id="4_230" name="4_S2_2_3" value="0"> (0) ไม่เชื่อมั่นเลย
+			<input type="radio" id="4_230" name="4_S2_2_3" value="99"> (0) ไม่เชื่อมั่นเลย
 		</label>
 	</div>
 </div>
@@ -75,10 +75,16 @@
 <script>
 	if('<?=$u_check_new_survey_trust_for_security?>'!='0'){
 			$(function() {
-				document.getElementById("4_21<?=$d_surveyTrustForSecurity->S2_2_1?>").checked = true;
-				document.getElementById("4_22<?=$d_surveyTrustForSecurity->S2_2_2?>").checked = true;
-				document.getElementById("4_23<?=$d_surveyTrustForSecurity->S2_2_3?>").checked = true;
+				checkId(document.getElementById("4_21<?=$d_surveyTrustForSecurity->S2_2_1?>"));
+				checkId(document.getElementById("4_22<?=$d_surveyTrustForSecurity->S2_2_2?>"));
+				checkId(document.getElementById("4_23<?=$d_surveyTrustForSecurity->S2_2_3?>"));
 
 			});
 		};
+
+		function checkId(id){
+				if(id != null){
+					id.checked = true;
+				}
+			};
 </script>

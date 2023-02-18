@@ -96,6 +96,43 @@ $(document).ready(function () {
 		} else {
 			formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น * สีแดงให้ครบก่อนบันทึกข้อมูล');
 		}
+	}).on('click', '.btn-form-save-delete', function () {
+		var element = this;
+		var restUrl = $(element).attr('data-url');
+		if (validBlank()) {
+			$.confirm({
+				icon: 'alarm outline icon',
+				title: 'ยืนยันการลบข้อมูล&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+				content: 'กดปุ่ม <b>ตกลง</b> เพื่อทำการยืนยันการลบข้อมูล',
+				confirmButton: 'ตกลง',
+				cancelButton: 'ยกเลิก',
+				confirmButtonClass: 'ui button green',
+				cancelButtonClass: 'ui button red',
+				columnClass: 'ui grid center aligned',
+				closeIcon: true,
+				closeIconClass: 'fa fa-close',
+				confirm: function () {
+					$.ajax({
+						url: restUrl,
+						data: $(FormSeletor).serialize(),
+						dataType: 'json',
+						type: 'post',
+						success: function (resp) {
+							if (resp.status) {
+								formMessageInfo(resp);
+							} else {
+								formMessageError(resp);
+							}
+						},
+						error: function (err, xhrr, http) {
+							toastMessageError({ title: 'Application Error', message: err.responseText });
+						}
+					});
+				},
+			});
+		} else {
+			formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น * สีแดงให้ครบก่อนบันทึกข้อมูล');
+		}
 	}).on('click', '.btn-form-hiddend-save', function () {
 		var element = this;
 		var restUrl = $(element).attr('data-url');
@@ -104,15 +141,7 @@ $(document).ready(function () {
 				url: restUrl,
 				data: $(FormSeletor).serialize(),
 				dataType: 'json',
-				type: 'post',
-				success: function (resp) {
-					if (!resp.status) {
-						formMessageError(resp);
-					}
-				},
-				error: function (err, xhrr, http) {
-					toastMessageError({ title: 'Application Error', message: err.responseText });
-				}
+				type: 'post'
 			});
 		} else {
 			formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น * สีแดงให้ครบก่อนบันทึกข้อมูล');

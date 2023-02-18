@@ -1249,7 +1249,7 @@
 
 									<label class=" col-form-label ">
 										<label class="radio-inline" style="align-self: center;"> 
-											<input type="radio" id="470" name="S4_7" value="0" > (0) ไม่เชื่อมั่นเลย
+											<input type="radio" id="470" name="S4_7" value="99" > (0) ไม่เชื่อมั่นเลย
 										</label>
 									</label>
 

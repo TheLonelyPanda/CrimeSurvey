@@ -64,11 +64,17 @@
 <script>
 	if('<?=$u_check_new_survey_panic_in_crimes?>'!='0'){
 			$(function() {
-				document.getElementById("3_211<?=$d_surveyPanicInCrimes->S2_2_1_1?>").checked = true;
-				document.getElementById("3_212<?=$d_surveyPanicInCrimes->S2_2_1_2?>").checked = true;
-				document.getElementById("3_213<?=$d_surveyPanicInCrimes->S2_2_1_3?>").checked = true;
-				document.getElementById("3_214<?=$d_surveyPanicInCrimes->S2_2_1_4?>").checked = true;
+				checkId(document.getElementById("3_211<?=$d_surveyPanicInCrimes->S2_2_1_1?>"));
+				checkId(document.getElementById("3_212<?=$d_surveyPanicInCrimes->S2_2_1_2?>"));
+				checkId(document.getElementById("3_213<?=$d_surveyPanicInCrimes->S2_2_1_3?>"));
+				checkId(document.getElementById("3_214<?=$d_surveyPanicInCrimes->S2_2_1_4?>"));
 
 			});
 		};
+
+		function checkId(id){
+				if(id != null){
+					id.checked = true;
+				}
+			};
 </script>
