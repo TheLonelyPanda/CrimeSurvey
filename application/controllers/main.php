@@ -1087,45 +1087,45 @@ class Main extends CI_Controller {
 			$this->datamodel->sql="select * from survey_profile where profile_id='$profile_id' or master_id = '$profile_id'";
 			$profileQueryData=$this->datamodel->list_data_sql_export();
 			$profileData = $this->dbutil->csv_from_result($profileQueryData);
-			write_file('./survey_profile.csv', $profileData);
+			write_file('./temp/survey_profile.csv', $profileData);
 
 			$this->datamodel->sql="select * from survey_victims where profile_id='$profile_id' or master_id = '$profile_id'";
 			$victimsQueryData=$this->datamodel->list_data_sql_export();
 			$victimsData = $this->dbutil->csv_from_result($victimsQueryData);
-			write_file('./survey_victims.csv', $victimsData);
+			write_file('./temp/survey_victims.csv', $victimsData);
 
 			$this->datamodel->sql="select * from survey_victims_crimes where profile_id='$profile_id' or master_id = '$profile_id'";
 			$crimesQueryData=$this->datamodel->list_data_sql_export();
 			$crimesData = $this->dbutil->csv_from_result($crimesQueryData);
-			write_file('./survey_victims_crimes.csv', $crimesData);
+			write_file('./temp/survey_victims_crimes.csv', $crimesData);
 
 			$this->datamodel->sql="select * from survey_knowledge_laws where profile_id='$profile_id'";
 			$lawsQueryData=$this->datamodel->list_data_sql_export();
 			$lawsData = $this->dbutil->csv_from_result($lawsQueryData);
-			write_file('./survey_knowledge_laws.csv', $lawsData);
+			write_file('./temp/survey_knowledge_laws.csv', $lawsData);
 
 			$this->datamodel->sql="select * from survey_panic_in_crimes where profile_id='$profile_id'";
 			$panicQueryData=$this->datamodel->list_data_sql_export();
 			$panicData = $this->dbutil->csv_from_result($panicQueryData);
-			write_file('./survey_panic_in_crimes.csv', $panicData);
+			write_file('./temp/survey_panic_in_crimes.csv', $panicData);
 
 			$this->datamodel->sql="select * from survey_trust_for_security where profile_id='$profile_id'";
 			$securityQueryData=$this->datamodel->list_data_sql_export();
 			$securityData = $this->dbutil->csv_from_result($securityQueryData);
-			write_file('./survey_trust_for_security.csv', $securityData);
+			write_file('./temp/survey_trust_for_security.csv', $securityData);
 
 			$this->datamodel->sql="select * from survey_sdgs where profile_id='$profile_id'";
 			$sdgsQueryData=$this->datamodel->list_data_sql_export();
 			$sdgsData = $this->dbutil->csv_from_result($sdgsQueryData);
-			write_file('./survey_sdgs.csv', $sdgsData);
+			write_file('./temp/survey_sdgs.csv', $sdgsData);
 
 			$this->datamodel->sql="select * from survey_trust_in_justic where profile_id='$profile_id'";
 			$justicQueryData=$this->datamodel->list_data_sql_export();
 			$justicData = $this->dbutil->csv_from_result($justicQueryData);
-			write_file('./survey_trust_in_justic.csv', $justicData);
+			write_file('./temp/survey_trust_in_justic.csv', $justicData);
 
 			// Zip the CSV files
-			$zip_file_path = './csv_'.$profile_id.'.zip';
+			$zip_file_path = './temp/csv_'.$profile_id.'.zip';
 			$this->zip->add_data('survey_profile.csv', $profileData);
 			$this->zip->add_data('survey_victims.csv', $victimsData);
 			$this->zip->add_data('survey_victims_crimes.csv', $crimesData);
