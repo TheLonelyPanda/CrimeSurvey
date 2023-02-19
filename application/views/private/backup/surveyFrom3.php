@@ -199,187 +199,187 @@
 
 		$('input[name="S1_1_1_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_2"]').on('change', function() {
 			if ($(this).val() === '9') {
-				$('input[name="S1_1_2_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_2_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_2_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_2_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_3"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S1_1_3_1_TEXT_1"]').prop('readonly', false);
-				$('input[name="S1_1_3_1_TEXT_2"]').prop('readonly', false);
-				$('input[name="S1_1_3_1_TEXT_3"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_1"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_2"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_3"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_4"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_5"]').prop('readonly', true);
+				$('input[name="S1_1_3_1_text_1"]').prop('readonly', false);
+				$('input[name="S1_1_3_1_text_2"]').prop('readonly', false);
+				$('input[name="S1_1_3_1_text_3"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_1"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_2"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_3"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_4"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_5"]').prop('readonly', true);
 			} else {
-				$('input[name="S1_1_3_1_TEXT_1"]').prop('readonly', true);
-				$('input[name="S1_1_3_1_TEXT_2"]').prop('readonly', true);
-				$('input[name="S1_1_3_1_TEXT_3"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_1"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_2"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_3"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_4"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_5"]').prop('readonly', false);
+				$('input[name="S1_1_3_1_text_1"]').prop('readonly', true);
+				$('input[name="S1_1_3_1_text_2"]').prop('readonly', true);
+				$('input[name="S1_1_3_1_text_3"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_1"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_2"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_3"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_4"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_5"]').prop('readonly', false);
 			}
 		});
 
 		$('input[name="S1_1_4"]').on('change', function() {
 			if ($(this).val() === '6') {
-				$('input[name="S1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S3_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="S3_4_TEXT"]').prop('readonly', false);
+				$('input[name="S3_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S3_4_TEXT"]').prop('readonly', true);
+				$('input[name="S3_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S3_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="S3_5_TEXT"]').prop('readonly', false);
+				$('input[name="S3_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S3_5_TEXT"]').prop('readonly', true);
+				$('input[name="S3_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_1"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S4_1_TEXT"]').prop('readonly', false);
+				$('input[name="S4_1_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_1_TEXT"]').prop('readonly', true);
+				$('input[name="S4_1_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_2"]').on('change', function() {
 			if ($(this).val() === '6') {
-				$('input[name="S4_2_TEXT"]').prop('readonly', false);
+				$('input[name="S4_2_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_2_TEXT"]').prop('readonly', true);
+				$('input[name="S4_2_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_3_2"]').on('change', function() {
 			if ($(this).val() === '2') {
-				$('input[name="S4_3_2_TEXT"]').prop('readonly', false);
+				$('input[name="S4_3_2_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_3_2_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_2_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_3_3"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '2') {
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '3') {
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '4') {
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '5') {
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '6') {
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '7') {
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
 			} else  {
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_6_1_1"]').on('change', function() {
 			if ($(this).val() === '4') {
-				$('input[name="S4_6_1_1_TEXT"]').prop('readonly', false);
+				$('input[name="S4_6_1_1_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_6_1_1_TEXT"]').prop('readonly', true);
+				$('input[name="S4_6_1_1_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[Id="462118"]').on('change', function () {
 			if ($(this).is(":checked")) {
-				$('input[name="S4_6_2_1_TEXT"]').prop('readonly', false);
+				$('input[name="S4_6_2_1_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_6_2_1_TEXT"]').prop('readonly', true);
+				$('input[name="S4_6_2_1_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_7"]').on('change', function() {
 			if ($(this).val() === '0') {
-				$('input[name="S4_7_TEXT"]').prop('readonly', false);
+				$('input[name="S4_7_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_7_text"]').prop('readonly', true);
 			}
 		});
 

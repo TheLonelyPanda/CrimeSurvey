@@ -85,7 +85,7 @@
 					<div class="line" style="float: right;">
 						<label for="2" class="col-form-label nText">แบบสอบถามลำดับที่</label>
 						<div class="col-lg-4 ">
-							<input type="text" class="form-control" name="1_TEXT" value=<?= $u_now_id ?> readonly />
+							<input type="text" class="form-control" name="1_text" value=<?= $u_now_id ?> readonly />
 						</div>
 					</div>
 					</br>
@@ -144,7 +144,7 @@
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" id="A4_41" name="A4_1_TEXT_3" readonly />
+												<input type="text" class="form-control" id="A4_41" name="A4_1_text_3" readonly />
 											</label>
 										</div>
 									</div>
@@ -181,13 +181,13 @@
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" id="A4_42" name="A4_2_TEXT_4" readonly />
+												<input type="text" class="form-control" id="A4_42" name="A4_2_text_4" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">อบต./ท.ตำบล/ท.เมือง/ท.นคร</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" id="A4_52" name="A4_2_TEXT_5" readonly />
+												<input type="text" class="form-control" id="A4_52" name="A4_2_text_5" readonly />
 											</label>
 										</div>
 									</div>
@@ -285,7 +285,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="1114_text" name="1_1_4_TEXT" readonly />
+									<input type="text" class="form-control" id="1114_text" name="1_1_4_text" readonly />
 								</div>
 							</div>
 
@@ -329,7 +329,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="1115_text" name="1_1_5_TEXT" readonly />
+									<input type="text" class="form-control" id="1115_text" name="1_1_5_text" readonly />
 								</div>
 							</div>
 
@@ -392,7 +392,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="112_text" name="1_2_TEXT" readonly />
+									<input type="text" class="form-control" id="112_text" name="1_2_text" readonly />
 								</div>
 							</div>
 
@@ -427,7 +427,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="113_text" name="1_3_TEXT" readonly />
+									<input type="text" class="form-control" id="113_text" name="1_3_text" readonly />
 								</div>
 							</div>
 
@@ -562,21 +562,21 @@
 			if ($(this).val() === '1') {
 				$('select[name="amphure_id_1"]').prop('disabled', false);
 				$('select[name="district_id_1"]').prop('disabled', false);
-				$('input[name="A4_1_TEXT_3"]').prop('readonly', false);
+				$('input[name="A4_1_text_3"]').prop('readonly', false);
 				$('select[name="province_id"]').prop('disabled', true);
 				$('select[name="amphure_id"]').prop('disabled', true);
 				$('select[name="district_id"]').prop('disabled', true);
-				$('input[name="A4_2_TEXT_4"]').prop('readonly', true);
-				$('input[name="A4_2_TEXT_5"]').prop('readonly', true);
+				$('input[name="A4_2_text_4"]').prop('readonly', true);
+				$('input[name="A4_2_text_5"]').prop('readonly', true);
 			} else {
 				$('select[name="amphure_id_1"]').prop('disabled', true);
 				$('select[name="district_id_1"]').prop('disabled', true);
-				$('input[name="A4_1_TEXT_3"]').prop('readonly', true);
+				$('input[name="A4_1_text_3"]').prop('readonly', true);
 				$('select[name="province_id"]').prop('disabled', false);
 				$('select[name="amphure_id"]').prop('disabled', false);
 				$('select[name="district_id"]').prop('disabled', false);
-				$('input[name="A4_2_TEXT_4"]').prop('readonly', false);
-				$('input[name="A4_2_TEXT_5"]').prop('readonly', false);
+				$('input[name="A4_2_text_4"]').prop('readonly', false);
+				$('input[name="A4_2_text_5"]').prop('readonly', false);
 			}
 		});
 
@@ -638,34 +638,34 @@
 
 		$('input[name="1_1_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="1_1_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="1_1_5_TEXT"]').prop('readonly', false);
+				$('input[name="1_1_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="1_1_5_TEXT"]').prop('readonly', true);
+				$('input[name="1_1_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="1_2"]').on('change', function() {
 			if ($(this).val() === '9') {
-				$('input[name="1_2_TEXT"]').prop('readonly', false);
+				$('input[name="1_2_text"]').prop('readonly', false);
 			} else {
-				$('input[name="1_2_TEXT"]').prop('readonly', true);
+				$('input[name="1_2_text"]').prop('readonly', true);
 			}
 		});
 
 
 		$('input[name="1_3"]').on('change', function() {
 			if ($(this).val() === '6') {
-				$('input[name="1_3_TEXT"]').prop('readonly', false);
+				$('input[name="1_3_text"]').prop('readonly', false);
 			} else {
-				$('input[name="1_3_TEXT"]').prop('readonly', true);
+				$('input[name="1_3_text"]').prop('readonly', true);
 			}
 		});
 		
@@ -749,21 +749,21 @@
 				if ('<?= $d_surveyProfile->A4 ?>' == '1') {
 					$('select[name="amphure_id_1"]').prop('disabled', false);
 					$('select[name="district_id_1"]').prop('disabled', false);
-					$('input[name="A4_1_TEXT_3"]').prop('readonly', false);
+					$('input[name="A4_1_text_3"]').prop('readonly', false);
 					$('select[name="province_id"]').prop('disabled', true);
 					$('select[name="amphure_id"]').prop('disabled', true);
 					$('select[name="district_id"]').prop('disabled', true);
-					$('input[name="A4_2_TEXT_4"]').prop('readonly', true);
-					$('input[name="A4_2_TEXT_5"]').prop('readonly', true);
+					$('input[name="A4_2_text_4"]').prop('readonly', true);
+					$('input[name="A4_2_text_5"]').prop('readonly', true);
 				} else {
 					$('select[name="amphure_id_1"]').prop('disabled', true);
 					$('select[name="district_id_1"]').prop('disabled', true);
-					$('input[name="A4_1_TEXT_3"]').prop('readonly', true);
+					$('input[name="A4_1_text_3"]').prop('readonly', true);
 					$('select[name="province_id"]').prop('disabled', false);
 					$('select[name="amphure_id"]').prop('disabled', false);
 					$('select[name="district_id"]').prop('disabled', false);
-					$('input[name="A4_2_TEXT_4"]').prop('readonly', false);
-					$('input[name="A4_2_TEXT_5"]').prop('readonly', false);
+					$('input[name="A4_2_text_4"]').prop('readonly', false);
+					$('input[name="A4_2_text_5"]').prop('readonly', false);
 				}
 				if ('<?= $d_surveyProfile->A4 ?>' == '2') {
 					$("#province").val('<?= $d_surveyProfile->A4_1 ?>').change();
@@ -782,33 +782,33 @@
 				checkId(document.getElementById("1113<?= $d_surveyProfile->{'1_1_3'} ?>"));
 				checkId(document.getElementById("1114<?= $d_surveyProfile->{'1_1_4'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_1_4'} ?>' == '8') {
-					$('input[name="1_1_4_TEXT"]').prop('readonly', false);
+					$('input[name="1_1_4_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_1_4_TEXT"]').prop('readonly', true);
+					$('input[name="1_1_4_text"]').prop('readonly', true);
 				}
 				document.getElementById("1114_text").value = '<?= $d_surveyProfile->{'1_1_4_text'} ?>';
 				checkId(document.getElementById("1115<?= $d_surveyProfile->{'1_1_5'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_1_5'} ?>' == '10') {
-					$('input[name="1_1_5_TEXT"]').prop('readonly', false);
+					$('input[name="1_1_5_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_1_5_TEXT"]').prop('readonly', true);
+					$('input[name="1_1_5_text"]').prop('readonly', true);
 				}
 				document.getElementById("1115_text").value = '<?= $d_surveyProfile->{'1_1_5_text'} ?>';
 				checkId(document.getElementById("1116<?= $d_surveyProfile->{'1_1_6'} ?>"));
 
 				checkId(document.getElementById("112<?= $d_surveyProfile->{'1_2'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_2'} ?>' == '9') {
-					$('input[name="1_2_TEXT"]').prop('readonly', false);
+					$('input[name="1_2_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_2_TEXT"]').prop('readonly', true);
+					$('input[name="1_2_text"]').prop('readonly', true);
 				}
 				document.getElementById("112_text").value = '<?= $d_surveyProfile->{'1_2_text'} ?>';
 
 				checkId(document.getElementById("113<?= $d_surveyProfile->{'1_3'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_3'} ?>' == '6') {
-					$('input[name="1_3_TEXT"]').prop('readonly', false);
+					$('input[name="1_3_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_3_TEXT"]').prop('readonly', true);
+					$('input[name="1_3_text"]').prop('readonly', true);
 				}
 				document.getElementById("113_text").value = '<?= $d_surveyProfile->{'1_3_text'} ?>';
 

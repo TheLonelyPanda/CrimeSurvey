@@ -171,7 +171,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S1_1_1_4_TEXT" readonly />
+									<input type="text" class="form-control" name="S1_1_1_4_text" readonly />
 								</div>
 							</div>
 
@@ -215,7 +215,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S1_1_1_5_TEXT" readonly />
+									<input type="text" class="form-control" name="S1_1_1_5_text" readonly />
 								</div>
 							</div>
 
@@ -279,7 +279,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S1_1_2_TEXT" readonly />
+									<input type="text" class="form-control" name="S1_1_2_text" readonly />
 								</div>
 							</div>
 
@@ -295,19 +295,19 @@
 										<div class="row" style=" padding-top: 13px;">
 											<label class="radio-inline " style="align-self: center;">เขต</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_1_TEXT_1" readonly />
+												<input type="text" class="form-control" name="S1_1_3_1_text_1" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">แขวง</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_1_TEXT_2" readonly />
+												<input type="text" class="form-control" name="S1_1_3_1_text_2" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_1_TEXT_3" readonly />
+												<input type="text" class="form-control" name="S1_1_3_1_text_3" readonly />
 											</label>
 										</div>
 									</div>
@@ -317,31 +317,31 @@
 											<input type="radio" id="1132" name="S1_1_3" value="2"> 
 											<label class="radio-inline" style="align-self: center;">(1.3.2) จังหวัดอื่นๆ (ระบุ)</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_2_TEXT_1" readonly />
+												<input type="text" class="form-control" name="S1_1_3_2_text_1" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">อำเภอ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_2_TEXT_2" readonly />
+												<input type="text" class="form-control" name="S1_1_3_2_text_2" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">ตำบล</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_2_TEXT_3" readonly />
+												<input type="text" class="form-control" name="S1_1_3_2_text_3" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_2_TEXT_4" readonly />
+												<input type="text" class="form-control" name="S1_1_3_2_text_4" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline" style="align-self: center;">อบต./ท.ตำบล/ท.เมือง/ท.นคร</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" name="S1_1_3_2_TEXT_5" readonly />
+												<input type="text" class="form-control" name="S1_1_3_2_text_5" readonly />
 											</label>
 										</div>
 									</div>
@@ -379,7 +379,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S1_1_4_TEXT" readonly />
+									<input type="text" class="form-control" name="S1_1_4_text" readonly />
 								</div>
 							</div>
 		
@@ -390,7 +390,7 @@
 					</br>
 					<label for="wight">จำนวนสมาชิกในครัวเรือนที่อยู่อาศัยในห้วง พ.ศ. 2565 มากกว่า 6 เดือนขึ้นไป รวมทั้งสิ้น</label> 
 					<label class="radio-inline col-form-label  col-lg-1">
-						<input type="text" class="form-control" name="S2_TEXT" />
+						<input type="text" class="form-control" name="S2_text" />
 					</label>
 					<label for="wight">คน</label>
 					</br>
@@ -413,107 +413,107 @@
 										<tr>
 											<td >1. (ตัวผู้ตอบ)</td>
 											<td ><input type="radio" id="2111" name="S2_1_1" value="1"> ชาย <input type="radio" id="2112" name="S2_1_1" value="2"> หญิง <input type="radio" id="2113" name="S2_1_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_1_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_1_2_text" /></td>
 											<td ><input type="radio" id="2131" name="S2_1_3" value="1"> เคย <input type="radio" id="2132" name="S2_1_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_1_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_1_4_text" /></td>
 										</tr>
 										<tr>
 											<td >2.</td>
 											<td ><input type="radio" id="2211" name="S2_2_1" value="1"> ชาย <input type="radio" id="2212" name="S2_2_1" value="2"> หญิง <input type="radio" id="2213" name="S2_2_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_2_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_2_2_text" /></td>
 											<td ><input type="radio" id="2231" name="S2_2_3" value="1"> เคย <input type="radio" id="2232" name="S2_2_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_2_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_2_4_text" /></td>
 										</tr>
 										<tr>
 											<td >3.</td>
 											<td ><input type="radio" id="2311" name="S2_3_1" value="1"> ชาย <input type="radio" id="2312" name="S2_3_1" value="2"> หญิง <input type="radio" id="2313" name="S2_3_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_3_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_3_2_text" /></td>
 											<td ><input type="radio" id="2331" name="S2_3_3" value="1"> เคย <input type="radio" id="2332" name="S2_3_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_3_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_3_4_text" /></td>
 										</tr>
 										<tr>
 											<td >4.</td>
 											<td ><input type="radio" id="2411" name="S2_4_1" value="1"> ชาย <input type="radio" id="2412" name="S2_4_1" value="2"> หญิง <input type="radio" id="2413" name="S2_4_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_4_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_4_2_text" /></td>
 											<td ><input type="radio" id="2431" name="S2_4_3" value="1"> เคย <input type="radio" id="2432" name="S2_4_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_4_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_4_4_text" /></td>
 										</tr>
 										<tr>
 											<td >5.</td>
 											<td ><input type="radio" id="2511" name="S2_5_1" value="1"> ชาย <input type="radio" id="2512" name="S2_5_1" value="2"> หญิง <input type="radio" id="2513" name="S2_5_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_5_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_5_2_text" /></td>
 											<td ><input type="radio" id="2531" name="S2_5_3" value="1"> เคย <input type="radio" id="2532" name="S2_5_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_5_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_5_4_text" /></td>
 										</tr>
 										<tr>
 											<td >6.</td>
 											<td ><input type="radio" id="2611" name="S2_6_1" value="1"> ชาย <input type="radio" id="2612" name="S2_6_1" value="2"> หญิง <input type="radio" id="2613" name="S2_6_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_6_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_6_2_text" /></td>
 											<td ><input type="radio" id="2631" name="S2_6_3" value="1"> เคย <input type="radio" id="2632" name="S2_6_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_6_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_6_4_text" /></td>
 										</tr>
 										<tr>
 											<td >7.</td>
 											<td ><input type="radio" id="2711" name="S2_7_1" value="1"> ชาย <input type="radio" id="2712" name="S2_7_1" value="2"> หญิง <input type="radio" id="2713" name="S2_7_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_7_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_7_2_text" /></td>
 											<td ><input type="radio" id="2731" name="S2_7_3" value="1"> เคย <input type="radio" id="2732" name="S2_7_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_7_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_7_4_text" /></td>
 										</tr>
 										<tr>
 											<td >8.</td>
 											<td ><input type="radio" id="2811" name="S2_8_1" value="1"> ชาย <input type="radio" id="2812" name="S2_8_1" value="2"> หญิง <input type="radio" id="2813" name="S2_8_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_8_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_8_2_text" /></td>
 											<td ><input type="radio" id="2831" name="S2_8_3" value="1"> เคย <input type="radio" id="2832" name="S2_8_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_8_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_8_4_text" /></td>
 										</tr>
 										<tr>
 											<td >9.</td>
 											<td ><input type="radio" id="2911" name="S2_9_1" value="1"> ชาย <input type="radio" id="2912" name="S2_9_1" value="2"> หญิง <input type="radio" id="2913" name="S2_9_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_9_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_9_2_text" /></td>
 											<td ><input type="radio" id="2931" name="S2_9_3" value="1"> เคย <input type="radio" id="2932" name="S2_9_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_9_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_9_4_text" /></td>
 										</tr>
 										<tr>
 											<td >10.</td>
 											<td ><input type="radio" id="210_11" name="S2_10_1" value="1"> ชาย <input type="radio" id="210_12" name="S2_10_1" value="2"> หญิง <input type="radio" id="210_13" name="S2_10_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_10_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_10_2_text" /></td>
 											<td ><input type="radio" id="210_31" name="S2_10_3" value="1"> เคย <input type="radio" id="210_32" name="S2_10_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_10_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_10_4_text" /></td>
 										</tr>
 										<tr>
 											<td >11.</td>
 											<td ><input type="radio" id="211_11" name="S2_11_1" value="1"> ชาย <input type="radio" id="211_12" name="S2_11_1" value="2"> หญิง <input type="radio" id="211_13" name="S2_11_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_11_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_11_2_text" /></td>
 											<td ><input type="radio" id="211_31" name="S2_11_3" value="1"> เคย <input type="radio" id="211_32" name="S2_11_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_11_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_11_4_text" /></td>
 										</tr>
 										<tr>
 											<td >12.</td>
 											<td ><input type="radio" id="212_11" name="S2_12_1" value="1"> ชาย <input type="radio" id="212_12" name="S2_12_1" value="2"> หญิง <input type="radio" id="212_13" name="S2_12_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_12_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_12_2_text" /></td>
 											<td ><input type="radio" id="212_31" name="S2_12_3" value="1"> เคย <input type="radio" id="212_32" name="S2_12_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_12_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_12_4_text" /></td>
 										</tr>
 										<tr>
 											<td >13.</td>
 											<td ><input type="radio" id="213_11" name="S2_13_1" value="1"> ชาย <input type="radio" id="213_12" name="S2_13_1" value="2"> หญิง <input type="radio" id="213_13" name="S2_13_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_13_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_13_2_text" /></td>
 											<td ><input type="radio" id="213_31" name="S2_13_3" value="1"> เคย <input type="radio" id="213_32" name="S2_13_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_13_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_13_4_text" /></td>
 										</tr>
 										<tr>
 											<td >14.</td>
 											<td ><input type="radio" id="21411" name="S2_14_1" value="1"> ชาย <input type="radio" id="21412" name="S2_14_1" value="2"> หญิง <input type="radio" id="21413" name="S2_14_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_14_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_14_2_text" /></td>
 											<td ><input type="radio" id="21431" name="S2_14_3" value="1"> เคย <input type="radio" id="21432" name="S2_14_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_14_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_14_4_text" /></td>
 										</tr>
 										<tr>
 											<td >15.</td>
 											<td ><input type="radio" id="21511" name="S2_15_1" value="1"> ชาย <input type="radio" id="21512" name="S2_15_1" value="2"> หญิง <input type="radio" id="21513" name="S2_15_1" value="3"> ทางเลือก</td>
-											<td ><input type="text" class="form-control" name="S2_15_2_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_15_2_text" /></td>
 											<td ><input type="radio" id="21531" name="S2_15_3" value="1"> เคย <input type="radio" id="21532" name="S2_15_3" value="2"> ไม่เคย</td>
-											<td ><input type="text" class="form-control" name="S2_15_4_TEXT" /></td>
+											<td ><input type="text" class="form-control" name="S2_15_4_text" /></td>
 										</tr>
 									</tbody>
 							</table>
@@ -609,7 +609,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S3_4_TEXT" readonly />
+									<input type="text" class="form-control" name="S3_4_text" readonly />
 								</div>
 							</div>
 
@@ -653,7 +653,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S3_5_TEXT" readonly />
+									<input type="text" class="form-control" name="S3_5_text" readonly />
 								</div>
 							</div>
 
@@ -690,7 +690,7 @@
 											<input type="radio" id="411" name="S4_1" value="2" >จำได้ ระบุ
 										</label>
 										<label class="radio-inline col-form-label  col-lg-8">
-											<input type="text" class="form-control" name="S4_1_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_1_text" readonly />
 										</label>
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
@@ -723,7 +723,7 @@
 											<input type="radio" id="426" name="S4_2" value="6" > (6) ความสัมพันธ์อื่นๆ (ระบุ)
 										</label>
 										<label class="radio-inline col-form-label  col-lg-6">
-											<input type="text" class="form-control" name="S4_2_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_2_text" readonly />
 										</label>
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
@@ -794,7 +794,7 @@
 											<input type="radio" id="4322" name="S4_3_2" value="2" > (2) มี เป็นมูลค่า
 										</label>
 										<label class="radio-inline col-form-label  col-lg-6">
-											<input type="text" class="form-control" name="S4_3_2_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_2_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -812,7 +812,7 @@
 											<input type="radio" id="4331" name="S4_3_3" value="1" > (1) ค่ารักษาพยาบาล จำนวน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-5">
-											<input type="text" class="form-control" name="S4_3_3_1_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_3_1_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -823,7 +823,7 @@
 											<input type="radio" id="4332" name="S4_3_3" value="2" > (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ) 
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="text" class="form-control" name="S4_3_3_2_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_3_2_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -834,7 +834,7 @@
 											<input type="radio" id="4333" name="S4_3_3" value="3" > (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ)  จำนวน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-2">
-											<input type="text" class="form-control" name="S4_3_3_3_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_3_3_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -845,7 +845,7 @@
 											<input type="radio" id="4334" name="S4_3_3" value="4" > (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-4">
-											<input type="text" class="form-control" name="S4_3_3_4_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_3_4_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -856,7 +856,7 @@
 											<input type="radio" id="4335" name="S4_3_3" value="5" > (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="text" class="form-control" name="S4_3_3_5_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_3_5_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -867,7 +867,7 @@
 											<input type="radio" id="4336" name="S4_3_3" value="6" > (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-4">
-											<input type="text" class="form-control" name="S4_3_3_6_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_3_6_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -878,7 +878,7 @@
 											<input type="radio" id="4337" name="S4_3_3" value="7" > (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="text" class="form-control" name="S4_3_3_7_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_3_3_7_text" readonly />
 										</label>
 										<label class="radio-inline" style="align-self: center;"> 
 											บาท
@@ -1128,7 +1128,7 @@
 							</div>
 							<div class="row">
 								<div class="col-lg-12">
-									<textarea type="text" class="form-control" id="45" rows="3" name="S4_5_TEXT"></textarea>
+									<textarea type="text" class="form-control" id="45" rows="3" name="S4_5_text"></textarea>
 								</div>
 							</div>
 
@@ -1155,7 +1155,7 @@
 											<input type="radio" id="46114" name="S4_6_1_1" value="4" > (4) อื่นๆ  โปรดระบุ
 										</label>
 										<label class="radio-inline col-form-label  col-lg-8">
-											<input type="text" class="form-control" name="S4_6_1_1_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_6_1_1_text" readonly />
 										</label>
 									</label>
 								</div>
@@ -1222,7 +1222,7 @@
 											<input type="checkbox" id="462118" name="S4_6_2_1" value="18" > (18) อื่นๆ (ระบุ)
 										</label>
 										<label class="radio-inline col-form-label  col-lg-8">
-											<input type="text" class="form-control" name="S4_6_2_1_TEXT" readonly />
+											<input type="text" class="form-control" name="S4_6_2_1_text" readonly />
 										</label>
 									</label>
 								</div>
@@ -1258,7 +1258,7 @@
 									โปรดระบุเหตุผล
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S4_7_TEXT" readonly />
+									<input type="text" class="form-control" name="S4_7_text" readonly />
 								</div>
 							</div>
 									
@@ -1589,187 +1589,187 @@
 
 		$('input[name="S1_1_1_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_2"]').on('change', function() {
 			if ($(this).val() === '9') {
-				$('input[name="S1_1_2_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_2_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_2_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_2_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_3"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S1_1_3_1_TEXT_1"]').prop('readonly', false);
-				$('input[name="S1_1_3_1_TEXT_2"]').prop('readonly', false);
-				$('input[name="S1_1_3_1_TEXT_3"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_1"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_2"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_3"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_4"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_5"]').prop('readonly', true);
+				$('input[name="S1_1_3_1_text_1"]').prop('readonly', false);
+				$('input[name="S1_1_3_1_text_2"]').prop('readonly', false);
+				$('input[name="S1_1_3_1_text_3"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_1"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_2"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_3"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_4"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_5"]').prop('readonly', true);
 			} else {
-				$('input[name="S1_1_3_1_TEXT_1"]').prop('readonly', true);
-				$('input[name="S1_1_3_1_TEXT_2"]').prop('readonly', true);
-				$('input[name="S1_1_3_1_TEXT_3"]').prop('readonly', true);
-				$('input[name="S1_1_3_2_TEXT_1"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_2"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_3"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_4"]').prop('readonly', false);
-				$('input[name="S1_1_3_2_TEXT_5"]').prop('readonly', false);
+				$('input[name="S1_1_3_1_text_1"]').prop('readonly', true);
+				$('input[name="S1_1_3_1_text_2"]').prop('readonly', true);
+				$('input[name="S1_1_3_1_text_3"]').prop('readonly', true);
+				$('input[name="S1_1_3_2_text_1"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_2"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_3"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_4"]').prop('readonly', false);
+				$('input[name="S1_1_3_2_text_5"]').prop('readonly', false);
 			}
 		});
 
 		$('input[name="S1_1_4"]').on('change', function() {
 			if ($(this).val() === '6') {
-				$('input[name="S1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S3_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="S3_4_TEXT"]').prop('readonly', false);
+				$('input[name="S3_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S3_4_TEXT"]').prop('readonly', true);
+				$('input[name="S3_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S3_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="S3_5_TEXT"]').prop('readonly', false);
+				$('input[name="S3_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S3_5_TEXT"]').prop('readonly', true);
+				$('input[name="S3_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_1"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S4_1_TEXT"]').prop('readonly', false);
+				$('input[name="S4_1_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_1_TEXT"]').prop('readonly', true);
+				$('input[name="S4_1_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_2"]').on('change', function() {
 			if ($(this).val() === '6') {
-				$('input[name="S4_2_TEXT"]').prop('readonly', false);
+				$('input[name="S4_2_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_2_TEXT"]').prop('readonly', true);
+				$('input[name="S4_2_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_3_2"]').on('change', function() {
 			if ($(this).val() === '2') {
-				$('input[name="S4_3_2_TEXT"]').prop('readonly', false);
+				$('input[name="S4_3_2_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_3_2_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_2_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_3_3"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '2') {
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '3') {
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '4') {
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '5') {
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '6') {
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			} else if ($(this).val() === '7') {
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', false);
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', false);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
 			} else  {
-				$('input[name="S4_3_3_1_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_2_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_3_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_4_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_5_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_6_TEXT"]').prop('readonly', true);
-				$('input[name="S4_3_3_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_3_3_1_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_2_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_3_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_4_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_5_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_6_text"]').prop('readonly', true);
+				$('input[name="S4_3_3_7_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_6_1_1"]').on('change', function() {
 			if ($(this).val() === '4') {
-				$('input[name="S4_6_1_1_TEXT"]').prop('readonly', false);
+				$('input[name="S4_6_1_1_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_6_1_1_TEXT"]').prop('readonly', true);
+				$('input[name="S4_6_1_1_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[Id="462118"]').on('change', function () {
 			if ($(this).is(":checked")) {
-				$('input[name="S4_6_2_1_TEXT"]').prop('readonly', false);
+				$('input[name="S4_6_2_1_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_6_2_1_TEXT"]').prop('readonly', true);
+				$('input[name="S4_6_2_1_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S4_7"]').on('change', function() {
 			if ($(this).val() === '0') {
-				$('input[name="S4_7_TEXT"]').prop('readonly', false);
+				$('input[name="S4_7_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S4_7_TEXT"]').prop('readonly', true);
+				$('input[name="S4_7_text"]').prop('readonly', true);
 			}
 		});
 

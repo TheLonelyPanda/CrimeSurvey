@@ -89,6 +89,16 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$profile_id;	
 			$this->datamodel->delete();
 
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profile_id;	
+			$this->datamodel->delete();
+
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->pk_name='master_id';
+			$this->datamodel->pk_value=$profile_id;	
+			$this->datamodel->delete();
+
 			$this->functionhelper->jsonHeader();
 			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/index'));      
 		}
@@ -110,6 +120,11 @@ class Main extends CI_Controller {
 			$this->datamodel->delete();
 
 			$this->datamodel->table_name='survey_victims';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profile_id;	
+			$this->datamodel->delete();
+
+			$this->datamodel->table_name='survey_victims_crimes';
 			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profile_id;	
 			$this->datamodel->delete();
@@ -157,11 +172,10 @@ class Main extends CI_Controller {
 				$data['d_surveyVictimslist']=$this->datamodel->list_data_sql();
 			}
 
-			$data['u_check_new_survey_profile']=$this->chkHave($data['u_now_id'],'survey_profile');
-			if($data['u_check_new_survey_profile'] == 0){
+			$data['u_check_new_survey_profile_victim']=$this->chkHave($data['u_now_id'],'survey_profile');
+			if($data['u_check_new_survey_profile_victim'] == 0){
 				$objSurveyProfile=new MyDto();
 				$objSurveyProfile->profile_id = $profile_id;
-				$objSurveyProfile->master_id = '';
 				$objSurveyProfile->{'1_1_1'} = '';
 				$objSurveyProfile->{'1_1_2'} = '';
 				$objSurveyProfile->{'1_1_3'} = '';
@@ -170,14 +184,13 @@ class Main extends CI_Controller {
 				$objSurveyProfile->{'1_1_5'} = '';
 				$objSurveyProfile->{'1_1_5_text'} = '';
 				$objSurveyProfile->{'1_1_6'} = '';
-				$objSurveyProfile->{'1_2'} = '';
-				$objSurveyProfile->{'1_2_text'} = '';
-				$objSurveyProfile->{'1_3'} = '';
-				$objSurveyProfile->{'1_3_text'} = '';
-				$data['d_surveyProfile']=$objSurveyProfile;
+				$data['d_surveyProfile_victim']=$objSurveyProfile;
 			}else{
 				$this->datamodel->sql="select * from survey_profile where profile_id='$profile_id'";
-				$data['d_surveyProfile']=$this->datamodel->first_row_data_sql();
+				$data['d_surveyProfile_victim']=$this->datamodel->first_row_data_sql();
+
+				$this->datamodel->sql="select * from survey_profile where master_id='$profile_id'";
+				$data['d_surveyProfile_victimlist']=$this->datamodel->list_data_sql();
 			}
 
 			$data['u_check_new_survey_victims_crimes']=$this->chkHave($data['u_now_id'],'survey_victims');
@@ -201,9 +214,9 @@ class Main extends CI_Controller {
 				$objdSurveyVictimsCrimes->S4_4_4_5  =  '';
 				$objdSurveyVictimsCrimes->S4_4_4_6  =  '';
 				$objdSurveyVictimsCrimes->S4_4_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6  =  '';
 				$objdSurveyVictimsCrimes->S4_4_6_1  =  '';
 				$objdSurveyVictimsCrimes->S4_4_6_1_text  =  '';
-				$objdSurveyVictimsCrimes->S4_4_6_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_6_2_1  =  '';
 				$objdSurveyVictimsCrimes->S4_4_6_2_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_6_2_3  =  '';
@@ -231,6 +244,9 @@ class Main extends CI_Controller {
 			} else{
 				$this->datamodel->sql="select * from survey_victims_crimes where profile_id='$profile_id'";
 				$data['d_surveyVictimsCrimes']=$this->datamodel->first_row_data_sql();
+
+				$this->datamodel->sql="select * from survey_victims_crimes where master_id='$profile_id'";
+				$data['d_surveyVictimsCrimeslist']=$this->datamodel->list_data_sql();
 			}
 
 	        $this->load->view('/private/surveyFrom1', $data);       
@@ -569,27 +585,27 @@ class Main extends CI_Controller {
 				$objProfile->A4_1 = 'กรุงเทพมหานคร';
 				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id_1'));
 				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id_1'));
-				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_1_TEXT_3'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_1_text_3'));
 				$objProfile->A4_5 = '';
 			}else{
 				$objProfile->A4_1 = $this->checkEmpty($this->input->post('province_id'));
 				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id'));
 				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id'));
-				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_2_TEXT_4'));
-				$objProfile->A4_5 = $this->checkEmpty($this->input->post('A4_2_TEXT_5'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_2_text_4'));
+				$objProfile->A4_5 = $this->checkEmpty($this->input->post('A4_2_text_5'));
 			}
 			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_1_1'));
 			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_1_2'));
 			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_1_3'));
 			$objProfile->{'1_1_4'} = $this->checkEmpty($this->input->post('1_1_4'));
-			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_1_4_TEXT'));
+			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_1_4_text'));
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_1_5'));
-			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_TEXT'));
+			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
 			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
-			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_TEXT'));
+			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
-			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_TEXT'));
+			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
 			if($this->chkHave($u_now_id,'survey_profile')=='0'){
 				$this->datamodel->insert($objProfile);
 			}else{
@@ -597,7 +613,9 @@ class Main extends CI_Controller {
 			}	
 			$objlist=new MyDto();
 			$objlist->running_num = 0;
+			$objlist->profile_id = $u_now_id;
 			$this->saveSurvey1($u_now_id,1,$objlist);
+			$this->saveSurvey1S4(1,$objlist);
 			$this->saveSurvey2($u_now_id);
 			$this->saveSurvey3($u_now_id);
 			$this->saveSurvey4($u_now_id);
@@ -621,7 +639,7 @@ class Main extends CI_Controller {
 	public function saveSurvey($hidden){
 		$user_name=$this->isLogin();
 		if($user_name != false){    
-			$profileId = $this->input->post('1_TEXT');
+			$profileId = $this->input->post('1_text');
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_profile';
 			$this->datamodel->pk_name='profile_id';
@@ -635,27 +653,27 @@ class Main extends CI_Controller {
 				$objProfile->A4_1 = 'กรุงเทพมหานคร';
 				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id_1'));
 				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id_1'));
-				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_1_TEXT_3'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_1_text_3'));
 				$objProfile->A4_5 = '';
 			}else{
 				$objProfile->A4_1 = $this->checkEmpty($this->input->post('province_id'));
 				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id'));
 				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id'));
-				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_2_TEXT_4'));
-				$objProfile->A4_5 = $this->checkEmpty($this->input->post('A4_2_TEXT_5'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_2_text_4'));
+				$objProfile->A4_5 = $this->checkEmpty($this->input->post('A4_2_text_5'));
 			}
 			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_1_1'));
 			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_1_2'));
 			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_1_3'));
 			$objProfile->{'1_1_4'} = $this->checkEmpty($this->input->post('1_1_4'));
-			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_1_4_TEXT'));
+			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_1_4_text'));
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_1_5'));
-			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_TEXT'));
+			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
 			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
-			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_TEXT'));
+			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
-			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_TEXT'));
+			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
 			if($this->chkHave($profileId,'survey_profile')=='0'){
 				$this->datamodel->insert($objProfile);
 			}else{
@@ -664,7 +682,9 @@ class Main extends CI_Controller {
 
 			$objlist=new MyDto();
 			$objlist->running_num = 0;
+			$objlist->profile_id = $profileId;
 			$this->saveSurvey1($profileId,1,$objlist);
+			$this->saveSurvey1S4(1,$objlist);
 
 			$this->datamodel->table_name='survey_victims';
 			$this->datamodel->condition='where master_id='.$profileId; 
@@ -672,6 +692,8 @@ class Main extends CI_Controller {
 
 			for ($i=2; $i <= count($listData)+1; $i++) { 
 				$this->saveSurvey1($profileId,$i,$listData[$i-2]);
+				$this->saveSurvey1S3($i,$listData[$i-2]);
+				$this->saveSurvey1S4($i,$listData[$i-2]);
 			}
 			$this->saveSurvey2($profileId);
 			$this->saveSurvey3($profileId);
@@ -708,7 +730,7 @@ class Main extends CI_Controller {
 					$objdSurveyVictims->master_id = $profileId;
 					$objdSurveyVictims->profile_id = $newProfileId;
 
-					$this->saveSurvey1S3($newProfileId,$master_id);
+					$this->initSurvey1S3($newProfileId,$master_id);
 				}
 			
 			}else{
@@ -748,7 +770,7 @@ class Main extends CI_Controller {
 		return $running->running_num;
 	}
 
-	public function saveSurvey1S3($profileId,$masterId){
+	public function initSurvey1S3($profileId,$masterId){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -761,9 +783,9 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_S3_3_2'));
 			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_S3_3_3'));
 			$objProfile->{'1_1_4'} = $this->checkEmpty($this->input->post('1_S3_3_4'));
-			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_S3_3_4_TEXT'));
+			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_S3_3_4_text'));
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_S3_3_5'));
-			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_3_5_TEXT'));
+			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_3_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_3_6'));
 			if($this->chkHave($profileId,'survey_profile')=='0'){
 				$this->datamodel->insert($objProfile);
@@ -774,59 +796,94 @@ class Main extends CI_Controller {
 		} 
     }
 
-	
-
-	public function saveSurvey1S4($profileId,$loop){
+	public function saveSurvey1S3($loop,$list){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
+			$objProfile=new MyDto();
+			$profileId = $list->profile_id;
+			if($loop != '1'){
+				$master_id = $list->master_id;
+				$objProfile->master_id = $master_id;
+			}
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$objProfile=new MyDto();
+			
+			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_1'));
+			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_2'));
+			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_3'));
+			$objProfile->{'1_1_4'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_4'));
+			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_4_text'));
+			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_5'));
+			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_5_text'));
+			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_6'));
+			if($this->chkHave($profileId,'survey_profile')=='0'){
+				$this->datamodel->insert($objProfile);
+			}else{
+				$this->datamodel->update($objProfile);
+			}
+
+		} 
+    }
+
+	
+	public function saveSurvey1S4($loop,$list){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$objdSurveyVictimsCrimes=new MyDto();
+			$profileId = $list->profile_id;
+			if($loop != 1){
+				$master_id = $list->master_id;
+				$objdSurveyVictimsCrimes->master_id = $master_id;
+			}
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_victims_crimes';
 			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profileId;
-			$objdSurveyVictimsCrimes=new MyDto();
 			$objdSurveyVictimsCrimes->profile_id = $profileId;
-			$objdSurveyVictimsCrimes->master_id = $loop;
-			$objdSurveyVictimsCrimes->S4_4_1 = $this->checkEmpty($this->input->post('1_S4_4_1'));
-			$objdSurveyVictimsCrimes->S4_4_1_text = $this->checkEmpty($this->input->post('1_S4_4_1_text'));
-			$objdSurveyVictimsCrimes->S4_4_2 = $this->checkEmpty($this->input->post('1_S4_4_2'));
-			$objdSurveyVictimsCrimes->S4_4_2_text = $this->checkEmpty($this->input->post('1_S4_4_2_text'));
-			$objdSurveyVictimsCrimes->S4_4_3 = $this->checkEmpty($this->input->post('1_S4_4_3'));
-			$objdSurveyVictimsCrimes->S4_4_3_1 = $this->checkEmpty($this->input->post('1_S4_4_3_1'));
-			$objdSurveyVictimsCrimes->S4_4_3_2 = $this->checkEmpty($this->input->post('1_S4_4_3_2'));
-			$objdSurveyVictimsCrimes->S4_4_3_2_text = $this->checkEmpty($this->input->post('1_S4_4_3_2_text'));
-			$objdSurveyVictimsCrimes->S4_4_3_3 = $this->checkEmpty($this->input->post('1_S4_4_3_3'));
-			$objdSurveyVictimsCrimes->S4_4_3_3_text = $this->checkEmpty($this->input->post('1_S4_4_3_3_text'));
-			$objdSurveyVictimsCrimes->S4_4_4_1 = $this->checkEmpty($this->input->post('1_S4_4_4_1'));
-			$objdSurveyVictimsCrimes->S4_4_4_2 = $this->checkEmpty($this->input->post('1_S4_4_4_2'));
-			$objdSurveyVictimsCrimes->S4_4_4_3 = $this->checkEmpty($this->input->post('1_S4_4_4_3'));
-			$objdSurveyVictimsCrimes->S4_4_4_4 = $this->checkEmpty($this->input->post('1_S4_4_4_4'));
-			$objdSurveyVictimsCrimes->S4_4_4_5 = $this->checkEmpty($this->input->post('1_S4_4_4_5'));
-			$objdSurveyVictimsCrimes->S4_4_4_6 = $this->checkEmpty($this->input->post('1_S4_4_4_6'));
-			$objdSurveyVictimsCrimes->S4_4_5 = $this->checkEmpty($this->input->post('1_S4_4_5'));
-			$objdSurveyVictimsCrimes->S4_4_6_1 = $this->checkEmpty($this->input->post('1_S4_4_6_1'));
-			$objdSurveyVictimsCrimes->S4_4_6_1_text = $this->checkEmpty($this->input->post('1_S4_4_6_1_text'));
-			$objdSurveyVictimsCrimes->S4_4_6_2 = $this->checkEmpty($this->input->post('1_S4_4_6_2'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_1 = $this->checkEmpty($this->input->post('1_S4_4_6_2_1'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_2 = $this->checkEmpty($this->input->post('1_S4_4_6_2_2'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_3 = $this->checkEmpty($this->input->post('1_S4_4_6_2_3'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_4 = $this->checkEmpty($this->input->post('1_S4_4_6_2_4'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_5 = $this->checkEmpty($this->input->post('1_S4_4_6_2_5'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_6 = $this->checkEmpty($this->input->post('1_S4_4_6_2_6'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_7 = $this->checkEmpty($this->input->post('1_S4_4_6_2_7'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_8 = $this->checkEmpty($this->input->post('1_S4_4_6_2_8'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_9 = $this->checkEmpty($this->input->post('1_S4_4_6_2_9'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_10 = $this->checkEmpty($this->input->post('1_S4_4_6_2_10'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_11 = $this->checkEmpty($this->input->post('1_S4_4_6_2_11'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_12 = $this->checkEmpty($this->input->post('1_S4_4_6_2_12'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_13 = $this->checkEmpty($this->input->post('1_S4_4_6_2_13'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_14 = $this->checkEmpty($this->input->post('1_S4_4_6_2_14'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_15 = $this->checkEmpty($this->input->post('1_S4_4_6_2_15'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_16 = $this->checkEmpty($this->input->post('1_S4_4_6_2_16'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_17 = $this->checkEmpty($this->input->post('1_S4_4_6_2_17'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_18 = $this->checkEmpty($this->input->post('1_S4_4_6_2_18'));
-			$objdSurveyVictimsCrimes->S4_4_6_2_18_text = $this->checkEmpty($this->input->post('1_S4_4_6_2_18_text'));
-			$objdSurveyVictimsCrimes->S4_4_7 = $this->checkEmpty($this->input->post('1_S4_4_7'));
-			$objdSurveyVictimsCrimes->S4_4_7_text = $this->checkEmpty($this->input->post('1_S4_4_7_text'));
+			$objdSurveyVictimsCrimes->S4_4_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_1'));
+			$objdSurveyVictimsCrimes->S4_4_1_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_1_text'));
+			$objdSurveyVictimsCrimes->S4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2'));
+			$objdSurveyVictimsCrimes->S4_4_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2_text'));
+			$objdSurveyVictimsCrimes->S4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2'));
+			$objdSurveyVictimsCrimes->S4_4_3_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_'.$this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3')).'_text'));
+			$objdSurveyVictimsCrimes->S4_4_4_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_1'));
+			$objdSurveyVictimsCrimes->S4_4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_2'));
+			$objdSurveyVictimsCrimes->S4_4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_3'));
+			$objdSurveyVictimsCrimes->S4_4_4_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_4'));
+			$objdSurveyVictimsCrimes->S4_4_4_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_5'));
+			$objdSurveyVictimsCrimes->S4_4_4_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_6'));
+			$objdSurveyVictimsCrimes->S4_4_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_5'));
+			$objdSurveyVictimsCrimes->S4_4_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6'));
+			$objdSurveyVictimsCrimes->S4_4_6_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_1'));
+			$objdSurveyVictimsCrimes->S4_4_6_1_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_1_text'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_1'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_2'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_3'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_4'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_5'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_6'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_7'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_8 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_8'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_9 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_9'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_10 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_10'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_11 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_11'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_12 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_12'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_13 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_13'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_14 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_14'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_15 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_15'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_16 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_16'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_17 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_17'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_18 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_18'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_18_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_18_text'));
+			$objdSurveyVictimsCrimes->S4_4_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_7'));
+			$objdSurveyVictimsCrimes->S4_4_7_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_7_text'));
 
 	
 			if($this->chkHave($profileId,'survey_victims_crimes') == 0){

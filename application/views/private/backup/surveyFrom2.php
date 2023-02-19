@@ -383,7 +383,7 @@
 							</div>
 							<div class="row">
 								<div class="col-lg-12">
-									<textarea type="text" id="24" class="form-control" rows="3" name="S2_4_TEXT"></textarea>
+									<textarea type="text" id="24" class="form-control" rows="3" name="S2_4_text"></textarea>
 								</div>
 							</div>
 							<div class="row">
@@ -391,7 +391,7 @@
 							</div>
 							<div class="row">
 								<div class="col-lg-12">
-									<textarea type="text" id="25" class="form-control" rows="3" name="S2_5_TEXT"></textarea>
+									<textarea type="text" id="25" class="form-control" rows="3" name="S2_5_text"></textarea>
 								</div>
 							</div>
 						</div>
@@ -441,26 +441,26 @@
 
 		$('input[name="S1_1_1_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_6"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S1_1_1_6_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_6_text"]').prop('readonly', false);
 				$('input[name="S1_1_1_6_1"]').attr('readonly', false);
 			} else {
-				$('input[name="S1_1_1_6_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_6_text"]').prop('readonly', true);
 				$('input[name="S1_1_1_6_1"]').attr('readonly', true);
 			}
 		});

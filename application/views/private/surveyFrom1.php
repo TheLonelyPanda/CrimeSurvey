@@ -2,7 +2,7 @@
 </br>
 <label for="wight">จำนวนสมาชิกในครัวเรือนที่อยู่อาศัยในห้วง พ.ศ. 2565 มากกว่า 6 เดือนขึ้นไป รวมทั้งสิ้น</label>
 <label class="radio-inline col-form-label  col-lg-1">
-	<input type="text" class="form-control" id="1_S2_TEXT" name="1_S2_TEXT" value="1" readonly />
+	<input type="text" class="form-control" id="1_S2_text" name="1_S2_text" value="1" readonly />
 	
 </label>
 <label for="wight">คน</label>
@@ -68,52 +68,51 @@
 			<div class="row">
 				<label for="31" class="col-form-label">3.1 เพศ &nbsp</label>
 				<label class="radio-inline col-form-label">
-					<input type="radio" id="1_3{Num}11" name="1_S3_{Num}_3_1" value="1"> (1) ชาย
+					<input type="radio" id="1_3{Num}311" name="1_S3_{Num}_3_1" value="1"> (1) ชาย
 				</label>
 				<label class="radio-inline col-form-label">
-					<input type="radio" id="1_3{Num}12" name="1_S3_{Num}_3_1" value="2"> (2) หญิง
+					<input type="radio" id="1_3{Num}312" name="1_S3_{Num}_3_1" value="2"> (2) หญิง
 				</label>
 				<label class="radio-inline col-form-label">
-					<input type="radio" id="1_3{Num}13" name="1_S3_{Num}_3_1" value="3"> (3) เพศทางเลือก
+					<input type="radio" id="1_3{Num}313" name="1_S3_{Num}_3_1" value="3"> (3) เพศทางเลือก
 				</label>
 			</div>
 
 			<div class="row">
 				<label for="32" class="col-form-label">3.2 อายุ</label>
 				<div class="col-lg-3">
-					<input type="text" class="form-control" name="1_S3_{Num}_3_2" />
+					<input type="text" class="form-control" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" />
 				</div>
-				<div class="col-form-label inputTextFix">
+				<div class="col-form-label inputtextFix">
 					ปี (เต็มปีบริบูรณ์)
 				</div>
 			</div>
-
 			<div class="row">
 				<label for="33" class="col-form-label">3.3 รายได้</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_3{Num}31" name="1_S3_{Num}_3_3" value="1"> (1) ต่ำกว่า 15,000 บาท
+						<input type="radio" id="1_3{Num}331" name="1_S3_{Num}_3_3" value="1"> (1) ต่ำกว่า 15,000 บาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}32" name="1_S3_{Num}_3_3" value="2"> (2) 15,001-25,000 บาท
+						<input type="radio" id="1_3{Num}332" name="1_S3_{Num}_3_3" value="2"> (2) 15,001-25,000 บาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}33" name="1_S3_{Num}_3_3" value="3"> (3) 25,001-35,000 บาท
+						<input type="radio" id="1_3{Num}333" name="1_S3_{Num}_3_3" value="3"> (3) 25,001-35,000 บาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}34" name="1_S3_{Num}_3_3" value="4"> (4) 35,001-45,000 บาท
+						<input type="radio" id="1_3{Num}334" name="1_S3_{Num}_3_3" value="4"> (4) 35,001-45,000 บาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}35" name="1_S3_{Num}_3_3" value="5"> (5) 45,001-55,000 บาท
+						<input type="radio" id="1_3{Num}335" name="1_S3_{Num}_3_3" value="5"> (5) 45,001-55,000 บาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}36" name="1_S3_{Num}_3_3" value="6"> (6) 55,001-65,000 บาท
+						<input type="radio" id="1_3{Num}336" name="1_S3_{Num}_3_3" value="6"> (6) 55,001-65,000 บาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}37" name="1_S3_{Num}_3_3" value="7"> (7) 65,001-75,000 บาท
+						<input type="radio" id="1_3{Num}337" name="1_S3_{Num}_3_3" value="7"> (7) 65,001-75,000 บาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}38" name="1_S3_{Num}_3_3" value="8"> (8) มากกว่า 75,000 บาท
+						<input type="radio" id="1_3{Num}338" name="1_S3_{Num}_3_3" value="8"> (8) มากกว่า 75,000 บาท
 					</label>
 				</div>
 			</div>
@@ -122,37 +121,37 @@
 				<label for="34" class="col-form-label">3.4 อาชีพ</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_3{Num}41" name="1_S3_{Num}_3_4" value="1"> (1) ข้าราชการ พนักงานรัฐวิสาหกิจ
+						<input type="radio" id="1_3{Num}341" name="1_S3_{Num}_3_4" value="1"> (1) ข้าราชการ พนักงานรัฐวิสาหกิจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}42" name="1_S3_{Num}_3_4" value="2"> (2) พนักงานเอกชน
+						<input type="radio" id="1_3{Num}342" name="1_S3_{Num}_3_4" value="2"> (2) พนักงานเอกชน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}43" name="1_S3_{Num}_3_4" value="3"> (3) นักเรียน/นักศึกษา
+						<input type="radio" id="1_3{Num}343" name="1_S3_{Num}_3_4" value="3"> (3) นักเรียน/นักศึกษา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}44" name="1_S3_{Num}_3_4" value="4"> (4) รับจ้างทั่วไป
+						<input type="radio" id="1_3{Num}344" name="1_S3_{Num}_3_4" value="4"> (4) รับจ้างทั่วไป
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}45" name="1_S3_{Num}_3_4" value="5"> (5) เกษตรกรรม
+						<input type="radio" id="1_3{Num}345" name="1_S3_{Num}_3_4" value="5"> (5) เกษตรกรรม
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}46" name="1_S3_{Num}_3_4" value="6"> (6) ประกอบธุรกิจ
+						<input type="radio" id="1_3{Num}346" name="1_S3_{Num}_3_4" value="6"> (6) ประกอบธุรกิจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}47" name="1_S3_{Num}_3_4" value="7"> (7) ไม่ได้ประกอบอาชีพ
+						<input type="radio" id="1_3{Num}347" name="1_S3_{Num}_3_4" value="7"> (7) ไม่ได้ประกอบอาชีพ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}48" name="1_S3_{Num}_3_4" value="8"> (8) อื่น ๆ...
+						<input type="radio" id="1_3{Num}348" name="1_S3_{Num}_3_4" value="8"> (8) อื่น ๆ...
 					</label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-form-label inputTextFix" style="margin-left: 10px;">
+				<div class="col-form-label inputtextFix" style="margin-left: 10px;">
 					โปรดระบุ
 				</div>
 				<div class="col-lg-4">
-					<input type="text" class="form-control" name="1_S3_{Num}_3_4_TEXT" readonly />
+					<input type="text" class="form-control" id="1_3{Num}34_text" name="1_S3_{Num}_3_4_text" readonly />
 				</div>
 			</div>
 
@@ -160,43 +159,44 @@
 				<label for="35" class="col-form-label">3.5 การศึกษาระดับสูงสุด</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_3{Num}51" name="1_S3_{Num}_3_5" value="1"> (1) ไม่เคยเข้ารับการศึกษา
+						<input type="radio" id="1_3{Num}351" name="1_S3_{Num}_3_5" value="1"> (1) ไม่เคยเข้ารับการศึกษา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}52" name="1_S3_{Num}_3_5" value="2"> (2) การศึกษานอกระบบ (กศน.)
+						<input type="radio" id="1_3{Num}352" name="1_S3_{Num}_3_5" value="2"> (2) การศึกษานอกระบบ (กศน.)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}53" name="1_S3_{Num}_3_5" value="3"> (3) ประถมศึกษา
+						<input type="radio" id="1_3{Num}353" name="1_S3_{Num}_3_5" value="3"> (3) ประถมศึกษา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}54" name="1_S3_{Num}_3_5" value="4"> (4) มัธยมศึกษา
+						<input type="radio" id="1_3{Num}354" name="1_S3_{Num}_3_5" value="4"> (4) มัธยมศึกษา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}55" name="1_S3_{Num}_3_5" value="5"> (5) ปวช.
+						<input type="radio" id="1_3{Num}355" name="1_S3_{Num}_3_5" value="5"> (5) ปวช.
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}56" name="1_S3_{Num}_3_5" value="6"> (6) ปวส.
+						<input type="radio" id="1_3{Num}356" name="1_S3_{Num}_3_5" value="6"> (6) ปวส.
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}57" name="1_S3_{Num}_3_5" value="7"> (7) ปริญญาตรี
+						<input type="radio" id="1_3{Num}357" name="1_S3_{Num}_3_5" value="7"> (7) ปริญญาตรี
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}58" name="1_S3_{Num}_3_5" value="8"> (8) ปริญญาโท
+						<input type="radio" id="1_3{Num}358" name="1_S3_{Num}_3_5" value="8"> (8) ปริญญาโท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}59" name="1_S3_{Num}_3_5" value="9"> (9) สูงกว่าปริญญาโท
+						<input type="radio" id="1_3{Num}359" name="1_S3_{Num}_3_5" value="9"> (9) สูงกว่าปริญญาโท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}510" name="1_S3_{Num}_3_5" value="10"> (10) การศึกษาในรูปแบบอื่น...
+						<input type="radio" id="1_3{Num}3510" name="1_S3_{Num}_3_5" value="10"> (10) การศึกษาในรูปแบบอื่น...
 					</label>
 				</div>
+				
 			</div>
 			<div class="row">
-				<div class="col-form-label inputTextFix" style="margin-left: 10px;">
+				<div class="col-form-label inputtextFix" style="margin-left: 10px;">
 					โปรดระบุ
 				</div>
 				<div class="col-lg-4">
-					<input type="text" class="form-control" name="1_S3_{Num}_3_5_TEXT" readonly />
+					<input type="text" class="form-control" id="1_3{Num}35_text" name="1_S3_{Num}_3_5_text" readonly />
 				</div>
 			</div>
 
@@ -204,20 +204,21 @@
 				<label for="36" class="col-form-label">3.6 ท่านเห็นการปฏิบัติงานของเจ้าหน้าที่ตำรวจ หรือเจ้าหน้าที่ของหน่วยงานด้านยุติธรรม </br>เช่น เจ้าหน้าที่คุมประพฤติ เจ้าหน้าที่ราชทัณฑ์ เจ้าหน้าที่ยุติธรรมจังหวัด เจ้าหน้าที่ยุติธรรมชุมชน เป็นต้น </br>ในการปฏิบัติงานในพื้นที่ชุมชนของท่านมากน้อยเพียงใด</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_3{Num}61" name="1_S3_{Num}_3_6" value="1"> (1) สัปดาห์ละครั้ง
+						<input type="radio" id="1_3{Num}361" name="1_S3_{Num}_3_6" value="1"> (1) สัปดาห์ละครั้ง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}62" name="1_S3_{Num}_3_6" value="2"> (2) เดือนละครั้ง
+						<input type="radio" id="1_3{Num}362" name="1_S3_{Num}_3_6" value="2"> (2) เดือนละครั้ง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}63" name="1_S3_{Num}_3_6" value="3"> (3) ปีละครั้ง
+						<input type="radio" id="1_3{Num}363" name="1_S3_{Num}_3_6" value="3"> (3) ปีละครั้ง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}64" name="1_S3_{Num}_3_6" value="4"> (4) มากกว่า 1 ครั้ง/ปี
+						<input type="radio" id="1_3{Num}364" name="1_S3_{Num}_3_6" value="4"> (4) มากกว่า 1 ครั้ง/ปี
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_3{Num}65" name="1_S3_{Num}_3_6" value="5"> (5) ไม่เคยพบ
+						<input type="radio" id="1_3{Num}365" name="1_S3_{Num}_3_6" value="5"> (5) ไม่เคยพบ
 					</label>
+					
 				</div>
 			</div>
 			</br>
@@ -232,14 +233,14 @@
 				<div class="col-lg-12">
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}11" name="1_S4_{Num}_4_1" value="1">จำได้ ระบุ
+							<input type="radio" id="1_4{Num}411" name="1_S4_{Num}_4_1" value="1">จำได้ ระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_1_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}41_text" name="1_S4_{Num}_4_1_text" readonly />
 						</label>
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}12" name="1_S4_{Num}_4_1" value="2"> (2) จำไม่ได้
+						<input type="radio" id="1_4{Num}412" name="1_S4_{Num}_4_1" value="2"> (2) จำไม่ได้
 					</label>
 				</div>
 			</div>
@@ -248,31 +249,31 @@
 				<label for="42" class="col-form-label">4.2 ความสัมพันธ์ระหว่างเหยื่อกับผู้ก่อเหตุ</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-2">
-						<input type="radio" id="1_4{Num}21" name="1_S4_{Num}_4_2" value="1"> (1) บิดา/มารดา
+						<input type="radio" id="1_4{Num}421" name="1_S4_{Num}_4_2" value="1"> (1) บิดา/มารดา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-2">
-						<input type="radio" id="1_4{Num}22" name="1_S4_{Num}_4_2" value="2"> (2) ผู้ปกครอง
+						<input type="radio" id="1_4{Num}422" name="1_S4_{Num}_4_2" value="2"> (2) ผู้ปกครอง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-2">
-						<input type="radio" id="1_4{Num}23" name="1_S4_{Num}_4_2" value="3"> (3) สามี
+						<input type="radio" id="1_4{Num}423" name="1_S4_{Num}_4_2" value="3"> (3) สามี
 					</label>
 					<label class="radio-inline col-form-label  col-lg-2">
-						<input type="radio" id="1_4{Num}24" name="1_S4_{Num}_4_2" value="4"> (4) ภรรยา
+						<input type="radio" id="1_4{Num}424" name="1_S4_{Num}_4_2" value="4"> (4) ภรรยา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-2">
-						<input type="radio" id="1_4{Num}25" name="1_S4_{Num}_4_2" value="5"> (5) คู่ชีวิตรูปแบบอื่น
+						<input type="radio" id="1_4{Num}425" name="1_S4_{Num}_4_2" value="5"> (5) คู่ชีวิตรูปแบบอื่น
 					</label>
 
 					<label class=" col-form-label ">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}26" name="1_S4_{Num}_4_2" value="6"> (6) ความสัมพันธ์อื่นๆ (ระบุ)
+							<input type="radio" id="1_4{Num}426" name="1_S4_{Num}_4_2" value="6"> (6) ความสัมพันธ์อื่นๆ (ระบุ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-6">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_2_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}42_text" name="1_S4_{Num}_4_2_text" readonly />
 						</label>
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}27" name="1_S4_{Num}_4_2" value="7"> (7) ไม่รู้จัก/ไม่เกี่ยวข้อง
+						<input type="radio" id="1_4{Num}427" name="1_S4_{Num}_4_2" value="7"> (7) ไม่รู้จัก/ไม่เกี่ยวข้อง
 					</label>
 				</div>
 				<p style="margin-left: 10px;">หมายเหตุ : สามี/ภรรยา หมายความรวมถึง คู่สมรสที่จดทะเบียนและไม่จดทะเบียนสมรส</p>
@@ -282,10 +283,10 @@
 				<label for="43" class="col-form-label">4.3 มีความเสียหายต่อชีวิต ร่างกาย หรือทรัพย์สินหรือไม่</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-2">
-						<input type="radio" id="1_4{Num}31" name="1_S4_{Num}_4_3" value="1"> (1) มี
+						<input type="radio" id="1_4{Num}431" name="1_S4_{Num}_4_3" value="1"> (1) มี
 					</label>
 					<label class="radio-inline col-form-label  col-lg-2">
-						<input type="radio" id="1_4{Num}32" name="1_S4_{Num}_4_3" value="2"> (2) ไม่มี
+						<input type="radio" id="1_4{Num}432" name="1_S4_{Num}_4_3" value="2"> (2) ไม่มี
 					</label>
 
 				</div>
@@ -295,34 +296,34 @@
 				<label for="431" class="col-form-label">4.3.1 ความเสียหายต่อชีวิต ร่างกาย</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}311" name="1_S4_{Num}_4_3_1" value="1" disabled> (1) ไม่มี
+						<input type="radio" id="1_4{Num}43_11" name="1_S4_{Num}_4_3_1" value="1" disabled> (1) ไม่มี
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}312" name="1_S4_{Num}_4_3_1" value="2" disabled> (2) ไม่ได้รับบาดเจ็บ
+						<input type="radio" id="1_4{Num}43_12" name="1_S4_{Num}_4_3_1" value="2" disabled> (2) ไม่ได้รับบาดเจ็บ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-4">
-						<input type="radio" id="1_4{Num}313" name="1_S4_{Num}_4_3_1" value="3" disabled> (3) ได้รับบาดเจ็บเล็กน้อย ไม่ถึงกับต้องรักษาตัว
+						<input type="radio" id="1_4{Num}43_13" name="1_S4_{Num}_4_3_1" value="3" disabled> (3) ได้รับบาดเจ็บเล็กน้อย ไม่ถึงกับต้องรักษาตัว
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}314" name="1_S4_{Num}_4_3_1" value="4" disabled> (4) รักษาตัวไม่เกิน 7 วัน
+						<input type="radio" id="1_4{Num}43_14" name="1_S4_{Num}_4_3_1" value="4" disabled> (4) รักษาตัวไม่เกิน 7 วัน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}315" name="1_S4_{Num}_4_3_1" value="5" disabled> (5) รักษาตัว 8-20 วัน
+						<input type="radio" id="1_4{Num}43_15" name="1_S4_{Num}_4_3_1" value="5" disabled> (5) รักษาตัว 8-20 วัน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}316" name="1_S4_{Num}_4_3_1" value="6" disabled> (6) รักษาตัวเกินกว่า 20 วัน (สาหัส)
+						<input type="radio" id="1_4{Num}43_16" name="1_S4_{Num}_4_3_1" value="6" disabled> (6) รักษาตัวเกินกว่า 20 วัน (สาหัส)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}317" name="1_S4_{Num}_4_3_1" value="7" disabled> (7) เสียโฉม พิการ หรือทุพลภาพเป็นกรถาวร
+						<input type="radio" id="1_4{Num}43_17" name="1_S4_{Num}_4_3_1" value="7" disabled> (7) เสียโฉม พิการ หรือทุพลภาพเป็นกรถาวร
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}318" name="1_S4_{Num}_4_3_1" value="8" disabled> (8) ได้รับอันตรายทางจิตใจจนถึงขั้นเข้ารับการบำบัดทางจิต
+						<input type="radio" id="1_4{Num}43_18" name="1_S4_{Num}_4_3_1" value="8" disabled> (8) ได้รับอันตรายทางจิตใจจนถึงขั้นเข้ารับการบำบัดทางจิต
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}319" name="1_S4_{Num}_4_3_1" value="9" disabled> (9) ได้รับอันตรายต่อสุขภาพ เจ็บป่วย
+						<input type="radio" id="1_4{Num}43_19" name="1_S4_{Num}_4_3_1" value="9" disabled> (9) ได้รับอันตรายต่อสุขภาพ เจ็บป่วย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}3110" name="1_S4_{Num}_4_3_1" value="10" disabled> (10) เสียชีวิต
+						<input type="radio" id="1_4{Num}43_110" name="1_S4_{Num}_4_3_1" value="10" disabled> (10) เสียชีวิต
 					</label>
 
 				</div>
@@ -332,14 +333,14 @@
 				<label for="432" class="col-form-label">4.3.2 ความเสียหายทรัพย์ถูกประทุษร้าย</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}321" name="1_S4_{Num}_4_3_2" value="1" disabled> (1) ไม่มี
+						<input type="radio" id="1_4{Num}43_21" name="1_S4_{Num}_4_3_2" value="1" disabled> (1) ไม่มี
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}322" name="1_S4_{Num}_4_3_2" value="2" disabled> (2) มี เป็นมูลค่า
+							<input type="radio" id="1_4{Num}43_22" name="1_S4_{Num}_4_3_2" value="2" disabled> (2) มี เป็นมูลค่า
 						</label>
 						<label class="radio-inline col-form-label  col-lg-6">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_2_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}432_text" name="1_S4_{Num}_4_3_2_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
@@ -354,10 +355,10 @@
 
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}331" name="1_S4_{Num}_4_3_3" value="1" disabled> (1) ค่ารักษาพยาบาล จำนวน
+							<input type="radio" id="1_4{Num}4331" name="1_S4_{Num}_4_3_3" value="1" disabled> (1) ค่ารักษาพยาบาล จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-5">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_3_1_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}4331_text" name="1_S4_{Num}_4_3_3_1_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
@@ -365,10 +366,10 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}332" name="1_S4_{Num}_4_3_3" value="2" disabled> (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ)
+							<input type="radio" id="1_4{Num}4332" name="1_S4_{Num}_4_3_3" value="2" disabled> (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_3_2_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}4332_text" name="1_S4_{Num}_4_3_3_2_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
@@ -376,10 +377,10 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}333" name="1_S4_{Num}_4_3_3" value="3" disabled> (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ) จำนวน
+							<input type="radio" id="1_4{Num}4333" name="1_S4_{Num}_4_3_3" value="3" disabled> (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ) จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-2">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_3_3_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}4333_text" name="1_S4_{Num}_4_3_3_3_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
@@ -387,10 +388,10 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}334" name="1_S4_{Num}_4_3_3" value="4" disabled> (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
+							<input type="radio" id="1_4{Num}4334" name="1_S4_{Num}_4_3_3" value="4" disabled> (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-4">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_3_4_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}4334_text" name="1_S4_{Num}_4_3_3_4_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
@@ -398,10 +399,10 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}335" name="1_S4_{Num}_4_3_3" value="5" disabled> (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
+							<input type="radio" id="1_4{Num}4335" name="1_S4_{Num}_4_3_3" value="5" disabled> (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_3_5_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}4335_text" name="1_S4_{Num}_4_3_3_5_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
@@ -409,10 +410,10 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}336" name="1_S4_{Num}_4_3_3" value="6" disabled> (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
+							<input type="radio" id="1_4{Num}4336" name="1_S4_{Num}_4_3_3" value="6" disabled> (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-4">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_3_6_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}4336_text" name="1_S4_{Num}_4_3_3_6_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
@@ -420,17 +421,17 @@
 					</label>
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}337" name="1_S4_{Num}_4_3_3" value="7" disabled> (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
+							<input type="radio" id="1_4{Num}4337" name="1_S4_{Num}_4_3_3" value="7" disabled> (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_3_3_7_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}4337_text" name="1_S4_{Num}_4_3_3_7_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}338" name="1_S4_{Num}_4_3_3" value="8" disabled> (8) ไม่มีความสูญเสีย/ค่าเสียหายจากมูลค่าที่เกิดขึ้น
+						<input type="radio" id="1_4{Num}4338" name="1_S4_{Num}_4_3_3" value="8" disabled> (8) ไม่มีความสูญเสีย/ค่าเสียหายจากมูลค่าที่เกิดขึ้น
 					</label>
 				</div>
 			</div>
@@ -443,61 +444,61 @@
 				<label for="441" class="col-form-label">4.4.1 ความผิดต่อชีวิตร่างกาย</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}411" name="1_S4_{Num}_4_4_1" value="1"> (1) ฆ่า
+						<input type="radio" id="1_4{Num}4411" name="1_S4_{Num}_4_4_1" value="1"> (1) ฆ่า
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}412" name="1_S4_{Num}_4_4_1" value="2"> (2) พยายามฆ่า
+						<input type="radio" id="1_4{Num}4412" name="1_S4_{Num}_4_4_1" value="2"> (2) พยายามฆ่า
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}413" name="1_S4_{Num}_4_4_1" value="3"> (3) ก่อการร้าย
+						<input type="radio" id="1_4{Num}4413" name="1_S4_{Num}_4_4_1" value="3"> (3) ก่อการร้าย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}414" name="1_S4_{Num}_4_4_1" value="4"> (4) วางเพลิง
+						<input type="radio" id="1_4{Num}4414" name="1_S4_{Num}_4_4_1" value="4"> (4) วางเพลิง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}415" name="1_S4_{Num}_4_4_1" value="5"> (5) วางระเบิด
+						<input type="radio" id="1_4{Num}4415" name="1_S4_{Num}_4_4_1" value="5"> (5) วางระเบิด
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}416" name="1_S4_{Num}_4_4_1" value="6"> (6) อุบัติเหตุจราจร
+						<input type="radio" id="1_4{Num}4416" name="1_S4_{Num}_4_4_1" value="6"> (6) อุบัติเหตุจราจร
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}417" name="1_S4_{Num}_4_4_1" value="7"> (7) อุบัติเหตุอื่น ๆ
+						<input type="radio" id="1_4{Num}4417" name="1_S4_{Num}_4_4_1" value="7"> (7) อุบัติเหตุอื่น ๆ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3	">
-						<input type="radio" id="1_4{Num}418" name="1_S4_{Num}_4_4_1" value="8"> (8) ชุลมุนต่อสู้
+						<input type="radio" id="1_4{Num}4418" name="1_S4_{Num}_4_4_1" value="8"> (8) ชุลมุนต่อสู้
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}419" name="1_S4_{Num}_4_4_1" value="9"> (9) ทะเลาะวิวาท
+						<input type="radio" id="1_4{Num}4419" name="1_S4_{Num}_4_4_1" value="9"> (9) ทะเลาะวิวาท
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4110" name="1_S4_{Num}_4_4_1" value="10"> (10) ความรุนแรงในครอบครัว
+						<input type="radio" id="1_4{Num}44110" name="1_S4_{Num}_4_4_1" value="10"> (10) ความรุนแรงในครอบครัว
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4111" name="1_S4_{Num}_4_4_1" value="11"> (11) ทำแท้งผิดกฎหมาย
+						<input type="radio" id="1_4{Num}44111" name="1_S4_{Num}_4_4_1" value="11"> (11) ทำแท้งผิดกฎหมาย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}4112" name="1_S4_{Num}_4_4_1" value="12"> (12) ข่มขู่คุกคามว่าจะทำอันตรายต่อชีวิตร่างกาย
+						<input type="radio" id="1_4{Num}44112" name="1_S4_{Num}_4_4_1" value="12"> (12) ข่มขู่คุกคามว่าจะทำอันตรายต่อชีวิตร่างกาย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4113" name="1_S4_{Num}_4_4_1" value="13"> (13) ข่มขู่คุกคามให้ตกใจกลัว
+						<input type="radio" id="1_4{Num}44113" name="1_S4_{Num}_4_4_1" value="13"> (13) ข่มขู่คุกคามให้ตกใจกลัว
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4114" name="1_S4_{Num}_4_4_1" value="14"> (14) ลักพาตัว
+						<input type="radio" id="1_4{Num}44114" name="1_S4_{Num}_4_4_1" value="14"> (14) ลักพาตัว
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4115" name="1_S4_{Num}_4_4_1" value="15"> (15) หน่วงเหนี่ยวกักขัง
+						<input type="radio" id="1_4{Num}44115" name="1_S4_{Num}_4_4_1" value="15"> (15) หน่วงเหนี่ยวกักขัง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4116" name="1_S4_{Num}_4_4_1" value="16"> (16) เอาคนเป็นทาส
+						<input type="radio" id="1_4{Num}44116" name="1_S4_{Num}_4_4_1" value="16"> (16) เอาคนเป็นทาส
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4117" name="1_S4_{Num}_4_4_1" value="17"> (17) ความผิดต่อเสรีภาพ
+						<input type="radio" id="1_4{Num}44117" name="1_S4_{Num}_4_4_1" value="17"> (17) ความผิดต่อเสรีภาพ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4118" name="1_S4_{Num}_4_4_1" value="18"> (18) ปลอมปนอาหาร
+						<input type="radio" id="1_4{Num}44118" name="1_S4_{Num}_4_4_1" value="18"> (18) ปลอมปนอาหาร
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}4119" name="1_S4_{Num}_4_4_1" value="19"> (19) ปล่อยสารพิษ
+						<input type="radio" id="1_4{Num}44119" name="1_S4_{Num}_4_4_1" value="19"> (19) ปล่อยสารพิษ
 					</label>
 				</div>
 			</div>
@@ -506,52 +507,52 @@
 				<label for="442" class="col-form-label">4.4.2 ความผิดต่อชีวิตร่างกาย</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-6" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}421" name="1_S4_{Num}_4_4_2" value="1"> (1) ปล้น จี้ ชิงทรัพย์ในที่สาธารณะ
+						<input type="radio" id="1_4{Num}4421" name="1_S4_{Num}_4_4_2" value="1"> (1) ปล้น จี้ ชิงทรัพย์ในที่สาธารณะ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}422" name="1_S4_{Num}_4_4_2" value="2"> (2) ปล้น จี้ ชิงทรัพย์ในพื้นที่ส่วนบุคคล
+						<input type="radio" id="1_4{Num}4422" name="1_S4_{Num}_4_4_2" value="2"> (2) ปล้น จี้ ชิงทรัพย์ในพื้นที่ส่วนบุคคล
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}423" name="1_S4_{Num}_4_4_2" value="3"> (3) ปล้นชิงสินค้า
+						<input type="radio" id="1_4{Num}4423" name="1_S4_{Num}_4_4_2" value="3"> (3) ปล้นชิงสินค้า
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}424" name="1_S4_{Num}_4_4_2" value="4"> (4) ปล้นชิงรถยนต์/รถจักรยานยนต์
+						<input type="radio" id="1_4{Num}4424" name="1_S4_{Num}_4_4_2" value="4"> (4) ปล้นชิงรถยนต์/รถจักรยานยนต์
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}425" name="1_S4_{Num}_4_4_2" value="5"> (5) ปล้นชิงโคกระบือหรือเครื่องมือเกษตร
+						<input type="radio" id="1_4{Num}4425" name="1_S4_{Num}_4_4_2" value="5"> (5) ปล้นชิงโคกระบือหรือเครื่องมือเกษตร
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}426" name="1_S4_{Num}_4_4_2" value="6"> (6) วิ่งราวทรัพย์
+						<input type="radio" id="1_4{Num}4426" name="1_S4_{Num}_4_4_2" value="6"> (6) วิ่งราวทรัพย์
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}427" name="1_S4_{Num}_4_4_2" value="7"> (7) ล้วงกระเป๋า
+						<input type="radio" id="1_4{Num}4427" name="1_S4_{Num}_4_4_2" value="7"> (7) ล้วงกระเป๋า
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6	">
-						<input type="radio" id="1_4{Num}428" name="1_S4_{Num}_4_4_2" value="8"> (8) ลักทรัพย์สถานประกอบการ
+						<input type="radio" id="1_4{Num}4428" name="1_S4_{Num}_4_4_2" value="8"> (8) ลักทรัพย์สถานประกอบการ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}429" name="1_S4_{Num}_4_4_2" value="9"> (9) ลักพาหนะ (รวมถึงทรัพย์สินในพาหนะ)
+						<input type="radio" id="1_4{Num}4429" name="1_S4_{Num}_4_4_2" value="9"> (9) ลักพาหนะ (รวมถึงทรัพย์สินในพาหนะ)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}4210" name="1_S4_{Num}_4_4_2" value="10"> (10) ลักโคกระบือหรือเครื่องมือการเกษตร
+						<input type="radio" id="1_4{Num}44210" name="1_S4_{Num}_4_4_2" value="10"> (10) ลักโคกระบือหรือเครื่องมือการเกษตร
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}4211" name="1_S4_{Num}_4_4_2" value="11"> (11) ลักทรัพย์สินในบ้าน/ที่พักอาศัย
+						<input type="radio" id="1_4{Num}44211" name="1_S4_{Num}_4_4_2" value="11"> (11) ลักทรัพย์สินในบ้าน/ที่พักอาศัย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}4212" name="1_S4_{Num}_4_4_2" value="12"> (12) ลักทรัพย์รูปแบบอื่น ๆ
+						<input type="radio" id="1_4{Num}44212" name="1_S4_{Num}_4_4_2" value="12"> (12) ลักทรัพย์รูปแบบอื่น ๆ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}4213" name="1_S4_{Num}_4_4_2" value="13"> (13) ข่มขู่ว่าจะเปิดเผยความลับ เช่น แบล็คเมล์ ภาพลับ/คลิปลับ เป็นต้น
+						<input type="radio" id="1_4{Num}44213" name="1_S4_{Num}_4_4_2" value="13"> (13) ข่มขู่ว่าจะเปิดเผยความลับ เช่น แบล็คเมล์ ภาพลับ/คลิปลับ เป็นต้น
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}4214" name="1_S4_{Num}_4_4_2" value="14"> (14) กรรโชกทรัพย์ (ขู่เข็ญว่าจะทำอันตรายต่อชีวิต/ร่างกายทรัพย์สินเพื่อแลกกับการเอาทรัพย์)
+						<input type="radio" id="1_4{Num}44214" name="1_S4_{Num}_4_4_2" value="14"> (14) กรรโชกทรัพย์ (ขู่เข็ญว่าจะทำอันตรายต่อชีวิต/ร่างกายทรัพย์สินเพื่อแลกกับการเอาทรัพย์)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}4215" name="1_S4_{Num}_4_4_2" value="15"> (15) ทำให้เสียทรัพย์ (เช่น ทำลายทรัพย์สิน ยานพาหนะ)
+						<input type="radio" id="1_4{Num}44215" name="1_S4_{Num}_4_4_2" value="15"> (15) ทำให้เสียทรัพย์ (เช่น ทำลายทรัพย์สิน ยานพาหนะ)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}4216" name="1_S4_{Num}_4_4_2" value="16"> (16) บุกรุกทรัพย์สิน เช่น บ้าน ที่ดิน
+						<input type="radio" id="1_4{Num}44216" name="1_S4_{Num}_4_4_2" value="16"> (16) บุกรุกทรัพย์สิน เช่น บ้าน ที่ดิน
 					</label>
 				</div>
 			</div>
@@ -561,28 +562,28 @@
 				<label for="443" class="col-form-label">4.4.3 ความผิดทางเพศ</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-4" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}431" name="1_S4_{Num}_4_4_3" value="1"> (1) ข่มขืนโดยใช้กำลังบังคับ
+						<input type="radio" id="1_4{Num}4431" name="1_S4_{Num}_4_4_3" value="1"> (1) ข่มขืนโดยใช้กำลังบังคับ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-4">
-						<input type="radio" id="1_4{Num}432" name="1_S4_{Num}_4_4_3" value="2"> (2) ข่มขืนขณะมึนเมา
+						<input type="radio" id="1_4{Num}4432" name="1_S4_{Num}_4_4_3" value="2"> (2) ข่มขืนขณะมึนเมา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-4">
-						<input type="radio" id="1_4{Num}433" name="1_S4_{Num}_4_4_3" value="3"> (3) ถูกรุมโทรม
+						<input type="radio" id="1_4{Num}4433" name="1_S4_{Num}_4_4_3" value="3"> (3) ถูกรุมโทรม
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}434" name="1_S4_{Num}_4_4_3" value="4"> (4) ทารุณทางเพศ
+						<input type="radio" id="1_4{Num}4434" name="1_S4_{Num}_4_4_3" value="4"> (4) ทารุณทางเพศ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}435" name="1_S4_{Num}_4_4_3" value="5"> (5) กระทำอนาจาร (มีการแตะเนื้อต้องตัว)
+						<input type="radio" id="1_4{Num}4435" name="1_S4_{Num}_4_4_3" value="5"> (5) กระทำอนาจาร (มีการแตะเนื้อต้องตัว)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}436" name="1_S4_{Num}_4_4_3" value="6"> (6) พูดจาลวนลาม/ลอบแอบมอง
+						<input type="radio" id="1_4{Num}4436" name="1_S4_{Num}_4_4_3" value="6"> (6) พูดจาลวนลาม/ลอบแอบมอง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}437" name="1_S4_{Num}_4_4_3" value="7"> (7) พูดจาลวนลาม/ลอบแอบมอง (ในสถานที่ทำงาน)
+						<input type="radio" id="1_4{Num}4437" name="1_S4_{Num}_4_4_3" value="7"> (7) พูดจาลวนลาม/ลอบแอบมอง (ในสถานที่ทำงาน)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6	">
-						<input type="radio" id="1_4{Num}438" name="1_S4_{Num}_4_4_3" value="8"> (8) สะกดรอย/ลอบติดตาม
+						<input type="radio" id="1_4{Num}4438" name="1_S4_{Num}_4_4_3" value="8"> (8) สะกดรอย/ลอบติดตาม
 					</label>
 				</div>
 			</div>
@@ -591,31 +592,31 @@
 				<label for="444" class="col-form-label">4.4.4 ความผิดฉ้อโกงการหลอกลวง</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}441" name="1_S4_{Num}_4_4_4" value="1"> (1) แอบอ้างใช้ข้อมูล/เอกสารส่วนตัว
+						<input type="radio" id="1_4{Num}4441" name="1_S4_{Num}_4_4_4" value="1"> (1) แอบอ้างใช้ข้อมูล/เอกสารส่วนตัว
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}442" name="1_S4_{Num}_4_4_4" value="2"> (2) ถูกหลอกลวงด้วยการใช้เงินปลอม
+						<input type="radio" id="1_4{Num}4442" name="1_S4_{Num}_4_4_4" value="2"> (2) ถูกหลอกลวงด้วยการใช้เงินปลอม
 					</label>
 					<label class="radio-inline col-form-label  col-lg-6">
-						<input type="radio" id="1_4{Num}443" name="1_S4_{Num}_4_4_4" value="3"> (3) แชร์ลูกโซ่
+						<input type="radio" id="1_4{Num}4443" name="1_S4_{Num}_4_4_4" value="3"> (3) แชร์ลูกโซ่
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}444" name="1_S4_{Num}_4_4_4" value="4"> (4) หลอกลวงจัดหางานหรือให้ไปทำงานในประเทศหรือต่างประเทศ
+						<input type="radio" id="1_4{Num}4444" name="1_S4_{Num}_4_4_4" value="4"> (4) หลอกลวงจัดหางานหรือให้ไปทำงานในประเทศหรือต่างประเทศ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}445" name="1_S4_{Num}_4_4_4" value="5"> (5) หลอกลวงด้วยกลฉ้อฉลให้โอนเงินเข้าบัญชีธนาคารคนร้าย
+						<input type="radio" id="1_4{Num}4445" name="1_S4_{Num}_4_4_4" value="5"> (5) หลอกลวงด้วยกลฉ้อฉลให้โอนเงินเข้าบัญชีธนาคารคนร้าย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}446" name="1_S4_{Num}_4_4_4" value="6"> (6) หลอกลวงให้สูญเสียทรัพย์สินให้คนร้าย โดยมีการแสดงเอกสารเท็จให้หลงเชื่อ
+						<input type="radio" id="1_4{Num}4446" name="1_S4_{Num}_4_4_4" value="6"> (6) หลอกลวงให้สูญเสียทรัพย์สินให้คนร้าย โดยมีการแสดงเอกสารเท็จให้หลงเชื่อ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}447" name="1_S4_{Num}_4_4_4" value="7"> (7) หลอกขายสินค้าปลอม
+						<input type="radio" id="1_4{Num}4447" name="1_S4_{Num}_4_4_4" value="7"> (7) หลอกขายสินค้าปลอม
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}448" name="1_S4_{Num}_4_4_4" value="8"> (8) หลอกประกาศขายสินค้าแต่ไม่จัดส่งสินค้าให้ หรือส่งให้แต่ไม่ตรงกับที่โฆษณา
+						<input type="radio" id="1_4{Num}4448" name="1_S4_{Num}_4_4_4" value="8"> (8) หลอกประกาศขายสินค้าแต่ไม่จัดส่งสินค้าให้ หรือส่งให้แต่ไม่ตรงกับที่โฆษณา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}449" name="1_S4_{Num}_4_4_4" value="9"> (9) หลอกลวงให้สูญเสียทรัพย์สินให้คนร้ายด้วยวิธีการอื่น ๆ
+						<input type="radio" id="1_4{Num}4449" name="1_S4_{Num}_4_4_4" value="9"> (9) หลอกลวงให้สูญเสียทรัพย์สินให้คนร้ายด้วยวิธีการอื่น ๆ
 					</label>
 				</div>
 			</div>
@@ -624,16 +625,16 @@
 				<label for="445" class="col-form-label">4.4.5 ความผิดเกี่ยวกับคอมพิวเตอร์</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}451" name="1_S4_{Num}_4_4_5" value="1"> (1) ถูกลักลอบเข้าสู่ระบบคอมพิวเตอร์
+						<input type="radio" id="1_4{Num}4451" name="1_S4_{Num}_4_4_5" value="1"> (1) ถูกลักลอบเข้าสู่ระบบคอมพิวเตอร์
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}452" name="1_S4_{Num}_4_4_5" value="2"> (2) ถูกล่วงรู้พาสเวิร์ดสำหรับระบบคอมพิวเตอร์ และนำไปก่อให้เกิดความเสียหาย
+						<input type="radio" id="1_4{Num}4452" name="1_S4_{Num}_4_4_5" value="2"> (2) ถูกล่วงรู้พาสเวิร์ดสำหรับระบบคอมพิวเตอร์ และนำไปก่อให้เกิดความเสียหาย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}453" name="1_S4_{Num}_4_4_5" value="3"> (3) ถูกล้วงข้อมูลในระบบคอมพิวเตอร์
+						<input type="radio" id="1_4{Num}4453" name="1_S4_{Num}_4_4_5" value="3"> (3) ถูกล้วงข้อมูลในระบบคอมพิวเตอร์
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}454" name="1_S4_{Num}_4_4_5" value="4"> (4) ตกเป็นเหยื่ออาชญากรรมทางคอมพิวเตอร์กรณีอื่น ๆ
+						<input type="radio" id="1_4{Num}4454" name="1_S4_{Num}_4_4_5" value="4"> (4) ตกเป็นเหยื่ออาชญากรรมทางคอมพิวเตอร์กรณีอื่น ๆ
 					</label>
 				</div>
 			</div>
@@ -642,28 +643,28 @@
 				<label for="446" class="col-form-label">4.4.6 ความผิดรูปแบบอื่น</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}461" name="1_S4_{Num}_4_4_6" value="1"> (1) ถูกเรียกสินบนโดยเจ้าหน้าที่ของรัฐ
+						<input type="radio" id="1_4{Num}4461" name="1_S4_{Num}_4_4_6" value="1"> (1) ถูกเรียกสินบนโดยเจ้าหน้าที่ของรัฐ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}462" name="1_S4_{Num}_4_4_6" value="2"> (2) ถูกเรียกรับสินบนโดยภาคธุรกิจ
+						<input type="radio" id="1_4{Num}4462" name="1_S4_{Num}_4_4_6" value="2"> (2) ถูกเรียกรับสินบนโดยภาคธุรกิจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}463" name="1_S4_{Num}_4_4_6" value="3"> (3) ได้รับความเสียหายจากเจ้าหน้าที่รัฐที่ใช้อำนาจโดยมิชอบ
+						<input type="radio" id="1_4{Num}4463" name="1_S4_{Num}_4_4_6" value="3"> (3) ได้รับความเสียหายจากเจ้าหน้าที่รัฐที่ใช้อำนาจโดยมิชอบ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}464" name="1_S4_{Num}_4_4_6" value="4"> (4) ตกเป็นเหยื่อในกระบวนการยุติธรรม เช่น ถูกคุกคามหรือไม่ได้รับความเป็นธรรมจากคดีอาญา (แพะรับบาป)
+						<input type="radio" id="1_4{Num}4464" name="1_S4_{Num}_4_4_6" value="4"> (4) ตกเป็นเหยื่อในกระบวนการยุติธรรม เช่น ถูกคุกคามหรือไม่ได้รับความเป็นธรรมจากคดีอาญา (แพะรับบาป)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}465" name="1_S4_{Num}_4_4_6" value="5"> (5) ถูกเลือกปฏิบัติ โดยมิชอบ อันเนื่องมาจาก เพศ ความพิการ ศาสนา และเชื้อชาติ เป็นต้น
+						<input type="radio" id="1_4{Num}4465" name="1_S4_{Num}_4_4_6" value="5"> (5) ถูกเลือกปฏิบัติ โดยมิชอบ อันเนื่องมาจาก เพศ ความพิการ ศาสนา และเชื้อชาติ เป็นต้น
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}466" name="1_S4_{Num}_4_4_6" value="6"> (6) ถูกดูหมิ่น หมิ่นประมาท หรือถูกเหยียดหยามเนื่องจากความแตกต่างในเรื่องเพศ เชื้อชาติ ศาสนา ความพิการ ชนกลุ่มน้อย
+						<input type="radio" id="1_4{Num}4466" name="1_S4_{Num}_4_4_6" value="6"> (6) ถูกดูหมิ่น หมิ่นประมาท หรือถูกเหยียดหยามเนื่องจากความแตกต่างในเรื่องเพศ เชื้อชาติ ศาสนา ความพิการ ชนกลุ่มน้อย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}467" name="1_S4_{Num}_4_4_6" value="7"> (7) ได้รับอันตรายจากการปล่อยมลภาวะตามเขตที่พักอาศัย
+						<input type="radio" id="1_4{Num}4467" name="1_S4_{Num}_4_4_6" value="7"> (7) ได้รับอันตรายจากการปล่อยมลภาวะตามเขตที่พักอาศัย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}468" name="1_S4_{Num}_4_4_6" value="8"> (8) ถูกล่วงละเมิดความเป็นส่วนตัว
+						<input type="radio" id="1_4{Num}4468" name="1_S4_{Num}_4_4_6" value="8"> (8) ถูกล่วงละเมิดความเป็นส่วนตัว
 					</label>
 				</div>
 			</div>
@@ -673,7 +674,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<textarea type="text" class="form-control" id="1_4{Num}5" rows="3" name="1_S4_{Num}_4_5"></textarea>
+					<textarea type="text" class="form-control" id="1_4{Num}45" rows="3" name="1_S4_{Num}_4_5"></textarea>
 				</div>
 			</div>
 
@@ -683,91 +684,91 @@
 
 			<div class="row" style="margin-left: 10px;">
 				<label for="461" class="col-form-label">
-					<input type="radio" id="1_4{Num}611" name="1_S4_{Num}_4_6_1" value="1"> 4.6.1 มีการแจ้งต่อเจ้าหน้าที่
+					<input type="radio" id="1_4{Num}4611" name="1_S4_{Num}_4_6" value="1"> 4.6.1 มีการแจ้งต่อเจ้าหน้าที่
 				</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}6111" name="1_S4_{Num}_4_6_1_1" value="1" disabled> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="radio" id="1_4{Num}46_111" name="1_S4_{Num}_4_6_1" value="1" disabled> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}6112" name="1_S4_{Num}_4_6_1_1" value="2" disabled> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="radio" id="1_4{Num}46_112" name="1_S4_{Num}_4_6_1" value="2" disabled> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}6113" name="1_S4_{Num}_4_6_1_1" value="3" disabled> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
+						<input type="radio" id="1_4{Num}46_113" name="1_S4_{Num}_4_6_1" value="3" disabled> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
 					</label>
 					<label class="col-form-label col-lg-12" style="margin-left: -5px;">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}6114" name="1_S4_{Num}_4_6_1_1" value="4" disabled> (4) อื่นๆ โปรดระบุ
+							<input type="radio" id="1_4{Num}46_114" name="1_S4_{Num}_4_6_1" value="4" disabled> (4) อื่นๆ โปรดระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_6_1_1_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}461_text" name="1_S4_{Num}_4_6_1_text" readonly />
 						</label>
 					</label>
 				</div>
 			</div>
-
+			
 			<div class="row" style="margin-left: 10px;">
 				<label for="461" class="col-form-label">
-					<input type="radio" id="1_4{Num}612" name="1_S4_{Num}_4_6_2" value="1"> 4.6.2 ไม่มีการแจ้งต่อเจ้าหน้าที่
+					<input type="radio" id="1_4{Num}4612" name="1_S4_{Num}_4_6" value="2"> 4.6.2 ไม่มีการแจ้งต่อเจ้าหน้าที่
 				</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="checkbox" id="1_4{Num}6211" name="1_S4_{Num}_4_6_2_1" value="1" disabled> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="checkbox" id="1_4{Num}46211" name="1_S4_{Num}_4_6_2_1" value="1" disabled> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6212" name="1_S4_{Num}_4_6_2_2" value="1" disabled> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="checkbox" id="1_4{Num}46212" name="1_S4_{Num}_4_6_2_2" value="1" disabled> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6213" name="1_S4_{Num}_4_6_2_3" value="1" disabled> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
+						<input type="checkbox" id="1_4{Num}46213" name="1_S4_{Num}_4_6_2_3" value="1" disabled> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6214" name="1_S4_{Num}_4_6_2_4" value="1" disabled> (4) ได้แจ้งเหตุต่อผู้มีหน้าที่รับผิดชอบที่เกี่ยวข้องแล้ว เช่น ฝ่ายรักษาความปลอดภัย หัวหน้างาน
+						<input type="checkbox" id="1_4{Num}46214" name="1_S4_{Num}_4_6_2_4" value="1" disabled> (4) ได้แจ้งเหตุต่อผู้มีหน้าที่รับผิดชอบที่เกี่ยวข้องแล้ว เช่น ฝ่ายรักษาความปลอดภัย หัวหน้างาน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6215" name="1_S4_{Num}_4_6_2_5" value="1" disabled> (5) มีเจ้าหน้าที่หรือบุคคลอื่นมาให้การช่วยเหลือไกล่เกลี่ยสามารถตกลงกับผู้กระทำผิดได้
+						<input type="checkbox" id="1_4{Num}46215" name="1_S4_{Num}_4_6_2_5" value="1" disabled> (5) มีเจ้าหน้าที่หรือบุคคลอื่นมาให้การช่วยเหลือไกล่เกลี่ยสามารถตกลงกับผู้กระทำผิดได้
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6216" name="1_S4_{Num}_4_6_2_6" value="1" disabled> (6) ถูกข่มขู่ จากผู้กระทำผิดหรือผู้เกี่ยวข้อง
+						<input type="checkbox" id="1_4{Num}46216" name="1_S4_{Num}_4_6_2_6" value="1" disabled> (6) ถูกข่มขู่ จากผู้กระทำผิดหรือผู้เกี่ยวข้อง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6217" name="1_S4_{Num}_4_6_2_7" value="1" disabled> (7) กลัวว่าจะถูกแก้แค้น หรือถูกทำร้ายจากผู้กระทำผิดหรือผู้เกี่ยวข้อง
+						<input type="checkbox" id="1_4{Num}46217" name="1_S4_{Num}_4_6_2_7" value="1" disabled> (7) กลัวว่าจะถูกแก้แค้น หรือถูกทำร้ายจากผู้กระทำผิดหรือผู้เกี่ยวข้อง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6218" name="1_S4_{Num}_4_6_2_8" value="1" disabled> (8) เป็นคนกันเอง/สนิทสนมคุ้นเคยกับผู้กระทำผิด
+						<input type="checkbox" id="1_4{Num}46218" name="1_S4_{Num}_4_6_2_8" value="1" disabled> (8) เป็นคนกันเอง/สนิทสนมคุ้นเคยกับผู้กระทำผิด
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}6219" name="1_S4_{Num}_4_6_2_9" value="1" disabled> (9) เป็นเหตุการณ์ที่น่าอับอาย กลัวว่าจะเสื่อมเสียชื่อเสียง
+						<input type="checkbox" id="1_4{Num}46219" name="1_S4_{Num}_4_6_2_9" value="1" disabled> (9) เป็นเหตุการณ์ที่น่าอับอาย กลัวว่าจะเสื่อมเสียชื่อเสียง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62110" name="1_S4_{Num}_4_6_2_10" value="1" disabled> (10) สงสาร/เห็นใจผู้กระทำผิด (เนื่องจากผู้กระทำผิดเป็นเด็ก/พิการ/ยากจน เป็นต้น)
+						<input type="checkbox" id="1_4{Num}462110" name="1_S4_{Num}_4_6_2_10" value="1" disabled> (10) สงสาร/เห็นใจผู้กระทำผิด (เนื่องจากผู้กระทำผิดเป็นเด็ก/พิการ/ยากจน เป็นต้น)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62111" name="1_S4_{Num}_4_6_2_11" value="1" disabled> (11) ยุ่งยาก ไม่อยากเป็นคดีความ ไม่อยากขึ้นโรงขึ้นศาล
+						<input type="checkbox" id="1_4{Num}462111" name="1_S4_{Num}_4_6_2_11" value="1" disabled> (11) ยุ่งยาก ไม่อยากเป็นคดีความ ไม่อยากขึ้นโรงขึ้นศาล
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62112" name="1_S4_{Num}_4_6_2_12" value="1" disabled> (12) ไม่สะดวก ไม่มีเวลาแจ้งเหตุกับเจ้าหน้าที่
+						<input type="checkbox" id="1_4{Num}462112" name="1_S4_{Num}_4_6_2_12" value="1" disabled> (12) ไม่สะดวก ไม่มีเวลาแจ้งเหตุกับเจ้าหน้าที่
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62113" name="1_S4_{Num}_4_6_2_13" value="1" disabled> (13) ขาดพยานหลักฐาน
+						<input type="checkbox" id="1_4{Num}462113" name="1_S4_{Num}_4_6_2_13" value="1" disabled> (13) ขาดพยานหลักฐาน
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62114" name="1_S4_{Num}_4_6_2_14" value="1" disabled> (14) คิดว่าเจ้าหน้าที่ตำรวจไม่สามารถติดตามผู้กระทำผิดมาดำเนินคดีได้
+						<input type="checkbox" id="1_4{Num}462114" name="1_S4_{Num}_4_6_2_14" value="1" disabled> (14) คิดว่าเจ้าหน้าที่ตำรวจไม่สามารถติดตามผู้กระทำผิดมาดำเนินคดีได้
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62115" name="1_S4_{Num}_4_6_2_15" value="1" disabled> (15) มีความรู้สึกไม่ดีกับเจ้าหน้าที่ตำรวจหรือไม่ไว้วางใจเจ้าหน้าที่
+						<input type="checkbox" id="1_4{Num}462115" name="1_S4_{Num}_4_6_2_15" value="1" disabled> (15) มีความรู้สึกไม่ดีกับเจ้าหน้าที่ตำรวจหรือไม่ไว้วางใจเจ้าหน้าที่
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62116" name="1_S4_{Num}_4_6_2_16" value="1" disabled> (16) ไม่เชื่อมั่นในประสิทธิภาพการปฏิบัติงานของเจ้าหน้าที่
+						<input type="checkbox" id="1_4{Num}462116" name="1_S4_{Num}_4_6_2_16" value="1" disabled> (16) ไม่เชื่อมั่นในประสิทธิภาพการปฏิบัติงานของเจ้าหน้าที่
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}62117" name="1_S4_{Num}_4_6_2_17" value="1" disabled> (17) ผู้กระทำผิดเป็นเจ้าหน้าที่รัฐหรือผู้มีอิทธิพล (รวมถึงลูกหลาน/ญาติ/คนใกล้ชิด)
+						<input type="checkbox" id="1_4{Num}462117" name="1_S4_{Num}_4_6_2_17" value="1" disabled> (17) ผู้กระทำผิดเป็นเจ้าหน้าที่รัฐหรือผู้มีอิทธิพล (รวมถึงลูกหลาน/ญาติ/คนใกล้ชิด)
 					</label>
 					<label class="col-form-label col-lg-12" style="margin-left: -5px;">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="checkbox" id="1_4{Num}62118" name="1_S4_{Num}_4_6_2_18" value="1" disabled> (18) อื่นๆ (ระบุ)
+							<input type="checkbox" id="1_4{Num}462118" name="1_S4_{Num}_4_6_2_18" value="1" disabled> (18) อื่นๆ (ระบุ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_6_2_18_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}462_text" name="1_S4_{Num}_4_6_2_18_text" readonly />
 						</label>
 					</label>
 				</div>
@@ -777,33 +778,33 @@
 				<label for="47" class="col-form-label">4.7 (เฉพาะกรณีที่แจ้งต่อเจ้าหน้าที่) ท่านมีความพึงพอใจต่อการดำเนินงานของเจ้าหน้าที่ต่อการรับแจ้งเหตุของท่านมากน้อยเพียงใด</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}75" name="1_S4_{Num}_4_7" value="5"> (5) เชื่อมั่นมาก
+						<input type="radio" id="1_4{Num}475" name="1_S4_{Num}_4_7" value="5"> (5) เชื่อมั่นมาก
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}74" name="1_S4_{Num}_4_7" value="4"> (4) เชื่อมั่นค่อนข้างมาก
+						<input type="radio" id="1_4{Num}474" name="1_S4_{Num}_4_7" value="4"> (4) เชื่อมั่นค่อนข้างมาก
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}73" name="1_S4_{Num}_4_7" value="3"> (3) เชื่อมั่นปานกลาง
+						<input type="radio" id="1_4{Num}473" name="1_S4_{Num}_4_7" value="3"> (3) เชื่อมั่นปานกลาง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}72" name="1_S4_{Num}_4_7" value="2"> (2) เชื่อมั่นค่อนข้างน้อย
+						<input type="radio" id="1_4{Num}472" name="1_S4_{Num}_4_7" value="2"> (2) เชื่อมั่นค่อนข้างน้อย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}71" name="1_S4_{Num}_4_7" value="1"> (1) เชื่อมั่นน้อย
+						<input type="radio" id="1_4{Num}471" name="1_S4_{Num}_4_7" value="1"> (1) เชื่อมั่นน้อย
 					</label>
 
 					<label class=" col-form-label ">
 						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}70" name="1_S4_{Num}_4_7" value="99"> (0) ไม่เชื่อมั่นเลย
+							<input type="radio" id="1_4{Num}4799" name="1_S4_{Num}_4_7" value="99"> (0) ไม่เชื่อมั่นเลย
 						</label>
 					</label>
 
 					<div class="row">
-						<div class="col-form-label inputTextFix" style="margin-left: 10px;">
+						<div class="col-form-label inputtextFix" style="margin-left: 10px;">
 							โปรดระบุเหตุผล
 						</div>
 						<div class="col-lg-4">
-							<input type="text" class="form-control" name="1_S4_{Num}_4_7_TEXT" readonly />
+							<input type="text" class="form-control" id="1_4{Num}47_text" name="1_S4_{Num}_4_7_text" readonly />
 						</div>
 					</div>
 
@@ -1100,7 +1101,7 @@
 						<div class="modal-main" style="margin-left: 10px;">
 						</div>
 						<div class="modal-footer">
-							<a class="close btn width-100 btn-default btn-form-hiddend-save" data-url="<?= site_url('main/saveSurvey/true') ?>" data-dismiss="modal" aria-hidden="true">Save</a>
+							<a value="Save" class="close btn width-100 btn-default btn-form-hiddend-save" data-url="<?= site_url('main/saveSurvey/true') ?>" data-dismiss="modal" aria-hidden="true">Save</a>
 						</div>
 					</div>
 				</div>
@@ -1175,6 +1176,516 @@
 				});
 			};
 
+			if('<?=$u_check_new_survey_profile_victim?>'!='0'){
+				$(function() {
+					<? for ($index=2; $index <= count($d_surveyProfile_victimlist)+1; $index++) { ?>
+						checkId(document.getElementById('1_3' + '<?=$index?>' + '31<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_1"}?>'));
+						document.getElementById('1_3' + '<?=$index?>' + '32_text').value = '<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_2"}?>';
+						checkId(document.getElementById('1_3' + '<?=$index?>' + '33<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_3"}?>'));
+						checkId(document.getElementById('1_3' + '<?=$index?>' + '34<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_4"}?>'));
+						document.getElementById('1_3' + '<?=$index?>' + '34_text').value = '<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_4_text"}?>';
+						checkId(document.getElementById('1_3' + '<?=$index?>' + '35<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_5"}?>'));
+						document.getElementById('1_3' + '<?=$index?>' + '35_text').value = '<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_5_text"}?>';
+						checkId(document.getElementById('1_3' + '<?=$index?>' + '36<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_6"}?>'));
+
+						if ('<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_4"}?>' == '8') {
+							$('input[name="1_S3_' + '<?=$index?>' + '_3_4_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S3_' + '<?=$index?>' + '_3_4_text"]').prop('readonly', true);
+						}
+
+						if ('<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_5"}?>' == '10') {
+							$('input[name="1_S3_' + '<?=$index?>' + '_3_5_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S3_' + '<?=$index?>' + '_3_5_text"]').prop('readonly', true);
+						}
+					
+					<? } ?>
+				});
+			};
+
+			if('<?=$u_check_new_survey_victims_crimes?>'!='0'){
+				$(function() {
+					checkId(document.getElementById('1_4141<?=$d_surveyVictimsCrimes->S4_4_1?>'));
+					document.getElementById('1_4141_text').value = '<?=$d_surveyVictimsCrimes->S4_4_1_text?>';
+					checkId(document.getElementById('1_4142<?=$d_surveyVictimsCrimes->S4_4_2?>'));
+					document.getElementById('1_4142_text').value = '<?=$d_surveyVictimsCrimes->S4_4_2_text?>';
+					checkId(document.getElementById('1_4143<?=$d_surveyVictimsCrimes->S4_4_3?>'));
+					checkId(document.getElementById('1_4143_1<?=$d_surveyVictimsCrimes->S4_4_3_1?>'));
+					checkId(document.getElementById('1_4143_2<?=$d_surveyVictimsCrimes->S4_4_3_2?>'));
+					document.getElementById('1_41432_text').value = '<?=$d_surveyVictimsCrimes->S4_4_3_2_text?>';
+					checkId(document.getElementById('1_41433<?=$d_surveyVictimsCrimes->S4_4_3_3?>'));
+					checkIdbox(document.getElementById('1_41433<?=$d_surveyVictimsCrimes->S4_4_3_3?>_text'),'<?=$d_surveyVictimsCrimes->S4_4_3_3_text?>');
+					checkId(document.getElementById('1_41441<?=$d_surveyVictimsCrimes->S4_4_4_1?>'));
+					checkId(document.getElementById('1_41442<?=$d_surveyVictimsCrimes->S4_4_4_2?>'));
+					checkId(document.getElementById('1_41443<?=$d_surveyVictimsCrimes->S4_4_4_3?>'));
+					checkId(document.getElementById('1_41444<?=$d_surveyVictimsCrimes->S4_4_4_4?>'));
+					checkId(document.getElementById('1_41445<?=$d_surveyVictimsCrimes->S4_4_4_5?>'));
+					checkId(document.getElementById('1_41446<?=$d_surveyVictimsCrimes->S4_4_4_6?>'));
+					document.getElementById('1_4145').value = '<?=$d_surveyVictimsCrimes->S4_4_5?>';
+					checkId(document.getElementById('1_41461<?=$d_surveyVictimsCrimes->S4_4_6?>'));
+					checkId(document.getElementById('1_4146_11<?=$d_surveyVictimsCrimes->S4_4_6_1?>'));
+					document.getElementById('1_41461_text').value = '<?=$d_surveyVictimsCrimes->S4_4_6_1_text?>';
+					checkIdnCheckBOX(document.getElementById('1_4146211'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_1?>'); 
+					checkIdnCheckBOX(document.getElementById('1_4146212'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_2?>');
+					checkIdnCheckBOX(document.getElementById('1_4146213'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_3?>');
+					checkIdnCheckBOX(document.getElementById('1_4146214'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_4?>');
+					checkIdnCheckBOX(document.getElementById('1_4146215'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_5?>');
+					checkIdnCheckBOX(document.getElementById('1_4146216'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_6?>');
+					checkIdnCheckBOX(document.getElementById('1_4146217'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_7?>');
+					checkIdnCheckBOX(document.getElementById('1_4146218'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_8?>');
+					checkIdnCheckBOX(document.getElementById('1_4146219'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_9?>');
+					checkIdnCheckBOX(document.getElementById('1_41462110'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_10?>');
+					checkIdnCheckBOX(document.getElementById('1_41462111'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_11?>');
+					checkIdnCheckBOX(document.getElementById('1_41462112'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_12?>');
+					checkIdnCheckBOX(document.getElementById('1_41462113'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_13?>');
+					checkIdnCheckBOX(document.getElementById('1_41462114'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_14?>');
+					checkIdnCheckBOX(document.getElementById('1_41462115'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_15?>');
+					checkIdnCheckBOX(document.getElementById('1_41462116'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_16?>');
+					checkIdnCheckBOX(document.getElementById('1_41462117'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_17?>');
+					checkIdnCheckBOX(document.getElementById('1_41462118'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_18?>');
+					document.getElementById('1_41462_text').value = '<?=$d_surveyVictimsCrimes->S4_4_6_2_18_text?>';
+					checkId(document.getElementById('1_4147<?=$d_surveyVictimsCrimes->S4_4_7?>'));
+					document.getElementById('1_4147_text').value = '<?=$d_surveyVictimsCrimes->S4_4_7_text?>';
+
+					if ('<?=$d_surveyVictimsCrimes->S4_4_1?>' == '1') {
+						$('input[name="1_S4_1_4_1_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_1_4_1_text"]').prop('readonly', true);
+					}
+
+					if ('<?=$d_surveyVictimsCrimes->S4_4_2?>' == '6') {
+						$('input[name="1_S4_1_4_2_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_1_4_2_text"]').prop('readonly', true);
+					}
+
+					if ('<?=$d_surveyVictimsCrimes->S4_4_3?>' == '1') {
+							$('input[name="1_S4_1_4_3_1"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_3_2"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_3_3"]').prop('disabled', false);
+						} else {
+							$('input[name="1_S4_1_4_3_1"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_3_2"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						}
+
+						if ('<?=$d_surveyVictimsCrimes->S4_4_3_2?>' == '2') {
+							$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
+						}
+
+
+						if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '1') {
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', false);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '2') {
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', false);
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '3') {
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', false);
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '4') {
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', false);
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '5') {
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', false);
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '6') {
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', false);
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '7') {
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', false);
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						} else {
+							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+						}
+
+			
+
+						if ('<?=$d_surveyVictimsCrimes->S4_4_6?>' == '1') {
+							$('input[name="1_S4_1_4_6_2_1"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_2"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_3"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_4"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_5"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_6"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_7"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_8"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_9"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_10"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_11"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_12"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_13"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_14"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_15"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_16"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_17"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_2_18"]').prop('checked', false);
+
+							$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', true);
+
+							$('input[name="1_S4_1_4_6_1"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
+
+						}else if('<?=$d_surveyVictimsCrimes->S4_4_6?>' == '2'){
+							$('input[name="1_S4_1_4_6_1"]').prop('checked', false);
+							$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
+
+							$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', false);
+
+							$('input[name="1_S4_1_4_6_1"]').prop('disabled', true);
+						}
+
+
+						if ('<?=$d_surveyVictimsCrimes->S4_4_6_1?>' == '4') {
+							$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
+						}
+
+						if ('<?=$d_surveyVictimsCrimes->S4_4_6_2_18?>' == '1') {
+							$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
+						}
+
+
+
+						if ('<?=$d_surveyVictimsCrimes->S4_4_7?>' == '99') {
+							$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);
+						}
+
+
+
+
+					
+					<? for ($index=2; $index <= count($d_surveyVictimsCrimeslist)+1; $index++) { ?>
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '41<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_1?>'));
+						document.getElementById('1_4' + '<?=$index?>' + '41_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_1_text?>';
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '42<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_2?>'));
+						document.getElementById('1_4' + '<?=$index?>' + '42_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_2_text?>';
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '43<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '43_1<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_1?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '43_2<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_2?>'));
+						document.getElementById('1_4' + '<?=$index?>' + '432_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_2_text?>';
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '433<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>'));
+						checkIdbox(document.getElementById('1_4' + '<?=$index?>' + '433<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>_text'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3_text?>');
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '441<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_1?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '442<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_2?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '443<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_3?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '444<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_4?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '445<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_5?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '446<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_6?>'));
+						document.getElementById('1_4' + '<?=$index?>' + '45').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_5?>';
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '461<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6?>'));
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '46_11<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_1?>'));
+						document.getElementById('1_4' + '<?=$index?>' + '461_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_1_text?>';
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46211'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_1?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46212'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_2?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46213'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_3?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46214'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_4?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46215'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_5?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46216'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_6?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46217'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_7?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46218'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_8?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46219'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_9?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462110'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_10?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462111'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_11?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462112'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_12?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462113'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_13?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462114'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_14?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462115'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_15?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462116'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_16?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462117'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_17?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462118'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_18?>');
+						document.getElementById('1_4' + '<?=$index?>' + '462_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_18_text?>';
+						checkId(document.getElementById('1_4' + '<?=$index?>' + '47<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7?>'));
+						document.getElementById('1_4' + '<?=$index?>' + '47_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7_text?>';
+
+
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_1?>' == '1') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_1_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_1_text"]').prop('readonly', true);
+					}
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_2?>' == '6') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_2_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_2_text"]').prop('readonly', true);
+					}
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3?>' == '1') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_1"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3"]').prop('disabled', false);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_1"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					}
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_2?>' == '2') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2_text"]').prop('readonly', true);
+					}
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '1') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '2') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '3') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '4') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '5') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '6') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '7') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					}
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6?>' == '1') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_1"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_2"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_3"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_4"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_5"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_6"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_7"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_8"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_9"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_10"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_11"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_12"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_13"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_14"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_15"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_16"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('checked', false);
+
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_1"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_2"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_3"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_4"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_5"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_6"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_7"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_8"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_9"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_10"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_11"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_12"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_13"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_14"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_15"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_16"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('disabled', true);
+
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18_text"]').prop('readonly', true);
+					}else if('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6?>' == '2'){
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('checked', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1_text"]').prop('readonly', true);
+
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_1"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_2"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_3"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_4"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_5"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_6"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_7"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_8"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_9"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_10"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_11"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_12"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_13"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_14"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_15"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_16"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('disabled', false);
+
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('disabled', true);
+					}
+
+
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_1?>' == '4') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1_text"]').prop('readonly', true);
+					}
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_18?>' == '1') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18_text"]').prop('readonly', true);
+					}
+
+
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7?>' == '99') {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('readonly', true);
+					}
+
+					<? } ?>
+					
+				});
+			};
+
 			function createDetech(i) {
 				$('input[name="1_S2_' + i + '_3"]').on('change', function() {
 					if ($(this).val() === '1') {
@@ -1189,33 +1700,33 @@
 
 				$('input[name="1_S3_' + i + '_3_4"]').on('change', function() {
 					if ($(this).val() === '8') {
-						$('input[name="1_S3_' + i + '_3_4_TEXT"]').prop('readonly', false);
+						$('input[name="1_S3_' + i + '_3_4_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S3_' + i + '_3_4_TEXT"]').prop('readonly', true);
+						$('input[name="1_S3_' + i + '_3_4_text"]').prop('readonly', true);
 					}
 				});
 
 				$('input[name="1_S3_' + i + '_3_5"]').on('change', function() {
 					if ($(this).val() === '10') {
-						$('input[name="1_S3_' + i + '_3_5_TEXT"]').prop('readonly', false);
+						$('input[name="1_S3_' + i + '_3_5_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S3_' + i + '_3_5_TEXT"]').prop('readonly', true);
+						$('input[name="1_S3_' + i + '_3_5_text"]').prop('readonly', true);
 					}
 				});
 
 				$('input[name="1_S4_' + i + '_4_1"]').on('change', function() {
 					if ($(this).val() === '1') {
-						$('input[name="1_S4_' + i + '_4_1_TEXT"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_1_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S4_' + i + '_4_1_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_1_text"]').prop('readonly', true);
 					}
 				});
 
 				$('input[name="1_S4_' + i + '_4_2"]').on('change', function() {
 					if ($(this).val() === '6') {
-						$('input[name="1_S4_' + i + '_4_2_TEXT"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_2_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S4_' + i + '_4_2_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_2_text"]').prop('readonly', true);
 					}
 				});
 
@@ -1227,97 +1738,96 @@
 					} else {
 						$('input[name="1_S4_' + i + '_4_3_1"]').prop('disabled', true);
 						$('input[name="1_S4_' + i + '_4_3_2"]').prop('disabled', true);
-						$('input[name="1_S4_' + i + '_4_3_2_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_2_text"]').prop('readonly', true);
 						$('input[name="1_S4_' + i + '_4_3_3"]').prop('disabled', true);
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					}
 				});
 
 				$('input[name="1_S4_' + i + '_4_3_2"]').on('change', function() {
 					if ($(this).val() === '2') {
-						$('input[name="1_S4_' + i + '_4_3_2_TEXT"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_2_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S4_' + i + '_4_3_2_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_2_text"]').prop('readonly', true);
 					}
 				});
 
 				$('input[name="1_S4_' + i + '_4_3_3"]').on('change', function() {
 					if ($(this).val() === '1') {
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', false);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					} else if ($(this).val() === '2') {
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', false);
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					} else if ($(this).val() === '3') {
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', false);
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					} else if ($(this).val() === '4') {
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', false);
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					} else if ($(this).val() === '5') {
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', false);
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					} else if ($(this).val() === '6') {
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', false);
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					} else if ($(this).val() === '7') {
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', false);
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
 					} else {
-						$('input[name="1_S4_' + i + '_4_3_3_1_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_2_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_3_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_4_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_5_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_6_TEXT"]').prop('readonly', true);
-						$('input[name="1_S4_' + i + '_4_3_3_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					}
 				});
 
-				$('input[name="1_S4_' + i + '_4_6_1"]').on('change', function() {
+				$('input[name="1_S4_' + i + '_4_6"]').on('change', function() {
 					if ($(this).val() === '1') {
-						$('input[name="1_S4_' + i + '_4_6_2"]').prop('checked', false);
 						$('input[name="1_S4_' + i + '_4_6_2_1"]').prop('checked', false);
 						$('input[name="1_S4_' + i + '_4_6_2_2"]').prop('checked', false);
 						$('input[name="1_S4_' + i + '_4_6_2_3"]').prop('checked', false);
@@ -1356,19 +1866,11 @@
 						$('input[name="1_S4_' + i + '_4_6_2_17"]').prop('disabled', true);
 						$('input[name="1_S4_' + i + '_4_6_2_18"]').prop('disabled', true);
 
-						$('input[name="1_S4_' + i + '_4_6_1_1"]').prop('disabled', false);
-						$('input[name="1_S4_' + i + '_4_6_2_18_TEXT"]').prop('readonly', true);
-
-
-
-					}
-				});
-
-				$('input[name="1_S4_' + i + '_4_6_2"]').on('change', function() {
-					if ($(this).val() === '1') {
+						$('input[name="1_S4_' + i + '_4_6_1"]').prop('disabled', false);
+						$('input[name="1_S4_' + i + '_4_6_2_18_text"]').prop('readonly', true);
+					}else if($(this).val() === '2'){
 						$('input[name="1_S4_' + i + '_4_6_1"]').prop('checked', false);
-						$('input[name="1_S4_' + i + '_4_6_1_1"]').prop('checked', false);
-						$('input[name="1_S4_' + i + '_4_6_1_1_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_6_1_text"]').prop('readonly', true);
 
 						$('input[name="1_S4_' + i + '_4_6_2_1"]').prop('disabled', false);
 						$('input[name="1_S4_' + i + '_4_6_2_2"]').prop('disabled', false);
@@ -1389,43 +1891,34 @@
 						$('input[name="1_S4_' + i + '_4_6_2_17"]').prop('disabled', false);
 						$('input[name="1_S4_' + i + '_4_6_2_18"]').prop('disabled', false);
 
-						$('input[name="1_S4_' + i + '_4_6_1_1"]').prop('disabled', true);
+						$('input[name="1_S4_' + i + '_4_6_1"]').prop('disabled', true);
 					}
 				});
 
 
 
-				$('input[name="1_S4_' + i + '_4_6_1_1"]').on('change', function() {
+				$('input[name="1_S4_' + i + '_4_6_1"]').on('change', function() {
 					if ($(this).val() === '4') {
-						$('input[name="1_S4_' + i + '_4_6_1_1_TEXT"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_6_1_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S4_' + i + '_4_6_1_1_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_6_1_text"]').prop('readonly', true);
 					}
 				});
 
 				$('input[name="1_S4_' + i + '_4_6_2_18"]').on('change', function() {
 					if ($(this).prop("checked") == true) {
-						$('input[name="1_S4_' + i + '_4_6_2_18_TEXT"]').prop('readonly', false);
+						$('input[name="1_S4_' + i + '_4_6_2_18_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S4_' + i + '_4_6_2_18_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_6_2_18_text"]').prop('readonly', true);
 					}
 				});
 
-
-
-				$('input[id="1_4' + i + '62118"]').on('change', function() {
-					if ($(this).is(":checked")) {
-						$('input[name="1_S4_' + i + '_4_6_2_1_TEXT"]').prop('readonly', false);
-					} else {
-						$('input[name="1_S4_' + i + '_4_6_2_1_TEXT"]').prop('readonly', true);
-					}
-				});
 
 				$('input[name="1_S4_' + i + '_4_7"]').on('change', function() {
-					if ($(this).val() === '0') {
-						$('input[name="1_S4_' + i + '_4_7_TEXT"]').prop('readonly', false);
+					if ($(this).val() === '99') {
+						$('input[name="1_S4_' + i + '_4_7_text"]').prop('readonly', false);
 					} else {
-						$('input[name="1_S4_' + i + '_4_7_TEXT"]').prop('readonly', true);
+						$('input[name="1_S4_' + i + '_4_7_text"]').prop('readonly', true);
 					}
 				});
 			};
@@ -1491,7 +1984,7 @@
 				modalMain.appendChild(cloneS4);
 				createDetech(i);
 
-				document.getElementById("1_S2_TEXT").value = <?=count($d_surveyVictimslist)+1 ?>+(i-<?=count($d_surveyVictimslist)+1 ?>);
+				document.getElementById("1_S2_text").value = <?=count($d_surveyVictimslist)+1 ?>+(i-<?=count($d_surveyVictimslist)+1 ?>);
 			}
 
 			function validBlank() {
@@ -1518,251 +2011,247 @@
 
 
 
-			$('input[name="1_S3_3_4"]').on('change', function() {
+			$('input[name="1_S3_1_3_4"]').on('change', function() {
 				if ($(this).val() === '8') {
-					$('input[name="1_S3_3_4_TEXT"]').prop('readonly', false);
+					$('input[name="1_S3_1_3_4_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S3_3_4_TEXT"]').prop('readonly', true);
+					$('input[name="1_S3_1_3_4_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S3_3_5"]').on('change', function() {
+			$('input[name="1_S3_1_3_5"]').on('change', function() {
 				if ($(this).val() === '10') {
-					$('input[name="1_S3_3_5_TEXT"]').prop('readonly', false);
+					$('input[name="1_S3_1_3_5_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S3_3_5_TEXT"]').prop('readonly', true);
+					$('input[name="1_S3_1_3_5_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S4_4_1"]').on('change', function() {
+			$('input[name="1_S4_1_4_1"]').on('change', function() {
 				if ($(this).val() === '1') {
-					$('input[name="1_S4_4_1_TEXT"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_1_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S4_4_1_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_1_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S4_4_2"]').on('change', function() {
+			$('input[name="1_S4_1_4_2"]').on('change', function() {
 				if ($(this).val() === '6') {
-					$('input[name="1_S4_4_2_TEXT"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_2_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S4_4_2_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_2_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S4_4_3"]').on('change', function() {
+			$('input[name="1_S4_1_4_3"]').on('change', function() {
 				if ($(this).val() === '1') {
-					$('input[name="1_S4_4_3_1"]').prop('disabled', false);
-					$('input[name="1_S4_4_3_2"]').prop('disabled', false);
-					$('input[name="1_S4_4_3_3"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_3_1"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_3_2"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_3_3"]').prop('disabled', false);
 				} else {
-					$('input[name="1_S4_4_3_1"]').prop('disabled', true);
-					$('input[name="1_S4_4_3_2"]').prop('disabled', true);
-					$('input[name="1_S4_4_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3"]').prop('disabled', true);
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_1"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_3_2"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S4_4_3_2"]').on('change', function() {
+			$('input[name="1_S4_1_4_3_2"]').on('change', function() {
 				if ($(this).val() === '2') {
-					$('input[name="1_S4_4_3_2_TEXT"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S4_4_3_2_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S4_4_3_3"]').on('change', function() {
+			$('input[name="1_S4_1_4_3_3"]').on('change', function() {
 				if ($(this).val() === '1') {
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', false);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				} else if ($(this).val() === '2') {
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', false);
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				} else if ($(this).val() === '3') {
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', false);
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				} else if ($(this).val() === '4') {
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', false);
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				} else if ($(this).val() === '5') {
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', false);
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				} else if ($(this).val() === '6') {
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', false);
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				} else if ($(this).val() === '7') {
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', false);
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
 				} else {
-					$('input[name="1_S4_4_3_3_1_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_2_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_3_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_4_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_5_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_6_TEXT"]').prop('readonly', true);
-					$('input[name="1_S4_4_3_3_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S4_4_6_1"]').on('change', function() {
+			$('input[name="1_S4_1_4_6"]').on('change', function() {
 				if ($(this).val() === '1') {
-					$('input[name="1_S4_4_6_2"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_1"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_2"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_3"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_4"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_5"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_6"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_7"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_8"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_9"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_10"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_11"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_12"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_13"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_14"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_15"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_16"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_17"]').prop('checked', false);
-					$('input[name="1_S4_4_6_2_18"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_1"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_2"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_3"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_4"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_5"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_6"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_7"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_8"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_9"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_10"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_11"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_12"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_13"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_14"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_15"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_16"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_17"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_2_18"]').prop('checked', false);
 
-					$('input[name="1_S4_4_6_2_1"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_2"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_3"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_4"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_5"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_6"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_7"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_8"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_9"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_10"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_11"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_12"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_13"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_14"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_15"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_16"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_17"]').prop('disabled', true);
-					$('input[name="1_S4_4_6_2_18"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', true);
 
-					$('input[name="1_S4_4_6_1_1"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_18_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_6_1"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
 
+				}else if($(this).val() === '2'){
+					$('input[name="1_S4_1_4_6_1"]').prop('checked', false);
+					$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
 
+					$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', false);
 
-				}
-			});
-
-			$('input[name="1_S4_4_6_2"]').on('change', function() {
-				if ($(this).val() === '1') {
-					$('input[name="1_S4_4_6_1"]').prop('checked', false);
-					$('input[name="1_S4_4_6_1_1"]').prop('checked', false);
-					$('input[name="1_S4_4_6_1_1_TEXT"]').prop('readonly', true);
-
-					$('input[name="1_S4_4_6_2_1"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_2"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_3"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_4"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_5"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_6"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_7"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_8"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_9"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_10"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_11"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_12"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_13"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_14"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_15"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_16"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_17"]').prop('disabled', false);
-					$('input[name="1_S4_4_6_2_18"]').prop('disabled', false);
-
-					$('input[name="1_S4_4_6_1_1"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_6_1"]').prop('disabled', true);
 				}
 			});
 
 
 
-			$('input[name="1_S4_4_6_1_1"]').on('change', function() {
+
+			$('input[name="1_S4_1_4_6_1"]').on('change', function() {
 				if ($(this).val() === '4') {
-					$('input[name="1_S4_4_6_1_1_TEXT"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S4_4_6_1_1_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
 				}
 			});
 
-			$('input[name="1_S4_4_6_2_18"]').on('change', function() {
+			$('input[name="1_S4_1_4_6_2_18"]').on('change', function() {
 				if ($(this).prop("checked") == true) {
-					$('input[name="1_S4_4_6_2_18_TEXT"]').prop('readonly', false);
+					$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S4_4_6_2_18_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
 				}
 			});
 
 
-
-			$('input[id="1_4{Num}62118"]').on('change', function() {
-				if ($(this).is(":checked")) {
-					$('input[name="1_S4_4_6_2_1_TEXT"]').prop('readonly', false);
+			$('input[name="1_S4_1_4_7"]').on('change', function() {
+				if ($(this).val() === '99') {
+					$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
 				} else {
-					$('input[name="1_S4_4_6_2_1_TEXT"]').prop('readonly', true);
-				}
-			});
-
-			$('input[name="1_S4_4_7"]').on('change', function() {
-				if ($(this).val() === '0') {
-					$('input[name="1_S4_4_7_TEXT"]').prop('readonly', false);
-				} else {
-					$('input[name="1_S4_4_7_TEXT"]').prop('readonly', true);
+					$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);
 				}
 			});
 
 			function checkId(id) {
 				if (id != null) {
 					id.checked = true;
+				}
+			};
+			function checkIdnCheckBOX(id,value) {
+				if (id != null ) {
+					if (value == 1) {
+						id.checked = true;
+					}
+				}
+			};
+			function checkIdbox(id,value) {
+				if (id != null) {
+					id.value = value;
 				}
 			};
 		</script>

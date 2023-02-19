@@ -171,7 +171,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S1_1_1_4_TEXT" readonly />
+									<input type="text" class="form-control" name="S1_1_1_4_text" readonly />
 								</div>
 							</div>
 
@@ -215,7 +215,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S1_1_1_5_TEXT" readonly />
+									<input type="text" class="form-control" name="S1_1_1_5_text" readonly />
 								</div>
 							</div>
 
@@ -235,7 +235,7 @@
 									เคย กรุณาระบุหน่วยงาน
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" name="S1_1_1_6_TEXT" readonly />
+									<input type="text" class="form-control" name="S1_1_1_6_text" readonly />
 								</div>
 							</div>
 
@@ -443,7 +443,7 @@
 							</div>
 							<div class="row">
 								<div class="col-lg-12">
-									<textarea type="text" id="25" class="form-control" rows="3" name="S2_5_TEXT"></textarea>
+									<textarea type="text" id="25" class="form-control" rows="3" name="S2_5_text"></textarea>
 								</div>
 							</div>
 						</div>
@@ -725,7 +725,7 @@
 							</div>
 							<div class="row">
 								<div class="col-lg-12">
-									<textarea type="text" class="form-control" id="36" rows="3" name="S3_6_TEXT"></textarea>
+									<textarea type="text" class="form-control" id="36" rows="3" name="S3_6_text"></textarea>
 								</div>
 							</div>
 							</br></br>
@@ -773,26 +773,26 @@
 
 		$('input[name="S1_1_1_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_6"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S1_1_1_6_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_6_text"]').prop('readonly', false);
 				$('input[name="S1_1_1_6_1"]').attr('readonly', false);
 			} else {
-				$('input[name="S1_1_1_6_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_6_text"]').prop('readonly', true);
 				$('input[name="S1_1_1_6_1"]').attr('readonly', true);
 			}
 		});

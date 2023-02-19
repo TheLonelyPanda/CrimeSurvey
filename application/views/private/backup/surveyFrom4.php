@@ -185,26 +185,26 @@
 
 		$('input[name="S1_1_1_4"]').on('change', function() {
 			if ($(this).val() === '8') {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_4_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_4_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_5"]').on('change', function() {
 			if ($(this).val() === '10') {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', false);
 			} else {
-				$('input[name="S1_1_1_5_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_5_text"]').prop('readonly', true);
 			}
 		});
 
 		$('input[name="S1_1_1_6"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="S1_1_1_6_TEXT"]').prop('readonly', false);
+				$('input[name="S1_1_1_6_text"]').prop('readonly', false);
 				$('input[name="S1_1_1_6_1"]').attr('readonly', false);
 			} else {
-				$('input[name="S1_1_1_6_TEXT"]').prop('readonly', true);
+				$('input[name="S1_1_1_6_text"]').prop('readonly', true);
 				$('input[name="S1_1_1_6_1"]').attr('readonly', true);
 			}
 		});
