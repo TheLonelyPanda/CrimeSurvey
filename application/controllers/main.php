@@ -1071,13 +1071,75 @@ class Main extends CI_Controller {
     }
        
 
-	public function export() {
+	public function export($profile_id) {
 		$user_name=$this->isLogin();
 		if($user_name != false){
 			$data['u_disp']=$this->session->userdata('user_name');					
 			$data['h_flag']="list";		  
-			$data['h_back']="main/index";  	        
-	        $this->load->view('/private/export', $data);       
+			$data['h_back']="main/index";  	      
+			
+			$this->load->library('zip');
+			$this->load->dbutil();
+			$this->load->helper('file');
+			$this->load->helper('download');
+			$this->load->model("datamodel");
+
+			$this->datamodel->sql="select * from survey_profile where profile_id='$profile_id' or master_id = '$profile_id'";
+			$profileQueryData=$this->datamodel->list_data_sql_export();
+			$profileData = $this->dbutil->csv_from_result($profileQueryData);
+			write_file('./survey_profile.csv', $profileData);
+
+			$this->datamodel->sql="select * from survey_victims where profile_id='$profile_id' or master_id = '$profile_id'";
+			$victimsQueryData=$this->datamodel->list_data_sql_export();
+			$victimsData = $this->dbutil->csv_from_result($victimsQueryData);
+			write_file('./survey_victims.csv', $victimsData);
+
+			$this->datamodel->sql="select * from survey_victims_crimes where profile_id='$profile_id' or master_id = '$profile_id'";
+			$crimesQueryData=$this->datamodel->list_data_sql_export();
+			$crimesData = $this->dbutil->csv_from_result($crimesQueryData);
+			write_file('./survey_victims_crimes.csv', $crimesData);
+
+			$this->datamodel->sql="select * from survey_knowledge_laws where profile_id='$profile_id'";
+			$lawsQueryData=$this->datamodel->list_data_sql_export();
+			$lawsData = $this->dbutil->csv_from_result($lawsQueryData);
+			write_file('./survey_knowledge_laws.csv', $lawsData);
+
+			$this->datamodel->sql="select * from survey_panic_in_crimes where profile_id='$profile_id'";
+			$panicQueryData=$this->datamodel->list_data_sql_export();
+			$panicData = $this->dbutil->csv_from_result($panicQueryData);
+			write_file('./survey_panic_in_crimes.csv', $panicData);
+
+			$this->datamodel->sql="select * from survey_trust_for_security where profile_id='$profile_id'";
+			$securityQueryData=$this->datamodel->list_data_sql_export();
+			$securityData = $this->dbutil->csv_from_result($securityQueryData);
+			write_file('./survey_trust_for_security.csv', $securityData);
+
+			$this->datamodel->sql="select * from survey_sdgs where profile_id='$profile_id'";
+			$sdgsQueryData=$this->datamodel->list_data_sql_export();
+			$sdgsData = $this->dbutil->csv_from_result($sdgsQueryData);
+			write_file('./survey_sdgs.csv', $sdgsData);
+
+			$this->datamodel->sql="select * from survey_trust_in_justic where profile_id='$profile_id'";
+			$justicQueryData=$this->datamodel->list_data_sql_export();
+			$justicData = $this->dbutil->csv_from_result($justicQueryData);
+			write_file('./survey_trust_in_justic.csv', $justicData);
+
+			// Zip the CSV files
+			$zip_file_path = './csv_'.$profile_id.'.zip';
+			$this->zip->add_data('survey_profile.csv', $profileData);
+			$this->zip->add_data('survey_victims.csv', $victimsData);
+			$this->zip->add_data('survey_victims_crimes.csv', $crimesData);
+			$this->zip->add_data('survey_knowledge_laws.csv', $lawsData);
+			$this->zip->add_data('survey_panic_in_crimes.csv', $panicData);
+			$this->zip->add_data('survey_trust_for_security.csv', $securityData);
+			$this->zip->add_data('survey_sdgs.csv', $sdgsData);
+			$this->zip->add_data('survey_trust_in_justic.csv', $justicData);
+			$this->zip->archive($zip_file_path);
+
+			// Send the zip file as response
+			$zip_file_data = file_get_contents($zip_file_path);
+			force_download('csv_'.$profile_id.'.zip', $zip_file_data);
+
 		}
     }
 

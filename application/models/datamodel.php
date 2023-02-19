@@ -38,6 +38,12 @@ class Datamodel extends CI_Model
     //echo $this->sql."::::::::::::";
     return $query->result();
   }
+  function list_data_sql_export()
+  {
+    $query = $this->db->query($this->sql);
+    //echo $this->sql."::::::::::::";
+    return $query;
+  }
 
   function first_row_data_sql()
   {
