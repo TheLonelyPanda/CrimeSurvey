@@ -137,7 +137,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.1</td>
-						<td class="tg-0lax">การขอรับความช่วยเหลือผ่านช่องทาง สายด่วนยุติธรรม 1111 กด 77</td>
+						<td class="tg-0lax">การขอรับความช่วยเหลือผ่านช่องทาง <b>สายด่วนยุติธรรม 1111 กด 77</b></td>
 						<td class="tg-0laa"><input type="radio" id="2_2215" name="2_S2_2_1" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2214" name="2_S2_2_1" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2213" name="2_S2_2_1" value="3"></td>
@@ -146,7 +146,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.2</td>
-						<td class="tg-0lax">การบริการให้ความช่วยเหลือทางกฎหมายและกระบวนการยุติธรรม ผ่านศูนย์ยุติธรรมจังหวัด/ชุมชน </td>
+						<td class="tg-0lax">การบริการให้ความช่วยเหลือทางกฎหมายและกระบวนการยุติธรรม <b>ผ่านศูนย์ยุติธรรมจังหวัด/ชุมชน</b> </td>
 						<td class="tg-0laa"><input type="radio" id="2_2225" name="2_S2_2_2" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2224" name="2_S2_2_2" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2223" name="2_S2_2_2" value="3"></td>
@@ -155,7 +155,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.3</td>
-						<td class="tg-0lax">เมื่อต้องตกเป็นผู้ต้องหาในคดีอาญา กฎหมายได้กำหนดให้รัฐ มีหน้าที่จัดหาทนายความ</td>
+						<td class="tg-0lax">เมื่อต้องตกเป็นผู้ต้องหาในคดีอาญา กฎหมายได้กำหนดให้รัฐ มีหน้าที่จัดหา<b>ทนายความ</b></td>
 						<td class="tg-0laa"><input type="radio" id="2_2235" name="2_S2_2_3" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2234" name="2_S2_2_3" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2233" name="2_S2_2_3" value="3"></td>
@@ -164,7 +164,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.4</td>
-						<td class="tg-0lax">การขอรับความช่วยเหลือทางการเงินในการต่อสู้คดีจากกองทุนยุติธรรม</td>
+						<td class="tg-0lax">การขอรับความช่วยเหลือทางการเงินในการต่อสู้คดีจาก<b>กองทุนยุติธรรม</b></td>
 						<td class="tg-0laa"><input type="radio" id="2_2245" name="2_S2_2_4" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2244" name="2_S2_2_4" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2243" name="2_S2_2_4" value="3"></td>
@@ -173,7 +173,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.5</td>
-						<td class="tg-0lax">การร้องขอให้หน่วยงานของรัฐทำหน้าที่ไกล่เกลี่ยคดีให้เมื่อมีคดีความเกิดขึ้น </td>
+						<td class="tg-0lax">การร้องขอให้หน่วยงานของรัฐทำหน้าที่<b>ไกล่เกลี่ยคดี</b>ให้เมื่อมีคดีความเกิดขึ้น </td>
 						<td class="tg-0laa"><input type="radio" id="2_2255" name="2_S2_2_5" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2254" name="2_S2_2_5" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2253" name="2_S2_2_5" value="3"></td>
@@ -182,7 +182,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.6</td>
-						<td class="tg-0lax">การรับหรือให้ข้อมูลข่าวสารผ่านทนายความหรือผู้ให้คำปรึกษาทางกฎหมาย</td>
+						<td class="tg-0lax">การรับหรือให้ข้อมูลข่าวสารผ่าน<b>ทนายความหรือผู้ให้คำปรึกษาทางกฎหมาย</b></td>
 						<td class="tg-0laa"><input type="radio" id="2_2265" name="2_S2_2_6" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2264" name="2_S2_2_6" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2263" name="2_S2_2_6" value="3"></td>
@@ -191,7 +191,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.7</td>
-						<td class="tg-0lax">การรับหรือให้ข้อมูลข่าวสารผ่านโฆษกหน่วยงานภาครัฐหรือเจ้าหน้าที่รัฐผู้รับผิดชอบคดี</td>
+						<td class="tg-0lax">การรับหรือให้ข้อมูลข่าวสารผ่าน<b>โฆษกหน่วยงานภาครัฐหรือเจ้าหน้าที่รัฐผู้รับผิดชอบคดี</b></td>
 						<td class="tg-0laa"><input type="radio" id="2_2275" name="2_S2_2_7" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2274" name="2_S2_2_7" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2273" name="2_S2_2_7" value="3"></td>
@@ -200,7 +200,7 @@
 					</tr>
 					<tr>
 						<td class="tg-0lax">2.8</td>
-						<td class="tg-0lax">การรับหรือให้ข้อมูลข่าวสารผ่านมูลนิธิหรือองค์กรให้ความช่วยเหลือในกระบวนการยุติธรรม</td>
+						<td class="tg-0lax">การรับหรือให้ข้อมูลข่าวสารผ่าน<b>มูลนิธิหรือองค์กรให้ความช่วยเหลือในกระบวนการยุติธรรม</b></td>
 						<td class="tg-0laa"><input type="radio" id="2_2285" name="2_S2_2_8" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2284" name="2_S2_2_8" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="2_2283" name="2_S2_2_8" value="3"></td>

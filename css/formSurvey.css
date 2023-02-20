@@ -35,7 +35,7 @@ a.width{
 .tg {
   border-collapse: collapse;
   border-spacing: 0;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .tg td {
@@ -93,6 +93,10 @@ a.width{
 .tg .tg-0laq {
   text-align: left;
   vertical-align: top;
+}
+
+.tg .age {
+  width: 100px;
 }
 
 .bg{

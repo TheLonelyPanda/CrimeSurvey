@@ -98,18 +98,18 @@
 								<label for="A1" class="col-form-label">A1 ข้อมูลส่วนบุคคล</label></br>
 							</div>
 							<div class="row indent">
-								<label for="A2" class="col-form-label nText">A2 บ้านเลขที่</label>
-								<div class="col-lg-3 ">
+								<label for="A2" class="col-form-label nText col-lg-15">A2 บ้านเลขที่</label>
+								<div class="col-lg-2 ">
 									<input type="text" class="form-control" id="A2" name="A2" />
 								</div>
 							</div>
 							<div class="row indent">
-								<label for="A3_1" class="col-form-label nText">A3 พิกัดบ้าน (NS)</label>
-								<div class="col-lg-3 ">
+								<label for="A3_1" class="col-form-label nText col-lg-15">A3 พิกัดบ้าน (NS)</label>
+								<div class="col-lg-2 ">
 									<input type="text" class="form-control" id="A3_1" name="A3_1" />
 								</div>
 								<label for="A3_2" class="col-form-label nText">พิกัดบ้าน (EW)</label>
-								<div class="col-lg-3 ">
+								<div class="col-lg-2 ">
 									<input type="text" class="form-control" id="A3_2" name="A3_2" />
 								</div>
 							</div>
@@ -126,7 +126,7 @@
 											<label class="radio-inline " style="align-self: center; style=" margin-left: 10px;>(A4.1) กรุงเทพมหานคร</label>
 										</div>
 										<div class="row" style=" padding-top: 13px;">
-											<label class="radio-inline " style="align-self: center;">เขต</label>
+											<label class="radio-inline col-lg-25" style="align-self: center;">เขต</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="amphure_id_1" id="amphure_1" class="form-control" disabled>
 													<option value="">เลือกเขต</option>
@@ -134,7 +134,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline" style="align-self: center;">แขวง</label>
+											<label class="radio-inline col-lg-25" style="align-self: center;">แขวง</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="district_id_1" id="district_1" class="form-control" disabled>
 													<option value="">เลือกแขวง</option>
@@ -142,7 +142,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline" style="align-self: center;">เขตสถานีตำรวจ</label>
+											<label class="radio-inline col-lg-25" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<input type="text" class="form-control" id="A4_41" name="A4_1_text_3" readonly />
 											</label>
@@ -152,7 +152,7 @@
 									<div style="width: 50%; float:right;">
 										<div class="row" style="margin-left: 10px;">
 											<input type="radio" id="A42" name="A4" value="2">
-											<label class="radio-inline" style="align-self: center;">(A4.2) จังหวัดอื่นๆ (ระบุ)</label>
+											<label class="radio-inline col-lg-4" style="align-self: center;">(A4.2) จังหวัดอื่นๆ (ระบุ)</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="province_id" id="province" class="form-control" disabled>
 													<option value="">เลือกจังหวัด</option>
@@ -163,7 +163,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline" style="align-self: center;">อำเภอ</label>
+											<label class="radio-inline col-lg-45" style="align-self: center;">อำเภอ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="amphure_id" id="amphure" class="form-control" disabled>
 													<option value="">เลือกอำเภอ</option>
@@ -171,7 +171,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline" style="align-self: center;">ตำบล</label>
+											<label class="radio-inline col-lg-45" style="align-self: center;">ตำบล</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="district_id" id="district" class="form-control" disabled>
 													<option value="">เลือกตำบล</option>
@@ -179,13 +179,13 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline" style="align-self: center;">เขตสถานีตำรวจ</label>
+											<label class="radio-inline col-lg-45" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<input type="text" class="form-control" id="A4_42" name="A4_2_text_4" readonly />
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline" style="align-self: center;">อบต./ท.ตำบล/ท.เมือง/ท.นคร</label>
+											<label class="radio-inline col-lg-45" style="align-self: center;">อบต./ท.ตำบล/ท.เมือง/ท.นคร</label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<input type="text" class="form-control" id="A4_52" name="A4_2_text_5" readonly />
 											</label>
@@ -213,8 +213,8 @@
 
 							<div class="row">
 								<label for="1112" class="col-form-label">1.1.2 อายุ</label>
-								<div class="col-lg-3">
-									<input type="text" class="form-control" id="1112" name="1_1_2" />
+								<div class="col-lg-1">
+									<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1112" name="1_1_2" />
 								</div>
 								<div class="col-form-label inputTextFix">
 									ปี (เต็มปีบริบูรณ์)
@@ -353,6 +353,36 @@
 									</label>
 								</div>
 							</div>
+
+							<div class="row">
+								<label for="1117" class="col-form-label">1.1.7 ในช่วงระยะเวลา 5 ปี ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรม หน่วยงานใด
+								<div class="col-lg-12">
+									<label class="radio-inline" style="align-self: center; margin-left: 10px;">
+										<input type="radio" id="11171" name="1_1_7" value="1"> (1) เคย กรุณาระบุหน่วยงาน 
+									</label>
+									<label class="radio-inline col-form-label  col-lg-8">
+										<input type="text" class="form-control"  id="11171_text" name="1_1_7_text" readonly />
+									</label>
+
+									<label class="radio-inline col-form-label  col-lg-3">
+										<input type="radio" id="11172" name="1_1_7" value="2"> (2) ไม่เคย 
+									</label>
+								</div>
+							</div>
+
+							<div class="row" style="margin-left: 10px;">
+								<label for="11171" class="col-form-label">1.1.7.1 ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรมในสถานะใด
+								<div class="col-lg-12">
+									<label class="radio-inline col-form-label" style="margin-left: 10px;">
+										<input type="radio" id="1117_11" name="1_1_7_1" value="1" disabled> (1) ผู้มาติดต่อหรือรับบริการโดยตรง ได้แก่ ผู้เสียหาย ผู้กระทำผิด
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12">
+										<input type="radio" id="1117_12" name="1_1_7_1" value="2" disabled> (2) ผู้มาติดต่อหรือรับบริการโดยอ้อม ได้แก่ ญาติ ผู้เกี่ยวข้องกับผู้เสียหายหรือผู้กระทำผิด 
+									</label>
+								</div>
+							</div>
+
+
 							</br>
 							<div class="row">
 								<label for="112" class="col-form-label">1.2 สถานะของท่านในครัวเรือน (ท่านมีความเกี่ยวข้องสัมพันธ์กับเจ้าของบ้านอย่างไร)</label>
@@ -466,7 +496,7 @@
 									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form3">
 											<i class="fa fa-plus-circle pull-right"></i>
-											3. แบบสอบถามความรู้สึกหวาดกลัวภัยอาชญากรรม
+											3. แบบสำรวจข้อมูลความรู้สึกหวาดกลัวภัยอาชญากรรม
 										</a>
 									</h3>
 								</div>
@@ -480,7 +510,7 @@
 									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form4">
 											<i class="fa fa-plus-circle pull-right"></i>
-											4. แบบสอบถามความเชื่อมั่นฯ
+											4. แบบสำรวจข้อมูลความเชื่อมั่นต่อความปลอดภัยในชีวิตและทรัพย์สิน
 										</a>
 									</h3>
 								</div>
@@ -494,7 +524,7 @@
 									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form5">
 											<i class="fa fa-plus-circle pull-right"></i>
-											5. แบบสอบถามSDGs
+											5. แบบสำรวจแบบสำรวจเป้าหมายแห่งการพัฒนาที่ยั่งยืน (Sustainable Development Goals: SDGs)
 										</a>
 									</h3>
 								</div>
@@ -508,7 +538,7 @@
 									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form6">
 											<i class="fa fa-plus-circle pull-right"></i>
-											6. แบบสอบถามความเชื่อมั่น งานตัวชี้วัด
+											6. แบบสอบถามความเชื่อมั่นของประชาชนที่มีต่อกระบวนการยุติธรรม
 										</a>
 									</h3>
 								</div>
@@ -652,6 +682,18 @@
 			}
 		});
 
+		$('input[name="1_1_7"]').on('change', function() {
+			if ($(this).val() === '1') {
+				$('input[name="1_1_7_text"]').prop('readonly', false);
+				$('input[name="1_1_7_1"]').prop('disabled', false);
+			} else {
+				$('input[name="1_1_7_text"]').prop('readonly', true);
+				$('input[name="1_1_7_1"]').prop('disabled', true);
+
+			}
+		});
+
+
 		$('input[name="1_2"]').on('change', function() {
 			if ($(this).val() === '9') {
 				$('input[name="1_2_text"]').prop('readonly', false);
@@ -668,6 +710,7 @@
 				$('input[name="1_3_text"]').prop('readonly', true);
 			}
 		});
+		
 		
 
 		$(function() {
@@ -796,6 +839,17 @@
 				document.getElementById("1115_text").value = '<?= $d_surveyProfile->{'1_1_5_text'} ?>';
 				checkId(document.getElementById("1116<?= $d_surveyProfile->{'1_1_6'} ?>"));
 
+				checkId(document.getElementById("1117<?= $d_surveyProfile->{'1_1_7'} ?>"));
+				if ('<?= $d_surveyProfile->{'1_1_7'} ?>' == '1') {
+					$('input[name="1_1_7_text"]').prop('readonly', false);
+					$('input[name="1_1_7_1"]').prop('disabled', false);
+				} else {
+					$('input[name="1_1_7_text"]').prop('readonly', true);
+					$('input[name="1_1_7_1"]').prop('disabled', true);
+				}
+				document.getElementById("11171_text").value = '<?= $d_surveyProfile->{'1_1_7_text'} ?>';
+				checkId(document.getElementById("1117_1<?= $d_surveyProfile->{'1_1_7_1'} ?>"));
+
 				checkId(document.getElementById("112<?= $d_surveyProfile->{'1_2'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_2'} ?>' == '9') {
 					$('input[name="1_2_text"]').prop('readonly', false);
@@ -814,6 +868,12 @@
 
 			});
 		};
+
+		function maxLengthCheck(object)
+		{
+			if (object.value.length > object.maxLength)
+			object.value = object.value.slice(0, object.maxLength)
+		}
 
 		function checkId(id){
 				if(id != null){

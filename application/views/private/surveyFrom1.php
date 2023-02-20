@@ -12,26 +12,26 @@
 	<div class="p-field p-col">
 		</br>
 		<div class="col-lg-1.5" style="margin-left: 10px;">
-			<a onclick="addFamily('front','0')" class="ui green button "><i class="plus icon small"></i> เพิ่มสามาชิกในครัวเรือน</a>
+			<a onclick="addFamily('front','0')" class="ui green button "><i class="plus icon small"></i> เพิ่มสมาชิกในครัวเรือน</a>
 		</div>
 		</br>
 		<div class="row" style="margin-left: 10px;">
 			<table class="tg">
 				<thead>
 					<tr>
-						<th>ลำดับที่</br>สมาชิก</br>ในครัวเรือน</th>
+						<th>ลำดับที่สมาชิก</br>ในครัวเรือน</th>
 						<th>เพศ</th>
 						<th>อายุ</th>
 						<th>การตกเป็นเหยื่อ</br>อาชญากรรม</br>(1 ม.ค. – 31 ธ.ค. 65)</th>
 						<th><u>หมายเหตุ</u></br>(กรณีไม่ระบุคำตอบ)</th>
-						<th>กรอกข้อมูลและรายละเอียดการตกเป็นเหยื่ออาชญากรรม</th>
+						<th>กรอกข้อมูลและรายละเอียด</br>การตกเป็นเหยื่ออาชญากรรม</th>
 					</tr>
 				</thead>
 				<tbody id="familyTable">
 					<tr>
 						<td>1. (ตัวผู้ตอบ)</td>
 						<td><input type="radio" id="1_2111" name="1_S2_1_1" value="1"> ชาย <input type="radio" id="1_2112" name="1_S2_1_1" value="2"> หญิง <input type="radio" id="1_2113" name="1_S2_1_1" value="3"> ทางเลือก</td>
-						<td><input type="text" class="form-control" id="1_212" name="1_S2_1_2" /></td>
+						<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength = "3" id="1_212" name="1_S2_1_2" /></td>
 						<td><input type="radio" id="1_2131" name="1_S2_1_3" value="1"> เคย <input type="radio" id="1_2132" name="1_S2_1_3" value="2"> ไม่เคย</td>
 						<td><input type="text" class="form-control" id="1_214" name="1_S2_1_4" /></td>
 						<td>
@@ -50,7 +50,7 @@
 			<tr>
 				<td>{No.}</td>
 				<td><input type="radio" id="1_2{Num}11" name="1_S2_{Num}_1" value="1"> ชาย <input type="radio" id="1_2{Num}12" name="1_S2_{Num}_1" value="2"> หญิง <input type="radio" id="1_2{Num}13" name="1_S2_{Num}_1" value="3"> ทางเลือก</td>
-				<td><input type="text" class="form-control" id="1_2{Num}2" name="1_S2_{Num}_2" /></td>
+				<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength = "3" id="1_2{Num}2" name="1_S2_{Num}_2" /></td>
 				<td><input type="radio" id="1_2{Num}31" name="1_S2_{Num}_3" value="1"> เคย <input type="radio" id="1_2{Num}32" name="1_S2_{Num}_3" value="2"> ไม่เคย</td>
 				<td><input type="text" class="form-control" id="1_2{Num}4" name="1_S2_{Num}_4" /></td>
 				<td>
@@ -81,7 +81,7 @@
 			<div class="row">
 				<label for="32" class="col-form-label">3.2 อายุ</label>
 				<div class="col-lg-3">
-					<input type="text" class="form-control" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" />
+					<input type="text" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" />
 				</div>
 				<div class="col-form-label inputtextFix">
 					ปี (เต็มปีบริบูรณ์)
@@ -232,7 +232,7 @@
 				<label for="41" class="col-form-label">4.1 ขณะเกิดเหตุผู้ประสบเหตุหรือเหยื่อจำหน้าผู้ก่อเหตุหรือรูปพรรณสัณฐานของผู้ก่อเหตุได้หรือไม่</label>
 				<div class="col-lg-12">
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}411" name="1_S4_{Num}_4_1" value="1">จำได้ ระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
@@ -248,7 +248,7 @@
 			<div class="row">
 				<label for="42" class="col-form-label">4.2 ความสัมพันธ์ระหว่างเหยื่อกับผู้ก่อเหตุ</label>
 				<div class="col-lg-12">
-					<label class="radio-inline col-form-label  col-lg-2">
+					<label class="radio-inline col-form-label  col-lg-2" style="margin-left: 10px;">
 						<input type="radio" id="1_4{Num}421" name="1_S4_{Num}_4_2" value="1"> (1) บิดา/มารดา
 					</label>
 					<label class="radio-inline col-form-label  col-lg-2">
@@ -265,7 +265,7 @@
 					</label>
 
 					<label class=" col-form-label ">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;" >
 							<input type="radio" id="1_4{Num}426" name="1_S4_{Num}_4_2" value="6"> (6) ความสัมพันธ์อื่นๆ (ระบุ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-6">
@@ -282,7 +282,7 @@
 			<div class="row">
 				<label for="43" class="col-form-label">4.3 มีความเสียหายต่อชีวิต ร่างกาย หรือทรัพย์สินหรือไม่</label>
 				<div class="col-lg-12">
-					<label class="radio-inline col-form-label  col-lg-2">
+					<label class="radio-inline col-form-label  col-lg-2" style="margin-left: 10px;">
 						<input type="radio" id="1_4{Num}431" name="1_S4_{Num}_4_3" value="1"> (1) มี
 					</label>
 					<label class="radio-inline col-form-label  col-lg-2">
@@ -314,7 +314,7 @@
 						<input type="radio" id="1_4{Num}43_16" name="1_S4_{Num}_4_3_1" value="6" disabled> (6) รักษาตัวเกินกว่า 20 วัน (สาหัส)
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="radio" id="1_4{Num}43_17" name="1_S4_{Num}_4_3_1" value="7" disabled> (7) เสียโฉม พิการ หรือทุพลภาพเป็นกรถาวร
+						<input type="radio" id="1_4{Num}43_17" name="1_S4_{Num}_4_3_1" value="7" disabled> (7) เสียโฉม พิการ หรือทุพลภาพเป็นการถาวร
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
 						<input type="radio" id="1_4{Num}43_18" name="1_S4_{Num}_4_3_1" value="8" disabled> (8) ได้รับอันตรายทางจิตใจจนถึงขั้นเข้ารับการบำบัดทางจิต
@@ -332,7 +332,7 @@
 			<div class="row" style="margin-left: 10px;">
 				<label for="432" class="col-form-label">4.3.2 ความเสียหายทรัพย์ถูกประทุษร้าย</label>
 				<div class="col-lg-12">
-					<label class="radio-inline col-form-label  col-lg-3">
+					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 						<input type="radio" id="1_4{Num}43_21" name="1_S4_{Num}_4_3_2" value="1" disabled> (1) ไม่มี
 					</label>
 					<label class="col-form-label">
@@ -354,83 +354,83 @@
 				<div class="col-lg-12">
 
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;" >
 							<input type="radio" id="1_4{Num}4331" name="1_S4_{Num}_4_3_3" value="1" disabled> (1) ค่ารักษาพยาบาล จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-5">
-							<input type="text" class="form-control" id="1_4{Num}4331_text" name="1_S4_{Num}_4_3_3_1_text" readonly />
+							<input type="number" class="form-control floatNumberField"   id="1_4{Num}4331_text" name="1_S4_{Num}_4_3_3_1_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}4332" name="1_S4_{Num}_4_3_3" value="2" disabled> (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
-							<input type="text" class="form-control" id="1_4{Num}4332_text" name="1_S4_{Num}_4_3_3_2_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}4332_text" name="1_S4_{Num}_4_3_3_2_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}4333" name="1_S4_{Num}_4_3_3" value="3" disabled> (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ) จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-2">
-							<input type="text" class="form-control" id="1_4{Num}4333_text" name="1_S4_{Num}_4_3_3_3_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}4333_text" name="1_S4_{Num}_4_3_3_3_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}4334" name="1_S4_{Num}_4_3_3" value="4" disabled> (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-4">
-							<input type="text" class="form-control" id="1_4{Num}4334_text" name="1_S4_{Num}_4_3_3_4_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}4334_text" name="1_S4_{Num}_4_3_3_4_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}4335" name="1_S4_{Num}_4_3_3" value="5" disabled> (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
-							<input type="text" class="form-control" id="1_4{Num}4335_text" name="1_S4_{Num}_4_3_3_5_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}4335_text" name="1_S4_{Num}_4_3_3_5_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}4336" name="1_S4_{Num}_4_3_3" value="6" disabled> (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-4">
-							<input type="text" class="form-control" id="1_4{Num}4336_text" name="1_S4_{Num}_4_3_3_6_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}4336_text" name="1_S4_{Num}_4_3_3_6_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center;">
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}4337" name="1_S4_{Num}_4_3_3" value="7" disabled> (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-3">
-							<input type="text" class="form-control" id="1_4{Num}4337_text" name="1_S4_{Num}_4_3_3_7_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}4337_text" name="1_S4_{Num}_4_3_3_7_text" readonly />
 						</label>
 						<label class="radio-inline" style="align-self: center;">
 							บาท
 						</label>
 					</label>
-					<label class="radio-inline col-form-label  col-lg-12">
+					<label class="radio-inline col-form-label  col-lg-12 " style="margin-left: 10px;">
 						<input type="radio" id="1_4{Num}4338" name="1_S4_{Num}_4_3_3" value="8" disabled> (8) ไม่มีความสูญเสีย/ค่าเสียหายจากมูลค่าที่เกิดขึ้น
 					</label>
 				</div>
@@ -709,17 +709,17 @@
 			
 			<div class="row" style="margin-left: 10px;">
 				<label for="461" class="col-form-label">
-					<input type="radio" id="1_4{Num}4612" name="1_S4_{Num}_4_6" value="2"> 4.6.2 ไม่มีการแจ้งต่อเจ้าหน้าที่
+					<input type="radio" id="1_4{Num}4612" name="1_S4_{Num}_4_6" value="2"> 4.6.2 ไม่มีการแจ้งต่อเจ้าหน้าที่ <u>(ตอบได้มากกว่า 1 ข้อ)</u>
 				</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
-						<input type="checkbox" id="1_4{Num}46211" name="1_S4_{Num}_4_6_2_1" value="1" disabled> (1) แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="checkbox" id="1_4{Num}46211" name="1_S4_{Num}_4_6_2_1" value="1" disabled> (1) ไม่เกิดความเสียหาย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}46212" name="1_S4_{Num}_4_6_2_2" value="1" disabled> (2) แจ้งต่อผู้แทนชุมชน เช่น ผู้ใหญ่บ้าน กำนัน ผู้นำชุมชน หรือบุคคลที่ตนนับถือ แต่ไม่ได้แจ้งต่อเจ้าหน้าที่ตำรวจ
+						<input type="checkbox" id="1_4{Num}46212" name="1_S4_{Num}_4_6_2_2" value="1" disabled> (2) เห็นว่าเป็นเรื่องเล็กน้อยหรือความเสียหายที่เกิดขึ้นเล็กน้อย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
-						<input type="checkbox" id="1_4{Num}46213" name="1_S4_{Num}_4_6_2_3" value="1" disabled> (3) แจ้งต่อเจ้าหน้าที่หรือหน่วยงานภาครัฐอื่น ที่ไม่ใช่หน่วยงานตำรวจ เช่น สำนักงานพัฒนาสังคมและความมั่นคงของมนุษย์, ยุติธรรมชุมชน, ยุติธรรมจังหวัดศูนย์ดํารงธรรม, ศูนย์ดํารงธรรม, ศูนย์บริการข้อมูลภาครัฐเพื่อประชาชน สายด่วน 1111 หรือศูนย์รับเรื่องราวร้องทุกข์
+						<input type="checkbox" id="1_4{Num}46213" name="1_S4_{Num}_4_6_2_3" value="1" disabled> (3) เป็นเรื่องส่วนตัว ได้จัดการกับเหตุที่เกิดขึ้นด้วยตนเอง เช่น ตกลงกับผู้กระทำผิด
 					</label>
 					<label class="radio-inline col-form-label  col-lg-12">
 						<input type="checkbox" id="1_4{Num}46214" name="1_S4_{Num}_4_6_2_4" value="1" disabled> (4) ได้แจ้งเหตุต่อผู้มีหน้าที่รับผิดชอบที่เกี่ยวข้องแล้ว เช่น ฝ่ายรักษาความปลอดภัย หัวหน้างาน
@@ -778,19 +778,19 @@
 				<label for="47" class="col-form-label">4.7 (เฉพาะกรณีที่แจ้งต่อเจ้าหน้าที่) ท่านมีความพึงพอใจต่อการดำเนินงานของเจ้าหน้าที่ต่อการรับแจ้งเหตุของท่านมากน้อยเพียงใด</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-						<input type="radio" id="1_4{Num}475" name="1_S4_{Num}_4_7" value="5"> (5) เชื่อมั่นมาก
+						<input type="radio" id="1_4{Num}475" name="1_S4_{Num}_4_7" value="5" disabled> (5) เชื่อมั่นมาก
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}474" name="1_S4_{Num}_4_7" value="4"> (4) เชื่อมั่นค่อนข้างมาก
+						<input type="radio" id="1_4{Num}474" name="1_S4_{Num}_4_7" value="4" disabled> (4) เชื่อมั่นค่อนข้างมาก
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}473" name="1_S4_{Num}_4_7" value="3"> (3) เชื่อมั่นปานกลาง
+						<input type="radio" id="1_4{Num}473" name="1_S4_{Num}_4_7" value="3" disabled> (3) เชื่อมั่นปานกลาง
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}472" name="1_S4_{Num}_4_7" value="2"> (2) เชื่อมั่นค่อนข้างน้อย
+						<input type="radio" id="1_4{Num}472" name="1_S4_{Num}_4_7" value="2" disabled> (2) เชื่อมั่นค่อนข้างน้อย
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
-						<input type="radio" id="1_4{Num}471" name="1_S4_{Num}_4_7" value="1"> (1) เชื่อมั่นน้อย
+						<input type="radio" id="1_4{Num}471" name="1_S4_{Num}_4_7" value="1" disabled> (1) เชื่อมั่นน้อย
 					</label>
 
 					<label class=" col-form-label ">
@@ -1392,6 +1392,9 @@
 							$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', true);
 							$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', true);
 
+							$('input[name="1_S4_1_4_7"]').prop('disabled', false);
+							$('input[name="1_S4_1_4_7_text"]').prop('disabled', false);
+							
 							$('input[name="1_S4_1_4_6_1"]').prop('disabled', false);
 							$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
 
@@ -1419,6 +1422,9 @@
 							$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', false);
 
 							$('input[name="1_S4_1_4_6_1"]').prop('disabled', true);
+
+							$('input[name="1_S4_1_4_7"]').prop('disabled', true);
+							$('input[name="1_S4_1_4_7_text"]').prop('disabled', true);
 						}
 
 
@@ -1632,6 +1638,9 @@
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('disabled', true);
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('disabled', true);
 
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_7"]').prop('disabled', false);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('disabled', false);
+
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('disabled', false);
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18_text"]').prop('readonly', true);
 					}else if('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6?>' == '2'){
@@ -1656,6 +1665,9 @@
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_16"]').prop('disabled', false);
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('disabled', false);
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('disabled', false);
+
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_7"]').prop('disabled', true);
+						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('disabled', true);
 
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('disabled', true);
 					}
@@ -1866,6 +1878,9 @@
 						$('input[name="1_S4_' + i + '_4_6_2_17"]').prop('disabled', true);
 						$('input[name="1_S4_' + i + '_4_6_2_18"]').prop('disabled', true);
 
+						$('input[name="1_S4_' + i + '_4_7"]').prop('disabled', false);
+						$('input[name="1_S4_' + i + '_4_7_text"]').prop('disabled', false);
+
 						$('input[name="1_S4_' + i + '_4_6_1"]').prop('disabled', false);
 						$('input[name="1_S4_' + i + '_4_6_2_18_text"]').prop('readonly', true);
 					}else if($(this).val() === '2'){
@@ -1890,6 +1905,9 @@
 						$('input[name="1_S4_' + i + '_4_6_2_16"]').prop('disabled', false);
 						$('input[name="1_S4_' + i + '_4_6_2_17"]').prop('disabled', false);
 						$('input[name="1_S4_' + i + '_4_6_2_18"]').prop('disabled', false);
+
+						$('input[name="1_S4_' + i + '_4_7"]').prop('disabled', true);
+						$('input[name="1_S4_' + i + '_4_7_text"]').prop('disabled', true);
 
 						$('input[name="1_S4_' + i + '_4_6_1"]').prop('disabled', true);
 					}
@@ -2179,6 +2197,9 @@
 					$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', true);
 					$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', true);
 
+					$('input[name="1_S4_1_4_7"]').prop('disabled', false);
+					$('input[name="1_S4_1_4_7_text"]').prop('disabled', false);
+
 					$('input[name="1_S4_1_4_6_1"]').prop('disabled', false);
 					$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
 
@@ -2204,6 +2225,9 @@
 					$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', false);
 					$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', false);
 					$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', false);
+
+					$('input[name="1_S4_1_4_7"]').prop('disabled', true);
+					$('input[name="1_S4_1_4_7_text"]').prop('disabled', true);
 
 					$('input[name="1_S4_1_4_6_1"]').prop('disabled', true);
 				}
@@ -2254,4 +2278,14 @@
 					id.value = value;
 				}
 			};
+
+			function maxLengthCheck(object)
+			{
+				if (object.value.length > object.maxLength)
+				object.value = object.value.slice(0, object.maxLength)
+			}
+
+			$(".floatNumberField").change(function() {
+				$(this).val(parseFloat($(this).val()).toFixed(2));
+			});
 		</script>

@@ -549,6 +549,9 @@ class Main extends CI_Controller {
 				$objSurveyProfile->{'1_1_5'} = '';
 				$objSurveyProfile->{'1_1_5_text'} = '';
 				$objSurveyProfile->{'1_1_6'} = '';
+				$objSurveyProfile->{'1_1_7'} = '';
+				$objSurveyProfile->{'1_1_7_text'} = '';
+				$objSurveyProfile->{'1_1_7_1'} = '';
 				$objSurveyProfile->{'1_2'} = '';
 				$objSurveyProfile->{'1_2_text'} = '';
 				$objSurveyProfile->{'1_3'} = '';
@@ -602,6 +605,9 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_1_5'));
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
+			$objProfile->{'1_1_7'} = $this->checkEmpty($this->input->post('1_1_7'));
+			$objProfile->{'1_1_7_text'} = $this->checkEmpty($this->input->post('1_1_7_text'));
+			$objProfile->{'1_1_7_1'} = $this->checkEmpty($this->input->post('1_1_7_1'));
 			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
 			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
@@ -670,6 +676,9 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_1_5'));
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
+			$objProfile->{'1_1_7'} = $this->checkEmpty($this->input->post('1_1_7'));
+			$objProfile->{'1_1_7_text'} = $this->checkEmpty($this->input->post('1_1_7_text'));
+			$objProfile->{'1_1_7_1'} = $this->checkEmpty($this->input->post('1_1_7_1'));
 			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
 			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));

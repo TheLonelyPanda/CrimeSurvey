@@ -23,7 +23,7 @@
 						<td class="tg-0laq bg" colspan="7">ภาพรวมของความปลอดภัยในละแวกที่พักอาศัย</td>
 					</tr>
 					<tr>
-						<td class="tg-0lax">2.1.1 การเดินตามลำพังในละแวกที่พักอาศัยในตอนกลางวัน</td>
+						<td class="tg-0lax">2.1.1 การเดินตามลำพังในละแวกที่พักอาศัยในตอน<u>กลางวัน</u></td>
 						<td class="tg-0laa"><input type="radio" id="3_2115" name="3_S2_2_1_1" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2114" name="3_S2_2_1_1" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2113" name="3_S2_2_1_1" value="3"></td>
@@ -31,7 +31,7 @@
 						<td class="tg-0laa"><input type="radio" id="3_2111" name="3_S2_2_1_1" value="1"></td>
 					</tr>
 					<tr>
-						<td class="tg-0lax">2.1.2 การเดินตามลำพังในละแวกที่พักอาศัยในตอนกลางคืน</td>
+						<td class="tg-0lax">2.1.2 การเดินตามลำพังในละแวกที่พักอาศัยในตอน<u>กลางคืน</u></td>
 						<td class="tg-0laa"><input type="radio" id="3_2125" name="3_S2_2_1_2" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2124" name="3_S2_2_1_2" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2123" name="3_S2_2_1_2" value="3"></td>
@@ -39,7 +39,7 @@
 						<td class="tg-0laa"><input type="radio" id="3_2121" name="3_S2_2_1_2" value="1"></td>
 					</tr>
 					<tr>
-						<td class="tg-0lax">2.1.3 เมื่อต้องอยู่บ้านคนเดียวในเวลากลางวัน </td>
+						<td class="tg-0lax">2.1.3 เมื่อต้องอยู่บ้านคนเดียวในเวลา<u>กลางวัน</u> </td>
 						<td class="tg-0laa"><input type="radio" id="3_2135" name="3_S2_2_1_3" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2134" name="3_S2_2_1_3" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2133" name="3_S2_2_1_3" value="3"></td>
@@ -47,7 +47,7 @@
 						<td class="tg-0laa"><input type="radio" id="3_2131" name="3_S2_2_1_3" value="1"></td>
 					</tr>
 					<tr>
-						<td class="tg-0lax">2.1.4 เมื่อต้องอยู่บ้านคนเดียวในเวลากลางคืน</td>
+						<td class="tg-0lax">2.1.4 เมื่อต้องอยู่บ้านคนเดียวในเวลา<u>กลางคืน</u></td>
 						<td class="tg-0laa"><input type="radio" id="3_2145" name="3_S2_2_1_4" value="5"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2144" name="3_S2_2_1_4" value="4"></td>
 						<td class="tg-0laa"><input type="radio" id="3_2143" name="3_S2_2_1_4" value="3"></td>

@@ -157,7 +157,7 @@ $(document).ready(function () {
 			type: 'post',
 			success: function (resp) {
 				if (resp.status) {
-					formMessageInfo(resp);
+					window.location.href = resp.url;
 				} else {
 					formMessageError(resp);
 				}

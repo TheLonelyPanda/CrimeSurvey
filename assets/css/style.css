@@ -251,7 +251,7 @@ body {
     font-size: 14px;
 	line-height: 1.42857143;
     background: #d5d8da;
-    color: #30373e;
+    color: rgb(0, 0, 0);
 }
 * {
 	-webkit-box-sizing: border-box;
@@ -4640,7 +4640,7 @@ h6 .label, h6 .badge { top: -1px; }
 
 .form-control,
 select.form-control:not([size]):not([multiple]) {
-	height: 34px;
+	height: 38px;
 	padding: 6px 12px;
 	font-size: 14px;
 	line-height: 1.42857143;
