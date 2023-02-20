@@ -794,8 +794,8 @@
 					</label>
 
 					<label class=" col-form-label ">
-						<label class="radio-inline" style="align-self: center;">
-							<input type="radio" id="1_4{Num}4799" name="1_S4_{Num}_4_7" value="99"> (0) ไม่เชื่อมั่นเลย
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
+							<input type="radio" id="1_4{Num}470" name="1_S4_{Num}_4_7" value="0" disabled> (0) ไม่เชื่อมั่นเลย
 						</label>
 					</label>
 
@@ -1442,7 +1442,7 @@
 
 
 
-						if ('<?=$d_surveyVictimsCrimes->S4_4_7?>' == '99') {
+						if ('<?=$d_surveyVictimsCrimes->S4_4_7?>' == '0') {
 							$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
 						} else {
 							$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);
@@ -1687,7 +1687,7 @@
 					}
 
 
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7?>' == '99') {
+				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7?>' == '0') {
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('readonly', false);
 					} else {
 						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('readonly', true);
@@ -1933,7 +1933,7 @@
 
 
 				$('input[name="1_S4_' + i + '_4_7"]').on('change', function() {
-					if ($(this).val() === '99') {
+					if ($(this).val() === '0') {
 						$('input[name="1_S4_' + i + '_4_7_text"]').prop('readonly', false);
 					} else {
 						$('input[name="1_S4_' + i + '_4_7_text"]').prop('readonly', true);
@@ -2254,7 +2254,7 @@
 
 
 			$('input[name="1_S4_1_4_7"]').on('change', function() {
-				if ($(this).val() === '99') {
+				if ($(this).val() === '0') {
 					$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
 				} else {
 					$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);

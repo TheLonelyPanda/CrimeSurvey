@@ -584,6 +584,7 @@ class Main extends CI_Controller {
 			$objProfile->A3_1 = $this->checkEmpty($this->input->post('A3_1'));
 			$objProfile->A3_2 = $this->checkEmpty($this->input->post('A3_2'));
 			$objProfile->A4 = $this->checkEmpty($this->input->post('A4'));
+			$objProfile->profile_code = '';
 			if($this->checkEmpty($this->input->post('A4'))=='1'){
 				$objProfile->A4_1 = 'กรุงเทพมหานคร';
 				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id_1'));
@@ -620,13 +621,13 @@ class Main extends CI_Controller {
 			$objlist=new MyDto();
 			$objlist->running_num = 0;
 			$objlist->profile_id = $u_now_id;
-			$this->saveSurvey1($u_now_id,1,$objlist);
-			$this->saveSurvey1S4(1,$objlist);
-			$this->saveSurvey2($u_now_id);
-			$this->saveSurvey3($u_now_id);
-			$this->saveSurvey4($u_now_id);
-			$this->saveSurvey5($u_now_id);
-			$this->saveSurvey6($u_now_id);
+			$this->saveSurvey1($u_now_id,1,$objlist,'');
+			$this->saveSurvey1S4(1,$objlist,'');
+			$this->saveSurvey2($u_now_id,'');
+			$this->saveSurvey3($u_now_id,'');
+			$this->saveSurvey4($u_now_id,'');
+			$this->saveSurvey5($u_now_id,'');
+			$this->saveSurvey6($u_now_id,'');
 
 		} 
     }
@@ -642,15 +643,30 @@ class Main extends CI_Controller {
 		return $string;
 	}
 
+	public function checkEmptyS($string){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			if($string != '99'){
+				if($string == null){
+					return '';
+				}
+			}
+		}
+		return $string;
+	}
+
 	public function saveSurvey($hidden){
 		$user_name=$this->isLogin();
 		if($user_name != false){    
+			$profileCode = '';
+			$provinceCode = '';
 			$profileId = $this->input->post('1_text');
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_profile';
 			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profileId;
 			$objProfile=new MyDto();
+			
 			$objProfile->A2 = $this->checkEmpty($this->input->post('A2'));
 			$objProfile->A3_1 = $this->checkEmpty($this->input->post('A3_1'));
 			$objProfile->A3_2 = $this->checkEmpty($this->input->post('A3_2'));
@@ -667,6 +683,12 @@ class Main extends CI_Controller {
 				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id'));
 				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_2_text_4'));
 				$objProfile->A4_5 = $this->checkEmpty($this->input->post('A4_2_text_5'));
+			}
+			
+			if('' == $this->chkProfileCodeFirst($profileId)){
+				$provinceCode = $this->queryProviceId($objProfile->A4_1);
+				$profileCode = $provinceCode.date("Ymd").$profileId;
+				$objProfile->profile_code = $profileCode;
 			}
 			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_1_1'));
 			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_1_2'));
@@ -692,23 +714,23 @@ class Main extends CI_Controller {
 			$objlist=new MyDto();
 			$objlist->running_num = 0;
 			$objlist->profile_id = $profileId;
-			$this->saveSurvey1($profileId,1,$objlist);
-			$this->saveSurvey1S4(1,$objlist);
+			$this->saveSurvey1($profileId,1,$objlist,$provinceCode);
+			$this->saveSurvey1S4(1,$objlist,$provinceCode);
 
 			$this->datamodel->table_name='survey_victims';
 			$this->datamodel->condition='where master_id='.$profileId; 
 			$listData=$this->datamodel->list_data();
 
 			for ($i=2; $i <= count($listData)+1; $i++) { 
-				$this->saveSurvey1($profileId,$i,$listData[$i-2]);
-				$this->saveSurvey1S3($i,$listData[$i-2]);
-				$this->saveSurvey1S4($i,$listData[$i-2]);
+				$this->saveSurvey1($profileId,$i,$listData[$i-2],$provinceCode);
+				$this->saveSurvey1S3($i,$listData[$i-2],$provinceCode);
+				$this->saveSurvey1S4($i,$listData[$i-2],$provinceCode);
 			}
-			$this->saveSurvey2($profileId);
-			$this->saveSurvey3($profileId);
-			$this->saveSurvey4($profileId);
-			$this->saveSurvey5($profileId);
-			$this->saveSurvey6($profileId);
+			$this->saveSurvey2($profileId,$profileCode);
+			$this->saveSurvey3($profileId,$profileCode);
+			$this->saveSurvey4($profileId,$profileCode);
+			$this->saveSurvey5($profileId,$profileCode);
+			$this->saveSurvey6($profileId,$profileCode);
 			
 			if($hidden != 'true'){
 				$this->functionhelper->jsonHeader();
@@ -719,11 +741,12 @@ class Main extends CI_Controller {
 		} 
     }
 
-	public function saveSurvey1($profileId,$loop,$list){
+	public function saveSurvey1($profileId,$loop,$list,$provinceCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
 			$master_id = 'IS NULL';
+			$chkInsert = '';
 			$objdSurveyVictims=new MyDto();
 			if($loop!=1){
 				if($list->running_num != 0){
@@ -741,9 +764,14 @@ class Main extends CI_Controller {
 
 					$this->initSurvey1S3($newProfileId,$master_id);
 				}
-			
+				$chkInsert = $this->chkPCNotInsert($objdSurveyVictims->profile_id,$master_id,'survey_victims');
 			}else{
 				$objdSurveyVictims->profile_id = $profileId;
+			}
+			if($provinceCode != ''){
+				$objdSurveyVictims->profile_code = $provinceCode.date("Ymd").$objdSurveyVictims->profile_id;
+			}else if($chkInsert !=''){
+				$objdSurveyVictims->profile_code = $chkInsert.$objdSurveyVictims->profile_id;
 			}
 			$objdSurveyVictims->S2_1 = $this->checkEmpty($this->input->post('1_S2_'.$loop.'_1'));
 			$objdSurveyVictims->S2_2 = $this->checkEmpty($this->input->post('1_S2_'.$loop.'_2'));
@@ -805,21 +833,28 @@ class Main extends CI_Controller {
 		} 
     }
 
-	public function saveSurvey1S3($loop,$list){
+	public function saveSurvey1S3($loop,$list,$provinceCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
+			$chkInsert = '';
 			$objProfile=new MyDto();
 			$profileId = $list->profile_id;
 			if($loop != '1'){
 				$master_id = $list->master_id;
 				$objProfile->master_id = $master_id;
+				$chkInsert = $this->chkPCNotInsert($profileId,$master_id,'survey_profile');
 			}
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_profile';
 			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profileId;
-			$objProfile=new MyDto();
 			
+			$objProfile=new MyDto();
+			if($provinceCode != ''){
+				$objProfile->profile_code = $provinceCode.date("Ymd").$profileId;
+			}else if($chkInsert !=''){
+				$objProfile->profile_code = $chkInsert.$profileId;
+			}
 			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_1'));
 			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_2'));
 			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_3'));
@@ -838,20 +873,28 @@ class Main extends CI_Controller {
     }
 
 	
-	public function saveSurvey1S4($loop,$list){
+	public function saveSurvey1S4($loop,$list,$provinceCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
+			$chkInsert = '';
 			$objdSurveyVictimsCrimes=new MyDto();
 			$profileId = $list->profile_id;
 			if($loop != 1){
 				$master_id = $list->master_id;
 				$objdSurveyVictimsCrimes->master_id = $master_id;
+				$chkInsert = $this->chkPCNotInsert($profileId,$master_id,'survey_victims_crimes');
 			}
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_victims_crimes';
 			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profileId;
 			$objdSurveyVictimsCrimes->profile_id = $profileId;
+			
+			if($provinceCode != ''){
+				$objdSurveyVictimsCrimes->profile_code = $provinceCode.date("Ymd").$profileId;
+			}else if($chkInsert !=''){
+				$objdSurveyVictimsCrimes->profile_code = $chkInsert.$profileId;
+			}
 			$objdSurveyVictimsCrimes->S4_4_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_1'));
 			$objdSurveyVictimsCrimes->S4_4_1_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_1_text'));
 			$objdSurveyVictimsCrimes->S4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2'));
@@ -891,7 +934,7 @@ class Main extends CI_Controller {
 			$objdSurveyVictimsCrimes->S4_4_6_2_17 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_17'));
 			$objdSurveyVictimsCrimes->S4_4_6_2_18 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_18'));
 			$objdSurveyVictimsCrimes->S4_4_6_2_18_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_18_text'));
-			$objdSurveyVictimsCrimes->S4_4_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_7'));
+			$objdSurveyVictimsCrimes->S4_4_7 = $this->checkEmptyS($this->input->post('1_S4_'.$loop.'_4_7'));
 			$objdSurveyVictimsCrimes->S4_4_7_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_7_text'));
 
 	
@@ -904,7 +947,7 @@ class Main extends CI_Controller {
 		} 
     }
 
-	public function saveSurvey2($profileId){
+	public function saveSurvey2($profileId,$profileCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -913,6 +956,9 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$profileId;
 			$objdSurveyKnowledgeLaws=new MyDto();
 			$objdSurveyKnowledgeLaws->profile_id = $profileId;
+			if($profileCode != ''){
+				$objdSurveyKnowledgeLaws->profile_code = $profileCode;
+			}
 			$objdSurveyKnowledgeLaws->S2_1_1 = $this->checkEmpty($this->input->post('2_S2_1_1'));
 			$objdSurveyKnowledgeLaws->S2_1_2 = $this->checkEmpty($this->input->post('2_S2_1_2'));
 			$objdSurveyKnowledgeLaws->S2_1_3 = $this->checkEmpty($this->input->post('2_S2_1_3'));
@@ -953,7 +999,7 @@ class Main extends CI_Controller {
 		} 
     }
 
-	public function saveSurvey3($profileId){
+	public function saveSurvey3($profileId,$profileCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -962,6 +1008,9 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$profileId;
 			$objdSurveyPanicInCrimes=new MyDto();
 			$objdSurveyPanicInCrimes->profile_id = $profileId;
+			if($profileCode != ''){
+				$objdSurveyPanicInCrimes->profile_code = $profileCode;
+			}
 			$objdSurveyPanicInCrimes->S2_2_1_1 = $this->checkEmpty($this->input->post('3_S2_2_1_1'));
 			$objdSurveyPanicInCrimes->S2_2_1_2 = $this->checkEmpty($this->input->post('3_S2_2_1_2'));
 			$objdSurveyPanicInCrimes->S2_2_1_3 = $this->checkEmpty($this->input->post('3_S2_2_1_3'));
@@ -975,7 +1024,7 @@ class Main extends CI_Controller {
 
 		} 
     }
-	public function saveSurvey4($profileId){
+	public function saveSurvey4($profileId,$profileCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -984,6 +1033,9 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$profileId;
 			$objdSurveyTrustForSecurity=new MyDto();
 			$objdSurveyTrustForSecurity->profile_id = $profileId;
+			if($profileCode != ''){
+				$objdSurveyTrustForSecurity->profile_code = $profileCode;
+			}
 			$objdSurveyTrustForSecurity->S2_2_1 = $this->checkEmpty($this->input->post('4_S2_2_1'));
 			$objdSurveyTrustForSecurity->S2_2_2 = $this->checkEmpty($this->input->post('4_S2_2_2'));
 			$objdSurveyTrustForSecurity->S2_2_3 = $this->checkEmpty($this->input->post('4_S2_2_3'));
@@ -996,7 +1048,7 @@ class Main extends CI_Controller {
 
 		} 
     }
-	public function saveSurvey5($profileId){
+	public function saveSurvey5($profileId,$profileCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -1005,6 +1057,9 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$profileId;
 			$objdSurveySdgs=new MyDto();
 			$objdSurveySdgs->profile_id = $profileId;
+			if($profileCode != ''){
+				$objdSurveySdgs->profile_code = $profileCode;
+			}
 			$objdSurveySdgs->S2_2_1 = $this->checkEmpty($this->input->post('5_S2_2_1'));
 			$objdSurveySdgs->S2_2_2 = $this->checkEmpty($this->input->post('5_S2_2_2'));
 	
@@ -1016,7 +1071,7 @@ class Main extends CI_Controller {
 
 		} 
     }
-	public function saveSurvey6($profileId){
+	public function saveSurvey6($profileId,$profileCode){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -1025,6 +1080,9 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$profileId;
 			$objdSurveyTrustInJustic=new MyDto();
 			$objdSurveyTrustInJustic->profile_id = $profileId;
+			if($profileCode != ''){
+				$objdSurveyTrustInJustic->profile_code = $profileCode;
+			}
 			$objdSurveyTrustInJustic->S2_1_1 = $this->checkEmpty($this->input->post('6_S2_1_1'));
 			$objdSurveyTrustInJustic->S2_1_2 = $this->checkEmpty($this->input->post('6_S2_1_2'));
 			$objdSurveyTrustInJustic->S2_1_3 = $this->checkEmpty($this->input->post('6_S2_1_3'));
@@ -1189,6 +1247,52 @@ class Main extends CI_Controller {
 		}
 		return $count;
 	}
+
+	function queryProviceId($province){				
+		$user_name=$this->isLogin();
+		$codeId = '';
+		if($user_name != false){
+			$this->load->model("datamodel");
+			$this->datamodel->sql=" select code from provinces where name_th= '".$province."'";   
+			$data=$this->datamodel->first_row_data_sql();
+			$codeId = $data->code;
+		}
+		return $codeId;
+	}
+
+	function chkProfileCodeFirst($profile_id){				
+		$user_name=$this->isLogin();
+		$profileCode = '';
+		if($user_name != false){
+			$this->load->model("datamodel");
+			$this->datamodel->sql=" select profile_code from survey_profile where profile_id = ".$profile_id;   
+			$data=$this->datamodel->first_row_data_sql();
+			$profileCode = $data->profile_code;
+		}
+		return $profileCode;
+	}
+
+	function chkPCNotInsert($profile_id,$master_id,$table){				
+		$user_name=$this->isLogin();
+		$profileCode = '';
+		if($user_name != false){
+			$this->load->model("datamodel");
+			$this->datamodel->sql=" select profile_code from survey_profile where profile_id = ".$master_id;   
+			$data=$this->datamodel->first_row_data_sql();
+			$profileCodeMaster = $data->profile_code;
+
+			$this->datamodel->sql=" select profile_code from ".$table." where profile_id = ".$profile_id;   
+			$data=$this->datamodel->first_row_data_sql();
+			$profileCodeMember = $data->profile_code;
+			
+			if($profileCodeMaster != '' && ($profileCodeMember == '' || $profileCodeMember == NULL)){
+				return substr($profileCodeMaster,0,10);
+			}
+		}
+		return $profileCode;
+	}
+
+	
 
 	public function submitLogout(){
 		$this->session->unset_userdata('user_name');
