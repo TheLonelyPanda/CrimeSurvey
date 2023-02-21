@@ -85,6 +85,7 @@
 		<h1 class="page-header" style="margin-top : 10px;">ลิสแบบสำรวจ</h1>
 			<div class="body">
 			<a href="<?= site_url('main/survey/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> เพิ่มแบบสอบถาม</a>
+			<a href="<?php echo base_url()."main/exportAll/"?>" class="ui green button " style="float:right;"><i class="share square icon small"></i>export แบบสอบถาม</a>
 							</br></br>
 				<table id="data-table" data-order='[[0,"desc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
 					<thead>

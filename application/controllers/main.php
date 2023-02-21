@@ -526,6 +526,12 @@ class Main extends CI_Controller {
 			}else{
 				$data['u_now_id']=$profile_id;
 			}
+			$profileCode=$this->chkProfileCodeFirst($data['u_now_id']);
+			if($profileCode != null || $profileCode != ''){
+				$data['u_profile_code'] = $profileCode;
+			}else{
+				$data['u_profile_code'] ='';
+			}
 
 			$data['u_check_new_survey_profile']=$this->chkHave($data['u_now_id'],'survey_profile');
 			if($data['u_check_new_survey_profile'] == 0){
@@ -1210,6 +1216,78 @@ class Main extends CI_Controller {
 		}
     }
 
+	public function exportAll() {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	      
+			
+			$this->load->library('zip');
+			$this->load->dbutil();
+			$this->load->helper('file');
+			$this->load->helper('download');
+			$this->load->model("datamodel");
+
+			$this->datamodel->sql="select * from survey_profile";
+			$profileQueryData=$this->datamodel->list_data_sql_export();
+			$profileData = $this->dbutil->csv_from_result($profileQueryData);
+			write_file('./temp/survey_profile.csv', $profileData);
+
+			$this->datamodel->sql="select * from survey_victims";
+			$victimsQueryData=$this->datamodel->list_data_sql_export();
+			$victimsData = $this->dbutil->csv_from_result($victimsQueryData);
+			write_file('./temp/survey_victims.csv', $victimsData);
+
+			$this->datamodel->sql="select * from survey_victims_crimes";
+			$crimesQueryData=$this->datamodel->list_data_sql_export();
+			$crimesData = $this->dbutil->csv_from_result($crimesQueryData);
+			write_file('./temp/survey_victims_crimes.csv', $crimesData);
+
+			$this->datamodel->sql="select * from survey_knowledge_laws";
+			$lawsQueryData=$this->datamodel->list_data_sql_export();
+			$lawsData = $this->dbutil->csv_from_result($lawsQueryData);
+			write_file('./temp/survey_knowledge_laws.csv', $lawsData);
+
+			$this->datamodel->sql="select * from survey_panic_in_crimes";
+			$panicQueryData=$this->datamodel->list_data_sql_export();
+			$panicData = $this->dbutil->csv_from_result($panicQueryData);
+			write_file('./temp/survey_panic_in_crimes.csv', $panicData);
+
+			$this->datamodel->sql="select * from survey_trust_for_security";
+			$securityQueryData=$this->datamodel->list_data_sql_export();
+			$securityData = $this->dbutil->csv_from_result($securityQueryData);
+			write_file('./temp/survey_trust_for_security.csv', $securityData);
+
+			$this->datamodel->sql="select * from survey_sdgs";
+			$sdgsQueryData=$this->datamodel->list_data_sql_export();
+			$sdgsData = $this->dbutil->csv_from_result($sdgsQueryData);
+			write_file('./temp/survey_sdgs.csv', $sdgsData);
+
+			$this->datamodel->sql="select * from survey_trust_in_justic";
+			$justicQueryData=$this->datamodel->list_data_sql_export();
+			$justicData = $this->dbutil->csv_from_result($justicQueryData);
+			write_file('./temp/survey_trust_in_justic.csv', $justicData);
+
+			// Zip the CSV files
+			$zip_file_path = './temp/csv_All.zip';
+			$this->zip->add_data('survey_profile.csv', $profileData);
+			$this->zip->add_data('survey_victims.csv', $victimsData);
+			$this->zip->add_data('survey_victims_crimes.csv', $crimesData);
+			$this->zip->add_data('survey_knowledge_laws.csv', $lawsData);
+			$this->zip->add_data('survey_panic_in_crimes.csv', $panicData);
+			$this->zip->add_data('survey_trust_for_security.csv', $securityData);
+			$this->zip->add_data('survey_sdgs.csv', $sdgsData);
+			$this->zip->add_data('survey_trust_in_justic.csv', $justicData);
+			$this->zip->archive($zip_file_path);
+
+			// Send the zip file as response
+			$zip_file_data = file_get_contents($zip_file_path);
+			force_download('csv_All.zip', $zip_file_data);
+
+		}
+    }
+
 	function isLogin(){				
 		$user_name=$this->session->userdata('user_name');
 		if($user_name==''){				
@@ -1267,7 +1345,10 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");
 			$this->datamodel->sql=" select profile_code from survey_profile where profile_id = ".$profile_id;   
 			$data=$this->datamodel->first_row_data_sql();
-			$profileCode = $data->profile_code;
+			if($data != null){
+				$profileCode = $data->profile_code;
+			}
+			
 		}
 		return $profileCode;
 	}

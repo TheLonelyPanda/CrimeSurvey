@@ -84,8 +84,9 @@
 				<form class="a form app form-horizontal" id="form-data" method="post">
 					<div class="line" style="float: right;">
 						<label for="2" class="col-form-label nText">แบบสอบถามลำดับที่</label>
-						<div class="col-lg-4 ">
-							<input type="text" class="form-control" name="1_text" value=<?= $u_now_id ?> readonly />
+						<div class="col-lg-625">
+							<input type="hidden" name="1_text" value="<?= $u_now_id ?>" readonly />
+							<input type="text" class="form-control" name="2_text" value="<?= $u_profile_code ?>" readonly />
 						</div>
 					</div>
 					</br>

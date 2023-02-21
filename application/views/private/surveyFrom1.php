@@ -81,7 +81,7 @@
 			<div class="row">
 				<label for="32" class="col-form-label">3.2 อายุ</label>
 				<div class="col-lg-3">
-					<input type="text" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" />
+					<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" />
 				</div>
 				<div class="col-form-label inputtextFix">
 					ปี (เต็มปีบริบูรณ์)

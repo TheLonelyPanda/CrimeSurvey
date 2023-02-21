@@ -14,7 +14,7 @@
 <div class="row">
 	<label for="22" class="col-form-label">2.2 ท่านตกเป็นเหยื่ออาชญากรรมครั้งแรกในขณะที่มีอายุ </label>
 	<div class="col-lg-1">
-		<input type="text" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="5_22" name="5_S2_2_2" readonly/>
+		<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="5_22" name="5_S2_2_2" readonly/>
 	</div>
 	<div class="col-form-label inputTextFix">
 		ปี
