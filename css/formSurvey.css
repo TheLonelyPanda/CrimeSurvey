@@ -28,6 +28,10 @@ a.width{
   font-weight: 400;
 }
 
+.overFlow{
+  line-height: 4;
+}
+
 .collapseForm{
   background-color: #efefef;
 }
@@ -112,3 +116,4 @@ a.width{
   text-align: center;
   vertical-align: top
 }
+

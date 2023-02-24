@@ -7654,14 +7654,14 @@ textarea.parsley-error:focus {
 input.parsley-success, 
 select.parsley-success, 
 textarea.parsley-success {
-    border: 2px solid #17B6A4 !important;
+    /*border: 2px solid #17B6A4 !important;*/
     background: #fff !important;
     color: #30373F !important;
 }
 input.parsley-success:focus, 
 select.parsley-success:focus, 
 textarea.parsley-success:focus {
-    border-color: #129283 !important;
+    /*border-color: #129283 !important;*/
 }
 .parsley-errors-list {
     margin: 0;
@@ -7678,6 +7678,12 @@ textarea.parsley-success:focus {
 .radio .parsley-error + .parsley-errors-list.filled > li,
 .checkbox .parsley-error + .parsley-errors-list.filled > li {
     margin-top: 3px;
+}
+div:has(> label.parsley-error){
+    background-color: #ff000040;
+}
+tr:has(> td.parsley-error){
+    background-color: #ff000040;
 }
 
 

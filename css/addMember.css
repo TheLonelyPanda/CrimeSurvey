@@ -2,6 +2,10 @@
   margin-top: 10px;
 }
 
+.star{
+  color:red;
+}
+
 table {
   border-spacing: 1;
   border-collapse: collapse;

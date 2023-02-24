@@ -6,20 +6,20 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>Menu</title>
+	<title>tjsurvey : แบบสำรวจข้อมูลสถิติอาชญากรรมภาคประชาชน</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
 
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
-	<link rel="stylesheet" href="<?php echo base_url() . 'css/formSurvey.css' ?>">
+	<link rel="stylesheet" href="<?php echo base_url() . 'css/formSurvey.css?ts='.time()?>">
 	<link rel="stylesheet" href="<?php echo base_url() . "js/css/cupertino/jquery-ui-1.9.2.custom.min.css" ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . "semantic/semantic.min.css" ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . 'plugins/jquery-confirm/css/jquery-confirm.css' ?>">
 
 	<link href="http://fonts.googleapis.com/css?family=Nunito:400,300,700" rel="stylesheet" id="fontFamilySrc" />
 
-	<link href="<?php echo base_url() . 'assets/plugins/bootstrap/bootstrap-4.1.1/css/bootstrap.min.css'  ?>" rel='stylesheet' />
+	<link href="<?php echo base_url() . 'assets/plugins/bootstrap/bootstrap-4.1.1/css/bootstrap.min.css?ts='.time()?>" rel='stylesheet' />
 	<link href="<?php echo base_url() . 'assets/css/animate.min.css'  ?>" rel='stylesheet' />
 	<link href="<?php echo base_url() . 'assets/css/style.min.css'  ?>" rel='stylesheet' />
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-1.12.3.js" ?>"></script>
@@ -65,9 +65,9 @@
 						</a>
 						<ul class="dropdown-menu pull-right">
 							<? if ($u_level == 'ADMIN') { ?>
-								<li><a href="<?= site_url('admin/addMember') ?>">แก้ไข User</a></li>
+								<li><a href="<?= site_url('admin/addMember') ?>">จัดการผู้ใช้งาน (User)</a></li>
 							<? } ?>
-							<li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout') ?>">Log Out</a></li>
+							<li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout') ?>">ออกจากระบบ</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -81,9 +81,9 @@
 		<div class="panel container" style="margin-top : 10px;">
 			<h1 class="page-header" style="margin-top : 10px;">แบบสำรวจข้อมูลสถิติอาชญากรรมภาคประชาชน</h1>
 			<div class="body">
-				<form class="a form app form-horizontal" id="form-data" method="post">
+				<form class="a form app form-horizontal" id="form-data-varidate" data-parsley-errors-messages-disabled data-parsley-inputs="input:not([type='checkbox']), textarea, select" method="post">
 					<div class="line" style="float: right;">
-						<label for="2" class="col-form-label nText">แบบสอบถามลำดับที่</label>
+						<label for="2" class="col-form-label nText">แบบสำรวจลำดับที่</label>
 						<div class="col-lg-625">
 							<input type="hidden" name="1_text" value="<?= $u_now_id ?>" readonly />
 							<input type="text" class="form-control" name="2_text" value="<?= $u_profile_code ?>" readonly />
@@ -99,19 +99,15 @@
 								<label for="A1" class="col-form-label">A1 ข้อมูลส่วนบุคคล</label></br>
 							</div>
 							<div class="row indent">
-								<label for="A2" class="col-form-label nText col-lg-15">A2 บ้านเลขที่</label>
+								<label for="A2" class="col-form-label nText col-lg-2">A2 บ้านเลขที่</label>
 								<div class="col-lg-2 ">
-									<input type="text" class="form-control" id="A2" name="A2" />
+									<input type="text" class="form-control" id="A2" name="A2" data-parsley-required="true" />
 								</div>
 							</div>
 							<div class="row indent">
-								<label for="A3_1" class="col-form-label nText col-lg-15">A3 พิกัดบ้าน (NS)</label>
+								<label for="A3" class="col-form-label nText col-lg-2">A3 พิกัดบ้าน (NS) (EW)</label>
 								<div class="col-lg-2 ">
-									<input type="text" class="form-control" id="A3_1" name="A3_1" />
-								</div>
-								<label for="A3_2" class="col-form-label nText">พิกัดบ้าน (EW)</label>
-								<div class="col-lg-2 ">
-									<input type="text" class="form-control" id="A3_2" name="A3_2" />
+									<input type="text" class="form-control" id="A3" name="A3" data-parsley-required="true" />
 								</div>
 							</div>
 							<div class="row">
@@ -123,7 +119,7 @@
 								<div class="col-lg-12">
 									<div style="width: 50%; float:left;">
 										<div class="row" style="margin-left: 10px; padding-top: 13px;">
-											<input type="radio" id="A41" name="A4" value="1">
+											<input type="radio" id="A41" name="A4" value="1" data-parsley-required="true">
 											<label class="radio-inline " style="align-self: center; style=" margin-left: 10px;>(A4.1) กรุงเทพมหานคร</label>
 										</div>
 										<div class="row" style=" padding-top: 13px;">
@@ -145,7 +141,7 @@
 										<div class="row">
 											<label class="radio-inline col-lg-25" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" id="A4_41" name="A4_1_text_3" readonly />
+												<input type="text" class="form-control" id="A4_41" name="A4_1_text_3" data-parsley-required="true"  readonly />
 											</label>
 										</div>
 									</div>
@@ -158,8 +154,9 @@
 												<select name="province_id" id="province" class="form-control" disabled>
 													<option value="">เลือกจังหวัด</option>
 													<? foreach ($d_province as $result) { ?>
+														<? if($result->name_th != 'กรุงเทพมหานคร'){ ?>
 														<option value="<?= $result->name_th ?>"><?= $result->name_th ?></option>
-													<? } ?>
+													<? }} ?>
 												</select>
 											</label>
 										</div>
@@ -182,13 +179,13 @@
 										<div class="row">
 											<label class="radio-inline col-lg-45" style="align-self: center;">เขตสถานีตำรวจ</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" id="A4_42" name="A4_2_text_4" readonly />
+												<input type="text" class="form-control" id="A4_42" name="A4_2_text_4" data-parsley-required="true" readonly />
 											</label>
 										</div>
 										<div class="row">
 											<label class="radio-inline col-lg-45" style="align-self: center;">อบต./ท.ตำบล/ท.เมือง/ท.นคร</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="text" class="form-control" id="A4_52" name="A4_2_text_5" readonly />
+												<input type="text" class="form-control" id="A4_52" name="A4_2_text_5" data-parsley-required="true" readonly />
 											</label>
 										</div>
 									</div>
@@ -202,7 +199,7 @@
 							<div class="row">
 								<label for="1111" class="col-form-label">1.1.1 เพศ &nbsp</label>
 								<label class="radio-inline col-form-label">
-									<input type="radio" id="11111" name="1_1_1" value="1"> (1) ชาย
+									<input type="radio" id="11111" class="" name="1_1_1" value="1" data-parsley-required="true"> (1) ชาย
 								</label>
 								<label class="radio-inline col-form-label">
 									<input type="radio" id="11112" name="1_1_1" value="2"> (2) หญิง
@@ -215,7 +212,7 @@
 							<div class="row">
 								<label for="1112" class="col-form-label">1.1.2 อายุ</label>
 								<div class="col-lg-1">
-									<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1112" name="1_1_2" />
+									<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1112" name="1_1_2" data-parsley-required="true"/>
 								</div>
 								<div class="col-form-label inputTextFix">
 									ปี (เต็มปีบริบูรณ์)
@@ -226,7 +223,7 @@
 								<label for="1113" class="col-form-label">1.1.3 รายได้</label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-										<input type="radio" id="11131" name="1_1_3" value="1"> (1) ต่ำกว่า 15,000 บาท
+										<input type="radio" id="11131" name="1_1_3" value="1" data-parsley-required="true"> (1) ต่ำกว่า 15,000 บาท
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
 										<input type="radio" id="11132" name="1_1_3" value="2"> (2) 15,001-25,000 บาท
@@ -256,7 +253,7 @@
 								<label for="1114" class="col-form-label">1.1.4 อาชีพ</label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-										<input type="radio" id="11141" name="1_1_4" value="1"> (1) ข้าราชการ พนักงานรัฐวิสาหกิจ
+										<input type="radio" id="11141" name="1_1_4" value="1" data-parsley-required="true"> (1) ข้าราชการ พนักงานรัฐวิสาหกิจ
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
 										<input type="radio" id="11142" name="1_1_4" value="2"> (2) พนักงานเอกชน
@@ -286,7 +283,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="1114_text" name="1_1_4_text" readonly />
+									<input type="text" class="form-control" id="1114_text" name="1_1_4_text" data-parsley-required="true" readonly />
 								</div>
 							</div>
 
@@ -294,7 +291,7 @@
 								<label for="1115" class="col-form-label">1.1.5 การศึกษาระดับสูงสุด</label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-										<input type="radio" id="11151" name="1_1_5" value="1"> (1) ไม่เคยเข้ารับการศึกษา
+										<input type="radio" id="11151" name="1_1_5" value="1" data-parsley-required="true"> (1) ไม่เคยเข้ารับการศึกษา
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
 										<input type="radio" id="11152" name="1_1_5" value="2"> (2) การศึกษานอกระบบ (กศน.)
@@ -330,7 +327,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="1115_text" name="1_1_5_text" readonly />
+									<input type="text" class="form-control" id="1115_text" name="1_1_5_text" data-parsley-required="true" readonly />
 								</div>
 							</div>
 
@@ -338,7 +335,7 @@
 								<label for="1116" class="col-form-label">1.1.6 ท่านเห็นการปฏิบัติงานของเจ้าหน้าที่ตำรวจ หรือเจ้าหน้าที่ของหน่วยงานด้านยุติธรรม </br>เช่น เจ้าหน้าที่คุมประพฤติ เจ้าหน้าที่ราชทัณฑ์ เจ้าหน้าที่ยุติธรรมจังหวัด เจ้าหน้าที่ยุติธรรมชุมชน เป็นต้น </br>ในการปฏิบัติงานในพื้นที่ชุมชนของท่านมากน้อยเพียงใด</label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-										<input type="radio" id="11161" name="1_1_6" value="1"> (1) สัปดาห์ละครั้ง
+										<input type="radio" id="11161" name="1_1_6" value="1" data-parsley-required="true"> (1) สัปดาห์ละครั้ง
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
 										<input type="radio" id="11162" name="1_1_6" value="2"> (2) เดือนละครั้ง
@@ -359,10 +356,10 @@
 								<label for="1117" class="col-form-label">1.1.7 ในช่วงระยะเวลา 5 ปี ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรม หน่วยงานใด
 								<div class="col-lg-12">
 									<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-										<input type="radio" id="11171" name="1_1_7" value="1"> (1) เคย กรุณาระบุหน่วยงาน 
+										<input type="radio" id="11171" name="1_1_7" value="1" data-parsley-required="true"> (1) เคย กรุณาระบุหน่วยงาน 
 									</label>
 									<label class="radio-inline col-form-label  col-lg-8">
-										<input type="text" class="form-control"  id="11171_text" name="1_1_7_text" readonly />
+										<input type="text" class="form-control"  id="11171_text" name="1_1_7_text" data-parsley-required="true" readonly />
 									</label>
 
 									<label class="radio-inline col-form-label  col-lg-3">
@@ -375,7 +372,7 @@
 								<label for="11171" class="col-form-label">1.1.7.1 ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรมในสถานะใด
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label" style="margin-left: 10px;">
-										<input type="radio" id="1117_11" name="1_1_7_1" value="1" disabled> (1) ผู้มาติดต่อหรือรับบริการโดยตรง ได้แก่ ผู้เสียหาย ผู้กระทำผิด
+										<input type="radio" id="1117_11" name="1_1_7_1" value="1" data-parsley-required="true" disabled> (1) ผู้มาติดต่อหรือรับบริการโดยตรง ได้แก่ ผู้เสียหาย ผู้กระทำผิด
 									</label>
 									<label class="radio-inline col-form-label  col-lg-12">
 										<input type="radio" id="1117_12" name="1_1_7_1" value="2" disabled> (2) ผู้มาติดต่อหรือรับบริการโดยอ้อม ได้แก่ ญาติ ผู้เกี่ยวข้องกับผู้เสียหายหรือผู้กระทำผิด 
@@ -389,7 +386,7 @@
 								<label for="112" class="col-form-label">1.2 สถานะของท่านในครัวเรือน (ท่านมีความเกี่ยวข้องสัมพันธ์กับเจ้าของบ้านอย่างไร)</label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-										<input type="radio" id="1121" name="1_2" value="1"> (1) เจ้าของบ้าน
+										<input type="radio" id="1121" name="1_2" value="1" data-parsley-required="true"> (1) เจ้าของบ้าน
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
 										<input type="radio" id="1122" name="1_2" value="2"> (2) คู่สมรส
@@ -423,7 +420,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="112_text" name="1_2_text" readonly />
+									<input type="text" class="form-control" id="112_text" name="1_2_text" data-parsley-required="true" readonly />
 								</div>
 							</div>
 
@@ -432,7 +429,7 @@
 								<label for="113" class="col-form-label">1.3 ลักษณะบริเวณที่อยู่อาศัย</label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-8" style="margin-left: 10px;">
-										<input type="radio" id="1131" name="1_3" value="1"> (1) เขตที่พักอาศัยทั่วไป เช่น หมู่บ้านจัดสรร บ้านเดี่ยว
+										<input type="radio" id="1131" name="1_3" value="1" data-parsley-required="true"> (1) เขตที่พักอาศัยทั่วไป เช่น หมู่บ้านจัดสรร บ้านเดี่ยว
 									</label>
 									<label class="radio-inline col-form-label  col-lg-8">
 										<input type="radio" id="1132" name="1_3" value="2"> (2) เขตธุรกิจ เช่น เขตที่มีบริษัท ห้าง ร้าน อยู่รวมกันเป็นบริเวณกว้าง
@@ -458,7 +455,7 @@
 									โปรดระบุ
 								</div>
 								<div class="col-lg-4">
-									<input type="text" class="form-control" id="113_text" name="1_3_text" readonly />
+									<input type="text" class="form-control" id="113_text" name="1_3_text" data-parsley-required="true" readonly />
 								</div>
 							</div>
 
@@ -552,7 +549,7 @@
 
 							<div class="row">
 								<div class="col-lg-1.5" style="margin-left: auto; margin-right: 0;">
-									<a value="Save" data-url="<?= site_url('main/saveSurvey/false') ?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
+									<a value="Save" data-url="<?= site_url('main/saveSurvey/false') ?>" class="ui basic green button btn-form-varidate-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
 									<a href="<?= site_url('/main/index/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
@@ -578,6 +575,7 @@
 	<!-- ================== END BASE JS ================== -->
 
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="<?php echo base_url() .'/assets/plugins/parsley/dist/parsley.js'?>"></script>
 
 	<script src="<?php echo base_url() . '/assets/js/apps.min.js' ?>"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
@@ -589,6 +587,8 @@
 		});
 
 
+		var A4_41 = $('#A4_41');
+		var A4_42   = $('#A4_42');
 		$('input[name="A4"]').on('change', function() {
 			if ($(this).val() === '1') {
 				$('select[name="amphure_id_1"]').prop('disabled', false);
@@ -599,6 +599,17 @@
 				$('select[name="district_id"]').prop('disabled', true);
 				$('input[name="A4_2_text_4"]').prop('readonly', true);
 				$('input[name="A4_2_text_5"]').prop('readonly', true);
+
+				document.getElementById("A4_41").setAttribute("data-parsley-required", "true");
+				document.getElementById("A4_42").setAttribute("data-parsley-required", "false");
+				document.getElementById("A4_52").setAttribute("data-parsley-required", "false");
+				document.getElementById("A4_42").value = "";
+				document.getElementById("A4_52").value = "";
+				document.getElementById("province").value = "";
+				document.getElementById("amphure").value = "";
+				document.getElementById("district").value = "";
+
+
 			} else {
 				$('select[name="amphure_id_1"]').prop('disabled', true);
 				$('select[name="district_id_1"]').prop('disabled', true);
@@ -608,6 +619,14 @@
 				$('select[name="district_id"]').prop('disabled', false);
 				$('input[name="A4_2_text_4"]').prop('readonly', false);
 				$('input[name="A4_2_text_5"]').prop('readonly', false);
+
+				document.getElementById("A4_41").setAttribute("data-parsley-required", "false");
+				document.getElementById("A4_42").setAttribute("data-parsley-required", "true");
+				document.getElementById("A4_52").setAttribute("data-parsley-required", "true");
+				document.getElementById("A4_41").value = "";
+				document.getElementById("amphure_1").value = "";
+				document.getElementById("district_1").value = "";
+
 			}
 		});
 
@@ -670,16 +689,22 @@
 		$('input[name="1_1_4"]').on('change', function() {
 			if ($(this).val() === '8') {
 				$('input[name="1_1_4_text"]').prop('readonly', false);
+				document.getElementById("1114_text").setAttribute("data-parsley-required", "true");
 			} else {
 				$('input[name="1_1_4_text"]').prop('readonly', true);
+				document.getElementById("1114_text").setAttribute("data-parsley-required", "false");
+				document.getElementById("1114_text").value = "";
 			}
 		});
 
 		$('input[name="1_1_5"]').on('change', function() {
 			if ($(this).val() === '10') {
 				$('input[name="1_1_5_text"]').prop('readonly', false);
+				document.getElementById("1115_text").setAttribute("data-parsley-required", "true");
 			} else {
 				$('input[name="1_1_5_text"]').prop('readonly', true);
+				document.getElementById("1115_text").setAttribute("data-parsley-required", "false");
+				document.getElementById("1115_text").value = "";
 			}
 		});
 
@@ -687,9 +712,17 @@
 			if ($(this).val() === '1') {
 				$('input[name="1_1_7_text"]').prop('readonly', false);
 				$('input[name="1_1_7_1"]').prop('disabled', false);
+
+				document.getElementById("11171_text").setAttribute("data-parsley-required", "true");
+				document.getElementById("1117_11").setAttribute("data-parsley-required", "true");
 			} else {
 				$('input[name="1_1_7_text"]').prop('readonly', true);
 				$('input[name="1_1_7_1"]').prop('disabled', true);
+
+				document.getElementById("11171_text").setAttribute("data-parsley-required", "false");
+				document.getElementById("1117_11").setAttribute("data-parsley-required", "false");
+				$('input[name="1_1_7_1"]').prop('checked', false);
+				document.getElementById("11171_text").value = "";
 
 			}
 		});
@@ -698,8 +731,11 @@
 		$('input[name="1_2"]').on('change', function() {
 			if ($(this).val() === '9') {
 				$('input[name="1_2_text"]').prop('readonly', false);
+				document.getElementById("112_text").setAttribute("data-parsley-required", "true");
 			} else {
 				$('input[name="1_2_text"]').prop('readonly', true);
+				document.getElementById("112_text").setAttribute("data-parsley-required", "false");
+				document.getElementById("112_text").value = "";
 			}
 		});
 
@@ -707,8 +743,11 @@
 		$('input[name="1_3"]').on('change', function() {
 			if ($(this).val() === '6') {
 				$('input[name="1_3_text"]').prop('readonly', false);
+				document.getElementById("113_text").setAttribute("data-parsley-required", "true");
 			} else {
 				$('input[name="1_3_text"]').prop('readonly', true);
+				document.getElementById("113_text").setAttribute("data-parsley-required", "false");
+				document.getElementById("113_text").value = "";
 			}
 		});
 		
@@ -787,8 +826,7 @@
 		if ('<?= $u_check_new_survey_profile ?>' != '0') {
 			$(function() {
 				document.getElementById("A2").value = '<?= $d_surveyProfile->A2 ?>';
-				document.getElementById("A3_1").value = '<?= $d_surveyProfile->A3_1 ?>';
-				document.getElementById("A3_2").value = '<?= $d_surveyProfile->A3_2 ?>';
+				document.getElementById("A3").value = '<?= $d_surveyProfile->A3 ?>';
 				checkId(document.getElementById("A4<?= $d_surveyProfile->A4 ?>"));
 				if ('<?= $d_surveyProfile->A4 ?>' == '1') {
 					$('select[name="amphure_id_1"]').prop('disabled', false);
@@ -799,6 +837,10 @@
 					$('select[name="district_id"]').prop('disabled', true);
 					$('input[name="A4_2_text_4"]').prop('readonly', true);
 					$('input[name="A4_2_text_5"]').prop('readonly', true);
+
+					document.getElementById("A4_41").setAttribute("data-parsley-required", "true");
+					document.getElementById("A4_42").setAttribute("data-parsley-required", "false");
+					document.getElementById("A4_52").setAttribute("data-parsley-required", "false");
 				} else {
 					$('select[name="amphure_id_1"]').prop('disabled', true);
 					$('select[name="district_id_1"]').prop('disabled', true);
@@ -808,6 +850,10 @@
 					$('select[name="district_id"]').prop('disabled', false);
 					$('input[name="A4_2_text_4"]').prop('readonly', false);
 					$('input[name="A4_2_text_5"]').prop('readonly', false);
+
+					document.getElementById("A4_41").setAttribute("data-parsley-required", "false");
+					document.getElementById("A4_42").setAttribute("data-parsley-required", "true");
+					document.getElementById("A4_52").setAttribute("data-parsley-required", "true");
 				}
 				if ('<?= $d_surveyProfile->A4 ?>' == '2') {
 					$("#province").val('<?= $d_surveyProfile->A4_1 ?>').change();
@@ -827,15 +873,19 @@
 				checkId(document.getElementById("1114<?= $d_surveyProfile->{'1_1_4'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_1_4'} ?>' == '8') {
 					$('input[name="1_1_4_text"]').prop('readonly', false);
+					document.getElementById("1114_text").setAttribute("data-parsley-required", "true");
 				} else {
 					$('input[name="1_1_4_text"]').prop('readonly', true);
+					document.getElementById("1114_text").setAttribute("data-parsley-required", "false");
 				}
 				document.getElementById("1114_text").value = '<?= $d_surveyProfile->{'1_1_4_text'} ?>';
 				checkId(document.getElementById("1115<?= $d_surveyProfile->{'1_1_5'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_1_5'} ?>' == '10') {
 					$('input[name="1_1_5_text"]').prop('readonly', false);
+					document.getElementById("1115_text").setAttribute("data-parsley-required", "true");
 				} else {
 					$('input[name="1_1_5_text"]').prop('readonly', true);
+					document.getElementById("1115_text").setAttribute("data-parsley-required", "false");
 				}
 				document.getElementById("1115_text").value = '<?= $d_surveyProfile->{'1_1_5_text'} ?>';
 				checkId(document.getElementById("1116<?= $d_surveyProfile->{'1_1_6'} ?>"));
@@ -844,9 +894,15 @@
 				if ('<?= $d_surveyProfile->{'1_1_7'} ?>' == '1') {
 					$('input[name="1_1_7_text"]').prop('readonly', false);
 					$('input[name="1_1_7_1"]').prop('disabled', false);
+
+					document.getElementById("11171_text").setAttribute("data-parsley-required", "true");
+					document.getElementById("1117_11").setAttribute("data-parsley-required", "true");
 				} else {
 					$('input[name="1_1_7_text"]').prop('readonly', true);
 					$('input[name="1_1_7_1"]').prop('disabled', true);
+
+					document.getElementById("11171_text").setAttribute("data-parsley-required", "false");
+					document.getElementById("1117_11").setAttribute("data-parsley-required", "false");
 				}
 				document.getElementById("11171_text").value = '<?= $d_surveyProfile->{'1_1_7_text'} ?>';
 				checkId(document.getElementById("1117_1<?= $d_surveyProfile->{'1_1_7_1'} ?>"));
@@ -854,16 +910,20 @@
 				checkId(document.getElementById("112<?= $d_surveyProfile->{'1_2'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_2'} ?>' == '9') {
 					$('input[name="1_2_text"]').prop('readonly', false);
+					document.getElementById("112_text").setAttribute("data-parsley-required", "true");
 				} else {
 					$('input[name="1_2_text"]').prop('readonly', true);
+					document.getElementById("112_text").setAttribute("data-parsley-required", "false");
 				}
 				document.getElementById("112_text").value = '<?= $d_surveyProfile->{'1_2_text'} ?>';
 
 				checkId(document.getElementById("113<?= $d_surveyProfile->{'1_3'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_3'} ?>' == '6') {
 					$('input[name="1_3_text"]').prop('readonly', false);
+					document.getElementById("113_text").setAttribute("data-parsley-required", "true");
 				} else {
 					$('input[name="1_3_text"]').prop('readonly', true);
+					document.getElementById("113_text").setAttribute("data-parsley-required", "false");
 				}
 				document.getElementById("113_text").value = '<?= $d_surveyProfile->{'1_3_text'} ?>';
 
@@ -881,6 +941,23 @@
 					id.checked = true;
 				}
 			};
+
+		$('input[type="radio"]').mousedown(function() { 
+			// if it was checked before
+			if(this.checked) {
+				// bind event to reset state after click is completed
+				$(this).mouseup(function() {  
+					// bind param, because "this" will point somewhere else in setTimeout
+					var radio = this;
+					// apparently if you do it immediatelly, it will be overriden, hence wait a tiny bit
+					setTimeout(function() { 
+						radio.checked = false; 
+					}, 5); 
+					// don't handle mouseup anymore unless bound again
+					$(this).unbind('mouseup');
+				});
+			}
+		});
 	</script>
 </body>
 

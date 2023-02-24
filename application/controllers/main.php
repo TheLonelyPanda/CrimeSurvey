@@ -34,7 +34,7 @@ class Main extends CI_Controller {
 			
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_profile';
-			$this->datamodel->condition=" where master_id is null";		
+			$this->datamodel->condition=" where master_id is null and status = 'complete'";		
 			$list_data=$this->datamodel->list_data();
 			$data['list_data']=$list_data;
 
@@ -539,8 +539,7 @@ class Main extends CI_Controller {
 				$objSurveyProfile->profile_id = $profile_id;
 				$objSurveyProfile->master_id = '';
 				$objSurveyProfile->A2 = '';
-				$objSurveyProfile->A3_1 = '';
-				$objSurveyProfile->A3_2 = '';
+				$objSurveyProfile->A3 = '';
 				$objSurveyProfile->A4 = '';
 				$objSurveyProfile->A4_1 = '';
 				$objSurveyProfile->A4_2 = '';
@@ -587,8 +586,7 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$u_now_id;
 			$objProfile=new MyDto();
 			$objProfile->A2 = $this->checkEmpty($this->input->post('A2'));
-			$objProfile->A3_1 = $this->checkEmpty($this->input->post('A3_1'));
-			$objProfile->A3_2 = $this->checkEmpty($this->input->post('A3_2'));
+			$objProfile->A3 = $this->checkEmpty($this->input->post('A3'));
 			$objProfile->A4 = $this->checkEmpty($this->input->post('A4'));
 			$objProfile->profile_code = '';
 			if($this->checkEmpty($this->input->post('A4'))=='1'){
@@ -674,8 +672,7 @@ class Main extends CI_Controller {
 			$objProfile=new MyDto();
 			
 			$objProfile->A2 = $this->checkEmpty($this->input->post('A2'));
-			$objProfile->A3_1 = $this->checkEmpty($this->input->post('A3_1'));
-			$objProfile->A3_2 = $this->checkEmpty($this->input->post('A3_2'));
+			$objProfile->A3 = $this->checkEmpty($this->input->post('A3'));
 			$objProfile->A4 = $this->checkEmpty($this->input->post('A4'));
 			if($this->checkEmpty($this->input->post('A4'))=='1'){
 				$objProfile->A4_1 = 'กรุงเทพมหานคร';
@@ -711,6 +708,9 @@ class Main extends CI_Controller {
 			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
 			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
+			if($hidden == 'false'){
+				$objProfile->status = 'complete';
+			}
 			if($this->chkHave($profileId,'survey_profile')=='0'){
 				$this->datamodel->insert($objProfile);
 			}else{
@@ -1364,13 +1364,30 @@ class Main extends CI_Controller {
 
 			$this->datamodel->sql=" select profile_code from ".$table." where profile_id = ".$profile_id;   
 			$data=$this->datamodel->first_row_data_sql();
-			$profileCodeMember = $data->profile_code;
+			if($data == null){
+				$profileCodeMember = '';
+			}else{
+				$profileCodeMember = $data->profile_code;
+			}
+			
 			
 			if($profileCodeMaster != '' && ($profileCodeMember == '' || $profileCodeMember == NULL)){
 				return substr($profileCodeMaster,0,10);
 			}
 		}
 		return $profileCode;
+	}
+
+	public function queryProfileIdNext(){				
+		$user_name=$this->isLogin();
+		$profileId = '';
+		if($user_name != false){
+			$this->load->model("datamodel");
+			$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+			$u_now_id=$this->datamodel->first_row_data_sql();
+			$profileId=$u_now_id->AUTO_INCREMENT;
+		}
+		echo $profileId;
 	}
 
 	

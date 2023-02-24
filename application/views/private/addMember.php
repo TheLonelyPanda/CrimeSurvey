@@ -5,7 +5,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>Menu</title>
+	<title>tjsurvey : จัดการผู้ใช้งาน (User)</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -67,9 +67,9 @@
 						</a>
 						<ul class="dropdown-menu pull-right">
 							<? if($u_level == 'ADMIN'){ ?>
-								<li><a href="<?= site_url('admin/addMember')?>">แก้ไข User</a></li>
+								<li><a href="<?= site_url('admin/addMember')?>">จัดการผู้ใช้งาน (User)</a></li>
 							<?}?>
-                            <li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout')?>">Log Out</a></li>
+                            <li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout')?>">ออกจากระบบ</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -81,33 +81,31 @@
 	  </a>
 		<!-- begin #content -->
 		<div class="panel container" style="margin-top : 10px;">
-		<h1 class="page-header" style="margin-top : 10px;">แก้ไข User</h1>
+		<h1 class="page-header" style="margin-top : 10px;">จัดการผู้ใช้งาน (User)</h1>
 			<div class="body">
-				<a href="javascript:void(0)" type="button" data-toggle="modal" data-target="#modal-add" class="ui green button "><i class="plus icon small"></i> เพิ่ม user</a>
+				<a href="javascript:void(0)" type="button" data-toggle="modal" data-target="#modal-add" class="ui green button "><i class="plus icon small"></i> เพิ่มผู้ใช้งานใหม่</a>
 				</br></br>
-				<table id="data-table" data-order='[[1,"asc"]]'  class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
+				<table id="data-table" data-order='[[0,"asc"]]'  class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
 					<thead>
 						<tr class="inverse">
-							<th class="text-center">id</th>
-							<th class="text-center">username</th>
-							<th class="text-center">password</th>
-							<th class="text-center">level</th>
-							<th class="text-center">name</th>
-							<th class="text-center">surname</th>
-							<th class="text-center">email</th>
-							<th class="text-center">mobile</th>
+							<th class="text-center">ลำดับที่</th>
+							<th class="text-center">รหัสผู้ใช้งาน (Username)</th>
+							<th class="text-center">ชื่อ</th>
+							<th class="text-center">นามสกุล</th>
+							<th class="text-center">ระดับผู้ใช้งาน</th>
+							<th class="text-center">อีเมล</th>
+							<th class="text-center">เบอร์ติดต่อ</th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($list_user as $row) { ?>
+						<?php $index = 1; foreach ($list_user as $row) { ?>
 							<tr>
-								<td><?php echo $row->id; ?></td>
+								<td><?php echo $index; ?></td>
 								<td><?php echo $row->username; ?></td>
-								<td><?php echo $row->password; ?></td>
-								<td><?php echo $row->level; ?></td>
 								<td><?php echo $row->name; ?></td>
 								<td><?php echo $row->surname; ?></td>
+								<td><?php echo $row->level; ?></td>
 								<td><?php echo $row->email; ?></td>
 								<td><?php echo $row->mobile; ?></td>
 								<td>
@@ -116,7 +114,7 @@
 								data-email=<?php echo $row->email; ?> data-mobile=<?php echo $row->mobile; ?>><i class="edit icon large" style="color:orange"></i></a>
 								<a href="javascript:void(0)" data-url="<?=site_url('/admin/deleteUser/'.$row->id)?>" class="btn-form-delete"><i class="delete icon large" style="color:red"></i></a></td>
 							</tr>
-						<?php } ?>
+						<?php $index++; } ?>
 					</tbody>
 				</table>
 			</div>
@@ -130,7 +128,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title">แก้ไข user</h4>
+					<h4 class="modal-title">แก้ไขผู้ใช้งาน</h4>
 				</div>
 				<form class="a form app" id="form-data" method="post" >
 				<input type="hidden" id="e_modalId" name="e_id">
@@ -175,7 +173,7 @@
 					</div>
 					<div class="modal-footer">
 						<a href="index.html" class="btn width-100 btn-default" data-dismiss="modal">ยกเลิก</a>
-						<a class="btn width-100 btn-default btn-form-save" value="Save" data-url="<?= site_url('admin/editUser')?>">Save</a>
+						<a class="btn width-100 btn-default btn-form-save" value="Save" data-url="<?= site_url('admin/editUser')?>">บันทึก</a>
 					</div>
 
 				</form>
@@ -188,52 +186,69 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title">เพิ่ม user</h4>
+					<h4 class="modal-title">เพิ่มผู้ใช้งานใหม่</h4>
 				</div>
-				<form class="a form app" id="form-data" method="post" >
+				<form class="a form app" data-parsley-validate="true" id="form-data-varidate" method="post" >
 				<input type="hidden" id="a_modalId" name="a_id">
 					<div class="ui form">
 						<div class="modal-body">
 							<div class="row">
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Username</label>
-									<input type="text" class="input" id="a_modalUsername" name="a_username"/>
+							<div class="col-lg-3 m-b-15">
+									<label class="col-form-label">ชื่อ <span class="star">*</span></label>
+									<input type="text" class="input" id="a_modalName" name="a_name" data-parsley-required="true"/>
 								</div>
 								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Password</label>
-									<input type="text" class="input" id="a_modalPassword" name="a_password"/>
-								</div>
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Name</label>
-									<input type="text" class="input" id="a_modalName" name="a_name"/>
-								</div>
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Surname</label>
-									<input type="text" class="input" id="a_modalSurname" name="a_surname"/>
+									<label class="col-form-label">นามสกุล <span class="star">*</span></label>
+									<input type="text" class="input" id="a_modalSurname" name="a_surname" data-parsley-required="true"/>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">E-mail</label>
-									<input type="text" class="input" id="a_modalEmail" name="a_email"/>
+							<div class="col-lg-3 m-b-15">
+									<label class="col-form-label">อีเมล</label>
+									<input class="form-control input" type="text" id="a_modalEmail" name="a_email" data-parsley-type="email" placeholder="Email" />
 								</div>
 								<div class="col-lg-3 m-b-15">
-									<label class="col-form-label">Mobile Number</label>
-									<input type="text" class="input" id="a_modalMobile" name="a_mobile"/>
+									<label class="col-form-label">เบอร์ติดต่อ <span class="star">*</span></label>
+									<input type="text" class="input" id="a_modalMobile" name="a_mobile" data-parsley-required="true"/>
 								</div>
+							</div>
+							<div class="row">
+								
 								<div class="col-lg-2 m-b-15">
-									<label class="col-form-label">Level</label>
+									<label class="col-form-label">ระดับผู้ใช้งาน <span class="star">*</span></label>
 									<select class="default-select2 input "  id="a_modalLevel" name="a_level">
 										<option value="ADMIN">Admin</option>
 										<option value="USER">User</option>
 									</select>
 								</div>
 							</div>
+							<div class="row">
+							
+								<div class="col-lg-3 m-b-15">
+									<label class="col-form-label">รหัสผู้ใช้งาน <span class="star">*</span></label>
+									<input type="text" class="input" id="a_modalUsername" name="a_username" data-parsley-required="true"/>
+								</div>
+								
+								
+							</div>
+							<div class="row">
+							<div class="col-lg-3 m-b-15">
+									<label class="col-form-label">รหัสผ่าน <span class="star">*</span></label>
+									<input type="password" class="input" id="a_modalPassword" name="a_password" data-parsley-required="true"/>
+								</div>
+							</div>
+							<div class="row">
+							<div class="col-lg-3 m-b-15">
+									<label class="col-form-label">รหัสผ่าน (อีกครั้ง) <span class="star">*</span></label>
+									<input type="password" class="input" id="a_modalPassword_check" data-parsley-equalto="#a_modalPassword" data-parsley-required="true"/>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 					<div class="modal-footer">
 						<a href="index.html" class="btn width-100 btn-default" data-dismiss="modal">ยกเลิก</a>
-						<a class="btn width-100 btn-default btn-form-save" value="Save" data-url="<?= site_url('admin/addUser')?>">Save</a>
+						<a class="btn width-100 btn-default btn-form-varidate-save" value="Save" data-url="<?= site_url('admin/addUser')?>">บันทึก</a>
 					</div>
 
 				</form>
@@ -257,7 +272,7 @@
 	<!-- ================== END BASE JS ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
-
+	<script src="<?php echo base_url() .'/assets/plugins/parsley/dist/parsley.js'?>"></script>
     <script src="../assets/js/apps.min.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	

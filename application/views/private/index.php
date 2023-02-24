@@ -5,7 +5,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>Menu</title>
+	<title>tjsurvey : รายการแบบสำรวจข้อมูล</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -68,9 +68,9 @@
 						</a>
 						<ul class="dropdown-menu pull-right">
 							<? if($u_level == 'ADMIN'){ ?>
-								<li><a href="<?= site_url('admin/addMember')?>">แก้ไข User</a></li>
+								<li><a href="<?= site_url('admin/addMember')?>">จัดการผู้ใช้งาน (User)</a></li>
 							<?}?>
-                            <li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout')?>">Log Out</a></li>
+                            <li><a href="javascript:void(0)" class="item btn-form-logout" data-url="<?= site_url('main/submitLogout')?>">ออกจากระบบ</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -82,15 +82,16 @@
 	  </a>
 		<!-- begin #content -->
 		<div class="panel container" style="margin-top : 10px;">
-		<h1 class="page-header" style="margin-top : 10px;">ลิสแบบสำรวจ</h1>
 			<div class="body">
-			<a href="<?= site_url('main/survey/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> เพิ่มแบบสอบถาม</a>
-			<a href="<?php echo base_url()."main/exportAll/"?>" class="ui green button " style="float:right;"><i class="share square icon small"></i>export แบบสอบถาม</a>
+			</br></br>
+			<a href="<?= site_url('main/survey/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> สำรวจข้อมูลใหม่</a>
+			<a href="<?php echo base_url()."main/exportAll/"?>" class="ui green button " style="float:right;"><i class="share square icon small"></i>export ข้อมูลแบบสำรวจ</a>
 							</br></br>
+				<h1 class="page-header" style="margin-top : 10px;">รายการแบบสำรวจ</h1>
 				<table id="data-table" data-order='[[0,"desc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
 					<thead>
 						<tr class="inverse">
-							<th class="text-center">แบบสอบถามลำดับที่</th>
+							<th class="text-center">แบบสำรวจลำดับที่</th>
 							<th class="text-center">บ้านเลขที่</th>
 							<th class="text-center">จังหวัด</th>
 							<th class="text-center">เพศ</th>
@@ -101,7 +102,7 @@
 					<tbody>
 						<?php foreach ($list_data as $row) { ?>
 							<tr>
-								<td class="text-center"><?php echo $row->profile_id; ?></td>
+								<td class="text-center"><?php echo $row->profile_code; ?></td>
 								<td class="text-center"><?php echo $row->A2; ?></td>
 								<td class="text-center"><?php echo $row->A4_1; ?></td>
 								<td class="text-center"><?php if($row->{'1_1_1'} == '1'){echo 'ชาย';}elseif($row->{'1_1_1'} == '2'){echo 'หญิง';}else{echo 'เพศทางเลือก';} ?></td>

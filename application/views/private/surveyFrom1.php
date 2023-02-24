@@ -3,7 +3,7 @@
 <label for="wight">จำนวนสมาชิกในครัวเรือนที่อยู่อาศัยในห้วง พ.ศ. 2565 มากกว่า 6 เดือนขึ้นไป รวมทั้งสิ้น</label>
 <label class="radio-inline col-form-label  col-lg-1">
 	<input type="text" class="form-control" id="1_S2_text" name="1_S2_text" value="1" readonly />
-	
+
 </label>
 <label for="wight">คน</label>
 </br>
@@ -30,10 +30,10 @@
 				<tbody id="familyTable">
 					<tr>
 						<td>1. (ตัวผู้ตอบ)</td>
-						<td><input type="radio" id="1_2111" name="1_S2_1_1" value="1"> ชาย <input type="radio" id="1_2112" name="1_S2_1_1" value="2"> หญิง <input type="radio" id="1_2113" name="1_S2_1_1" value="3"> ทางเลือก</td>
-						<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength = "3" id="1_212" name="1_S2_1_2" /></td>
-						<td><input type="radio" id="1_2131" name="1_S2_1_3" value="1"> เคย <input type="radio" id="1_2132" name="1_S2_1_3" value="2"> ไม่เคย</td>
-						<td><input type="text" class="form-control" id="1_214" name="1_S2_1_4" /></td>
+						<td><input type="radio" id="1_2111" name="1_S2_1_1" value="1" data-parsley-required="true"> ชาย <input type="radio" id="1_2112" name="1_S2_1_1" value="2"> หญิง <input type="radio" id="1_2113" name="1_S2_1_1" value="3"> ทางเลือก</td>
+						<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength="3" id="1_212" name="1_S2_1_2" data-parsley-required="true" /></td>
+						<td><input type="radio" id="1_2131" name="1_S2_1_3" value="1"> เคย <input type="radio" id="1_2132" name="1_S2_1_3" value="2" data-parsley-required="true"> ไม่เคย</td>
+						<td><input type="text" class="form-control" id="1_214" name="1_S2_1_4" data-parsley-required="true" /></td>
 						<td>
 							<a href="javascript:void(0)" data-url="<?= site_url('main/saveSurvey/true') ?>" id="1_2151_a" name="1_S2_1_5_BUTTON" type="button" data-toggle="modal" data-target="#modal-edit-1" class="ui basic black button btn-form-hiddend-save disabled"><i id="1_2151_i" class="edit icon large readonly"></i></a>
 						</td>
@@ -49,13 +49,13 @@
 		<template id="familyTemplate">
 			<tr>
 				<td>{No.}</td>
-				<td><input type="radio" id="1_2{Num}11" name="1_S2_{Num}_1" value="1"> ชาย <input type="radio" id="1_2{Num}12" name="1_S2_{Num}_1" value="2"> หญิง <input type="radio" id="1_2{Num}13" name="1_S2_{Num}_1" value="3"> ทางเลือก</td>
-				<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength = "3" id="1_2{Num}2" name="1_S2_{Num}_2" /></td>
-				<td><input type="radio" id="1_2{Num}31" name="1_S2_{Num}_3" value="1"> เคย <input type="radio" id="1_2{Num}32" name="1_S2_{Num}_3" value="2"> ไม่เคย</td>
-				<td><input type="text" class="form-control" id="1_2{Num}4" name="1_S2_{Num}_4" /></td>
+				<td><input type="radio" id="1_2{Num}11" name="1_S2_{Num}_1" value="1" data-parsley-required="true"> ชาย <input type="radio" id="1_2{Num}12" name="1_S2_{Num}_1" value="2"> หญิง <input type="radio" id="1_2{Num}13" name="1_S2_{Num}_1" value="3"> ทางเลือก</td>
+				<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength="3" id="1_2{Num}2" name="1_S2_{Num}_2" data-parsley-required="true" /></td>
+				<td><input type="radio" id="1_2{Num}31" name="1_S2_{Num}_3" value="1" data-parsley-required="true"> เคย <input type="radio" id="1_2{Num}32" name="1_S2_{Num}_3" value="2" > ไม่เคย</td>
+				<td><input type="text" class="form-control" id="1_2{Num}4" name="1_S2_{Num}_4" data-parsley-required="true" /></td>
 				<td>
 					<a href="javascript:void(0)" data-url="<?= site_url('main/saveSurvey/true') ?>" id="1_2{Num}51_a" name="1_S2_{Num}_5_BUTTON" type="button" data-toggle="modal" data-target="#modal-edit-{Num}" class="ui basic black button btn-form-hiddend-save disabled"><i id="1_2{Num}51_i" class="edit icon large readonly"></i></a>
-					<a href="javascript:void(0)" data-url="<?= site_url('main/deleteVictims/{profileId}/'. $u_now_id) ?>" name="1_S2_1_5_Delete" type="button" class="ui basic red button btn-form-save-delete readonly"><i id="1_2151_i" class="delete icon large readonly"></i></a>
+					<a href="javascript:void(0)" data-url="<?= site_url('main/deleteVictims/{profileId}/' . $u_now_id) ?>" name="1_S2_1_5_Delete" type="button" class="ui basic red button btn-form-save-delete readonly"><i id="1_2151_i" class="delete icon large readonly"></i></a>
 				</td>
 			</tr>
 		</template>
@@ -80,8 +80,8 @@
 
 			<div class="row">
 				<label for="32" class="col-form-label">3.2 อายุ</label>
-				<div class="col-lg-3">
-					<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" />
+				<div class="col-lg-1">
+					<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength="3" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" />
 				</div>
 				<div class="col-form-label inputtextFix">
 					ปี (เต็มปีบริบูรณ์)
@@ -151,7 +151,7 @@
 					โปรดระบุ
 				</div>
 				<div class="col-lg-4">
-					<input type="text" class="form-control" id="1_3{Num}34_text" name="1_S3_{Num}_3_4_text" readonly />
+					<input type="text" class="form-control" id="1_3{Num}34_text" name="1_S3_{Num}_3_4_text" style="line-height: 4;" readonly />
 				</div>
 			</div>
 
@@ -189,14 +189,14 @@
 						<input type="radio" id="1_3{Num}3510" name="1_S3_{Num}_3_5" value="10"> (10) การศึกษาในรูปแบบอื่น...
 					</label>
 				</div>
-				
+
 			</div>
 			<div class="row">
 				<div class="col-form-label inputtextFix" style="margin-left: 10px;">
 					โปรดระบุ
 				</div>
 				<div class="col-lg-4">
-					<input type="text" class="form-control" id="1_3{Num}35_text" name="1_S3_{Num}_3_5_text" readonly />
+					<input type="text" class="form-control" id="1_3{Num}35_text" name="1_S3_{Num}_3_5_text" style="line-height: 4;" readonly />
 				</div>
 			</div>
 
@@ -218,7 +218,7 @@
 					<label class="radio-inline col-form-label  col-lg-3">
 						<input type="radio" id="1_3{Num}365" name="1_S3_{Num}_3_6" value="5"> (5) ไม่เคยพบ
 					</label>
-					
+
 				</div>
 			</div>
 			</br>
@@ -236,7 +236,7 @@
 							<input type="radio" id="1_4{Num}411" name="1_S4_{Num}_4_1" value="1">จำได้ ระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
-							<input type="text" class="form-control" id="1_4{Num}41_text" name="1_S4_{Num}_4_1_text" readonly />
+							<input type="text" class="form-control" id="1_4{Num}41_text" name="1_S4_{Num}_4_1_text" style="line-height: 4;" readonly />
 						</label>
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
@@ -265,11 +265,11 @@
 					</label>
 
 					<label class=" col-form-label ">
-						<label class="radio-inline" style="align-self: center; margin-left: 10px;" >
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}426" name="1_S4_{Num}_4_2" value="6"> (6) ความสัมพันธ์อื่นๆ (ระบุ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-6">
-							<input type="text" class="form-control" id="1_4{Num}42_text" name="1_S4_{Num}_4_2_text" readonly />
+							<input type="text" class="form-control" id="1_4{Num}42_text" name="1_S4_{Num}_4_2_text" style="line-height: 4;" readonly />
 						</label>
 					</label>
 					<label class="radio-inline col-form-label  col-lg-3">
@@ -340,9 +340,9 @@
 							<input type="radio" id="1_4{Num}43_22" name="1_S4_{Num}_4_3_2" value="2" disabled> (2) มี เป็นมูลค่า
 						</label>
 						<label class="radio-inline col-form-label  col-lg-6">
-							<input type="text" class="form-control" id="1_4{Num}432_text" name="1_S4_{Num}_4_3_2_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}432_text" name="1_S4_{Num}_4_3_2_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -354,13 +354,13 @@
 				<div class="col-lg-12">
 
 					<label class="col-form-label">
-						<label class="radio-inline" style="align-self: center; margin-left: 10px;" >
+						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 							<input type="radio" id="1_4{Num}4331" name="1_S4_{Num}_4_3_3" value="1" disabled> (1) ค่ารักษาพยาบาล จำนวน
 						</label>
 						<label class="radio-inline col-form-label  col-lg-5">
-							<input type="number" class="form-control floatNumberField"   id="1_4{Num}4331_text" name="1_S4_{Num}_4_3_3_1_text" readonly />
+							<input type="number" class="form-control floatNumberField" id="1_4{Num}4331_text" name="1_S4_{Num}_4_3_3_1_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -371,7 +371,7 @@
 						<label class="radio-inline col-form-label  col-lg-3">
 							<input type="number" class="form-control floatNumberField" id="1_4{Num}4332_text" name="1_S4_{Num}_4_3_3_2_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -382,7 +382,7 @@
 						<label class="radio-inline col-form-label  col-lg-2">
 							<input type="number" class="form-control floatNumberField" id="1_4{Num}4333_text" name="1_S4_{Num}_4_3_3_3_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -393,7 +393,7 @@
 						<label class="radio-inline col-form-label  col-lg-4">
 							<input type="number" class="form-control floatNumberField" id="1_4{Num}4334_text" name="1_S4_{Num}_4_3_3_4_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -404,7 +404,7 @@
 						<label class="radio-inline col-form-label  col-lg-3">
 							<input type="number" class="form-control floatNumberField" id="1_4{Num}4335_text" name="1_S4_{Num}_4_3_3_5_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -415,7 +415,7 @@
 						<label class="radio-inline col-form-label  col-lg-4">
 							<input type="number" class="form-control floatNumberField" id="1_4{Num}4336_text" name="1_S4_{Num}_4_3_3_6_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -426,7 +426,7 @@
 						<label class="radio-inline col-form-label  col-lg-3">
 							<input type="number" class="form-control floatNumberField" id="1_4{Num}4337_text" name="1_S4_{Num}_4_3_3_7_text" readonly />
 						</label>
-						<label class="radio-inline" style="align-self: center;">
+						<label class="nText" style="align-self: center;">
 							บาท
 						</label>
 					</label>
@@ -504,7 +504,7 @@
 			</div>
 
 			<div class="row" style="margin-left: 10px;">
-				<label for="442" class="col-form-label">4.4.2 ความผิดต่อชีวิตร่างกาย</label>
+				<label for="442" class="col-form-label">4.4.2 ความผิดต่อทรัพย์</label>
 				<div class="col-lg-12">
 					<label class="radio-inline col-form-label  col-lg-6" style="margin-left: 10px;">
 						<input type="radio" id="1_4{Num}4421" name="1_S4_{Num}_4_4_2" value="1"> (1) ปล้น จี้ ชิงทรัพย์ในที่สาธารณะ
@@ -701,12 +701,12 @@
 							<input type="radio" id="1_4{Num}46_114" name="1_S4_{Num}_4_6_1" value="4" disabled> (4) อื่นๆ โปรดระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
-							<input type="text" class="form-control" id="1_4{Num}461_text" name="1_S4_{Num}_4_6_1_text" readonly />
+							<input type="text" class="form-control" id="1_4{Num}461_text" name="1_S4_{Num}_4_6_1_text" style="line-height: 4;" readonly />
 						</label>
 					</label>
 				</div>
 			</div>
-			
+
 			<div class="row" style="margin-left: 10px;">
 				<label for="461" class="col-form-label">
 					<input type="radio" id="1_4{Num}4612" name="1_S4_{Num}_4_6" value="2"> 4.6.2 ไม่มีการแจ้งต่อเจ้าหน้าที่ <u>(ตอบได้มากกว่า 1 ข้อ)</u>
@@ -768,7 +768,7 @@
 							<input type="checkbox" id="1_4{Num}462118" name="1_S4_{Num}_4_6_2_18" value="1" disabled> (18) อื่นๆ (ระบุ)
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
-							<input type="text" class="form-control" id="1_4{Num}462_text" name="1_S4_{Num}_4_6_2_18_text" readonly />
+							<input type="text" class="form-control" id="1_4{Num}462_text" name="1_S4_{Num}_4_6_2_18_text" style="line-height: 4;" readonly />
 						</label>
 					</label>
 				</div>
@@ -804,7 +804,7 @@
 							โปรดระบุเหตุผล
 						</div>
 						<div class="col-lg-4">
-							<input type="text" class="form-control" id="1_4{Num}47_text" name="1_S4_{Num}_4_7_text" readonly />
+							<input type="text" class="form-control" id="1_4{Num}47_text" name="1_S4_{Num}_4_7_text" style="line-height: 4;" readonly />
 						</div>
 					</div>
 
@@ -1153,19 +1153,19 @@
 						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)green(?!\S)/g, ' black disabled ');
 						document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)green(?!\S)/g, ' disabled ');
 					}
-					
 
-					<? for ($index=2; $index <= count($d_surveyVictimslist)+1; $index++) { ?>
-						addFamily('back','<?=$d_surveyVictimslist[$index-2]->profile_id?>');
-						checkId(document.getElementById("1_2"+<?=$index?>+"1<?= $d_surveyVictimslist[$index-2]->S2_1 ?>"));
-						document.getElementById("1_2"+<?=$index?>+"2").value = '<?= $d_surveyVictimslist[$index-2]->S2_2 ?>';
-						checkId(document.getElementById("1_2"+<?=$index?>+"3<?= $d_surveyVictimslist[$index-2]->S2_3 ?>"));
-						document.getElementById("1_2"+<?=$index?>+"4").value = '<?= $d_surveyVictimslist[$index-2]->S2_4 ?>';
 
-						if ('<?= $d_surveyVictimslist[$index-2]->S2_3 ?>' == '1') {
-						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)disabled(?!\S)/g, '');
-						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)black(?!\S)/g, ' green ');
-						document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)disabled(?!\S)/g, ' green ');
+					<? for ($index = 2; $index <= count($d_surveyVictimslist) + 1; $index++) { ?>
+						addFamily('back', '<?= $d_surveyVictimslist[$index - 2]->profile_id ?>');
+						checkId(document.getElementById("1_2" + <?= $index ?> + "1<?= $d_surveyVictimslist[$index - 2]->S2_1 ?>"));
+						document.getElementById("1_2" + <?= $index ?> + "2").value = '<?= $d_surveyVictimslist[$index - 2]->S2_2 ?>';
+						checkId(document.getElementById("1_2" + <?= $index ?> + "3<?= $d_surveyVictimslist[$index - 2]->S2_3 ?>"));
+						document.getElementById("1_2" + <?= $index ?> + "4").value = '<?= $d_surveyVictimslist[$index - 2]->S2_4 ?>';
+
+						if ('<?= $d_surveyVictimslist[$index - 2]->S2_3 ?>' == '1') {
+							document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)disabled(?!\S)/g, '');
+							document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)black(?!\S)/g, ' green ');
+							document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)disabled(?!\S)/g, ' green ');
 						} else {
 							document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)green(?!\S)/g, ' black disabled ');
 							document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)green(?!\S)/g, ' disabled ');
@@ -1176,525 +1176,525 @@
 				});
 			};
 
-			if('<?=$u_check_new_survey_profile_victim?>'!='0'){
+			if ('<?= $u_check_new_survey_profile_victim ?>' != '0') {
 				$(function() {
-					<? for ($index=2; $index <= count($d_surveyProfile_victimlist)+1; $index++) { ?>
-						checkId(document.getElementById('1_3' + '<?=$index?>' + '31<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_1"}?>'));
-						document.getElementById('1_3' + '<?=$index?>' + '32_text').value = '<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_2"}?>';
-						checkId(document.getElementById('1_3' + '<?=$index?>' + '33<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_3"}?>'));
-						checkId(document.getElementById('1_3' + '<?=$index?>' + '34<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_4"}?>'));
-						document.getElementById('1_3' + '<?=$index?>' + '34_text').value = '<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_4_text"}?>';
-						checkId(document.getElementById('1_3' + '<?=$index?>' + '35<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_5"}?>'));
-						document.getElementById('1_3' + '<?=$index?>' + '35_text').value = '<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_5_text"}?>';
-						checkId(document.getElementById('1_3' + '<?=$index?>' + '36<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_6"}?>'));
+					<? for ($index = 2; $index <= count($d_surveyProfile_victimlist) + 1; $index++) { ?>
+						checkId(document.getElementById('1_3' + '<?= $index ?>' + '31<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_1"} ?>'));
+						document.getElementById('1_3' + '<?= $index ?>' + '32_text').value = '<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_2"} ?>';
+						checkId(document.getElementById('1_3' + '<?= $index ?>' + '33<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_3"} ?>'));
+						checkId(document.getElementById('1_3' + '<?= $index ?>' + '34<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_4"} ?>'));
+						document.getElementById('1_3' + '<?= $index ?>' + '34_text').value = '<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_4_text"} ?>';
+						checkId(document.getElementById('1_3' + '<?= $index ?>' + '35<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_5"} ?>'));
+						document.getElementById('1_3' + '<?= $index ?>' + '35_text').value = '<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_5_text"} ?>';
+						checkId(document.getElementById('1_3' + '<?= $index ?>' + '36<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_6"} ?>'));
 
-						if ('<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_4"}?>' == '8') {
-							$('input[name="1_S3_' + '<?=$index?>' + '_3_4_text"]').prop('readonly', false);
+						if ('<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_4"} ?>' == '8') {
+							$('input[name="1_S3_' + '<?= $index ?>' + '_3_4_text"]').prop('readonly', false);
 						} else {
-							$('input[name="1_S3_' + '<?=$index?>' + '_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S3_' + '<?= $index ?>' + '_3_4_text"]').prop('readonly', true);
 						}
 
-						if ('<?=$d_surveyProfile_victimlist[$index-2]->{"1_1_5"}?>' == '10') {
-							$('input[name="1_S3_' + '<?=$index?>' + '_3_5_text"]').prop('readonly', false);
+						if ('<?= $d_surveyProfile_victimlist[$index - 2]->{"1_1_5"} ?>' == '10') {
+							$('input[name="1_S3_' + '<?= $index ?>' + '_3_5_text"]').prop('readonly', false);
 						} else {
-							$('input[name="1_S3_' + '<?=$index?>' + '_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S3_' + '<?= $index ?>' + '_3_5_text"]').prop('readonly', true);
 						}
-					
+
 					<? } ?>
 				});
 			};
 
-			if('<?=$u_check_new_survey_victims_crimes?>'!='0'){
+			if ('<?= $u_check_new_survey_victims_crimes ?>' != '0') {
 				$(function() {
-					checkId(document.getElementById('1_4141<?=$d_surveyVictimsCrimes->S4_4_1?>'));
-					document.getElementById('1_4141_text').value = '<?=$d_surveyVictimsCrimes->S4_4_1_text?>';
-					checkId(document.getElementById('1_4142<?=$d_surveyVictimsCrimes->S4_4_2?>'));
-					document.getElementById('1_4142_text').value = '<?=$d_surveyVictimsCrimes->S4_4_2_text?>';
-					checkId(document.getElementById('1_4143<?=$d_surveyVictimsCrimes->S4_4_3?>'));
-					checkId(document.getElementById('1_4143_1<?=$d_surveyVictimsCrimes->S4_4_3_1?>'));
-					checkId(document.getElementById('1_4143_2<?=$d_surveyVictimsCrimes->S4_4_3_2?>'));
-					document.getElementById('1_41432_text').value = '<?=$d_surveyVictimsCrimes->S4_4_3_2_text?>';
-					checkId(document.getElementById('1_41433<?=$d_surveyVictimsCrimes->S4_4_3_3?>'));
-					checkIdbox(document.getElementById('1_41433<?=$d_surveyVictimsCrimes->S4_4_3_3?>_text'),'<?=$d_surveyVictimsCrimes->S4_4_3_3_text?>');
-					checkId(document.getElementById('1_41441<?=$d_surveyVictimsCrimes->S4_4_4_1?>'));
-					checkId(document.getElementById('1_41442<?=$d_surveyVictimsCrimes->S4_4_4_2?>'));
-					checkId(document.getElementById('1_41443<?=$d_surveyVictimsCrimes->S4_4_4_3?>'));
-					checkId(document.getElementById('1_41444<?=$d_surveyVictimsCrimes->S4_4_4_4?>'));
-					checkId(document.getElementById('1_41445<?=$d_surveyVictimsCrimes->S4_4_4_5?>'));
-					checkId(document.getElementById('1_41446<?=$d_surveyVictimsCrimes->S4_4_4_6?>'));
-					document.getElementById('1_4145').value = '<?=$d_surveyVictimsCrimes->S4_4_5?>';
-					checkId(document.getElementById('1_41461<?=$d_surveyVictimsCrimes->S4_4_6?>'));
-					checkId(document.getElementById('1_4146_11<?=$d_surveyVictimsCrimes->S4_4_6_1?>'));
-					document.getElementById('1_41461_text').value = '<?=$d_surveyVictimsCrimes->S4_4_6_1_text?>';
-					checkIdnCheckBOX(document.getElementById('1_4146211'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_1?>'); 
-					checkIdnCheckBOX(document.getElementById('1_4146212'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_2?>');
-					checkIdnCheckBOX(document.getElementById('1_4146213'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_3?>');
-					checkIdnCheckBOX(document.getElementById('1_4146214'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_4?>');
-					checkIdnCheckBOX(document.getElementById('1_4146215'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_5?>');
-					checkIdnCheckBOX(document.getElementById('1_4146216'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_6?>');
-					checkIdnCheckBOX(document.getElementById('1_4146217'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_7?>');
-					checkIdnCheckBOX(document.getElementById('1_4146218'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_8?>');
-					checkIdnCheckBOX(document.getElementById('1_4146219'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_9?>');
-					checkIdnCheckBOX(document.getElementById('1_41462110'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_10?>');
-					checkIdnCheckBOX(document.getElementById('1_41462111'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_11?>');
-					checkIdnCheckBOX(document.getElementById('1_41462112'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_12?>');
-					checkIdnCheckBOX(document.getElementById('1_41462113'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_13?>');
-					checkIdnCheckBOX(document.getElementById('1_41462114'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_14?>');
-					checkIdnCheckBOX(document.getElementById('1_41462115'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_15?>');
-					checkIdnCheckBOX(document.getElementById('1_41462116'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_16?>');
-					checkIdnCheckBOX(document.getElementById('1_41462117'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_17?>');
-					checkIdnCheckBOX(document.getElementById('1_41462118'),'<?=$d_surveyVictimsCrimes->S4_4_6_2_18?>');
-					document.getElementById('1_41462_text').value = '<?=$d_surveyVictimsCrimes->S4_4_6_2_18_text?>';
-					checkId(document.getElementById('1_4147<?=$d_surveyVictimsCrimes->S4_4_7?>'));
-					document.getElementById('1_4147_text').value = '<?=$d_surveyVictimsCrimes->S4_4_7_text?>';
+					checkId(document.getElementById('1_4141<?= $d_surveyVictimsCrimes->S4_4_1 ?>'));
+					document.getElementById('1_4141_text').value = '<?= $d_surveyVictimsCrimes->S4_4_1_text ?>';
+					checkId(document.getElementById('1_4142<?= $d_surveyVictimsCrimes->S4_4_2 ?>'));
+					document.getElementById('1_4142_text').value = '<?= $d_surveyVictimsCrimes->S4_4_2_text ?>';
+					checkId(document.getElementById('1_4143<?= $d_surveyVictimsCrimes->S4_4_3 ?>'));
+					checkId(document.getElementById('1_4143_1<?= $d_surveyVictimsCrimes->S4_4_3_1 ?>'));
+					checkId(document.getElementById('1_4143_2<?= $d_surveyVictimsCrimes->S4_4_3_2 ?>'));
+					document.getElementById('1_41432_text').value = '<?= $d_surveyVictimsCrimes->S4_4_3_2_text ?>';
+					checkId(document.getElementById('1_41433<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>'));
+					checkIdbox(document.getElementById('1_41433<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>_text'), '<?= $d_surveyVictimsCrimes->S4_4_3_3_text ?>');
+					checkId(document.getElementById('1_41441<?= $d_surveyVictimsCrimes->S4_4_4_1 ?>'));
+					checkId(document.getElementById('1_41442<?= $d_surveyVictimsCrimes->S4_4_4_2 ?>'));
+					checkId(document.getElementById('1_41443<?= $d_surveyVictimsCrimes->S4_4_4_3 ?>'));
+					checkId(document.getElementById('1_41444<?= $d_surveyVictimsCrimes->S4_4_4_4 ?>'));
+					checkId(document.getElementById('1_41445<?= $d_surveyVictimsCrimes->S4_4_4_5 ?>'));
+					checkId(document.getElementById('1_41446<?= $d_surveyVictimsCrimes->S4_4_4_6 ?>'));
+					document.getElementById('1_4145').value = '<?= $d_surveyVictimsCrimes->S4_4_5 ?>';
+					checkId(document.getElementById('1_41461<?= $d_surveyVictimsCrimes->S4_4_6 ?>'));
+					checkId(document.getElementById('1_4146_11<?= $d_surveyVictimsCrimes->S4_4_6_1 ?>'));
+					document.getElementById('1_41461_text').value = '<?= $d_surveyVictimsCrimes->S4_4_6_1_text ?>';
+					checkIdnCheckBOX(document.getElementById('1_4146211'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_1 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146212'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_2 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146213'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_3 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146214'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_4 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146215'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_5 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146216'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_6 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146217'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_7 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146218'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_8 ?>');
+					checkIdnCheckBOX(document.getElementById('1_4146219'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_9 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462110'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_10 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462111'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_11 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462112'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_12 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462113'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_13 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462114'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_14 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462115'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_15 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462116'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_16 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462117'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_17 ?>');
+					checkIdnCheckBOX(document.getElementById('1_41462118'), '<?= $d_surveyVictimsCrimes->S4_4_6_2_18 ?>');
+					document.getElementById('1_41462_text').value = '<?= $d_surveyVictimsCrimes->S4_4_6_2_18_text ?>';
+					checkId(document.getElementById('1_4147<?= $d_surveyVictimsCrimes->S4_4_7 ?>'));
+					document.getElementById('1_4147_text').value = '<?= $d_surveyVictimsCrimes->S4_4_7_text ?>';
 
-					if ('<?=$d_surveyVictimsCrimes->S4_4_1?>' == '1') {
+					if ('<?= $d_surveyVictimsCrimes->S4_4_1 ?>' == '1') {
 						$('input[name="1_S4_1_4_1_text"]').prop('readonly', false);
 					} else {
 						$('input[name="1_S4_1_4_1_text"]').prop('readonly', true);
 					}
 
-					if ('<?=$d_surveyVictimsCrimes->S4_4_2?>' == '6') {
+					if ('<?= $d_surveyVictimsCrimes->S4_4_2 ?>' == '6') {
 						$('input[name="1_S4_1_4_2_text"]').prop('readonly', false);
 					} else {
 						$('input[name="1_S4_1_4_2_text"]').prop('readonly', true);
 					}
 
-					if ('<?=$d_surveyVictimsCrimes->S4_4_3?>' == '1') {
-							$('input[name="1_S4_1_4_3_1"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_3_2"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_3_3"]').prop('disabled', false);
+					if ('<?= $d_surveyVictimsCrimes->S4_4_3 ?>' == '1') {
+						$('input[name="1_S4_1_4_3_1"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_3_2"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_3_3"]').prop('disabled', false);
+					} else {
+						$('input[name="1_S4_1_4_3_1"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_3_2"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					}
+
+					if ('<?= $d_surveyVictimsCrimes->S4_4_3_2 ?>' == '2') {
+						$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
+					}
+
+
+					if ('<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>' == '1') {
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', false);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>' == '2') {
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', false);
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>' == '3') {
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', false);
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>' == '4') {
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', false);
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>' == '5') {
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', false);
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>' == '6') {
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', false);
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					} else if ('<?= $d_surveyVictimsCrimes->S4_4_3_3 ?>' == '7') {
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', false);
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+					} else {
+						$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+					}
+
+
+
+					if ('<?= $d_surveyVictimsCrimes->S4_4_6 ?>' == '1') {
+						$('input[name="1_S4_1_4_6_2_1"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_2"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_3"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_4"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_5"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_6"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_7"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_8"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_9"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_10"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_11"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_12"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_13"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_14"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_15"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_16"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_17"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_2_18"]').prop('checked', false);
+
+						$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', true);
+
+						$('input[name="1_S4_1_4_7"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_7_text"]').prop('disabled', false);
+
+						$('input[name="1_S4_1_4_6_1"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
+
+					} else if ('<?= $d_surveyVictimsCrimes->S4_4_6 ?>' == '2') {
+						$('input[name="1_S4_1_4_6_1"]').prop('checked', false);
+						$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
+
+						$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', false);
+						$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', false);
+
+						$('input[name="1_S4_1_4_6_1"]').prop('disabled', true);
+
+						$('input[name="1_S4_1_4_7"]').prop('disabled', true);
+						$('input[name="1_S4_1_4_7_text"]').prop('disabled', true);
+					}
+
+
+					if ('<?= $d_surveyVictimsCrimes->S4_4_6_1 ?>' == '4') {
+						$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
+					}
+
+					if ('<?= $d_surveyVictimsCrimes->S4_4_6_2_18 ?>' == '1') {
+						$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
+					}
+
+
+
+					if ('<?= $d_surveyVictimsCrimes->S4_4_7 ?>' == '0') {
+						$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
+					} else {
+						$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);
+					}
+
+
+
+
+
+					<? for ($index = 2; $index <= count($d_surveyVictimsCrimeslist) + 1; $index++) { ?>
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '41<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_1 ?>'));
+						document.getElementById('1_4' + '<?= $index ?>' + '41_text').value = '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_1_text ?>';
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '42<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_2 ?>'));
+						document.getElementById('1_4' + '<?= $index ?>' + '42_text').value = '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_2_text ?>';
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '43<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '43_1<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_1 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '43_2<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_2 ?>'));
+						document.getElementById('1_4' + '<?= $index ?>' + '432_text').value = '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_2_text ?>';
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '433<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>'));
+						checkIdbox(document.getElementById('1_4' + '<?= $index ?>' + '433<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>_text'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3_text ?>');
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '441<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_4_1 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '442<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_4_2 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '443<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_4_3 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '444<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_4_4 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '445<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_4_5 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '446<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_4_6 ?>'));
+						document.getElementById('1_4' + '<?= $index ?>' + '45').value = '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_5 ?>';
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '461<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6 ?>'));
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '46_11<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_1 ?>'));
+						document.getElementById('1_4' + '<?= $index ?>' + '461_text').value = '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_1_text ?>';
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46211'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_1 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46212'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_2 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46213'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_3 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46214'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_4 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46215'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_5 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46216'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_6 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46217'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_7 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46218'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_8 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '46219'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_9 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462110'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_10 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462111'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_11 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462112'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_12 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462113'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_13 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462114'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_14 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462115'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_15 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462116'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_16 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462117'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_17 ?>');
+						checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '462118'), '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_18 ?>');
+						document.getElementById('1_4' + '<?= $index ?>' + '462_text').value = '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_18_text ?>';
+						checkId(document.getElementById('1_4' + '<?= $index ?>' + '47<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_7 ?>'));
+						document.getElementById('1_4' + '<?= $index ?>' + '47_text').value = '<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_7_text ?>';
+
+
+
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_1 ?>' == '1') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_1_text"]').prop('readonly', false);
 						} else {
-							$('input[name="1_S4_1_4_3_1"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_3_2"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_1_text"]').prop('readonly', true);
 						}
 
-						if ('<?=$d_surveyVictimsCrimes->S4_4_3_2?>' == '2') {
-							$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', false);
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_2 ?>' == '6') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_2_text"]').prop('readonly', false);
 						} else {
-							$('input[name="1_S4_1_4_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_2_text"]').prop('readonly', true);
 						}
 
-
-						if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '1') {
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', false);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
-						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '2') {
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', false);
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
-						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '3') {
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', false);
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
-						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '4') {
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', false);
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
-						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '5') {
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', false);
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
-						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '6') {
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', false);
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
-						} else if ('<?=$d_surveyVictimsCrimes->S4_4_3_3?>' == '7') {
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', false);
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3 ?>' == '1') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3"]').prop('disabled', false);
 						} else {
-							$('input[name="1_S4_1_4_3_3_1_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_2_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_3_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_4_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_5_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_6_text"]').prop('readonly', true);
-							$('input[name="1_S4_1_4_3_3_7_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
 						}
 
-			
-
-						if ('<?=$d_surveyVictimsCrimes->S4_4_6?>' == '1') {
-							$('input[name="1_S4_1_4_6_2_1"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_2"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_3"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_4"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_5"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_6"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_7"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_8"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_9"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_10"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_11"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_12"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_13"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_14"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_15"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_16"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_17"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_2_18"]').prop('checked', false);
-
-							$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', true);
-
-							$('input[name="1_S4_1_4_7"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_7_text"]').prop('disabled', false);
-							
-							$('input[name="1_S4_1_4_6_1"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
-
-						}else if('<?=$d_surveyVictimsCrimes->S4_4_6?>' == '2'){
-							$('input[name="1_S4_1_4_6_1"]').prop('checked', false);
-							$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
-
-							$('input[name="1_S4_1_4_6_2_1"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_2"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_3"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_4"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_5"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_6"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_7"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_8"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_9"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_10"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_11"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_12"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_13"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_14"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_15"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_16"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_17"]').prop('disabled', false);
-							$('input[name="1_S4_1_4_6_2_18"]').prop('disabled', false);
-
-							$('input[name="1_S4_1_4_6_1"]').prop('disabled', true);
-
-							$('input[name="1_S4_1_4_7"]').prop('disabled', true);
-							$('input[name="1_S4_1_4_7_text"]').prop('disabled', true);
-						}
-
-
-						if ('<?=$d_surveyVictimsCrimes->S4_4_6_1?>' == '4') {
-							$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', false);
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_2 ?>' == '2') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2_text"]').prop('readonly', false);
 						} else {
-							$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2_text"]').prop('readonly', true);
 						}
 
-						if ('<?=$d_surveyVictimsCrimes->S4_4_6_2_18?>' == '1') {
-							$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', false);
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>' == '1') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>' == '2') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>' == '3') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>' == '4') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>' == '5') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>' == '6') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+						} else if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_3_3 ?>' == '7') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
 						} else {
-							$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+						}
+
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6 ?>' == '1') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_1"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_2"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_3"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_4"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_5"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_6"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_7"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_8"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_9"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_10"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_11"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_12"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_13"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_14"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_15"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_16"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_17"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_18"]').prop('checked', false);
+
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_1"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_2"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_3"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_4"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_5"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_6"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_7"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_8"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_9"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_10"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_11"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_12"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_13"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_14"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_15"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_16"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_17"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_18"]').prop('disabled', true);
+
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7_text"]').prop('disabled', false);
+
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_1"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_18_text"]').prop('readonly', true);
+						} else if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6 ?>' == '2') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_1"]').prop('checked', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_1_text"]').prop('readonly', true);
+
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_1"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_2"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_3"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_4"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_5"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_6"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_7"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_8"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_9"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_10"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_11"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_12"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_13"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_14"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_15"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_16"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_17"]').prop('disabled', false);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_18"]').prop('disabled', false);
+
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7"]').prop('disabled', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7_text"]').prop('disabled', true);
+
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_1"]').prop('disabled', true);
 						}
 
 
 
-						if ('<?=$d_surveyVictimsCrimes->S4_4_7?>' == '0') {
-							$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_1 ?>' == '4') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_1_text"]').prop('readonly', false);
 						} else {
-							$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_1_text"]').prop('readonly', true);
+						}
+
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_6_2_18 ?>' == '1') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_18_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_6_2_18_text"]').prop('readonly', true);
 						}
 
 
-
-
-					
-					<? for ($index=2; $index <= count($d_surveyVictimsCrimeslist)+1; $index++) { ?>
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '41<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_1?>'));
-						document.getElementById('1_4' + '<?=$index?>' + '41_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_1_text?>';
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '42<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_2?>'));
-						document.getElementById('1_4' + '<?=$index?>' + '42_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_2_text?>';
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '43<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '43_1<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_1?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '43_2<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_2?>'));
-						document.getElementById('1_4' + '<?=$index?>' + '432_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_2_text?>';
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '433<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>'));
-						checkIdbox(document.getElementById('1_4' + '<?=$index?>' + '433<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>_text'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3_text?>');
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '441<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_1?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '442<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_2?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '443<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_3?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '444<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_4?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '445<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_5?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '446<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_4_6?>'));
-						document.getElementById('1_4' + '<?=$index?>' + '45').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_5?>';
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '461<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6?>'));
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '46_11<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_1?>'));
-						document.getElementById('1_4' + '<?=$index?>' + '461_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_1_text?>';
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46211'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_1?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46212'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_2?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46213'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_3?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46214'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_4?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46215'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_5?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46216'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_6?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46217'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_7?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46218'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_8?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '46219'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_9?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462110'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_10?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462111'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_11?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462112'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_12?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462113'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_13?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462114'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_14?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462115'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_15?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462116'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_16?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462117'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_17?>');
-						checkIdnCheckBOX(document.getElementById('1_4' + '<?=$index?>' + '462118'),'<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_18?>');
-						document.getElementById('1_4' + '<?=$index?>' + '462_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_18_text?>';
-						checkId(document.getElementById('1_4' + '<?=$index?>' + '47<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7?>'));
-						document.getElementById('1_4' + '<?=$index?>' + '47_text').value = '<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7_text?>';
-
-
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_1?>' == '1') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_1_text"]').prop('readonly', false);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_1_text"]').prop('readonly', true);
-					}
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_2?>' == '6') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_2_text"]').prop('readonly', false);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_2_text"]').prop('readonly', true);
-					}
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3?>' == '1') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_1"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3"]').prop('disabled', false);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_1"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					}
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_2?>' == '2') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2_text"]').prop('readonly', false);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_2_text"]').prop('readonly', true);
-					}
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '1') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '2') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '3') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '4') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '5') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '6') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					} else if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_3_3?>' == '7') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_1_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_2_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_3_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_4_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_5_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_6_text"]').prop('readonly', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_3_3_7_text"]').prop('readonly', true);
-					}
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6?>' == '1') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_1"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_2"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_3"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_4"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_5"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_6"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_7"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_8"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_9"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_10"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_11"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_12"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_13"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_14"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_15"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_16"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('checked', false);
-
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_1"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_2"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_3"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_4"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_5"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_6"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_7"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_8"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_9"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_10"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_11"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_12"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_13"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_14"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_15"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_16"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('disabled', true);
-
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_7"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('disabled', false);
-
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18_text"]').prop('readonly', true);
-					}else if('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6?>' == '2'){
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('checked', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1_text"]').prop('readonly', true);
-
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_1"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_2"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_3"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_4"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_5"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_6"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_7"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_8"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_9"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_10"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_11"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_12"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_13"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_14"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_15"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_16"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_17"]').prop('disabled', false);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18"]').prop('disabled', false);
-
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_7"]').prop('disabled', true);
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('disabled', true);
-
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1"]').prop('disabled', true);
-					}
-
-
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_1?>' == '4') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1_text"]').prop('readonly', false);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_1_text"]').prop('readonly', true);
-					}
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_6_2_18?>' == '1') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18_text"]').prop('readonly', false);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_6_2_18_text"]').prop('readonly', true);
-					}
-
-
-				if ('<?=$d_surveyVictimsCrimeslist[$index-2]->S4_4_7?>' == '0') {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('readonly', false);
-					} else {
-						$('input[name="1_S4_' + '<?=$index?>' + '_4_7_text"]').prop('readonly', true);
-					}
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_7 ?>' == '0') {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7_text"]').prop('readonly', false);
+						} else {
+							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7_text"]').prop('readonly', true);
+						}
 
 					<? } ?>
-					
+
 				});
 			};
 
@@ -1883,7 +1883,7 @@
 
 						$('input[name="1_S4_' + i + '_4_6_1"]').prop('disabled', false);
 						$('input[name="1_S4_' + i + '_4_6_2_18_text"]').prop('readonly', true);
-					}else if($(this).val() === '2'){
+					} else if ($(this).val() === '2') {
 						$('input[name="1_S4_' + i + '_4_6_1"]').prop('checked', false);
 						$('input[name="1_S4_' + i + '_4_6_1_text"]').prop('readonly', true);
 
@@ -1941,23 +1941,41 @@
 				});
 			};
 
-			function addFamily(checkFront,profileId) {
-				i=i+1;
-				if(checkFront == 'front'){
-					var restUrl = '../saveSurvey1/' + '<?= $u_now_id ?>' + '/' + i;
-					if (validBlank()) {
-						$.ajax({
-							url: restUrl,
-							data: $(FormSeletor).serialize(),
-							dataType: 'json',
-							type: 'post'
-						});
-					} else {
-						formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น * สีแดงให้ครบก่อนบันทึกข้อมูล');
-					}
+			function addFamily(checkFront, profileId) {
+				i = i + 1;
+				var newProfileId = '';
+
+
+				if (checkFront == 'front') {
+					getProfileId(function(data) {
+						saveSurvey();
+						newProfileId = data;
+						cloneTable(profileId, newProfileId);
+					});
+
+				} else {
+					cloneTable(profileId, newProfileId);
 				}
 
-				//familyTemplate
+
+
+
+			}
+
+			function validBlank() {
+				var pass = true;
+				$('.chk_empty').each(function(i, obj) {
+					if (obj.value == "") {
+						pass = false;
+					}
+				});
+				return pass;
+			}
+
+			function cloneTable(profileId, newProfileId) {
+				if(newProfileId != ''){
+					profileId = newProfileId;
+				}
 				const tbody = document.querySelector("#familyTable");
 				const template = document.querySelector('#familyTemplate');
 
@@ -1968,7 +1986,7 @@
 				td[2].innerHTML = td[2].innerHTML.replaceAll("{Num}", i);
 				td[3].innerHTML = td[3].innerHTML.replaceAll("{Num}", i);
 				td[4].innerHTML = td[4].innerHTML.replaceAll("{Num}", i);
-				td[5].innerHTML = td[5].innerHTML.replaceAll("{Num}", i).replaceAll("{profileId}",profileId);
+				td[5].innerHTML = td[5].innerHTML.replaceAll("{Num}", i).replaceAll("{profileId}", profileId);
 
 				tbody.appendChild(clone);
 
@@ -2002,18 +2020,37 @@
 				modalMain.appendChild(cloneS4);
 				createDetech(i);
 
-				document.getElementById("1_S2_text").value = <?=count($d_surveyVictimslist)+1 ?>+(i-<?=count($d_surveyVictimslist)+1 ?>);
+				document.getElementById("1_S2_text").value = <?= count($d_surveyVictimslist) + 1 ?> + (i - <?= count($d_surveyVictimslist) + 1 ?>);
 			}
 
-			function validBlank() {
-				var pass = true;
-				$('.chk_empty').each(function(i, obj) {
-					if (obj.value == "") {
-						pass = false;
+			function getProfileId(callback) {
+				$.ajax({
+					url: '../queryProfileIdNext',
+					data: $(FormSeletor).serialize(),
+					dataType: 'json',
+					type: 'post',
+					success: function(data) {
+						callback(data);
+					},
+					error: function() {
+						alert('Error find profileId');
 					}
 				});
-				return pass;
-			}
+			};
+
+			function saveSurvey() {
+				var restUrl = '../saveSurvey1/' + '<?= $u_now_id ?>' + '/' + i;
+				if (validBlank()) {
+					$.ajax({
+						url: restUrl,
+						data: $(FormSeletor).serialize(),
+						dataType: 'json',
+						type: 'post'
+					});
+				} else {
+					formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น * สีแดงให้ครบก่อนบันทึกข้อมูล');
+				}
+			};
 
 
 			$('input[name="1_S2_1_3"]').on('change', function() {
@@ -2203,7 +2240,7 @@
 					$('input[name="1_S4_1_4_6_1"]').prop('disabled', false);
 					$('input[name="1_S4_1_4_6_2_18_text"]').prop('readonly', true);
 
-				}else if($(this).val() === '2'){
+				} else if ($(this).val() === '2') {
 					$('input[name="1_S4_1_4_6_1"]').prop('checked', false);
 					$('input[name="1_S4_1_4_6_1_text"]').prop('readonly', true);
 
@@ -2266,23 +2303,24 @@
 					id.checked = true;
 				}
 			};
-			function checkIdnCheckBOX(id,value) {
-				if (id != null ) {
+
+			function checkIdnCheckBOX(id, value) {
+				if (id != null) {
 					if (value == 1) {
 						id.checked = true;
 					}
 				}
 			};
-			function checkIdbox(id,value) {
+
+			function checkIdbox(id, value) {
 				if (id != null) {
 					id.value = value;
 				}
 			};
 
-			function maxLengthCheck(object)
-			{
+			function maxLengthCheck(object) {
 				if (object.value.length > object.maxLength)
-				object.value = object.value.slice(0, object.maxLength)
+					object.value = object.value.slice(0, object.maxLength)
 			}
 
 			$(".floatNumberField").change(function() {

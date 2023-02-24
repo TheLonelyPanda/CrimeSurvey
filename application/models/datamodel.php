@@ -8,10 +8,12 @@ class Datamodel extends CI_Model
   }
   function insert($obj)
   {
+    $obj->Create_DTM=date('Y-m-d H:i:s');
     $this->db->insert($this->table_name, $obj);
   }
   function update($obj)
   {
+    $obj->Update_DTM=date('Y-m-d H:i:s');
     $this->db->where($this->pk_name, $this->pk_value);
     $this->db->update($this->table_name, $obj);
   }
