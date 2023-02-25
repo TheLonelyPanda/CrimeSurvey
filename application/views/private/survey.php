@@ -798,13 +798,13 @@
 			var districtObject = $('#district_1');
 
 			// on change province
-			amphureObject.html('<option value="">เลือกอำเภอ</option>');
+			amphureObject.html('<option value="">เลือกเขต</option>');
 			<? foreach ($d_amphures as $resultamp) { ?>
 				if (1 == <? echo $resultamp->province_id ?>) {
 					amphureObject.append('<option value="<?= $resultamp->name_th ?>"><?= $resultamp->name_th ?></option>')
 				}
 			<? } ?>
-			districtObject.html('<option value="">เลือกตำบล</option>');
+			districtObject.html('<option value="">เลือกแขวง</option>');
 
 			// on change amphure amphure_id
 			amphureObject.on('change', function() {
@@ -814,7 +814,7 @@
 						amphureId = '<? echo $resultamp->id ?>';
 					}
 				<? } ?>
-				districtObject.html('<option value="">เลือกตำบล</option>');
+				districtObject.html('<option value="">เลือกแขวง</option>');
 				<? foreach ($d_districts as $resultdis) { ?>
 					if (amphureId == <? echo $resultdis->amphure_id ?>) {
 						districtObject.append('<option value="<?= $resultdis->name_th ?>"><?= $resultdis->name_th ?></option>')

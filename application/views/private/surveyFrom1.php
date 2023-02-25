@@ -233,7 +233,7 @@
 				<div class="col-lg-12">
 					<label class="col-form-label">
 						<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-							<input type="radio" id="1_4{Num}411" name="1_S4_{Num}_4_1" value="1">จำได้ ระบุ
+							<input type="radio" id="1_4{Num}411" name="1_S4_{Num}_4_1" value="1">(1) จำได้ ระบุ
 						</label>
 						<label class="radio-inline col-form-label  col-lg-8">
 							<input type="text" class="form-control" id="1_4{Num}41_text" name="1_S4_{Num}_4_1_text" style="line-height: 4;" readonly />
@@ -1442,7 +1442,7 @@
 
 
 
-					if ('<?= $d_surveyVictimsCrimes->S4_4_7 ?>' == '0') {
+					if ('<?= $d_surveyVictimsCrimes->S4_4_7 ?>' != '99') {
 						$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
 					} else {
 						$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);
@@ -1687,7 +1687,7 @@
 						}
 
 
-						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_7 ?>' == '0') {
+						if ('<?= $d_surveyVictimsCrimeslist[$index - 2]->S4_4_7 ?>' != '99') {
 							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7_text"]').prop('readonly', false);
 						} else {
 							$('input[name="1_S4_' + '<?= $index ?>' + '_4_7_text"]').prop('readonly', true);
@@ -1933,7 +1933,7 @@
 
 
 				$('input[name="1_S4_' + i + '_4_7"]').on('change', function() {
-					if ($(this).val() === '0') {
+					if ($(this).val() != '99') {
 						$('input[name="1_S4_' + i + '_4_7_text"]').prop('readonly', false);
 					} else {
 						$('input[name="1_S4_' + i + '_4_7_text"]').prop('readonly', true);
@@ -2291,7 +2291,7 @@
 
 
 			$('input[name="1_S4_1_4_7"]').on('change', function() {
-				if ($(this).val() === '0') {
+				if ($(this).val() != '99') {
 					$('input[name="1_S4_1_4_7_text"]').prop('readonly', false);
 				} else {
 					$('input[name="1_S4_1_4_7_text"]').prop('readonly', true);
