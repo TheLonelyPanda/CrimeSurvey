@@ -243,9 +243,6 @@ $(document).ready(function () {
 					} else {
 						formMessageError(resp);
 					}
-				},
-				error: function (err, xhrr, http) {
-					toastMessageError({ title: 'Application Error', message: err.responseText+"asdasd" });
 				}
 			});
 		} else {

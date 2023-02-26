@@ -108,7 +108,6 @@
 								<td class="text-center"><?php if($row->{'1_1_1'} == '1'){echo 'ชาย';}elseif($row->{'1_1_1'} == '2'){echo 'หญิง';}else{echo 'เพศทางเลือก';} ?></td>
 								<td class="text-center"><?php echo $row->{'1_1_2'}; ?></td>
 								<td class="text-center">
-								<a href="<?php echo base_url()."main/export/".$row->profile_id?>" ><i class="share square icon large" style="color:green"></i></a>
 								<a href="<?= site_url('main/survey/'.$row->profile_id)?>" type="button"><i class="edit icon large" style="color:orange"></i></a>
 								<a href="javascript:void(0)" data-url="<?=site_url('/main/deleteData/'.$row->profile_id)?>" class="btn-form-delete"><i class="delete icon large" style="color:red"></i></a>
 								</td>

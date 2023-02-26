@@ -54,7 +54,7 @@
 				<td><input type="radio" id="1_2{Num}31" name="1_S2_{Num}_3" value="1" data-parsley-required="true"> เคย <input type="radio" id="1_2{Num}32" name="1_S2_{Num}_3" value="2" > ไม่เคย</td>
 				<td><input type="text" class="form-control" id="1_2{Num}4" name="1_S2_{Num}_4" data-parsley-required="true" /></td>
 				<td>
-					<a href="<?= site_url('main/goVictims/{profileId}/' . $u_now_id) ?>" id="1_2{Num}51_a" name="1_S2_{Num}_5_BUTTON" type="button"  class="ui basic black button btn-form-hiddend-save-go disabled"><i id="1_2{Num}51_i" class="edit icon large readonly"></i></a>
+					<a href="<?= site_url('main/goVictims/{profileId}/' . $u_now_id) ?>" data-url="<?= site_url('main/saveSurvey/true') ?>" id="1_2{Num}51_a" name="1_S2_{Num}_5_BUTTON" type="button"  class="ui basic black button btn-form-hiddend-save-go disabled"><i id="1_2{Num}51_i" class="edit icon large readonly"></i></a>
 					<a href="javascript:void(0)" data-url="<?= site_url('main/deleteVictims/{profileId}/' . $u_now_id) ?>" name="1_S2_1_5_Delete" type="button" class="ui basic red button btn-form-save-delete readonly"><i id="1_2151_i" class="delete icon large readonly"></i></a>
 				</td>
 			</tr>

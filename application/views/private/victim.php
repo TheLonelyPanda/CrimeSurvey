@@ -21,11 +21,11 @@
 
 	<link href="<?php echo base_url() . 'assets/plugins/bootstrap/bootstrap-4.1.1/css/bootstrap.min.css?ts=' . time() ?>" rel='stylesheet' />
 	<link href="<?php echo base_url() . 'assets/css/animate.min.css'  ?>" rel='stylesheet' />
-	<link href="<?php echo base_url() . 'assets/css/style.min.css'  ?>" rel='stylesheet' />
+	<link href="<?php echo base_url() . 'assets/css/style.min.css?ts='.time()  ?>" rel='stylesheet' />
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-1.12.3.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-ui-1.11.4.custom.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . 'plugins/jquery-confirm/js/jquery-confirm.js' ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url() . "js/custom/app.custom.js" ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url() . 'js/custom/app.custom.js?ts='.time() ?>"></script>
 	<!-- ================== END BASE CSS STYLE ================== -->
 
 	<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->

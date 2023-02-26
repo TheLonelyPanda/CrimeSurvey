@@ -326,17 +326,21 @@ class Main extends CI_Controller {
 			$this->datamodel->table_name='survey_victims_crimes';
 			$this->datamodel->condition='where profile_id='.$profileId; 
 			$listData=$this->datamodel->list_data();
-
-			$this->saveSurveyCrimeS3($profileId);
+			
+			if ($master_id != 'master') {
+				$this->saveSurveyCrimeS3($profileId);
+			}
+			
 
 			for ($i=1; $i <= count($listData); $i++) { 
 				$this->saveSurveyCrimeS4loop($profileId,$i,$listData[$i-1]->running_num);
 			}
 
-			if($master_id == 'master'){
-				$master_id = $profileId;
-			}
+			
 			if($back == 'back'){
+				if($master_id == 'master'){
+					$master_id = $profileId;
+				}
 				$this->functionhelper->jsonHeader(); 
 				$this->functionhelper->jsonResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/survey/'.$master_id));	
 			}else{
