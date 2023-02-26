@@ -161,6 +161,7 @@ class CI_Zip  {
 	 */
 	function add_data($filepath, $data = NULL)
 	{
+		$data = "\xEF\xBB\xBF" .$data;
 		if (is_array($filepath))
 		{
 			foreach ($filepath as $path => $data)

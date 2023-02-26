@@ -92,9 +92,9 @@ if ( ! function_exists('write_file'))
 		{
 			return FALSE;
 		}
-
+		$data_with_bom = "\xEF\xBB\xBF" . $data;
 		flock($fp, LOCK_EX);
-		fwrite($fp, $data);
+		fwrite($fp, $data_with_bom);
 		flock($fp, LOCK_UN);
 		fclose($fp);
 

@@ -134,6 +134,309 @@ class Main extends CI_Controller {
 		}
     }
 
+	public function goVictims($profile_id,$master_id) {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');
+			$data['u_level']=$this->session->userdata('u_level');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";
+			$data['u_profile_id']=$profile_id;
+			
+			$data['u_master_id']=$master_id;
+
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->condition=" where profile_id =".$profile_id;		
+			$data['d_surveyVictimsCrimes']=$this->datamodel->list_data();
+
+			$this->datamodel->sql=" select profile_code from survey_victims where profile_id = ".$profile_id;   
+			$data_Profile=$this->datamodel->first_row_data_sql();
+			$profileCode = $data_Profile->profile_code;
+			$masterOut = ''; 
+			if($master_id == 'master'){
+				$masterOut = $profile_id;
+			}else{
+				$masterOut = $master_id;
+			};
+			$data['masterOut'] = $masterOut;
+			if($data['d_surveyVictimsCrimes'] == null){
+				$objdSurveyVictimsCrimes=new MyDto();
+				$objdSurveyVictimsCrimes->profile_id = $profile_id;
+				if($master_id != 'master'){
+					$objdSurveyVictimsCrimes->master_id = $master_id;
+				}
+				$objdSurveyVictimsCrimes->profile_code = $profileCode;
+				$objdSurveyVictimsCrimes->S4_4_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_1_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_2_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_2_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_4_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_4_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_4_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_4_4  =  '';
+				$objdSurveyVictimsCrimes->S4_4_4_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_4_6  =  '';
+				$objdSurveyVictimsCrimes->S4_4_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_1_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_4  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_6  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_7  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_8  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_9  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_10  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_11  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_12  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_13  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_14  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_15  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_16  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_17  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_18  =  '';
+				$objdSurveyVictimsCrimes->S4_4_6_2_18_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_7  =  '';
+				$objdSurveyVictimsCrimes->S4_4_7_text  =  '';
+				$this->datamodel->table_name='survey_victims_crimes';
+				$this->datamodel->insert($objdSurveyVictimsCrimes);
+
+				$this->datamodel->table_name='survey_victims_crimes';
+				$this->datamodel->condition=" where profile_id =".$profile_id;		
+				$data['d_surveyVictimsCrimes']=$this->datamodel->list_data();
+			}
+
+			$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_victims_crimes'; ";   
+			$u_now_id=$this->datamodel->first_row_data_sql();
+			$data['u_now_runing_num']=$u_now_id->AUTO_INCREMENT;
+
+			$this->datamodel->sql='select * from survey_profile where profile_id ='.$profile_id;
+			$data['d_surveyProfile_victim']=$this->datamodel->first_row_data_sql();
+			
+			$this->load->view('/private/victim', $data);
+		}
+    }
+
+	public function deleteCrime($profile_id,$running_num,$master_id) {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="user";		  
+			$data['h_back']="admin/addMember"; 
+			
+			
+			$this->saveSurveyCrime($profile_id,$master_id,'back');
+			
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->pk_name='running_num';
+			$this->datamodel->pk_value=$running_num;	
+			$this->datamodel->delete();
+
+			$this->functionhelper->jsonHeader();
+			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/goVictims/'.$profile_id.'/'.$master_id));      
+		}
+    }
+	public function addCrime($profile_id,$master_id){
+		$user_name=$this->isLogin();
+
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->sql=" select profile_code from survey_victims where profile_id = ".$profile_id;   
+			$data_Profile=$this->datamodel->first_row_data_sql();
+			$profileCode = $data_Profile->profile_code;
+
+			$objdSurveyVictimsCrimes=new MyDto();
+			$objdSurveyVictimsCrimes->profile_id = $profile_id;
+			if($master_id != 'master'){
+				$objdSurveyVictimsCrimes->master_id = $master_id;
+			}
+			$objdSurveyVictimsCrimes->profile_code = $profileCode;
+			$objdSurveyVictimsCrimes->S4_4_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_1_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_2  =  '';
+			$objdSurveyVictimsCrimes->S4_4_2_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_2  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_2_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_4_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_4_2  =  '';
+			$objdSurveyVictimsCrimes->S4_4_4_3  =  '';
+			$objdSurveyVictimsCrimes->S4_4_4_4  =  '';
+			$objdSurveyVictimsCrimes->S4_4_4_5  =  '';
+			$objdSurveyVictimsCrimes->S4_4_4_6  =  '';
+			$objdSurveyVictimsCrimes->S4_4_5  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_1_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_2  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_3  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_4  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_5  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_6  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_7  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_8  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_9  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_10  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_11  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_12  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_13  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_14  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_15  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_16  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_17  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_18  =  '';
+			$objdSurveyVictimsCrimes->S4_4_6_2_18_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_7  =  '';
+			$objdSurveyVictimsCrimes->S4_4_7_text  =  '';
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->insert($objdSurveyVictimsCrimes);
+		}
+	}
+
+	public function saveSurveyInCrime($profileId,$i,$running,$master_id){
+		if($i == '1'){
+			$this->saveSurveyCrimeS3($profileId);
+		}
+		
+		$this->saveSurveyCrimeS4loop($profileId,$i,$running);
+
+		$this->functionhelper->jsonHeader(); 
+		$this->functionhelper->jsonResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/goVictims/'.$profileId.'/'.$master_id));
+	}
+
+	public function saveSurveyCrime($profileId,$master_id,$back){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->condition='where profile_id='.$profileId; 
+			$listData=$this->datamodel->list_data();
+
+			$this->saveSurveyCrimeS3($profileId);
+
+			for ($i=1; $i <= count($listData); $i++) { 
+				$this->saveSurveyCrimeS4loop($profileId,$i,$listData[$i-1]->running_num);
+			}
+
+			if($master_id == 'master'){
+				$master_id = $profileId;
+			}
+			if($back == 'back'){
+				$this->functionhelper->jsonHeader(); 
+				$this->functionhelper->jsonResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/survey/'.$master_id));	
+			}else{
+				$this->functionhelper->jsonHeader(); 
+				$this->functionhelper->jsonResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/goVictims/'.$profileId.'/'.$master_id));	
+			}
+		} 
+
+		
+    }
+
+
+	public function saveSurveyCrimeS4loop($profileId,$loop,$running_num){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+
+
+			$objdSurveyVictimsCrimes=new MyDto();
+			$this->load->model("datamodel");
+
+			$this->datamodel->sql=" select profile_code from survey_victims where profile_id = ".$profileId;   
+			$data_Profile=$this->datamodel->first_row_data_sql();
+			$profileCode = $data_Profile->profile_code;
+
+
+			$this->datamodel->table_name='survey_victims_crimes';
+			$this->datamodel->pk_name='running_num';
+			$this->datamodel->pk_value=$running_num;
+
+			
+			$objdSurveyVictimsCrimes->profile_code = $profileCode;
+			$objdSurveyVictimsCrimes->S4_4_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_1'));
+			$objdSurveyVictimsCrimes->S4_4_1_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_1_text'));
+			$objdSurveyVictimsCrimes->S4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2'));
+			$objdSurveyVictimsCrimes->S4_4_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2_text'));
+			$objdSurveyVictimsCrimes->S4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2'));
+			$objdSurveyVictimsCrimes->S4_4_3_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_'.$this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3')).'_text'));
+			$objdSurveyVictimsCrimes->S4_4_4_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_1'));
+			$objdSurveyVictimsCrimes->S4_4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_2'));
+			$objdSurveyVictimsCrimes->S4_4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_3'));
+			$objdSurveyVictimsCrimes->S4_4_4_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_4'));
+			$objdSurveyVictimsCrimes->S4_4_4_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_5'));
+			$objdSurveyVictimsCrimes->S4_4_4_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_6'));
+			$objdSurveyVictimsCrimes->S4_4_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_5'));
+			$objdSurveyVictimsCrimes->S4_4_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6'));
+			$objdSurveyVictimsCrimes->S4_4_6_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_1'));
+			$objdSurveyVictimsCrimes->S4_4_6_1_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_1_text'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_1'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_2'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_3'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_4'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_5'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_6'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_7'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_8 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_8'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_9 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_9'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_10 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_10'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_11 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_11'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_12 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_12'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_13 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_13'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_14 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_14'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_15 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_15'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_16 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_16'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_17 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_17'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_18 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_18'));
+			$objdSurveyVictimsCrimes->S4_4_6_2_18_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_6_2_18_text'));
+			$objdSurveyVictimsCrimes->S4_4_7 = $this->checkEmptyS($this->input->post('1_S4_'.$loop.'_4_7'));
+			$objdSurveyVictimsCrimes->S4_4_7_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_7_text'));
+			$this->datamodel->update($objdSurveyVictimsCrimes);
+
+		} 
+    }
+
+	public function saveSurveyCrimeS3($profileId){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			
+			$objProfile=new MyDto();
+			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_S3_1_3_1'));
+			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_S3_1_3_2'));
+			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_S3_1_3_3'));
+			$objProfile->{'1_1_4'} = $this->checkEmpty($this->input->post('1_S3_1_3_4'));
+			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_S3_1_3_4_text'));
+			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_S3_1_3_5'));
+			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_1_3_5_text'));
+			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_1_3_6'));
+			$this->datamodel->update($objProfile);
+
+		} 
+    }
+
 	public function surveyFrom1($profile_id) {
 		$user_name=$this->isLogin();
 		if($user_name != false){
@@ -721,7 +1024,6 @@ class Main extends CI_Controller {
 			$objlist->running_num = 0;
 			$objlist->profile_id = $profileId;
 			$this->saveSurvey1($profileId,1,$objlist,$provinceCode);
-			$this->saveSurvey1S4(1,$objlist,$provinceCode);
 
 			$this->datamodel->table_name='survey_victims';
 			$this->datamodel->condition='where master_id='.$profileId; 
@@ -729,8 +1031,6 @@ class Main extends CI_Controller {
 
 			for ($i=2; $i <= count($listData)+1; $i++) { 
 				$this->saveSurvey1($profileId,$i,$listData[$i-2],$provinceCode);
-				$this->saveSurvey1S3($i,$listData[$i-2],$provinceCode);
-				$this->saveSurvey1S4($i,$listData[$i-2],$provinceCode);
 			}
 			$this->saveSurvey2($profileId,$profileCode);
 			$this->saveSurvey3($profileId,$profileCode);
@@ -1229,42 +1529,50 @@ class Main extends CI_Controller {
 			$this->load->helper('download');
 			$this->load->model("datamodel");
 
-			$this->datamodel->sql="select * from survey_profile";
+			$this->datamodel->sql="SELECT profile_id, master_id, profile_code, A2, A3, A4, A4_1, A4_2, A4_3, A4_4, A4_5, `1_1_1`, `1_1_2`, `1_1_3`, `1_1_4`, `1_1_4_text`, `1_1_5`, `1_1_5_text`, `1_1_6`, `1_1_7`, `1_1_7_text`, `1_1_7_1`, `1_2`, `1_2_text`, `1_3`, `1_3_text`, Create_DTM, Update_DTM
+			FROM survey_profile WHERE status = 'complete' ;";
 			$profileQueryData=$this->datamodel->list_data_sql_export();
 			$profileData = $this->dbutil->csv_from_result($profileQueryData);
 			write_file('./temp/survey_profile.csv', $profileData);
 
-			$this->datamodel->sql="select * from survey_victims";
+			$this->datamodel->sql="SELECT sv.profile_id, sv.master_id, sv.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, sv.Create_DTM, sv.Update_DTM, sv.S2_1, sv.S2_2, sv.S2_3, sv.S2_4
+			FROM survey_victims sv , survey_profile p where sv.master_id = p.profile_id and p.status = 'complete';";
 			$victimsQueryData=$this->datamodel->list_data_sql_export();
 			$victimsData = $this->dbutil->csv_from_result($victimsQueryData);
 			write_file('./temp/survey_victims.csv', $victimsData);
 
-			$this->datamodel->sql="select * from survey_victims_crimes";
+			$this->datamodel->sql="SELECT svc.profile_id, svc.master_id, svc.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, svc.Create_DTM, svc.Update_DTM, svc.S4_4_1, svc.S4_4_1_text, svc.S4_4_2, svc.S4_4_2_text, svc.S4_4_3, svc.S4_4_3_1, svc.S4_4_3_2, svc.S4_4_3_2_text, svc.S4_4_3_3, svc.S4_4_3_3_text, svc.S4_4_4_1, svc.S4_4_4_2, svc.S4_4_4_3, svc.S4_4_4_4, svc.S4_4_4_5, svc.S4_4_4_6, svc.S4_4_5, svc.S4_4_6, svc.S4_4_6_1, svc.S4_4_6_1_text, svc.S4_4_6_2_1, svc.S4_4_6_2_2, svc.S4_4_6_2_3, svc.S4_4_6_2_4, svc.S4_4_6_2_5, svc.S4_4_6_2_6, svc.S4_4_6_2_7, svc.S4_4_6_2_8, svc.S4_4_6_2_9, svc.S4_4_6_2_10, svc.S4_4_6_2_11, svc.S4_4_6_2_12, svc.S4_4_6_2_13, svc.S4_4_6_2_14, svc.S4_4_6_2_15, svc.S4_4_6_2_16, svc.S4_4_6_2_17, svc.S4_4_6_2_18, svc.S4_4_6_2_18_text, svc.S4_4_7, svc.S4_4_7_text
+			FROM survey_victims_crimes svc , survey_profile p where svc.master_id = p.profile_id and svc.S4_4_1 <> '' and p.status = 'complete';";
 			$crimesQueryData=$this->datamodel->list_data_sql_export();
 			$crimesData = $this->dbutil->csv_from_result($crimesQueryData);
 			write_file('./temp/survey_victims_crimes.csv', $crimesData);
 
-			$this->datamodel->sql="select * from survey_knowledge_laws";
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, kl.S2_1_1, kl.S2_1_2, kl.S2_1_3, kl.S2_1_4, kl.S2_1_5, kl.S2_1_6, kl.S2_1_7, kl.S2_1_8, kl.S2_1_9, kl.S2_1_10, kl.S2_1_11, kl.S2_1_12, kl.S2_2_1, kl.S2_2_2, kl.S2_2_3, kl.S2_2_4, kl.S2_2_5, kl.S2_2_6, kl.S2_2_7, kl.S2_2_8, kl.S2_3_1, kl.S2_3_2, kl.S2_3_3, kl.S2_3_4, kl.S2_3_5, kl.S2_3_6, kl.S2_3_7, kl.S2_3_8, kl.S2_3_9, kl.S2_4, kl.S2_5, kl.Create_DTM, kl.Update_DTM
+			FROM survey_profile p , survey_knowledge_laws kl where p.profile_id = kl.profile_id and p.status = 'complete';";
 			$lawsQueryData=$this->datamodel->list_data_sql_export();
 			$lawsData = $this->dbutil->csv_from_result($lawsQueryData);
 			write_file('./temp/survey_knowledge_laws.csv', $lawsData);
 
-			$this->datamodel->sql="select * from survey_panic_in_crimes";
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, pic.S2_2_1_1, pic.S2_2_1_2, pic.S2_2_1_3, pic.S2_2_1_4, pic.Create_DTM, pic.Update_DTM
+			FROM survey_profile p , survey_panic_in_crimes pic where p.profile_id = pic.profile_id and p.status = 'complete';";
 			$panicQueryData=$this->datamodel->list_data_sql_export();
 			$panicData = $this->dbutil->csv_from_result($panicQueryData);
 			write_file('./temp/survey_panic_in_crimes.csv', $panicData);
 
-			$this->datamodel->sql="select * from survey_trust_for_security";
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, tfs.S2_2_1, tfs.S2_2_2, tfs.S2_2_3, tfs.Create_DTM, tfs.Update_DTM
+			FROM survey_profile p , survey_trust_for_security tfs where p.profile_id = tfs.profile_id and p.status = 'complete';";
 			$securityQueryData=$this->datamodel->list_data_sql_export();
 			$securityData = $this->dbutil->csv_from_result($securityQueryData);
 			write_file('./temp/survey_trust_for_security.csv', $securityData);
 
-			$this->datamodel->sql="select * from survey_sdgs";
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, s.S2_2_1, s.S2_2_2, s.Create_DTM, s.Update_DTM
+			FROM survey_profile p , survey_sdgs s where p.profile_id = s.profile_id and p.status = 'complete';";
 			$sdgsQueryData=$this->datamodel->list_data_sql_export();
 			$sdgsData = $this->dbutil->csv_from_result($sdgsQueryData);
 			write_file('./temp/survey_sdgs.csv', $sdgsData);
 
-			$this->datamodel->sql="select * from survey_trust_in_justic";
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, tij.S2_1_1, tij.S2_1_2, tij.S2_1_3, tij.S2_1_4, tij.S2_2_1, tij.S2_2_2, tij.S2_2_3, tij.S2_2_4, tij.S2_3_1, tij.S2_3_2, tij.S2_3_3, tij.S2_3_4, tij.S2_4_1, tij.S2_4_2, tij.S2_4_3, tij.S2_4_4, tij.S2_5, tij.S3_1_1, tij.S3_1_2, tij.S3_1_3, tij.S3_1_4, tij.S3_1_5, tij.S3_2_1, tij.S3_2_2, tij.S3_2_3, tij.S3_2_4, tij.S3_2_5, tij.S3_3_1, tij.S3_3_2, tij.S3_3_3, tij.S3_3_4, tij.S3_3_5, tij.S3_4_1, tij.S3_4_2, tij.S3_4_3, tij.S3_4_4, tij.S3_4_5, tij.S3_5_1, tij.S3_5_2, tij.S3_5_3, tij.S3_5_4, tij.S3_5_5, tij.S3_6, tij.Create_DTM, tij.Update_DTM
+			FROM survey_profile p , survey_trust_in_justic tij where p.profile_id = tij.profile_id and p.status = 'complete';";
 			$justicQueryData=$this->datamodel->list_data_sql_export();
 			$justicData = $this->dbutil->csv_from_result($justicQueryData);
 			write_file('./temp/survey_trust_in_justic.csv', $justicData);
