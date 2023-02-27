@@ -1704,9 +1704,12 @@
 
 			const clone = template.content.cloneNode(true);
 			let td = clone.querySelectorAll("td");
-			td[0].innerHTML = td[0].innerHTML.replaceAll("{No.}", i);
-			td[1].innerHTML = td[1].innerHTML.replaceAll("{Num}", i);
-			td[2].innerHTML = td[2].innerHTML.replaceAll("{Num}", i).replaceAll("{profileId}", profileId).replaceAll("{running_num}", running).replaceAll('{masterId}', '<?= $u_master_id ?>');
+			td[0].innerHTML = replaceAll(td[0].innerHTML,"{No.}", i);
+			td[1].innerHTML = replaceAll(td[1].innerHTML,"{Num}", i);
+			td[2].innerHTML = replaceAll(td[2].innerHTML,"{Num}", i)
+			td[2].innerHTML = replaceAll(td[2].innerHTML,"{profileId}", profileId)
+			td[2].innerHTML = replaceAll(td[2].innerHTML,"{running_num}", running)
+			td[2].innerHTML = replaceAll(td[2].innerHTML,'{masterId}', '<?= $u_master_id ?>');
 
 			tbody.appendChild(clone);
 
@@ -1718,7 +1721,9 @@
 			div[0].id = "modal-edit-" + i;
 			let a = cloneModal.querySelectorAll("div");
 			a.forEach(element => {
-				element.innerHTML = element.innerHTML.replaceAll("{Num}", i).replaceAll("{profile_Id}", profileId).replaceAll("{running}", running);
+				element.innerHTML = replaceAll(element.innerHTML,"{Num}", i)
+				element.innerHTML = replaceAll(element.innerHTML,"{profile_Id}", profileId)
+				element.innerHTML = replaceAll(element.innerHTML,"{running}", running);
 			});
 			place.appendChild(cloneModal);
 
@@ -1729,7 +1734,7 @@
 				const cloneS3 = templateS3.content.cloneNode(true);
 				let divS3 = cloneS3.querySelectorAll("div");
 				divS3.forEach(element => {
-					element.innerHTML = element.innerHTML.replaceAll("{Num}", i);
+					element.innerHTML = replaceAll(element.innerHTML,"{Num}", i);
 				});
 				modalMain.appendChild(cloneS3);
 			}
@@ -1738,7 +1743,7 @@
 			const cloneS4 = templateS4.content.cloneNode(true);
 			let divS4 = cloneS4.querySelectorAll("div");
 			divS4.forEach(element => {
-				element.innerHTML = element.innerHTML.replaceAll("{Num}", i);
+				element.innerHTML = replaceAll(element.innerHTML,"{Num}", i);
 			});
 			modalMain.appendChild(cloneS4);
 
@@ -2273,6 +2278,13 @@
 			if (object.value.length > object.maxLength)
 				object.value = object.value.slice(0, object.maxLength)
 		};
+
+		function escapeRegExp(string) {
+			return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+		}
+		function replaceAll(str, match, replacement){
+			return str.replace(new RegExp(escapeRegExp(match), 'g'), ()=>replacement);
+		}
 	</script>
 </body>
 

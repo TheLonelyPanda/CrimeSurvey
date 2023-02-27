@@ -475,26 +475,13 @@
 								</div>
 							</div>
 
-							<div class="panel panel-inverse overflow-hidden">
-								<div class="panel-heading">
-									<h3 class="panel-title">
-										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form2">
-											<i class="fa fa-plus-circle pull-right"></i>
-											2. แบบสอบถามความรู้เกี่ยวกับกฎหมายและกระบวนการยุติธรรม งานตัวชี้วัด
-										</a>
-									</h3>
-								</div>
-								<div id="form2" class="panel-collapse collapse collapseForm">
-									<div data-include="../surveyFrom2"></div>
-								</div>
-							</div>
 
 							<div class="panel panel-inverse overflow-hidden">
 								<div class="panel-heading">
 									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form3">
 											<i class="fa fa-plus-circle pull-right"></i>
-											3. แบบสำรวจข้อมูลความรู้สึกหวาดกลัวภัยอาชญากรรม
+											2. แบบสำรวจข้อมูลความรู้สึกหวาดกลัวภัยอาชญากรรม
 										</a>
 									</h3>
 								</div>
@@ -508,12 +495,27 @@
 									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form4">
 											<i class="fa fa-plus-circle pull-right"></i>
-											4. แบบสำรวจข้อมูลความเชื่อมั่นต่อความปลอดภัยในชีวิตและทรัพย์สิน
+											3. แบบสำรวจข้อมูลความเชื่อมั่นต่อความปลอดภัยในชีวิตและทรัพย์สิน
 										</a>
 									</h3>
 								</div>
 								<div id="form4" class="panel-collapse collapse collapseForm">
 									<div data-include="../surveyFrom4"></div>
+								</div>
+							</div>
+
+							
+							<div class="panel panel-inverse overflow-hidden">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form2">
+											<i class="fa fa-plus-circle pull-right"></i>
+											4. แบบสอบถามความรู้เกี่ยวกับกฎหมายและกระบวนการยุติธรรม งานตัวชี้วัด
+										</a>
+									</h3>
+								</div>
+								<div id="form2" class="panel-collapse collapse collapseForm">
+									<div data-include="../surveyFrom2"></div>
 								</div>
 							</div>
 

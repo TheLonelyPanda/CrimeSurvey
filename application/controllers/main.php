@@ -1121,11 +1121,19 @@ class Main extends CI_Controller {
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
+			$profileCode = '';
+			$this->datamodel->sql=" select profile_code from survey_profile where profile_id = ".$masterId;   
+			$data_Profile=$this->datamodel->first_row_data_sql();
+			if($data_Profile != null){
+				$profileCodeRaw = $data_Profile->profile_code;
+				$profileCode = substr($profileCodeRaw,0,10).$profileId;
+			}
 			$this->datamodel->table_name='survey_profile';
 			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profileId;
 			$objProfile=new MyDto();
 			$objProfile->master_id = $masterId;
+			$objProfile->profile_code = $profileCode;
 			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_S3_3_1'));
 			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_S3_3_2'));
 			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_S3_3_3'));
@@ -1540,13 +1548,13 @@ class Main extends CI_Controller {
 			write_file('./temp/survey_profile.csv', $profileData);
 
 			$this->datamodel->sql="SELECT sv.profile_id, sv.master_id, sv.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, sv.Create_DTM, sv.Update_DTM, sv.S2_1, sv.S2_2, sv.S2_3, sv.S2_4
-			FROM survey_victims sv , survey_profile p where sv.master_id = p.profile_id and p.status = 'complete';";
+			FROM survey_victims sv , survey_profile p where (sv.profile_id = p.profile_id Or sv.master_id = p.profile_id) and p.status = 'complete';";
 			$victimsQueryData=$this->datamodel->list_data_sql_export();
 			$victimsData = $this->dbutil->csv_from_result($victimsQueryData);
 			write_file('./temp/survey_victims.csv', $victimsData);
 
 			$this->datamodel->sql="SELECT svc.profile_id, svc.master_id, svc.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, svc.Create_DTM, svc.Update_DTM, svc.S4_4_1, svc.S4_4_1_text, svc.S4_4_2, svc.S4_4_2_text, svc.S4_4_3, svc.S4_4_3_1, svc.S4_4_3_2, svc.S4_4_3_2_text, svc.S4_4_3_3, svc.S4_4_3_3_text, svc.S4_4_4_1, svc.S4_4_4_2, svc.S4_4_4_3, svc.S4_4_4_4, svc.S4_4_4_5, svc.S4_4_4_6, svc.S4_4_5, svc.S4_4_6, svc.S4_4_6_1, svc.S4_4_6_1_text, svc.S4_4_6_2_1, svc.S4_4_6_2_2, svc.S4_4_6_2_3, svc.S4_4_6_2_4, svc.S4_4_6_2_5, svc.S4_4_6_2_6, svc.S4_4_6_2_7, svc.S4_4_6_2_8, svc.S4_4_6_2_9, svc.S4_4_6_2_10, svc.S4_4_6_2_11, svc.S4_4_6_2_12, svc.S4_4_6_2_13, svc.S4_4_6_2_14, svc.S4_4_6_2_15, svc.S4_4_6_2_16, svc.S4_4_6_2_17, svc.S4_4_6_2_18, svc.S4_4_6_2_18_text, svc.S4_4_7, svc.S4_4_7_text
-			FROM survey_victims_crimes svc , survey_profile p where svc.master_id = p.profile_id and svc.S4_4_1 <> '' and p.status = 'complete';";
+			FROM survey_victims_crimes svc , survey_profile p where (svc.profile_id = p.profile_id Or svc.master_id = p.profile_id) and svc.S4_4_1 <> '' and p.status = 'complete';";
 			$crimesQueryData=$this->datamodel->list_data_sql_export();
 			$crimesData = $this->dbutil->csv_from_result($crimesQueryData);
 			write_file('./temp/survey_victims_crimes.csv', $crimesData);

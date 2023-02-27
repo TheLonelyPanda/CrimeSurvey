@@ -33,7 +33,7 @@
 						<td><input type="radio" id="1_2111" name="1_S2_1_1" value="1" data-parsley-required="true"> ชาย <input type="radio" id="1_2112" name="1_S2_1_1" value="2"> หญิง <input type="radio" id="1_2113" name="1_S2_1_1" value="3"> ทางเลือก</td>
 						<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength="3" id="1_212" name="1_S2_1_2" data-parsley-required="true" /></td>
 						<td><input type="radio" id="1_2131" name="1_S2_1_3" value="1"> เคย <input type="radio" id="1_2132" name="1_S2_1_3" value="2" data-parsley-required="true"> ไม่เคย</td>
-						<td><input type="text" class="form-control" id="1_214" name="1_S2_1_4" data-parsley-required="true" /></td>
+						<td><input type="text" class="form-control" id="1_214" name="1_S2_1_4" /></td>
 						<td>
 							<a href="<?= site_url('main/goVictims/'. $u_now_id.'/master') ?>" data-url="<?= site_url('main/saveSurvey/true') ?>" id="1_2151_a" name="1_S2_1_5_BUTTON" type="button" class="ui basic black button btn-form-hiddend-save-go disabled"><i id="1_2151_i" class="edit icon large readonly"></i></a>
 						</td>
@@ -52,7 +52,7 @@
 				<td><input type="radio" id="1_2{Num}11" name="1_S2_{Num}_1" value="1" data-parsley-required="true"> ชาย <input type="radio" id="1_2{Num}12" name="1_S2_{Num}_1" value="2"> หญิง <input type="radio" id="1_2{Num}13" name="1_S2_{Num}_1" value="3"> ทางเลือก</td>
 				<td><input type="number" class="form-control age" oninput="maxLengthCheck(this)" maxlength="3" id="1_2{Num}2" name="1_S2_{Num}_2" data-parsley-required="true" /></td>
 				<td><input type="radio" id="1_2{Num}31" name="1_S2_{Num}_3" value="1" data-parsley-required="true"> เคย <input type="radio" id="1_2{Num}32" name="1_S2_{Num}_3" value="2" > ไม่เคย</td>
-				<td><input type="text" class="form-control" id="1_2{Num}4" name="1_S2_{Num}_4" data-parsley-required="true" /></td>
+				<td><input type="text" class="form-control" id="1_2{Num}4" name="1_S2_{Num}_4" /></td>
 				<td>
 					<a href="<?= site_url('main/goVictims/{profileId}/' . $u_now_id) ?>" data-url="<?= site_url('main/saveSurvey/true') ?>" id="1_2{Num}51_a" name="1_S2_{Num}_5_BUTTON" type="button"  class="ui basic black button btn-form-hiddend-save-go disabled"><i id="1_2{Num}51_i" class="edit icon large readonly"></i></a>
 					<a href="javascript:void(0)" data-url="<?= site_url('main/deleteVictims/{profileId}/' . $u_now_id) ?>" name="1_S2_1_5_Delete" type="button" class="ui basic red button btn-form-save-delete readonly"><i id="1_2151_i" class="delete icon large readonly"></i></a>
@@ -1122,7 +1122,7 @@
 				div[0].id = 'modal-edit-1';
 				let a = cloneModal.querySelectorAll("div");
 				a.forEach(element => {
-					element.innerHTML = element.innerHTML.replaceAll("{Num}", '1');
+					element.innerHTML = replaceAll(element.innerHTML,"{Num}", '1');
 				});
 
 				place.appendChild(cloneModal);
@@ -1225,12 +1225,13 @@
 
 				const clone = template.content.cloneNode(true);
 				let td = clone.querySelectorAll("td");
-				td[0].innerHTML = td[0].innerHTML.replaceAll("{No.}", i + ".");
-				td[1].innerHTML = td[1].innerHTML.replaceAll("{Num}", i);
-				td[2].innerHTML = td[2].innerHTML.replaceAll("{Num}", i);
-				td[3].innerHTML = td[3].innerHTML.replaceAll("{Num}", i);
-				td[4].innerHTML = td[4].innerHTML.replaceAll("{Num}", i);
-				td[5].innerHTML = td[5].innerHTML.replaceAll("{Num}", i).replaceAll("{profileId}", profileId);
+				td[0].innerHTML = replaceAll(td[0].innerHTML,"{No.}", i + ".");
+				td[1].innerHTML = replaceAll(td[1].innerHTML,"{Num}", i);
+				td[2].innerHTML = replaceAll(td[2].innerHTML,"{Num}", i);
+				td[3].innerHTML = replaceAll(td[3].innerHTML,"{Num}", i);
+				td[4].innerHTML = replaceAll(td[4].innerHTML,"{Num}", i);
+				td[5].innerHTML = replaceAll(td[5].innerHTML,"{Num}", i);
+				td[5].innerHTML = replaceAll(td[5].innerHTML,"{profileId}", profileId);
 
 				tbody.appendChild(clone);
 
@@ -1242,7 +1243,7 @@
 				div[0].id = "modal-edit-" + i;
 				let a = cloneModal.querySelectorAll("div");
 				a.forEach(element => {
-					element.innerHTML = element.innerHTML.replaceAll("{Num}", i);
+					element.innerHTML = replaceAll(element.innerHTML,"{Num}", i);
 				});
 				place.appendChild(cloneModal);
 
@@ -1338,18 +1339,24 @@
 
 			$('input[type="radio"]').mousedown(function() { 
 			// if it was checked before
-			if(this.checked) {
-				// bind event to reset state after click is completed
-				$(this).mouseup(function() {  
-					// bind param, because "this" will point somewhere else in setTimeout
-					var radio = this;
-					// apparently if you do it immediatelly, it will be overriden, hence wait a tiny bit
-					setTimeout(function() { 
-						radio.checked = false; 
-					}, 5); 
-					// don't handle mouseup anymore unless bound again
-					$(this).unbind('mouseup');
-				});
+				if(this.checked) {
+					// bind event to reset state after click is completed
+					$(this).mouseup(function() {  
+						// bind param, because "this" will point somewhere else in setTimeout
+						var radio = this;
+						// apparently if you do it immediatelly, it will be overriden, hence wait a tiny bit
+						setTimeout(function() { 
+							radio.checked = false; 
+						}, 5); 
+						// don't handle mouseup anymore unless bound again
+						$(this).unbind('mouseup');
+					});
+				}
+			});
+			function escapeRegExp(string) {
+				return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 			}
-		});
+				function replaceAll(str, match, replacement){
+				return str.replace(new RegExp(escapeRegExp(match), 'g'), ()=>replacement);
+			}
 		</script>
