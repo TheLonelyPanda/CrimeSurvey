@@ -137,6 +137,7 @@ class Main extends CI_Controller {
 	public function goVictims($profile_id,$master_id) {
 		$user_name=$this->isLogin();
 		if($user_name != false){
+			$this->session->set_userdata('comeback',"yes");
 			$data['u_disp']=$this->session->userdata('user_name');
 			$data['u_level']=$this->session->userdata('u_level');					
 			$data['h_flag']="list";		  
@@ -436,6 +437,7 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_S3_1_3_5'));
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_1_3_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_1_3_6'));
+			$objProfile->update_by = $this->session->userdata('u_am_id');
 			$this->datamodel->update($objProfile);
 
 		} 
@@ -813,6 +815,8 @@ class Main extends CI_Controller {
 	public function survey($profile_id) {
 		$user_name=$this->isLogin();
 		if($user_name != false){
+			$data['d_comeback']=$this->session->userdata('comeback');
+			$this->session->unset_userdata('comeback');
 			$data['u_disp']=$this->session->userdata('user_name');
 			$data['u_level']=$this->session->userdata('u_level');					
 			$data['h_flag']="list";		  
@@ -925,8 +929,10 @@ class Main extends CI_Controller {
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
 			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
 			if($this->chkHave($u_now_id,'survey_profile')=='0'){
+				$objProfile->create_by = $this->session->userdata('u_am_id');
 				$this->datamodel->insert($objProfile);
 			}else{
+				$objProfile->update_by = $this->session->userdata('u_am_id');
 				$this->datamodel->update($objProfile);
 			}	
 			$objlist=new MyDto();
@@ -1019,8 +1025,10 @@ class Main extends CI_Controller {
 				$objProfile->status = 'complete';
 			}
 			if($this->chkHave($profileId,'survey_profile')=='0'){
+				$objProfile->create_by = $this->session->userdata('u_am_id');
 				$this->datamodel->insert($objProfile);
 			}else{
+				$objProfile->update_by = $this->session->userdata('u_am_id');
 				$this->datamodel->update($objProfile);
 			}	
 
@@ -1143,8 +1151,10 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_3_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_3_6'));
 			if($this->chkHave($profileId,'survey_profile')=='0'){
+				$objProfile->create_by = $this->session->userdata('u_am_id');
 				$this->datamodel->insert($objProfile);
 			}else{
+				$objProfile->update_by = $this->session->userdata('u_am_id');
 				$this->datamodel->update($objProfile);
 			}
 
@@ -1182,8 +1192,10 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_6'));
 			if($this->chkHave($profileId,'survey_profile')=='0'){
+				$objProfile->create_by = $this->session->userdata('u_am_id');
 				$this->datamodel->insert($objProfile);
 			}else{
+				$objProfile->update_by = $this->session->userdata('u_am_id');
 				$this->datamodel->update($objProfile);
 			}
 
@@ -1541,7 +1553,7 @@ class Main extends CI_Controller {
 			$this->load->helper('download');
 			$this->load->model("datamodel");
 
-			$this->datamodel->sql="SELECT profile_id, master_id, profile_code, A2, A3, A4, A4_1, A4_2, A4_3, A4_4, A4_5, `1_1_1`, `1_1_2`, `1_1_3`, `1_1_4`, `1_1_4_text`, `1_1_5`, `1_1_5_text`, `1_1_6`, `1_1_7`, `1_1_7_text`, `1_1_7_1`, `1_2`, `1_2_text`, `1_3`, `1_3_text`, Create_DTM, Update_DTM
+			$this->datamodel->sql="SELECT profile_id, master_id, profile_code, A2, A3, A4, A4_1, A4_2, A4_3, A4_4, A4_5, `1_1_1`, `1_1_2`, `1_1_3`, `1_1_4`, `1_1_4_text`, `1_1_5`, `1_1_5_text`, `1_1_6`, `1_1_7`, `1_1_7_text`, `1_1_7_1`, `1_2`, `1_2_text`, `1_3`, `1_3_text`, create_by, Create_DTM, update_by, Update_DTM
 			FROM survey_profile WHERE status = 'complete' ;";
 			$profileQueryData=$this->datamodel->list_data_sql_export();
 			$profileData = $this->dbutil->csv_from_result($profileQueryData);

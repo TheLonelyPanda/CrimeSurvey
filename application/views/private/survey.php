@@ -115,15 +115,15 @@
 							</div>
 
 							<div class="row">
-								<label for="A4" class="col-form-label">A4 พื้นที่</label>
+								<label for="A4" class="col-form-label">A4 พื้นที่<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<div style="width: 50%; float:left;">
 										<div class="row" style="margin-left: 10px; padding-top: 13px;">
 											<input type="radio" id="A41" name="A4" value="1" data-parsley-required="true">
-											<label class="radio-inline " style="align-self: center; style=" margin-left: 10px;>(A4.1) กรุงเทพมหานคร<span class="star"> *</span></label>
+											<label class="radio-inline " style="align-self: center;">(A4.1) กรุงเทพมหานคร</label>
 										</div>
 										<div class="row" style=" padding-top: 13px;">
-											<label class="radio-inline col-lg-25" style="align-self: center;">เขต</label>
+											<label class="radio-inline col-lg-3" style="align-self: center; margin-left: 40px;">เขต<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="amphure_id_1" id="amphure_1" class="form-control" disabled>
 													<option value="">เลือกเขต</option>
@@ -131,7 +131,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline col-lg-25" style="align-self: center;">แขวง</label>
+											<label class="radio-inline col-lg-3" style="align-self: center; margin-left: 40px;">แขวง<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="district_id_1" id="district_1" class="form-control" disabled>
 													<option value="">เลือกแขวง</option>
@@ -139,7 +139,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline col-lg-25" style="align-self: center;">เขตสถานีตำรวจ</label>
+											<label class="radio-inline col-lg-3" style="align-self: center; margin-left: 40px;">เขตสถานีตำรวจ<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<input type="text" class="form-control" id="A4_41" name="A4_1_text_3" data-parsley-required="true"  readonly />
 											</label>
@@ -149,7 +149,10 @@
 									<div style="width: 50%; float:right;">
 										<div class="row" style="margin-left: 10px;">
 											<input type="radio" id="A42" name="A4" value="2">
-											<label class="radio-inline col-lg-4" style="align-self: center;">(A4.2) จังหวัดอื่นๆ (ระบุ)<span class="star"> *</span></label>
+											<label class="radio-inline col-lg-4" style="align-self: center;">(A4.2) จังหวัดอื่นๆ (ระบุ)</label>
+										</div>
+										<div class="row" >
+											<label class="radio-inline col-lg-45" style="align-self: center; margin-left: 30px;">จังหวัด<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="province_id" id="province" class="form-control" disabled>
 													<option value="">เลือกจังหวัด</option>
@@ -161,7 +164,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline col-lg-45" style="align-self: center;">อำเภอ</label>
+											<label class="radio-inline col-lg-45" style="align-self: center; margin-left: 30px;">อำเภอ<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="amphure_id" id="amphure" class="form-control" disabled>
 													<option value="">เลือกอำเภอ</option>
@@ -169,7 +172,7 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline col-lg-45" style="align-self: center;">ตำบล</label>
+											<label class="radio-inline col-lg-45" style="align-self: center; margin-left: 30px;">ตำบล<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="district_id" id="district" class="form-control" disabled>
 													<option value="">เลือกตำบล</option>
@@ -177,13 +180,13 @@
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline col-lg-45" style="align-self: center;">เขตสถานีตำรวจ</label>
+											<label class="radio-inline col-lg-45" style="align-self: center; margin-left: 30px;">เขตสถานีตำรวจ<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<input type="text" class="form-control" id="A4_42" name="A4_2_text_4" data-parsley-required="true" readonly />
 											</label>
 										</div>
 										<div class="row">
-											<label class="radio-inline col-lg-45" style="align-self: center;">อบต./ท.ตำบล/ท.เมือง/ท.นคร</label>
+											<label class="radio-inline col-lg-45" style="align-self: center; margin-left: 30px;">อบต./ท.ตำบล/ท.เมือง/ท.นคร<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<input type="text" class="form-control" id="A4_52" name="A4_2_text_5" data-parsley-required="true" readonly />
 											</label>
@@ -585,9 +588,14 @@
 	<script>
 		$(document).ready(function() {
 			App.init();
-
+			if('<?=$d_comeback?>' == 'yes'){
+				$('#form1').collapse('show');
+				var formele = document.getElementById("form1");
+				formele.scrollIntoView();
+				
+			}
+	
 		});
-
 
 		var A4_41 = $('#A4_41');
 		var A4_42   = $('#A4_42');

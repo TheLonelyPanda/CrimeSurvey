@@ -94,9 +94,9 @@
 								<table class="tg">
 									<thead>
 										<tr>
-											<th>เหตุลำดับที่</th>
-											<th>ความสัมพันธ์ระหว่างเหยื่อกับผู้ก่อเหตุ</th>
-											<th>จัดการ</th>
+											<th class="subhead tg tg-0laa">เหตุลำดับที่</th>
+											<th class="subhead tg tg-0laa long">ความสัมพันธ์ระหว่างเหยื่อกับผู้ก่อเหตุ</th>
+											<th class="subhead tg tg-0laa">จัดการ</th>
 										</tr>
 									</thead>
 									<tbody id="crimeTable">
@@ -106,7 +106,7 @@
 
 							<template id="crimeTemplate">
 								<tr>
-									<td>{No.}</td>
+									<td class="tg tg-mid">{No.}</td>
 									<td>
 										<p id="1_{Num}">
 									</td>
@@ -1178,7 +1178,7 @@
 							</br></br>
 
 							<div class="row">
-								<div class="col-lg-1.5" style="margin-left: auto; margin-right: 0;">
+								<div class="col-lg-1.5" style="margin-left: 400px;">
 									<a value="Save" data-url="<?= site_url('main/saveSurveyCrime/' . $u_profile_id . '/' . $u_master_id . '/back') ?>" class="ui basic green button btn-form-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
@@ -1231,7 +1231,7 @@
 						type: 'post'
 					});
 				} else {
-					formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น * สีแดงให้ครบก่อนบันทึกข้อมูล');
+					formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น <span class="star">* สีแดง</span>ให้ครบก่อนบันทึกข้อมูล');
 				}
 			}
 

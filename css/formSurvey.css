@@ -107,6 +107,11 @@ a.width{
   width: 100px;
 }
 
+.tg .long {
+  width: 400px;
+}
+
+
 .bg{
   background-color: #8080808a;
   font-weight: 600;
@@ -119,5 +124,10 @@ a.width{
 .tg .tg-0laa {
   text-align: center;
   vertical-align: top
+}
+
+.tg .tg-mid {
+  text-align: center;
+  vertical-align: middle
 }
 
