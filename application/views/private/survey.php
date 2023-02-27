@@ -99,13 +99,13 @@
 								<label for="A1" class="col-form-label">A1 ข้อมูลส่วนบุคคล</label></br>
 							</div>
 							<div class="row indent">
-								<label for="A2" class="col-form-label nText col-lg-2">A2 บ้านเลขที่</label>
+								<label for="A2" class="col-form-label nText col-lg-2">A2 บ้านเลขที่<span class="star"> *</span></label>
 								<div class="col-lg-2 ">
 									<input type="text" class="form-control" id="A2" name="A2" data-parsley-required="true" />
 								</div>
 							</div>
 							<div class="row indent">
-								<label for="A3" class="col-form-label nText col-lg-2">A3 พิกัดบ้าน (NS) (EW)</label>
+								<label for="A3" class="col-form-label nText col-lg-2">A3 พิกัดบ้าน (NS) (EW)<span class="star"> *</span></label>
 								<div class="col-lg-2 ">
 									<input type="text" class="form-control" id="A3" name="A3" data-parsley-required="true" />
 								</div>
@@ -120,7 +120,7 @@
 									<div style="width: 50%; float:left;">
 										<div class="row" style="margin-left: 10px; padding-top: 13px;">
 											<input type="radio" id="A41" name="A4" value="1" data-parsley-required="true">
-											<label class="radio-inline " style="align-self: center; style=" margin-left: 10px;>(A4.1) กรุงเทพมหานคร</label>
+											<label class="radio-inline " style="align-self: center; style=" margin-left: 10px;>(A4.1) กรุงเทพมหานคร<span class="star"> *</span></label>
 										</div>
 										<div class="row" style=" padding-top: 13px;">
 											<label class="radio-inline col-lg-25" style="align-self: center;">เขต</label>
@@ -149,7 +149,7 @@
 									<div style="width: 50%; float:right;">
 										<div class="row" style="margin-left: 10px;">
 											<input type="radio" id="A42" name="A4" value="2">
-											<label class="radio-inline col-lg-4" style="align-self: center;">(A4.2) จังหวัดอื่นๆ (ระบุ)</label>
+											<label class="radio-inline col-lg-4" style="align-self: center;">(A4.2) จังหวัดอื่นๆ (ระบุ)<span class="star"> *</span></label>
 											<label class="radio-inline col-form-label  col-lg-5">
 												<select name="province_id" id="province" class="form-control" disabled>
 													<option value="">เลือกจังหวัด</option>
@@ -197,7 +197,7 @@
 							<label for="wight">1.1 ข้อมูลบุคคลของผู้ตอบแบบสอบถาม (ผู้แทนครัวเรือน)</label>
 
 							<div class="row">
-								<label for="1111" class="col-form-label">1.1.1 เพศ &nbsp</label>
+								<label for="1111" class="col-form-label">1.1.1 เพศ<span class="star"> * </span> &nbsp</label>
 								<label class="radio-inline col-form-label">
 									<input type="radio" id="11111" class="" name="1_1_1" value="1" data-parsley-required="true"> (1) ชาย
 								</label>
@@ -210,7 +210,7 @@
 							</div>
 
 							<div class="row">
-								<label for="1112" class="col-form-label">1.1.2 อายุ</label>
+								<label for="1112" class="col-form-label">1.1.2 อายุ<span class="star"> *</span></label>
 								<div class="col-lg-1">
 									<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="1112" name="1_1_2" data-parsley-required="true"/>
 								</div>
@@ -220,7 +220,7 @@
 							</div>
 
 							<div class="row">
-								<label for="1113" class="col-form-label">1.1.3 รายได้</label>
+								<label for="1113" class="col-form-label">1.1.3 รายได้<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 										<input type="radio" id="11131" name="1_1_3" value="1" data-parsley-required="true"> (1) ต่ำกว่า 15,000 บาท
@@ -250,7 +250,7 @@
 							</div>
 
 							<div class="row">
-								<label for="1114" class="col-form-label">1.1.4 อาชีพ</label>
+								<label for="1114" class="col-form-label">1.1.4 อาชีพ<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 										<input type="radio" id="11141" name="1_1_4" value="1" data-parsley-required="true"> (1) ข้าราชการ พนักงานรัฐวิสาหกิจ
@@ -288,7 +288,7 @@
 							</div>
 
 							<div class="row">
-								<label for="1115" class="col-form-label">1.1.5 การศึกษาระดับสูงสุด</label>
+								<label for="1115" class="col-form-label">1.1.5 การศึกษาระดับสูงสุด<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 										<input type="radio" id="11151" name="1_1_5" value="1" data-parsley-required="true"> (1) ไม่เคยเข้ารับการศึกษา
@@ -332,7 +332,7 @@
 							</div>
 
 							<div class="row">
-								<label for="1116" class="col-form-label">1.1.6 ท่านเห็นการปฏิบัติงานของเจ้าหน้าที่ตำรวจ หรือเจ้าหน้าที่ของหน่วยงานด้านยุติธรรม </br>เช่น เจ้าหน้าที่คุมประพฤติ เจ้าหน้าที่ราชทัณฑ์ เจ้าหน้าที่ยุติธรรมจังหวัด เจ้าหน้าที่ยุติธรรมชุมชน เป็นต้น </br>ในการปฏิบัติงานในพื้นที่ชุมชนของท่านมากน้อยเพียงใด</label>
+								<label for="1116" class="col-form-label">1.1.6 ท่านเห็นการปฏิบัติงานของเจ้าหน้าที่ตำรวจ หรือเจ้าหน้าที่ของหน่วยงานด้านยุติธรรม </br>เช่น เจ้าหน้าที่คุมประพฤติ เจ้าหน้าที่ราชทัณฑ์ เจ้าหน้าที่ยุติธรรมจังหวัด เจ้าหน้าที่ยุติธรรมชุมชน เป็นต้น </br>ในการปฏิบัติงานในพื้นที่ชุมชนของท่านมากน้อยเพียงใด<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 										<input type="radio" id="11161" name="1_1_6" value="1" data-parsley-required="true"> (1) สัปดาห์ละครั้ง
@@ -353,7 +353,7 @@
 							</div>
 
 							<div class="row">
-								<label for="1117" class="col-form-label">1.1.7 ในช่วงระยะเวลา 5 ปี ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรม หน่วยงานใด
+								<label for="1117" class="col-form-label">1.1.7 ในช่วงระยะเวลา 5 ปี ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรม หน่วยงานใด<span class="star"> *</span>
 								<div class="col-lg-12">
 									<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 										<input type="radio" id="11171" name="1_1_7" value="1" data-parsley-required="true"> (1) เคย กรุณาระบุหน่วยงาน 
@@ -369,7 +369,7 @@
 							</div>
 
 							<div class="row" style="margin-left: 10px;">
-								<label for="11171" class="col-form-label">1.1.7.1 ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรมในสถานะใด
+								<label for="11171" class="col-form-label">1.1.7.1 ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรมในสถานะใด<span class="star"> *</span>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label" style="margin-left: 10px;">
 										<input type="radio" id="1117_11" name="1_1_7_1" value="1" data-parsley-required="true" disabled> (1) ผู้มาติดต่อหรือรับบริการโดยตรง ได้แก่ ผู้เสียหาย ผู้กระทำผิด
@@ -383,7 +383,7 @@
 
 							</br>
 							<div class="row">
-								<label for="112" class="col-form-label">1.2 สถานะของท่านในครัวเรือน (ท่านมีความเกี่ยวข้องสัมพันธ์กับเจ้าของบ้านอย่างไร)</label>
+								<label for="112" class="col-form-label">1.2 สถานะของท่านในครัวเรือน (ท่านมีความเกี่ยวข้องสัมพันธ์กับเจ้าของบ้านอย่างไร)<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 										<input type="radio" id="1121" name="1_2" value="1" data-parsley-required="true"> (1) เจ้าของบ้าน
@@ -426,7 +426,7 @@
 
 
 							<div class="row">
-								<label for="113" class="col-form-label">1.3 ลักษณะบริเวณที่อยู่อาศัย</label>
+								<label for="113" class="col-form-label">1.3 ลักษณะบริเวณที่อยู่อาศัย<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-8" style="margin-left: 10px;">
 										<input type="radio" id="1131" name="1_3" value="1" data-parsley-required="true"> (1) เขตที่พักอาศัยทั่วไป เช่น หมู่บ้านจัดสรร บ้านเดี่ยว

@@ -135,7 +135,7 @@ $(document).ready(function () {
 				},
 			});
 		} else {
-			formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น * สีแดงให้ครบก่อนบันทึกข้อมูล');
+			formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น <span class="star">* สีแดง</span>ให้ครบก่อนบันทึกข้อมูล');
 		}
 	}).on('click', '.btn-form-varidate-save-go', function () {
 		var element = this;

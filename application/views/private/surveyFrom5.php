@@ -1,7 +1,7 @@
 <label for="wight">ส่วนที่ 2 ข้อมูลเกี่ยวกับการข่มเหง การแสวงหาประโยชน์อย่างไม่ถูกต้อง การค้ามนุษย์ และความรุนแรงและการทรมานทุกรูปแบบที่มีต่อเด็ก</label>
 </br>
 <div class="row">
-	<label for="21" class="col-form-label">2.1 ท่านเคยถูกกระทำความรุนแรงทางเพศ โดยตกเป็นเหยื่ออาชญากรรมก่อนอายุ 18 ปี</label>
+	<label for="21" class="col-form-label">2.1 ท่านเคยถูกกระทำความรุนแรงทางเพศ โดยตกเป็นเหยื่ออาชญากรรมก่อนอายุ 18 ปี<span class="star"> *</span></label>
 	<div class="col-lg-12">
 		<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 			<input type="radio" id="5_211" name="5_S2_2_1" value="1" > (1) ใช่
@@ -12,7 +12,7 @@
 	</div>
 </div>
 <div class="row">
-	<label for="22" class="col-form-label">2.2 ท่านตกเป็นเหยื่ออาชญากรรมครั้งแรกในขณะที่มีอายุ </label>
+	<label for="22" class="col-form-label">2.2 ท่านตกเป็นเหยื่ออาชญากรรมครั้งแรกในขณะที่มีอายุ<span class="star"> *</span> </label>
 	<div class="col-lg-1">
 		<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength = "3" id="5_22" name="5_S2_2_2" data-parsley-required="true" readonly/>
 	</div>

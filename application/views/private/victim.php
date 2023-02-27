@@ -131,7 +131,7 @@
 								</br>
 
 								<div class="row">
-									<label for="31" class="col-form-label">3.1 เพศ &nbsp</label>
+									<label for="31" class="col-form-label">3.1 เพศ <span class="star">* </span>&nbsp</label>
 									<label class="radio-inline col-form-label">
 										<input type="radio" id="1_3{Num}311" name="1_S3_{Num}_3_1" value="1" data-parsley-required="true"> (1) ชาย
 									</label>
@@ -144,7 +144,7 @@
 								</div>
 
 								<div class="row">
-									<label for="32" class="col-form-label">3.2 อายุ</label>
+									<label for="32" class="col-form-label">3.2 อายุ<span class="star"> *</span></label>
 									<div class="col-lg-1">
 										<input type="number" class="form-control" oninput="maxLengthCheck(this)" maxlength="3" id="1_3{Num}32_text" name="1_S3_{Num}_3_2" data-parsley-required="true" />
 									</div>
@@ -153,7 +153,7 @@
 									</div>
 								</div>
 								<div class="row">
-									<label for="33" class="col-form-label">3.3 รายได้</label>
+									<label for="33" class="col-form-label">3.3 รายได้<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 											<input type="radio" id="1_3{Num}331" name="1_S3_{Num}_3_3" value="1" data-parsley-required="true"> (1) ต่ำกว่า 15,000 บาท
@@ -183,7 +183,7 @@
 								</div>
 
 								<div class="row">
-									<label for="34" class="col-form-label">3.4 อาชีพ</label>
+									<label for="34" class="col-form-label">3.4 อาชีพ<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 											<input type="radio" id="1_3{Num}341" name="1_S3_{Num}_3_4" value="1" data-parsley-required="true"> (1) ข้าราชการ พนักงานรัฐวิสาหกิจ
@@ -221,7 +221,7 @@
 								</div>
 
 								<div class="row">
-									<label for="35" class="col-form-label">3.5 การศึกษาระดับสูงสุด</label>
+									<label for="35" class="col-form-label">3.5 การศึกษาระดับสูงสุด<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 											<input type="radio" id="1_3{Num}351" name="1_S3_{Num}_3_5" value="1" data-parsley-required="true"> (1) ไม่เคยเข้ารับการศึกษา
@@ -266,7 +266,7 @@
 								</div>
 
 								<div class="row">
-									<label for="36" class="col-form-label">3.6 ท่านเห็นการปฏิบัติงานของเจ้าหน้าที่ตำรวจ หรือเจ้าหน้าที่ของหน่วยงานด้านยุติธรรม </br>เช่น เจ้าหน้าที่คุมประพฤติ เจ้าหน้าที่ราชทัณฑ์ เจ้าหน้าที่ยุติธรรมจังหวัด เจ้าหน้าที่ยุติธรรมชุมชน เป็นต้น </br>ในการปฏิบัติงานในพื้นที่ชุมชนของท่านมากน้อยเพียงใด</label>
+									<label for="36" class="col-form-label">3.6 ท่านเห็นการปฏิบัติงานของเจ้าหน้าที่ตำรวจ หรือเจ้าหน้าที่ของหน่วยงานด้านยุติธรรม </br>เช่น เจ้าหน้าที่คุมประพฤติ เจ้าหน้าที่ราชทัณฑ์ เจ้าหน้าที่ยุติธรรมจังหวัด เจ้าหน้าที่ยุติธรรมชุมชน เป็นต้น </br>ในการปฏิบัติงานในพื้นที่ชุมชนของท่านมากน้อยเพียงใด<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
 											<input type="radio" id="1_3{Num}361" name="1_S3_{Num}_3_6" value="1" data-parsley-required="true"> (1) สัปดาห์ละครั้ง
@@ -294,7 +294,7 @@
 								</br>
 
 								<div class="row">
-									<label for="41" class="col-form-label">4.1 ขณะเกิดเหตุผู้ประสบเหตุหรือเหยื่อจำหน้าผู้ก่อเหตุหรือรูปพรรณสัณฐานของผู้ก่อเหตุได้หรือไม่</label>
+									<label for="41" class="col-form-label">4.1 ขณะเกิดเหตุผู้ประสบเหตุหรือเหยื่อจำหน้าผู้ก่อเหตุหรือรูปพรรณสัณฐานของผู้ก่อเหตุได้หรือไม่<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="col-form-label col-lg-6">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
@@ -311,7 +311,7 @@
 								</div>
 
 								<div class="row">
-									<label for="42" class="col-form-label">4.2 ความสัมพันธ์ระหว่างเหยื่อกับผู้ก่อเหตุ</label>
+									<label for="42" class="col-form-label">4.2 ความสัมพันธ์ระหว่างเหยื่อกับผู้ก่อเหตุ<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-2" style="margin-left: 10px;">
 											<input type="radio" id="1_4{Num}421" name="1_S4_{Num}_4_2" value="1" data-parsley-required="true"> (1) บิดา/มารดา
@@ -345,7 +345,7 @@
 								</div>
 
 								<div class="row">
-									<label for="43" class="col-form-label">4.3 มีความเสียหายต่อชีวิต ร่างกาย หรือทรัพย์สินหรือไม่</label>
+									<label for="43" class="col-form-label">4.3 มีความเสียหายต่อชีวิต ร่างกาย หรือทรัพย์สินหรือไม่<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-2" style="margin-left: 10px;">
 											<input type="radio" id="1_4{Num}431" name="1_S4_{Num}_4_3" value="1" data-parsley-required="true"> (1) มี
@@ -356,7 +356,7 @@
 
 									</div>
 								</div>
-
+								<label style="margin-left: 20px;" for="43s" class="col-form-label"><span class="star">กรณีเลือกตอบ (1) กรุณาตอบข้อ 4.3.1 - 4.3.3 ให้ครบทุกข้อ</span></label>
 								<div class="row" style="margin-left: 10px;">
 									<label for="431" class="col-form-label">4.3.1 ความเสียหายต่อชีวิต ร่างกาย</label>
 									<div class="col-lg-12">
@@ -502,9 +502,9 @@
 								</div>
 
 								<div class="row">
-									<label for="44" class="col-form-label">4.4 ลักษณะความผิด</label>
+									<label for="44" class="col-form-label">4.4 ลักษณะความผิด<span class="star"> *</span></label>
 								</div>
-
+								<label style="margin-left: 20px;" for="43s" class="col-form-label"><span class="star">ข้อ 4.4.1 - 4.4.6 กรุณาตอบอย่างน้อย 1 ข้อ</span></label>
 								<div class="row" style="margin-left: 10px;">
 									<label for="441" class="col-form-label">4.4.1 ความผิดต่อชีวิตร่างกาย</label>
 									<div class="col-lg-12">
@@ -735,7 +735,7 @@
 								</div>
 
 								<div class="row">
-									<label for="45" class="col-form-label">4.5 พฤติกรรมโดยย่อ (โดยสังเขป)</label>
+									<label for="45" class="col-form-label">4.5 พฤติกรรมโดยย่อ (โดยสังเขป)<span class="star"> *</span></label>
 								</div>
 								<div class="row">
 									<div class="col-lg-12">
@@ -744,7 +744,7 @@
 								</div>
 
 								<div class="row">
-									<label for="46" class="col-form-label">4.6 การติดต่อและบริการจากหน่วยงานในกระบวนการยุติธรรม</label>
+									<label for="46" class="col-form-label">4.6 การติดต่อและบริการจากหน่วยงานในกระบวนการยุติธรรม<span class="star"> *</span></label>
 								</div>
 
 								<div class="row" style="margin-left: 10px;">
