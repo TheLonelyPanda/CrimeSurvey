@@ -12,7 +12,7 @@
 	<meta content="" name="author" />
 
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
-	<link rel="stylesheet" href="<?php echo base_url() . 'css/addMember.css' ?>">
+	<link rel="stylesheet" href="<?php echo base_url() . 'css/addMember.css?ts='.time()?>">
 	<link rel="stylesheet" href="<?php echo base_url() . "js/css/cupertino/jquery-ui-1.9.2.custom.min.css" ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . "semantic/semantic.min.css" ?>">
 	<link rel="stylesheet" href="<?php echo base_url() . 'plugins/jquery-confirm/css/jquery-confirm.css' ?>">
@@ -29,7 +29,7 @@
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-1.12.3.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . "newjs/jquery-ui-1.11.4.custom.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url() . 'plugins/jquery-confirm/js/jquery-confirm.js' ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url() . "js/custom/app.custom.js" ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url() . "js/custom/app.custom.js?ts=".time()?>"></script>
 	<!-- ================== END BASE CSS STYLE ================== -->
 
 	<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
@@ -133,7 +133,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 					<h4 class="modal-title">แก้ไขผู้ใช้งาน</h4>
 				</div>
-				<form class="a form app" id="form-data" method="post">
+				<form class="b form app" data-parsley-validate="true" id="form-data-varidate-b" method="post">
 					<input type="hidden" id="e_modalId" name="e_id">
 					<div class="ui form">
 						<div class="modal-body">
@@ -188,7 +188,7 @@
 					</div>
 					<div class="modal-footer">
 						<a href="index.html" class="btn width-100 btn-default" data-dismiss="modal">ยกเลิก</a>
-						<a class="btn width-100 btn-default btn-form-save" value="Save" data-url="<?= site_url('admin/editUser') ?>">บันทึก</a>
+						<a class="btn width-100 btn-default btn-form-varidate-edit" value="Save" data-url="<?= site_url('admin/editUser') ?>">บันทึก</a>
 					</div>
 
 				</form>
