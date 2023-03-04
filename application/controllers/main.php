@@ -1050,11 +1050,80 @@ class Main extends CI_Controller {
 			$this->saveSurvey5($profileId,$profileCode);
 			$this->saveSurvey6($profileId,$profileCode);
 			
+
+			if($hidden == 'false'){
+				$this->clearProfileCode($profileId);
+			}
 			if($hidden != 'true'){
 				$this->functionhelper->jsonHeader();
 				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/index'),$objProfile);	
 			}
 			
+
+		} 
+    }
+
+	public function clearProfileCode($profileId){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->sql="select *, DATE_FORMAT(Create_DTM, '%Y%m%d') AS formatted_date from survey_profile where profile_id = ".$profileId; 
+			$dateData=$this->datamodel->first_row_data_sql();
+			$dateFormat = $dateData->formatted_date;
+			$provinceCode = $this->queryProviceId($dateData->A4_1);
+
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->condition='where master_id='.$profileId.' or profile_id = '.$profileId; 
+			$listData=$this->datamodel->list_data();
+
+			
+			for ($i=1; $i <= count($listData); $i++) { 
+				$profileIdIn = $listData[$i-1]->profile_id;
+				$obj=new MyDto();
+				$obj->profile_code = $provinceCode.$dateFormat.$profileIdIn;
+				$this->datamodel->table_name='survey_profile';
+				$this->datamodel->pk_name='profile_id';
+				$this->datamodel->pk_value=$profileIdIn;
+				$this->datamodel->update($obj);
+
+				$this->datamodel->table_name='survey_victims';
+				$this->datamodel->pk_name='profile_id';
+				$this->datamodel->pk_value=$profileIdIn;
+				$this->datamodel->update($obj);
+
+				$this->datamodel->table_name='survey_victims_crimes';
+				$this->datamodel->pk_name='profile_id';
+				$this->datamodel->pk_value=$profileIdIn;
+				$this->datamodel->update($obj);
+			}
+
+			$objAll=new MyDto();
+			$objAll->profile_code = $provinceCode.$dateFormat.$profileId;
+			$this->datamodel->table_name='survey_knowledge_laws';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$this->datamodel->update($objAll);
+
+			$this->datamodel->table_name='survey_panic_in_crimes';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$this->datamodel->update($objAll);
+
+			$this->datamodel->table_name='survey_sdgs';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$this->datamodel->update($objAll);
+
+			$this->datamodel->table_name='survey_trust_for_security';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$this->datamodel->update($objAll);
+
+			$this->datamodel->table_name='survey_trust_in_justic';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$this->datamodel->update($objAll);
+
 
 		} 
     }
@@ -1553,8 +1622,12 @@ class Main extends CI_Controller {
 			$this->load->helper('download');
 			$this->load->model("datamodel");
 
-			$this->datamodel->sql="SELECT profile_id, master_id, profile_code, A2, A3, A4, A4_1, A4_2, A4_3, A4_4, A4_5, `1_1_1`, `1_1_2`, `1_1_3`, `1_1_4`, `1_1_4_text`, `1_1_5`, `1_1_5_text`, `1_1_6`, `1_1_7`, `1_1_7_text`, `1_1_7_1`, `1_2`, `1_2_text`, `1_3`, `1_3_text`, create_by, Create_DTM, update_by, Update_DTM
-			FROM survey_profile WHERE status = 'complete' ;";
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, p.create_by, p.Create_DTM, p.update_by, p.Update_DTM 
+			FROM survey_profile p WHERE p.status = 'complete' 
+			UNION 
+			SELECT m.profile_id, m.master_id, m.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, m.`1_1_1` , m.`1_1_2` , m.`1_1_3` , m.`1_1_4` , m.`1_1_4_text` , m.`1_1_5` , m.`1_1_5_text` , m.`1_1_6` , m.`1_1_7` , m.`1_1_7_text` , m.`1_1_7_1` , m.`1_2` , m.`1_2_text` , m.`1_3` , m.`1_3_text` , m.create_by, m.Create_DTM, m.update_by, m.Update_DTM 
+			FROM survey_profile p, survey_profile m WHERE p.status = 'complete' AND m.master_id = p.profile_id 
+			ORDER BY profile_id;";
 			$profileQueryData=$this->datamodel->list_data_sql_export();
 			$profileData = $this->dbutil->csv_from_result($profileQueryData);
 			write_file('./temp/survey_profile.csv', $profileData);
@@ -1601,6 +1674,12 @@ class Main extends CI_Controller {
 			$justicData = $this->dbutil->csv_from_result($justicQueryData);
 			write_file('./temp/survey_trust_in_justic.csv', $justicData);
 
+			$this->datamodel->sql="SELECT *
+			FROM p_user ;";
+			$descriptionQueryData=$this->datamodel->list_data_sql_export();
+			$descriptionData = $this->dbutil->csv_from_result($descriptionQueryData);
+			write_file('./temp/description.csv', $descriptionData);
+
 			// Zip the CSV files
 			$zip_file_path = './temp/csv_All.zip';
 			$this->zip->add_data('survey_profile.csv', $profileData);
@@ -1611,6 +1690,7 @@ class Main extends CI_Controller {
 			$this->zip->add_data('survey_trust_for_security.csv', $securityData);
 			$this->zip->add_data('survey_sdgs.csv', $sdgsData);
 			$this->zip->add_data('survey_trust_in_justic.csv', $justicData);
+			$this->zip->add_data('description.csv', $descriptionData);
 			$this->zip->archive($zip_file_path);
 
 			// Send the zip file as response

@@ -833,7 +833,7 @@
 												<input type="checkbox" id="1_4{Num}462118" name="1_S4_{Num}_4_6_2_18" value="1" disabled> (18) อื่นๆ (ระบุ)
 											</label>
 											<label class="radio-inline col-form-label  col-lg-8">
-												<input type="text" class="form-control" id="1_4{Num}462_text" name="1_S4_{Num}_4_6_2_18_text" style="line-height: 4;" data-parsley-required="true" readonly />
+												<input type="text" class="form-control" id="1_4{Num}462_text" name="1_S4_{Num}_4_6_2_18_text" style="line-height: 4;" data-parsley-required="false" readonly />
 											</label>
 										</label>
 									</div>
