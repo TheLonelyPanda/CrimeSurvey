@@ -812,6 +812,54 @@ class Main extends CI_Controller {
 		}
     }
 
+	public function surveyFrom7($profile_id) {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');
+			$data['u_level']=$this->session->userdata('u_level');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	        
+			$this->load->model("datamodel");	 
+
+			if ($profile_id == '0') {
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$u_now_id=$this->datamodel->first_row_data_sql();
+				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
+			}else{
+				$data['u_now_id']=$profile_id;
+			}
+
+
+			$data['u_check_new_survey_satisfaction']=$this->chkHave($data['u_now_id'],'survey_satisfaction');
+			if($data['u_check_new_survey_satisfaction'] == 0){
+				$objdSurveySatisfaction=new MyDto();
+				$objdSurveySatisfaction->profile_id = $profile_id;
+				$objdSurveySatisfaction->S2_2_1_1  =  '';
+				$objdSurveySatisfaction->S2_2_1_2  =  '';
+				$objdSurveySatisfaction->S2_2_1_3  =  '';
+				$objdSurveySatisfaction->S2_2_1_4  =  '';
+				$objdSurveySatisfaction->S2_2_1_5  =  '';
+				$objdSurveySatisfaction->S2_2_1_6  =  '';
+				$objdSurveySatisfaction->S2_2_1_7  =  '';
+				$objdSurveySatisfaction->S2_2_1_8  =  '';
+				$objdSurveySatisfaction->S2_2_1_9  =  '';
+				$objdSurveySatisfaction->S2_2_1_10  =  '';
+				$objdSurveySatisfaction->S2_2_1_11  =  '';
+				$objdSurveySatisfaction->S2_2_1_12  =  '';
+				$objdSurveySatisfaction->S2_2_1_13  =  '';
+				$objdSurveySatisfaction->S2_2_2  =  '';
+
+				$data['d_surveySatisfaction']=$objdSurveySatisfaction;
+			} else{
+				$this->datamodel->sql="select * from survey_satisfaction where profile_id='$profile_id'";
+				$data['d_surveySatisfaction']=$this->datamodel->first_row_data_sql();
+			}
+			
+			
+	        $this->load->view('/private/surveyFrom7', $data);       
+		}
+    }
+
 	public function survey($profile_id) {
 		$user_name=$this->isLogin();
 		if($user_name != false){
@@ -945,6 +993,7 @@ class Main extends CI_Controller {
 			$this->saveSurvey4($u_now_id,'');
 			$this->saveSurvey5($u_now_id,'');
 			$this->saveSurvey6($u_now_id,'');
+			$this->saveSurvey7($u_now_id,'');
 
 		} 
     }
@@ -1049,6 +1098,7 @@ class Main extends CI_Controller {
 			$this->saveSurvey4($profileId,$profileCode);
 			$this->saveSurvey5($profileId,$profileCode);
 			$this->saveSurvey6($profileId,$profileCode);
+			$this->saveSurvey7($profileId,$profileCode);
 			
 
 			if($hidden == 'false'){
@@ -1120,6 +1170,11 @@ class Main extends CI_Controller {
 			$this->datamodel->update($objAll);
 
 			$this->datamodel->table_name='survey_trust_in_justic';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$this->datamodel->update($objAll);
+
+			$this->datamodel->table_name='survey_satisfaction';
 			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profileId;
 			$this->datamodel->update($objAll);
@@ -1435,9 +1490,9 @@ class Main extends CI_Controller {
 			if($profileCode != ''){
 				$objdSurveyTrustForSecurity->profile_code = $profileCode;
 			}
-			$objdSurveyTrustForSecurity->S2_2_1 = $this->checkEmpty($this->input->post('4_S2_2_1'));
-			$objdSurveyTrustForSecurity->S2_2_2 = $this->checkEmpty($this->input->post('4_S2_2_2'));
-			$objdSurveyTrustForSecurity->S2_2_3 = $this->checkEmpty($this->input->post('4_S2_2_3'));
+			$objdSurveyTrustForSecurity->S2_2_1 = $this->checkEmptyS($this->input->post('4_S2_2_1'));
+			$objdSurveyTrustForSecurity->S2_2_2 = $this->checkEmptyS($this->input->post('4_S2_2_2'));
+			$objdSurveyTrustForSecurity->S2_2_3 = $this->checkEmptyS($this->input->post('4_S2_2_3'));
 	
 			if($this->chkHave($profileId,'survey_trust_for_security') == 0){
 				$this->datamodel->insert($objdSurveyTrustForSecurity);
@@ -1531,6 +1586,42 @@ class Main extends CI_Controller {
 				$this->datamodel->insert($objdSurveyTrustInJustic);
 			}else{
 				$this->datamodel->update($objdSurveyTrustInJustic);
+			}
+
+		} 
+    }
+
+	public function saveSurvey7($profileId,$profileCode){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_satisfaction';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$objdSurveySatisfaction=new MyDto();
+			$objdSurveySatisfaction->profile_id = $profileId;
+			if($profileCode != ''){
+				$objdSurveySatisfaction->profile_code = $profileCode;
+			}
+			$objdSurveySatisfaction->S2_2_1_1 = $this->checkEmptyS($this->input->post('7_S2_2_1_1'));
+			$objdSurveySatisfaction->S2_2_1_2 = $this->checkEmptyS($this->input->post('7_S2_2_1_2'));
+			$objdSurveySatisfaction->S2_2_1_3 = $this->checkEmptyS($this->input->post('7_S2_2_1_3'));
+			$objdSurveySatisfaction->S2_2_1_4 = $this->checkEmptyS($this->input->post('7_S2_2_1_4'));
+			$objdSurveySatisfaction->S2_2_1_5 = $this->checkEmptyS($this->input->post('7_S2_2_1_5'));
+			$objdSurveySatisfaction->S2_2_1_6 = $this->checkEmptyS($this->input->post('7_S2_2_1_6'));
+			$objdSurveySatisfaction->S2_2_1_7 = $this->checkEmptyS($this->input->post('7_S2_2_1_7'));
+			$objdSurveySatisfaction->S2_2_1_8 = $this->checkEmptyS($this->input->post('7_S2_2_1_8'));
+			$objdSurveySatisfaction->S2_2_1_9 = $this->checkEmptyS($this->input->post('7_S2_2_1_9'));
+			$objdSurveySatisfaction->S2_2_1_10 = $this->checkEmptyS($this->input->post('7_S2_2_1_10'));
+			$objdSurveySatisfaction->S2_2_1_11 = $this->checkEmptyS($this->input->post('7_S2_2_1_11'));
+			$objdSurveySatisfaction->S2_2_1_12 = $this->checkEmptyS($this->input->post('7_S2_2_1_12'));
+			$objdSurveySatisfaction->S2_2_1_13 = $this->checkEmptyS($this->input->post('7_S2_2_1_13'));
+			$objdSurveySatisfaction->S2_2_2 = $this->checkEmptyS($this->input->post('7_S2_2_2'));
+	
+			if($this->chkHave($profileId,'survey_satisfaction') == 0){
+				$this->datamodel->insert($objdSurveySatisfaction);
+			}else{
+				$this->datamodel->update($objdSurveySatisfaction);
 			}
 
 		} 
@@ -1674,6 +1765,12 @@ class Main extends CI_Controller {
 			$justicData = $this->dbutil->csv_from_result($justicQueryData);
 			write_file('./temp/survey_trust_in_justic.csv', $justicData);
 
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, ssf.S2_2_1_1, ssf.S2_2_1_2, ssf.S2_2_1_3, ssf.S2_2_1_4, ssf.S2_2_1_5, ssf.S2_2_1_6, ssf.S2_2_1_7, ssf.S2_2_1_8, ssf.S2_2_1_9, ssf.S2_2_1_10, ssf.S2_2_1_11, ssf.S2_2_1_12, ssf.S2_2_1_13, ssf.S2_2_2, ssf.Create_DTM, ssf.Update_DTM
+			FROM survey_profile p , survey_satisfaction ssf where p.profile_id = ssf.profile_id and p.status = 'complete';";
+			$satisfactionQueryData=$this->datamodel->list_data_sql_export();
+			$satisfactionData = $this->dbutil->csv_from_result($satisfactionQueryData);
+			write_file('./temp/survey_satisfaction.csv', $satisfactionData);
+
 			$this->datamodel->sql="SELECT *
 			FROM p_user ;";
 			$descriptionQueryData=$this->datamodel->list_data_sql_export();
@@ -1690,6 +1787,7 @@ class Main extends CI_Controller {
 			$this->zip->add_data('survey_trust_for_security.csv', $securityData);
 			$this->zip->add_data('survey_sdgs.csv', $sdgsData);
 			$this->zip->add_data('survey_trust_in_justic.csv', $justicData);
+			$this->zip->add_data('survey_satisfaction.csv', $satisfactionData);
 			$this->zip->add_data('description.csv', $descriptionData);
 			$this->zip->archive($zip_file_path);
 

@@ -19,7 +19,7 @@
 			<input type="radio" id="4_211" name="4_S2_2_1" value="1"> (1) เชื่อมั่นน้อย
 		</label>
 		<label class="radio-inline col-form-label  col-lg-3">
-			<input type="radio" id="4_210" name="4_S2_2_1" value="99" data-parsley-required="true"> (0) ไม่เชื่อมั่นเลย
+			<input type="radio" id="4_210" name="4_S2_2_1" value="0" data-parsley-required="true"> (0) ไม่เชื่อมั่นเลย
 		</label>
 	</div>
 </div>
@@ -43,7 +43,7 @@
 			<input type="radio" id="4_221" name="4_S2_2_2" value="1"> (1) เชื่อมั่นน้อย
 		</label>
 		<label class="radio-inline col-form-label  col-lg-3">
-			<input type="radio" id="4_220" name="4_S2_2_2" value="99" data-parsley-required="true"> (0) ไม่เชื่อมั่นเลย
+			<input type="radio" id="4_220" name="4_S2_2_2" value="0" data-parsley-required="true"> (0) ไม่เชื่อมั่นเลย
 		</label>
 	</div>
 </div>
@@ -67,7 +67,7 @@
 			<input type="radio" id="4_231" name="4_S2_2_3" value="1" data-parsley-required="true"> (1) เชื่อมั่นน้อย
 		</label>
 		<label class="radio-inline col-form-label  col-lg-3">
-			<input type="radio" id="4_230" name="4_S2_2_3" value="99" data-parsley-required="true"> (0) ไม่เชื่อมั่นเลย
+			<input type="radio" id="4_230" name="4_S2_2_3" value="0" data-parsley-required="true"> (0) ไม่เชื่อมั่นเลย
 		</label>
 	</div>
 </div>

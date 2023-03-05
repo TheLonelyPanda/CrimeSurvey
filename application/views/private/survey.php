@@ -507,18 +507,17 @@
 								</div>
 							</div>
 
-							
 							<div class="panel panel-inverse overflow-hidden">
 								<div class="panel-heading">
 									<h3 class="panel-title">
-										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form2">
+										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form7">
 											<i class="fa fa-plus-circle pull-right"></i>
-											4. แบบสอบถามความรู้เกี่ยวกับกฎหมายและกระบวนการยุติธรรม งานตัวชี้วัด
+											4. แบบสำรวจความพึงพอใจต่อระบบการป้องกันอาชญากรรมและมาตรการในการป้องกันอาชญากรรม
 										</a>
 									</h3>
 								</div>
-								<div id="form2" class="panel-collapse collapse collapseForm">
-									<div data-include="../surveyFrom2"></div>
+								<div id="form7" class="panel-collapse collapse collapseForm">
+									<div data-include="../surveyFrom7"></div>
 								</div>
 							</div>
 
@@ -539,9 +538,24 @@
 							<div class="panel panel-inverse overflow-hidden">
 								<div class="panel-heading">
 									<h3 class="panel-title">
+										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form2">
+											<i class="fa fa-plus-circle pull-right"></i>
+											6. แบบสอบถามความรู้เกี่ยวกับกฎหมายและกระบวนการยุติธรรม งานตัวชี้วัด
+										</a>
+									</h3>
+								</div>
+								<div id="form2" class="panel-collapse collapse collapseForm">
+									<div data-include="../surveyFrom2"></div>
+								</div>
+							</div>
+
+
+							<div class="panel panel-inverse overflow-hidden">
+								<div class="panel-heading">
+									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form6">
 											<i class="fa fa-plus-circle pull-right"></i>
-											6. แบบสอบถามความเชื่อมั่นของประชาชนที่มีต่อกระบวนการยุติธรรม
+											7. แบบสอบถามความเชื่อมั่นของประชาชนที่มีต่อกระบวนการยุติธรรม
 										</a>
 									</h3>
 								</div>
@@ -654,6 +668,7 @@
 			$('#form4').collapse('hide');
 			$('#form5').collapse('hide');
 			$('#form6').collapse('hide');
+			$('#form7').collapse('hide');
 		})
 
 		$('#form2').on('shown.bs.collapse', function() {
@@ -662,6 +677,7 @@
 			$('#form4').collapse('hide');
 			$('#form5').collapse('hide');
 			$('#form6').collapse('hide');
+			$('#form7').collapse('hide');
 		})
 
 		$('#form3').on('shown.bs.collapse', function() {
@@ -670,6 +686,7 @@
 			$('#form4').collapse('hide');
 			$('#form5').collapse('hide');
 			$('#form6').collapse('hide');
+			$('#form7').collapse('hide');
 		})
 
 		$('#form4').on('shown.bs.collapse', function() {
@@ -678,6 +695,7 @@
 			$('#form1').collapse('hide');
 			$('#form5').collapse('hide');
 			$('#form6').collapse('hide');
+			$('#form7').collapse('hide');
 		})
 
 		$('#form5').on('shown.bs.collapse', function() {
@@ -686,6 +704,7 @@
 			$('#form4').collapse('hide');
 			$('#form1').collapse('hide');
 			$('#form6').collapse('hide');
+			$('#form7').collapse('hide');
 		})
 
 		$('#form6').on('shown.bs.collapse', function() {
@@ -694,6 +713,16 @@
 			$('#form4').collapse('hide');
 			$('#form5').collapse('hide');
 			$('#form1').collapse('hide');
+			$('#form7').collapse('hide');
+		})
+
+		$('#form7').on('shown.bs.collapse', function() {
+			$('#form2').collapse('hide');
+			$('#form3').collapse('hide');
+			$('#form4').collapse('hide');
+			$('#form5').collapse('hide');
+			$('#form1').collapse('hide');
+			$('#form6').collapse('hide');
 		})
 
 		$('input[name="1_1_4"]').on('change', function() {
