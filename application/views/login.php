@@ -29,7 +29,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5> 
-           		   		<input type="text" id="username" class="input" name="user_name">
+           		   		<input type="text" id="username" class="input" name="user_name" tabindex="1">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -38,10 +38,10 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" id="password" class="input" name="pwd"> 
+           		    	<input type="password" id="password" class="input" name="pwd" tabindex="2"> 
             	   </div>
             	</div>
-            	<a class="butn btn-form-login" value="Login" data-url="<?= site_url('user/submitLogin')?>">Login</a>
+            	<a class="butn btn-form-login" id="buttonLogin" value="Login" tabindex="3" data-url="<?= site_url('user/submitLogin')?>">Login</a>
             </form>
         </div>
     </div>
@@ -76,6 +76,14 @@
 	inputs.forEach(input => {
 		input.addEventListener("focus", addcl);
 		input.addEventListener("blur", remcl);
+	});
+
+	var buttona = document.getElementById("buttonLogin");
+	buttona.addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			document.getElementById("buttonLogin").click();
+		}
 	});
 </script>
 </html>

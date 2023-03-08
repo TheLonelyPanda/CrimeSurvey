@@ -156,7 +156,7 @@
 									<label for="33" class="col-form-label">3.3 รายได้<span class="star"> *</span></label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-											<input type="radio" id="1_3{Num}331" name="1_S3_{Num}_3_3" value="1" data-parsley-required="true"> (1) ต่ำกว่า 15,000 บาท
+											<input type="radio" id="1_3{Num}331" name="1_S3_{Num}_3_3" value="1" data-parsley-required="true"> (1) ไม่เกิน 15,000 บาท
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
 											<input type="radio" id="1_3{Num}332" name="1_S3_{Num}_3_3" value="2"> (2) 15,001-25,000 บาท
@@ -649,6 +649,9 @@
 										</label>
 										<label class="radio-inline col-form-label  col-lg-6	">
 											<input type="radio" id="1_4{Num}4438" name="1_S4_{Num}_4_4_3" value="8"> (8) สะกดรอย/ลอบติดตาม
+										</label>
+										<label class="radio-inline col-form-label  col-lg-6	">
+											<input type="radio" id="1_4{Num}4439" name="1_S4_{Num}_4_4_3" value="9"> (9) ลักษณะความผิดทางเพศอื่นๆ
 										</label>
 									</div>
 								</div>

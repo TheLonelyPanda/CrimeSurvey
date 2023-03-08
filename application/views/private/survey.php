@@ -84,7 +84,7 @@
 				<form class="a form app form-horizontal" id="form-data-varidate" data-parsley-errors-messages-disabled data-parsley-inputs="input:not([type='checkbox']), textarea, select" method="post">
 					<div class="line" style="float: right;">
 						<label for="2" class="col-form-label nText">แบบสำรวจลำดับที่</label>
-						<div class="col-lg-625">
+						<div class="col-lg-7">
 							<input type="hidden" name="1_text" value="<?= $u_now_id ?>" readonly />
 							<input type="text" class="form-control" name="2_text" value="<?= $u_profile_code ?>" readonly />
 						</div>
@@ -226,7 +226,7 @@
 								<label for="1113" class="col-form-label">1.1.3 รายได้<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-										<input type="radio" id="11131" name="1_1_3" value="1" data-parsley-required="true"> (1) ต่ำกว่า 15,000 บาท
+										<input type="radio" id="11131" name="1_1_3" value="1" data-parsley-required="true"> (1) ไม่เกิน 15,000 บาท
 									</label>
 									<label class="radio-inline col-form-label  col-lg-3">
 										<input type="radio" id="11132" name="1_1_3" value="2"> (2) 15,001-25,000 บาท
@@ -356,7 +356,7 @@
 							</div>
 
 							<div class="row">
-								<label for="1117" class="col-form-label">1.1.7 ในช่วงระยะเวลา 5 ปี ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรม หน่วยงานใด<span class="star"> *</span>
+								<label for="1117" class="col-form-label">1.1.7 ในช่วงระยะเวลา 5 ปี ท่านเคยมาติดต่อหรือรับบริการจากหน่วยงานในกระบวนการยุติธรรม หรือไม่<span class="star"> *</span>
 								<div class="col-lg-12">
 									<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 										<input type="radio" id="11171" name="1_1_7" value="1" data-parsley-required="true"> (1) เคย กรุณาระบุหน่วยงาน 
@@ -540,7 +540,7 @@
 									<h3 class="panel-title">
 										<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#form2">
 											<i class="fa fa-plus-circle pull-right"></i>
-											6. แบบสอบถามความรู้เกี่ยวกับกฎหมายและกระบวนการยุติธรรม งานตัวชี้วัด
+											6. แบบสอบถามความรู้เกี่ยวกับกฎหมายและกระบวนการยุติธรรม
 										</a>
 									</h3>
 								</div>
@@ -787,6 +787,28 @@
 				$('input[name="1_3_text"]').prop('readonly', true);
 				document.getElementById("113_text").setAttribute("data-parsley-required", "false");
 				document.getElementById("113_text").value = "";
+			}
+		});
+
+		$('input[name="1_1_2"]').on('change', function() {
+			document.getElementById("1_212").value = document.getElementById("1112").value;
+		});
+
+		$('input[name="1_1_1"]').on('change', function() {
+			if(document.getElementById("11111").checked){
+				document.getElementById("1_2111").checked = true;
+				document.getElementById("1_2112").checked = false;
+				document.getElementById("1_2113").checked = false;
+			}
+			if(document.getElementById("11112").checked){
+				document.getElementById("1_2112").checked = true;
+				document.getElementById("1_2113").checked = false;
+				document.getElementById("1_2111").checked = false;
+			}
+			if(document.getElementById("11113").checked){
+				document.getElementById("1_2113").checked = true;
+				document.getElementById("1_2112").checked = false;
+				document.getElementById("1_2111").checked = false;
 			}
 		});
 		

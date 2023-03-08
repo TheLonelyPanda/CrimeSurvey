@@ -34,7 +34,7 @@ class Main extends CI_Controller {
 			
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_profile';
-			$this->datamodel->condition=" where master_id is null and status = 'complete'";		
+			$this->datamodel->condition=" where master_id is null and status = 'complete' order by profile_id desc";		
 			$list_data=$this->datamodel->list_data();
 			$data['list_data']=$list_data;
 
@@ -236,7 +236,7 @@ class Main extends CI_Controller {
 			$data['h_back']="admin/addMember"; 
 			
 			
-			$this->saveSurveyCrime($profile_id,$master_id,'back');
+			$this->saveSurveyCrime($profile_id,$master_id,'delete');
 			
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_victims_crimes';
@@ -344,6 +344,7 @@ class Main extends CI_Controller {
 				}
 				$this->functionhelper->jsonHeader(); 
 				$this->functionhelper->jsonResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/survey/'.$master_id));	
+			}else if($back == 'delete'){
 			}else{
 				$this->functionhelper->jsonHeader(); 
 				$this->functionhelper->jsonResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/goVictims/'.$profileId.'/'.$master_id));	
@@ -1775,7 +1776,7 @@ class Main extends CI_Controller {
 			FROM p_user ;";
 			$descriptionQueryData=$this->datamodel->list_data_sql_export();
 			$descriptionData = $this->dbutil->csv_from_result($descriptionQueryData);
-			write_file('./temp/description.csv', $descriptionData);
+			write_file('./temp/users.csv', $descriptionData);
 
 			// Zip the CSV files
 			$zip_file_path = './temp/csv_All.zip';
@@ -1788,7 +1789,7 @@ class Main extends CI_Controller {
 			$this->zip->add_data('survey_sdgs.csv', $sdgsData);
 			$this->zip->add_data('survey_trust_in_justic.csv', $justicData);
 			$this->zip->add_data('survey_satisfaction.csv', $satisfactionData);
-			$this->zip->add_data('description.csv', $descriptionData);
+			$this->zip->add_data('users.csv', $descriptionData);
 			$this->zip->archive($zip_file_path);
 
 			// Send the zip file as response

@@ -85,10 +85,10 @@
 			<div class="body">
 			</br></br>
 			<a href="<?= site_url('main/survey/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> สำรวจข้อมูลใหม่</a>
-			<a href="<?php echo base_url()."main/exportAll/"?>" class="ui green button " style="float:right;"><i class="share square icon small"></i>export ข้อมูลแบบสำรวจ</a>
+			<a href="<?php echo base_url()."main/exportAll/"?>" class="ui green button " style="float:right;"><i class="share square icon small"></i>Export ข้อมูลแบบสำรวจ</a>
 							</br></br>
 				<h1 class="page-header" style="margin-top : 10px;">รายการแบบสำรวจ</h1>
-				<table id="data-table" data-order='[[0,"desc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
+				<table id="data-table" data-order='[[5,"desc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
 					<thead>
 						<tr class="inverse">
 							<th class="text-center">แบบสำรวจลำดับที่</th>
