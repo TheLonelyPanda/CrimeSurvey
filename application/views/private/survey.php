@@ -361,8 +361,38 @@
 									<label class="radio-inline" style="align-self: center; margin-left: 10px;">
 										<input type="radio" id="11171" name="1_1_7" value="1" data-parsley-required="true"> (1) เคย กรุณาระบุหน่วยงาน 
 									</label>
-									<label class="radio-inline col-form-label  col-lg-8">
-										<input type="text" class="form-control"  id="11171_text" name="1_1_7_text" data-parsley-required="true" readonly />
+
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C1" name="1_1_7_C1" value="1" disabled> (1) สำนักงานศาลยุติธรรม
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C2" name="1_1_7_C2" value="1" disabled> (2) สำนักงานอัยการสูงสุด
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C3" name="1_1_7_C3" value="1" disabled> (3) สำนักงานตำรวจแห่งชาติ
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C4" name="1_1_7_C4" value="1" disabled> (4) กรมคุมประพฤติ 
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C5" name="1_1_7_C5" value="1" disabled> (5) กรมพินิจและคุ้มครองเด็กและเยาวชน 
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C6" name="1_1_7_C6" value="1" disabled> (6) กรมราชทัณฑ์
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C7" name="1_1_7_C7" value="1" disabled> (7) กรมคุ้มครองสิทธิและเสรีภาพ
+									</label>
+									<label class="radio-inline col-form-label  col-lg-12" style="margin-left: 10px;">
+										<input type="checkbox" id="11171C8" name="1_1_7_C8" value="1" disabled> (8) กรมสอบสวนคดีพิเศษ
+									</label>
+									<label class="col-form-label col-lg-12" style="margin-left: -5px;">
+										<label class="radio-inline" style="align-self: center;">
+											<input type="checkbox" id="11171C9" name="1_1_7_C9" value="1" disabled> (9) อื่นๆ โปรดระบุ
+										</label>
+										<label class="radio-inline col-form-label  col-lg-8">
+											<input type="text" class="form-control" id="11171C9_text" name="1_1_7_C9_text" style="line-height: 4;" data-parsley-required="false" readonly />
+										</label>
 									</label>
 
 									<label class="radio-inline col-form-label  col-lg-3">
@@ -749,22 +779,60 @@
 
 		$('input[name="1_1_7"]').on('change', function() {
 			if ($(this).val() === '1') {
-				$('input[name="1_1_7_text"]').prop('readonly', false);
 				$('input[name="1_1_7_1"]').prop('disabled', false);
-
-				document.getElementById("11171_text").setAttribute("data-parsley-required", "true");
+				$('input[name="1_1_7_C1"]').prop('disabled', false);
+				$('input[name="1_1_7_C2"]').prop('disabled', false);
+				$('input[name="1_1_7_C3"]').prop('disabled', false);
+				$('input[name="1_1_7_C4"]').prop('disabled', false);
+				$('input[name="1_1_7_C5"]').prop('disabled', false);
+				$('input[name="1_1_7_C6"]').prop('disabled', false);
+				$('input[name="1_1_7_C7"]').prop('disabled', false);
+				$('input[name="1_1_7_C8"]').prop('disabled', false);
+				$('input[name="1_1_7_C9"]').prop('disabled', false);
+				
 				document.getElementById("1117_11").setAttribute("data-parsley-required", "true");
 			} else {
-				$('input[name="1_1_7_text"]').prop('readonly', true);
 				$('input[name="1_1_7_1"]').prop('disabled', true);
 
-				document.getElementById("11171_text").setAttribute("data-parsley-required", "false");
+				$('input[name="1_1_7_C1"]').prop('disabled', true);
+				$('input[name="1_1_7_C1"]').prop('checked', false);
+				$('input[name="1_1_7_C2"]').prop('disabled', true);
+				$('input[name="1_1_7_C2"]').prop('checked', false);
+				$('input[name="1_1_7_C3"]').prop('disabled', true);
+				$('input[name="1_1_7_C3"]').prop('checked', false);
+				$('input[name="1_1_7_C4"]').prop('disabled', true);
+				$('input[name="1_1_7_C4"]').prop('checked', false);
+				$('input[name="1_1_7_C5"]').prop('disabled', true);
+				$('input[name="1_1_7_C5"]').prop('checked', false);
+				$('input[name="1_1_7_C6"]').prop('disabled', true);
+				$('input[name="1_1_7_C6"]').prop('checked', false);
+				$('input[name="1_1_7_C7"]').prop('disabled', true);
+				$('input[name="1_1_7_C7"]').prop('checked', false);
+				$('input[name="1_1_7_C8"]').prop('disabled', true);
+				$('input[name="1_1_7_C8"]').prop('checked', false);
+				$('input[name="1_1_7_C9"]').prop('disabled', true);
+				$('input[name="1_1_7_C9"]').prop('checked', false);
+				document.getElementById("11171C9_text").setAttribute("data-parsley-required", "false");
+				document.getElementById("11171C9_text").value = "";
+				$('input[name="1_1_7_C9_text"]').prop('readonly', true);
+
 				document.getElementById("1117_11").setAttribute("data-parsley-required", "false");
 				$('input[name="1_1_7_1"]').prop('checked', false);
-				document.getElementById("11171_text").value = "";
 
 			}
 		});
+
+
+		$('input[name="1_1_7_C9"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_1_7_C9_text"]').prop('readonly', false);
+					document.getElementById("11171C9_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_1_7_C9_text"]').prop('readonly', true);
+					document.getElementById("11171C9_text").setAttribute("data-parsley-required", "false");
+					document.getElementById("11171C9_text").value = "";
+				}
+			});
 
 
 		$('input[name="1_2"]').on('change', function() {
@@ -953,19 +1021,52 @@
 
 				checkId(document.getElementById("1117<?= $d_surveyProfile->{'1_1_7'} ?>"));
 				if ('<?= $d_surveyProfile->{'1_1_7'} ?>' == '1') {
-					$('input[name="1_1_7_text"]').prop('readonly', false);
+					$('input[name="1_1_7_C1"]').prop('disabled', false);
+					$('input[name="1_1_7_C2"]').prop('disabled', false);
+					$('input[name="1_1_7_C3"]').prop('disabled', false);
+					$('input[name="1_1_7_C4"]').prop('disabled', false);
+					$('input[name="1_1_7_C5"]').prop('disabled', false);
+					$('input[name="1_1_7_C6"]').prop('disabled', false);
+					$('input[name="1_1_7_C7"]').prop('disabled', false);
+					$('input[name="1_1_7_C8"]').prop('disabled', false);
+					$('input[name="1_1_7_C9"]').prop('disabled', false);
 					$('input[name="1_1_7_1"]').prop('disabled', false);
 
-					document.getElementById("11171_text").setAttribute("data-parsley-required", "true");
 					document.getElementById("1117_11").setAttribute("data-parsley-required", "true");
 				} else {
-					$('input[name="1_1_7_text"]').prop('readonly', true);
+					$('input[name="1_1_7_C1"]').prop('disabled', true);
+					$('input[name="1_1_7_C2"]').prop('disabled', true);
+					$('input[name="1_1_7_C3"]').prop('disabled', true);
+					$('input[name="1_1_7_C4"]').prop('disabled', true);
+					$('input[name="1_1_7_C5"]').prop('disabled', true);
+					$('input[name="1_1_7_C6"]').prop('disabled', true);
+					$('input[name="1_1_7_C7"]').prop('disabled', true);
+					$('input[name="1_1_7_C8"]').prop('disabled', true);
+					$('input[name="1_1_7_C9"]').prop('disabled', true);
 					$('input[name="1_1_7_1"]').prop('disabled', true);
 
-					document.getElementById("11171_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1117_11").setAttribute("data-parsley-required", "false");
 				}
-				document.getElementById("11171_text").value = '<?= $d_surveyProfile->{'1_1_7_text'} ?>';
+
+				if ('<?= $d_surveyProfile->{'1_1_7_C9'} ?>' == '1') {
+					$('input[name="1_1_7_C9_text"]').prop('readonly', false);
+					document.getElementById("11171C9_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_1_7_C9_text"]').prop('readonly', true);
+					document.getElementById("11171C9_text").setAttribute("data-parsley-required", "false");
+				}
+
+				checkIdnCheckBOX(document.getElementById('11171C1'), '<?= $d_surveyProfile->{'1_1_7_C1'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C2'), '<?= $d_surveyProfile->{'1_1_7_C2'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C3'), '<?= $d_surveyProfile->{'1_1_7_C3'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C4'), '<?= $d_surveyProfile->{'1_1_7_C4'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C5'), '<?= $d_surveyProfile->{'1_1_7_C5'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C6'), '<?= $d_surveyProfile->{'1_1_7_C6'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C7'), '<?= $d_surveyProfile->{'1_1_7_C7'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C8'), '<?= $d_surveyProfile->{'1_1_7_C8'} ?>');
+				checkIdnCheckBOX(document.getElementById('11171C9'), '<?= $d_surveyProfile->{'1_1_7_C9'} ?>');
+				document.getElementById("11171C9_text").value = '<?= $d_surveyProfile->{'1_1_7_C9_text'} ?>';
+
 				checkId(document.getElementById("1117_1<?= $d_surveyProfile->{'1_1_7_1'} ?>"));
 
 				checkId(document.getElementById("112<?= $d_surveyProfile->{'1_2'} ?>"));
@@ -1002,6 +1103,14 @@
 					id.checked = true;
 				}
 			};
+
+		function checkIdnCheckBOX(id, value) {
+			if (id != null) {
+				if (value == 1) {
+					id.checked = true;
+				}
+			}
+		};
 
 		$('input[type="radio"]').mousedown(function() { 
 			// if it was checked before

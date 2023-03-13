@@ -361,34 +361,34 @@
 									<label for="431" class="col-form-label">4.3.1 ความเสียหายต่อชีวิต ร่างกาย</label>
 									<div class="col-lg-12">
 										<label class="radio-inline col-form-label  col-lg-3" style="margin-left: 10px;">
-											<input type="radio" id="1_4{Num}43_11" name="1_S4_{Num}_4_3_1" value="1" data-parsley-required="true" disabled> (1) ไม่มี
+											<input type="checkbox" id="1_4{Num}43_11" name="1_S4_{Num}_4_3_1_1" value="1" disabled> (1) ไม่มี
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="radio" id="1_4{Num}43_12" name="1_S4_{Num}_4_3_1" value="2" disabled> (2) ไม่ได้รับบาดเจ็บ
+											<input type="checkbox" id="1_4{Num}43_12" name="1_S4_{Num}_4_3_1_2" value="1" disabled> (2) ไม่ได้รับบาดเจ็บ
 										</label>
 										<label class="radio-inline col-form-label  col-lg-4">
-											<input type="radio" id="1_4{Num}43_13" name="1_S4_{Num}_4_3_1" value="3" disabled> (3) ได้รับบาดเจ็บเล็กน้อย ไม่ถึงกับต้องรักษาตัว
+											<input type="checkbox" id="1_4{Num}43_13" name="1_S4_{Num}_4_3_1_3" value="1" disabled> (3) ได้รับบาดเจ็บเล็กน้อย ไม่ถึงกับต้องรักษาตัว
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="radio" id="1_4{Num}43_14" name="1_S4_{Num}_4_3_1" value="4" disabled> (4) รักษาตัวไม่เกิน 7 วัน
+											<input type="checkbox" id="1_4{Num}43_14" name="1_S4_{Num}_4_3_1_4" value="1" disabled> (4) รักษาตัวไม่เกิน 7 วัน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="radio" id="1_4{Num}43_15" name="1_S4_{Num}_4_3_1" value="5" disabled> (5) รักษาตัว 8-20 วัน
+											<input type="checkbox" id="1_4{Num}43_15" name="1_S4_{Num}_4_3_1_5" value="1" disabled> (5) รักษาตัว 8-20 วัน
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="radio" id="1_4{Num}43_16" name="1_S4_{Num}_4_3_1" value="6" disabled> (6) รักษาตัวเกินกว่า 20 วัน (สาหัส)
+											<input type="checkbox" id="1_4{Num}43_16" name="1_S4_{Num}_4_3_1_6" value="1" disabled> (6) รักษาตัวเกินกว่า 20 วัน (สาหัส)
 										</label>
 										<label class="radio-inline col-form-label  col-lg-12">
-											<input type="radio" id="1_4{Num}43_17" name="1_S4_{Num}_4_3_1" value="7" disabled> (7) เสียโฉม พิการ หรือทุพลภาพเป็นการถาวร
+											<input type="checkbox" id="1_4{Num}43_17" name="1_S4_{Num}_4_3_1_7" value="1" disabled> (7) เสียโฉม พิการ หรือทุพลภาพเป็นการถาวร
 										</label>
 										<label class="radio-inline col-form-label  col-lg-12">
-											<input type="radio" id="1_4{Num}43_18" name="1_S4_{Num}_4_3_1" value="8" disabled> (8) ได้รับอันตรายทางจิตใจจนถึงขั้นเข้ารับการบำบัดทางจิต
+											<input type="checkbox" id="1_4{Num}43_18" name="1_S4_{Num}_4_3_1_8" value="1" disabled> (8) ได้รับอันตรายทางจิตใจจนถึงขั้นเข้ารับการบำบัดทางจิต
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="radio" id="1_4{Num}43_19" name="1_S4_{Num}_4_3_1" value="9" disabled> (9) ได้รับอันตรายต่อสุขภาพ เจ็บป่วย
+											<input type="checkbox" id="1_4{Num}43_19" name="1_S4_{Num}_4_3_1_9" value="1" disabled> (9) ได้รับอันตรายต่อสุขภาพ เจ็บป่วย
 										</label>
 										<label class="radio-inline col-form-label  col-lg-3">
-											<input type="radio" id="1_4{Num}43_110" name="1_S4_{Num}_4_3_1" value="10" disabled> (10) เสียชีวิต
+											<input type="checkbox" id="1_4{Num}43_110" name="1_S4_{Num}_4_3_1_10" value="1" disabled> (10) เสียชีวิต
 										</label>
 
 									</div>
@@ -420,10 +420,10 @@
 
 										<label class="col-form-label">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-												<input type="radio" id="1_4{Num}4331" name="1_S4_{Num}_4_3_3" value="1" data-parsley-required="true" disabled> (1) ค่ารักษาพยาบาล จำนวน
+												<input type="checkbox" id="1_4{Num}4331" name="1_S4_{Num}_4_3_3_1" value="1" disabled> (1) ค่ารักษาพยาบาล จำนวน
 											</label>
 											<label class="radio-inline col-form-label  col-lg-5">
-												<input type="number" class="form-control floatNumberField" id="1_4{Num}4331_text" name="1_S4_{Num}_4_3_3_1_text" data-parsley-required="true" readonly />
+												<input type="number" class="form-control floatNumberField" id="1_4{Num}4331_text" name="1_S4_{Num}_4_3_3_1_text" data-parsley-required="false" readonly />
 											</label>
 											<label class="nText" style="align-self: center;">
 												บาท
@@ -431,10 +431,10 @@
 										</label>
 										<label class="col-form-label">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-												<input type="radio" id="1_4{Num}4332" name="1_S4_{Num}_4_3_3" value="2" disabled> (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ)
+												<input type="checkbox" id="1_4{Num}4332" name="1_S4_{Num}_4_3_3_2" value="1" disabled> (2) ต้องหยุดงานหรือขาดรายได้ (จำนวนวันที่หยุดงาน x รายได้เฉลี่ยโดยประมาณ)
 											</label>
 											<label class="radio-inline col-form-label  col-lg-3">
-												<input type="number" class="form-control floatNumberField" id="1_4{Num}4332_text" name="1_S4_{Num}_4_3_3_2_text" data-parsley-required="true" readonly />
+												<input type="number" class="form-control floatNumberField" id="1_4{Num}4332_text" name="1_S4_{Num}_4_3_3_2_text" data-parsley-required="false" readonly />
 											</label>
 											<label class="nText" style="align-self: center;">
 												บาท
@@ -442,10 +442,10 @@
 										</label>
 										<label class="col-form-label">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-												<input type="radio" id="1_4{Num}4333" name="1_S4_{Num}_4_3_3" value="3" disabled> (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ) จำนวน
+												<input type="checkbox" id="1_4{Num}4333" name="1_S4_{Num}_4_3_3_3" value="1" disabled> (3) ค่าใช้จ่ายในการติดต่อหน่วยงานราชการหรือหน่วยงานกระบวนการยุติธรรม (เช่น ตำรวจ อัยการ ศาล ศูนย์ดำรงธรรม ฯลฯ) จำนวน
 											</label>
 											<label class="radio-inline col-form-label  col-lg-2">
-												<input type="number" class="form-control floatNumberField" id="1_4{Num}4333_text" name="1_S4_{Num}_4_3_3_3_text" data-parsley-required="true" readonly />
+												<input type="number" class="form-control floatNumberField" id="1_4{Num}4333_text" name="1_S4_{Num}_4_3_3_3_text" data-parsley-required="false" readonly />
 											</label>
 											<label class="nText" style="align-self: center;">
 												บาท
@@ -453,10 +453,10 @@
 										</label>
 										<label class="col-form-label">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-												<input type="radio" id="1_4{Num}4334" name="1_S4_{Num}_4_3_3" value="4" disabled> (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
+												<input type="checkbox" id="1_4{Num}4334" name="1_S4_{Num}_4_3_3_4" value="1" disabled> (4) ค่าใช้จ่ายในการติดต่อทนายความ จำนวน
 											</label>
 											<label class="radio-inline col-form-label  col-lg-4">
-												<input type="number" class="form-control floatNumberField" id="1_4{Num}4334_text" name="1_S4_{Num}_4_3_3_4_text" data-parsley-required="true" readonly />
+												<input type="number" class="form-control floatNumberField" id="1_4{Num}4334_text" name="1_S4_{Num}_4_3_3_4_text" data-parsley-required="false" readonly />
 											</label>
 											<label class="nText" style="align-self: center;">
 												บาท
@@ -464,10 +464,10 @@
 										</label>
 										<label class="col-form-label">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-												<input type="radio" id="1_4{Num}4335" name="1_S4_{Num}_4_3_3" value="5" disabled> (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
+												<input type="checkbox" id="1_4{Num}4335" name="1_S4_{Num}_4_3_3_5" value="1" disabled> (5) ค่าใช้จ่ายในการติดต่อหน่วยงานเอกชน (เช่น บริษัทประกันภัย NGOs) จำนวน
 											</label>
 											<label class="radio-inline col-form-label  col-lg-3">
-												<input type="number" class="form-control floatNumberField" id="1_4{Num}4335_text" name="1_S4_{Num}_4_3_3_5_text" data-parsley-required="true" readonly />
+												<input type="number" class="form-control floatNumberField" id="1_4{Num}4335_text" name="1_S4_{Num}_4_3_3_5_text" data-parsley-required="false" readonly />
 											</label>
 											<label class="nText" style="align-self: center;">
 												บาท
@@ -475,10 +475,10 @@
 										</label>
 										<label class="col-form-label">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-												<input type="radio" id="1_4{Num}4336" name="1_S4_{Num}_4_3_3" value="6" disabled> (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
+												<input type="checkbox" id="1_4{Num}4336" name="1_S4_{Num}_4_3_3_6" value="1" disabled> (6) ค่าใช้จ่ายในการแสวงหาพยานหลักฐาน จำนวน
 											</label>
 											<label class="radio-inline col-form-label  col-lg-4">
-												<input type="number" class="form-control floatNumberField" id="1_4{Num}4336_text" name="1_S4_{Num}_4_3_3_6_text" data-parsley-required="true" readonly />
+												<input type="number" class="form-control floatNumberField" id="1_4{Num}4336_text" name="1_S4_{Num}_4_3_3_6_text" data-parsley-required="false" readonly />
 											</label>
 											<label class="nText" style="align-self: center;">
 												บาท
@@ -486,17 +486,17 @@
 										</label>
 										<label class="col-form-label">
 											<label class="radio-inline" style="align-self: center; margin-left: 10px;">
-												<input type="radio" id="1_4{Num}4337" name="1_S4_{Num}_4_3_3" value="7" disabled> (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
+												<input type="checkbox" id="1_4{Num}4337" name="1_S4_{Num}_4_3_3_7" value="1" disabled> (7) ค่าใช้จ่ายด้านค่าเดินทาง ที่พักและอื่น ๆในการติดต่อทางคดี จำนวน
 											</label>
 											<label class="radio-inline col-form-label  col-lg-3">
-												<input type="number" class="form-control floatNumberField" id="1_4{Num}4337_text" name="1_S4_{Num}_4_3_3_7_text" data-parsley-required="true" readonly />
+												<input type="number" class="form-control floatNumberField" id="1_4{Num}4337_text" name="1_S4_{Num}_4_3_3_7_text" data-parsley-required="false" readonly />
 											</label>
 											<label class="nText" style="align-self: center;">
 												บาท
 											</label>
 										</label>
 										<label class="radio-inline col-form-label  col-lg-12 " style="margin-left: 10px;">
-											<input type="radio" id="1_4{Num}4338" name="1_S4_{Num}_4_3_3" value="8" disabled> (8) ไม่มีความสูญเสีย/ค่าเสียหายจากมูลค่าที่เกิดขึ้น
+											<input type="checkbox" id="1_4{Num}4338" name="1_S4_{Num}_4_3_3_8" value="1" disabled> (8) ไม่มีความสูญเสีย/ค่าเสียหายจากมูลค่าที่เกิดขึ้น
 										</label>
 									</div>
 								</div>
@@ -1273,18 +1273,50 @@
 
 			$('input[name="1_S4_' + i + '_4_3"]').on('change', function() {
 				if ($(this).val() === '1') {
-					$('input[name="1_S4_' + i + '_4_3_1"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_1"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_2"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_3"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_4"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_5"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_6"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_7"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_8"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_9"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_1_10"]').prop('disabled', false);
 					$('input[name="1_S4_' + i + '_4_3_2"]').prop('disabled', false);
-					$('input[name="1_S4_' + i + '_4_3_3"]').prop('disabled', false);
-					document.getElementById("1_4" + i + "43_11").setAttribute("data-parsley-required", "true");
+					$('input[name="1_S4_' + i + '_4_3_3_1"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_3_2"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_3_3"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_3_4"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_3_5"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_3_6"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_3_7"]').prop('disabled', false);
+					$('input[name="1_S4_' + i + '_4_3_3_8"]').prop('disabled', false);
 					document.getElementById("1_4" + i + "43_21").setAttribute("data-parsley-required", "true");
 					document.getElementById("1_4" + i + "4331").setAttribute("data-parsley-required", "true");
 
 				} else {
 					$('input[name="1_S4_' + i + '_4_3_1"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_1"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_2"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_3"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_4"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_5"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_6"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_7"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_8"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_9"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_1_10"]').prop('checked', false);
+
 					$('input[name="1_S4_' + i + '_4_3_2"]').prop('checked', false);
-					$('input[name="1_S4_' + i + '_4_3_3"]').prop('checked', false);
-					document.getElementById("1_4" + i + "43_11").setAttribute("data-parsley-required", "false");
+					$('input[name="1_S4_' + i + '_4_3_3_1"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_3_2"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_3_3"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_3_4"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_3_5"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_3_6"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_3_7"]').prop('checked', false);
+					$('input[name="1_S4_' + i + '_4_3_3_8"]').prop('checked', false);
 					document.getElementById("1_4" + i + "43_21").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4331").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "432_text").setAttribute("data-parsley-required", "false");
@@ -1304,10 +1336,27 @@
 					document.getElementById("1_4" + i + "4336_text").value = "";
 					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4337_text").value = "";
-					$('input[name="1_S4_' + i + '_4_3_1"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_1"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_2"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_3"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_4"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_5"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_6"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_7"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_8"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_9"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_1_10"]').prop('disabled', true);
+
 					$('input[name="1_S4_' + i + '_4_3_2"]').prop('disabled', true);
 					$('input[name="1_S4_' + i + '_4_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_1"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_2"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_3"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_4"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_5"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_6"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_7"]').prop('disabled', true);
+					$('input[name="1_S4_' + i + '_4_3_3_8"]').prop('disabled', true);
 					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
 					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
 					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
@@ -1329,174 +1378,78 @@
 				}
 			});
 
-			$('input[name="1_S4_' + i + '_4_3_3"]').on('change', function() {
-				if ($(this).val() === '1') {
+			$('input[name="1_S4_' + i + '_4_3_3_1"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
 					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4332_text").value = "";
-					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4333_text").value = "";
-					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4334_text").value = "";
-					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4335_text").value = "";
-					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4336_text").value = "";
-					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4337_text").value = "";
-				} else if ($(this).val() === '2') {
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
-					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4331_text").value = "";
-					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4333_text").value = "";
-					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4334_text").value = "";
-					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4335_text").value = "";
-					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4336_text").value = "";
-					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4337_text").value = "";
-				} else if ($(this).val() === '3') {
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
-					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4331_text").value = "";
-					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4332_text").value = "";
-					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4334_text").value = "";
-					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4335_text").value = "";
-					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4336_text").value = "";
-					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4337_text").value = "";
-				} else if ($(this).val() === '4') {
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
-					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4331_text").value = "";
-					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4332_text").value = "";
-					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4333_text").value = "";
-					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4335_text").value = "";
-					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4336_text").value = "";
-					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4337_text").value = "";
-				} else if ($(this).val() === '5') {
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
-					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4331_text").value = "";
-					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4332_text").value = "";
-					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4333_text").value = "";
-					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4334_text").value = "";
-					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4336_text").value = "";
-					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4337_text").value = "";
-				} else if ($(this).val() === '6') {
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
-					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4331_text").value = "";
-					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4332_text").value = "";
-					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4333_text").value = "";
-					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4334_text").value = "";
-					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4335_text").value = "";
-					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4337_text").value = "";
-				} else if ($(this).val() === '7') {
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
-					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4331_text").value = "";
-					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4332_text").value = "";
-					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4333_text").value = "";
-					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4334_text").value = "";
-					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4335_text").value = "";
-					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + i + "4336_text").value = "";
-					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "true");
 				} else {
 					$('input[name="1_S4_' + i + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4331_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4331_text").value = "";
+				}
+			});
+
+			$('input[name="1_S4_' + i + '_4_3_3_2"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', false);
+					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + i + '_4_3_3_2_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4332_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4332_text").value = "";
+				}
+			});
+
+			$('input[name="1_S4_' + i + '_4_3_3_3"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', false);
+					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + i + '_4_3_3_3_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4333_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4333_text").value = "";
+				}
+			});
+			
+			$('input[name="1_S4_' + i + '_4_3_3_4"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', false);
+					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + i + '_4_3_3_4_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4334_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4334_text").value = "";
+				}
+			});
+			
+			$('input[name="1_S4_' + i + '_4_3_3_5"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', false);
+					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + i + '_4_3_3_5_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4335_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4335_text").value = "";
+				}
+			});
+			
+			$('input[name="1_S4_' + i + '_4_3_3_6"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', false);
+					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + i + '_4_3_3_6_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4336_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4336_text").value = "";
+				}
+			});
+			
+			$('input[name="1_S4_' + i + '_4_3_3_7"]').on('change', function() {
+				if ($(this).prop("checked") == true) {
+					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', false);
+					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + i + '_4_3_3_7_text"]').prop('readonly', true);
 					document.getElementById("1_4" + i + "4337_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + i + "4337_text").value = "";
 				}
@@ -1796,11 +1749,35 @@
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '42<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_2 ?>'));
 				document.getElementById('1_4' + '<?= $index ?>' + '42_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_2_text ?>';
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '43<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3 ?>'));
-				checkId(document.getElementById('1_4' + '<?= $index ?>' + '43_1<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1 ?>'));
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_11'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_1 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_12'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_2 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_13'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_3 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_14'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_4 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_15'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_5 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_16'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_6 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_17'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_7 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_18'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_8 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_19'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_9 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '43_110'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_1_10 ?>');
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '43_2<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_2 ?>'));
 				document.getElementById('1_4' + '<?= $index ?>' + '432_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_2_text ?>';
-				checkId(document.getElementById('1_4' + '<?= $index ?>' + '433<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>'));
-				checkIdbox(document.getElementById('1_4' + '<?= $index ?>' + '433<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>_text'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_text ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4331'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_1 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4332'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_2 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4333'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_3 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4334'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_4 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4335'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_5 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4336'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_6 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4337'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_7 ?>');
+				checkIdnCheckBOX(document.getElementById('1_4' + '<?= $index ?>' + '4338'), '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_8 ?>');
+
+				document.getElementById('1_4' + '<?= $index ?>' + '4331_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_1_text ?>';
+				document.getElementById('1_4' + '<?= $index ?>' + '4332_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_2_text ?>';
+				document.getElementById('1_4' + '<?= $index ?>' + '4333_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_3_text ?>';
+				document.getElementById('1_4' + '<?= $index ?>' + '4334_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_4_text ?>';
+				document.getElementById('1_4' + '<?= $index ?>' + '4335_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_5_text ?>';
+				document.getElementById('1_4' + '<?= $index ?>' + '4336_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_6_text ?>';
+				document.getElementById('1_4' + '<?= $index ?>' + '4337_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_7_text ?>';
+
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '441<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_4_1 ?>'));
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '442<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_4_2 ?>'));
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '443<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_4_3 ?>'));
@@ -1854,15 +1831,29 @@
 
 
 				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3 ?>' == '1') {
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_1"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_2"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_3"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_4"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_5"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_6"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_7"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_8"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_9"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_10"]').prop('disabled', false);
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2"]').prop('disabled', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7"]').prop('disabled', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_8"]').prop('disabled', false);
 
-					document.getElementById("1_4" + "<?= $index ?>" + "43_11").setAttribute("data-parsley-required", "true");
 					document.getElementById("1_4" + "<?= $index ?>" + "43_21").setAttribute("data-parsley-required", "true");
 					document.getElementById("1_4" + "<?= $index ?>" + "4331").setAttribute("data-parsley-required", "true");
 				} else {
-					document.getElementById("1_4" + "<?= $index ?>" + "43_11").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + "<?= $index ?>" + "43_21").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + "<?= $index ?>" + "4331").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + "<?= $index ?>" + "432_text").setAttribute("data-parsley-required", "false");
@@ -1873,10 +1864,42 @@
 					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
 					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1"]').prop('disabled', true);
+
+
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_1"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_2"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_3"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_4"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_5"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_6"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_7"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_8"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_9"]').prop('checked', false);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_10"]').prop('checked', false);
+
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_1"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_2"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_3"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_4"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_5"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_6"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_7"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_8"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_9"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_1_10"]').prop('disabled', true);
+
+
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2"]').prop('disabled', true);
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7"]').prop('disabled', true);
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_8"]').prop('disabled', true);
+					
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
@@ -1894,129 +1917,62 @@
 					document.getElementById("1_4" + "<?= $index ?>" + "432_text").setAttribute("data-parsley-required", "false");
 				}
 
-
-
-				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>' == '1') {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
+				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_1 ?>' == '1') {
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
-				} else if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>' == '2') {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
-				} else if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>' == '3') {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
-				} else if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>' == '4') {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
-				} else if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>' == '5') {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
-				} else if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>' == '6') {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "true");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
-				} else if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3 ?>' == '7') {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "true");
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', false);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "true");
 				} else {
-					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
-					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
 					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_1_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
-					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4331_text").setAttribute("data-parsley-required", "false");
 				}
+
+				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_2 ?>' == '1') {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', false);
+					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_2_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4332_text").setAttribute("data-parsley-required", "false");
+				}
+
+				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_3 ?>' == '1') {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', false);
+					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_3_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4333_text").setAttribute("data-parsley-required", "false");
+				}
+
+				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_4 ?>' == '1') {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', false);
+					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_4_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4334_text").setAttribute("data-parsley-required", "false");
+				}
+
+				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_5 ?>' == '1') {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', false);
+					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_5_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4335_text").setAttribute("data-parsley-required", "false");
+				}
+
+				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_6 ?>' == '1') {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', false);
+					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_6_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4336_text").setAttribute("data-parsley-required", "false");
+				}
+
+				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_3_3_7 ?>' == '1') {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', false);
+					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "true");
+				} else {
+					$('input[name="1_S4_' + '<?= $index ?>' + '_4_3_3_7_text"]').prop('readonly', true);
+					document.getElementById("1_4" + "<?= $index ?>" + "4337_text").setAttribute("data-parsley-required", "false");
+				}
+			
 
 				if ('<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_6 ?>' == '1') {
 					document.getElementById("1_4" + "<?= $index ?>" + "46_111").setAttribute("data-parsley-required", "true");

@@ -173,11 +173,33 @@ class Main extends CI_Controller {
 				$objdSurveyVictimsCrimes->S4_4_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_2_text  =  '';
 				$objdSurveyVictimsCrimes->S4_4_3  =  '';
-				$objdSurveyVictimsCrimes->S4_4_3_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_4  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_6  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_7  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_8  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_9  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_10  =  '';
 				$objdSurveyVictimsCrimes->S4_4_3_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_3_2_text  =  '';
-				$objdSurveyVictimsCrimes->S4_4_3_3  =  '';
-				$objdSurveyVictimsCrimes->S4_4_3_3_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_4  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_6  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_7  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_8  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_1_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_2_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_3_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_4_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_5_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_6_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_7_text  =  '';
 				$objdSurveyVictimsCrimes->S4_4_4_1  =  '';
 				$objdSurveyVictimsCrimes->S4_4_4_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_4_3  =  '';
@@ -244,6 +266,24 @@ class Main extends CI_Controller {
 			$this->datamodel->pk_value=$running_num;	
 			$this->datamodel->delete();
 
+			if($master_id != 'master'){
+				$this->datamodel->table_name='survey_profile';
+				$this->datamodel->pk_name='profile_id';
+				$this->datamodel->pk_value=$profile_id;
+				
+				$objProfile=new MyDto();
+				$objProfile->{'1_1_1'} = '';
+				$objProfile->{'1_1_2'} = '';
+				$objProfile->{'1_1_3'} = '';
+				$objProfile->{'1_1_4'} = '';
+				$objProfile->{'1_1_4_text'} = '';
+				$objProfile->{'1_1_5'} = '';
+				$objProfile->{'1_1_5_text'} = '';
+				$objProfile->{'1_1_6'} = '';
+				$objProfile->update_by = $this->session->userdata('u_am_id');
+				$this->datamodel->update($objProfile);
+			}
+
 			$this->functionhelper->jsonHeader();
 			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/goVictims/'.$profile_id.'/'.$master_id));      
 		}
@@ -268,11 +308,33 @@ class Main extends CI_Controller {
 			$objdSurveyVictimsCrimes->S4_4_2  =  '';
 			$objdSurveyVictimsCrimes->S4_4_2_text  =  '';
 			$objdSurveyVictimsCrimes->S4_4_3  =  '';
-			$objdSurveyVictimsCrimes->S4_4_3_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_2  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_3  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_4  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_5  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_6  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_7  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_8  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_9  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_1_10  =  '';
 			$objdSurveyVictimsCrimes->S4_4_3_2  =  '';
 			$objdSurveyVictimsCrimes->S4_4_3_2_text  =  '';
-			$objdSurveyVictimsCrimes->S4_4_3_3  =  '';
-			$objdSurveyVictimsCrimes->S4_4_3_3_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_1  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_2  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_3  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_4  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_5  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_6  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_7  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_8  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_1_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_2_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_3_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_4_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_5_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_6_text  =  '';
+			$objdSurveyVictimsCrimes->S4_4_3_3_7_text  =  '';
 			$objdSurveyVictimsCrimes->S4_4_4_1  =  '';
 			$objdSurveyVictimsCrimes->S4_4_4_2  =  '';
 			$objdSurveyVictimsCrimes->S4_4_4_3  =  '';
@@ -379,11 +441,33 @@ class Main extends CI_Controller {
 			$objdSurveyVictimsCrimes->S4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2'));
 			$objdSurveyVictimsCrimes->S4_4_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2_text'));
 			$objdSurveyVictimsCrimes->S4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3'));
-			$objdSurveyVictimsCrimes->S4_4_3_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_2'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_4'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_5'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_6'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_7'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_8 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_8'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_9 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_9'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_10 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_10'));
 			$objdSurveyVictimsCrimes->S4_4_3_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2'));
 			$objdSurveyVictimsCrimes->S4_4_3_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2_text'));
-			$objdSurveyVictimsCrimes->S4_4_3_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3'));
-			$objdSurveyVictimsCrimes->S4_4_3_3_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_'.$this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3')).'_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_2'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_4'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_5'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_6'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_7'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_8 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_8'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_1_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_1_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_2_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_3_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_3_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_4_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_4_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_5_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_5_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_6_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_6_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_7_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_7_text'));
 			$objdSurveyVictimsCrimes->S4_4_4_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_1'));
 			$objdSurveyVictimsCrimes->S4_4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_2'));
 			$objdSurveyVictimsCrimes->S4_4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_3'));
@@ -512,11 +596,33 @@ class Main extends CI_Controller {
 				$objdSurveyVictimsCrimes->S4_4_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_2_text  =  '';
 				$objdSurveyVictimsCrimes->S4_4_3  =  '';
-				$objdSurveyVictimsCrimes->S4_4_3_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_4  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_6  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_7  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_8  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_9  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_1_10  =  '';
 				$objdSurveyVictimsCrimes->S4_4_3_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_3_2_text  =  '';
-				$objdSurveyVictimsCrimes->S4_4_3_3  =  '';
-				$objdSurveyVictimsCrimes->S4_4_3_3_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_1  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_2  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_3  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_4  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_5  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_6  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_7  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_8  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_1_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_2_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_3_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_4_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_5_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_6_text  =  '';
+				$objdSurveyVictimsCrimes->S4_4_3_3_7_text  =  '';
 				$objdSurveyVictimsCrimes->S4_4_4_1  =  '';
 				$objdSurveyVictimsCrimes->S4_4_4_2  =  '';
 				$objdSurveyVictimsCrimes->S4_4_4_3  =  '';
@@ -915,7 +1021,16 @@ class Main extends CI_Controller {
 				$objSurveyProfile->{'1_1_5_text'} = '';
 				$objSurveyProfile->{'1_1_6'} = '';
 				$objSurveyProfile->{'1_1_7'} = '';
-				$objSurveyProfile->{'1_1_7_text'} = '';
+				$objSurveyProfile->{'1_1_7_C1'} = '';
+				$objSurveyProfile->{'1_1_7_C2'} = '';
+				$objSurveyProfile->{'1_1_7_C3'} = '';
+				$objSurveyProfile->{'1_1_7_C4'} = '';
+				$objSurveyProfile->{'1_1_7_C5'} = '';
+				$objSurveyProfile->{'1_1_7_C6'} = '';
+				$objSurveyProfile->{'1_1_7_C7'} = '';
+				$objSurveyProfile->{'1_1_7_C8'} = '';
+				$objSurveyProfile->{'1_1_7_C9'} = '';
+				$objSurveyProfile->{'1_1_7_C9_text'} = '';
 				$objSurveyProfile->{'1_1_7_1'} = '';
 				$objSurveyProfile->{'1_2'} = '';
 				$objSurveyProfile->{'1_2_text'} = '';
@@ -971,7 +1086,16 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
 			$objProfile->{'1_1_7'} = $this->checkEmpty($this->input->post('1_1_7'));
-			$objProfile->{'1_1_7_text'} = $this->checkEmpty($this->input->post('1_1_7_text'));
+			$objProfile->{'1_1_7_C1'} = $this->checkEmpty($this->input->post('1_1_7_C1'));
+			$objProfile->{'1_1_7_C2'} = $this->checkEmpty($this->input->post('1_1_7_C2'));
+			$objProfile->{'1_1_7_C3'} = $this->checkEmpty($this->input->post('1_1_7_C3'));
+			$objProfile->{'1_1_7_C4'} = $this->checkEmpty($this->input->post('1_1_7_C4'));
+			$objProfile->{'1_1_7_C5'} = $this->checkEmpty($this->input->post('1_1_7_C5'));
+			$objProfile->{'1_1_7_C6'} = $this->checkEmpty($this->input->post('1_1_7_C6'));
+			$objProfile->{'1_1_7_C7'} = $this->checkEmpty($this->input->post('1_1_7_C7'));
+			$objProfile->{'1_1_7_C8'} = $this->checkEmpty($this->input->post('1_1_7_C8'));
+			$objProfile->{'1_1_7_C9'} = $this->checkEmpty($this->input->post('1_1_7_C9'));
+			$objProfile->{'1_1_7_C9_text'} = $this->checkEmpty($this->input->post('1_1_7_C9_text'));
 			$objProfile->{'1_1_7_1'} = $this->checkEmpty($this->input->post('1_1_7_1'));
 			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
 			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
@@ -1065,7 +1189,16 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
 			$objProfile->{'1_1_7'} = $this->checkEmpty($this->input->post('1_1_7'));
-			$objProfile->{'1_1_7_text'} = $this->checkEmpty($this->input->post('1_1_7_text'));
+			$objProfile->{'1_1_7_C1'} = $this->checkEmpty($this->input->post('1_1_7_C1'));
+			$objProfile->{'1_1_7_C2'} = $this->checkEmpty($this->input->post('1_1_7_C2'));
+			$objProfile->{'1_1_7_C3'} = $this->checkEmpty($this->input->post('1_1_7_C3'));
+			$objProfile->{'1_1_7_C4'} = $this->checkEmpty($this->input->post('1_1_7_C4'));
+			$objProfile->{'1_1_7_C5'} = $this->checkEmpty($this->input->post('1_1_7_C5'));
+			$objProfile->{'1_1_7_C6'} = $this->checkEmpty($this->input->post('1_1_7_C6'));
+			$objProfile->{'1_1_7_C7'} = $this->checkEmpty($this->input->post('1_1_7_C7'));
+			$objProfile->{'1_1_7_C8'} = $this->checkEmpty($this->input->post('1_1_7_C8'));
+			$objProfile->{'1_1_7_C9'} = $this->checkEmpty($this->input->post('1_1_7_C9'));
+			$objProfile->{'1_1_7_C9_text'} = $this->checkEmpty($this->input->post('1_1_7_C9_text'));
 			$objProfile->{'1_1_7_1'} = $this->checkEmpty($this->input->post('1_1_7_1'));
 			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
 			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
@@ -1355,11 +1488,33 @@ class Main extends CI_Controller {
 			$objdSurveyVictimsCrimes->S4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2'));
 			$objdSurveyVictimsCrimes->S4_4_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_2_text'));
 			$objdSurveyVictimsCrimes->S4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3'));
-			$objdSurveyVictimsCrimes->S4_4_3_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_2'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_4'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_5'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_6'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_7'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_8 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_8'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_9 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_9'));
+			$objdSurveyVictimsCrimes->S4_4_3_1_10 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_1_10'));
 			$objdSurveyVictimsCrimes->S4_4_3_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2'));
 			$objdSurveyVictimsCrimes->S4_4_3_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_2_text'));
-			$objdSurveyVictimsCrimes->S4_4_3_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3'));
-			$objdSurveyVictimsCrimes->S4_4_3_3_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_'.$this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3')).'_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_1'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_2'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_3'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_4 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_4'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_5 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_5'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_6 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_6'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_7 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_7'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_8 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_8'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_1_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_1_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_2_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_2_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_3_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_3_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_4_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_4_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_5_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_5_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_6_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_6_text'));
+			$objdSurveyVictimsCrimes->S4_4_3_3_7_text = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_3_3_7_text'));
 			$objdSurveyVictimsCrimes->S4_4_4_1 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_1'));
 			$objdSurveyVictimsCrimes->S4_4_4_2 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_2'));
 			$objdSurveyVictimsCrimes->S4_4_4_3 = $this->checkEmpty($this->input->post('1_S4_'.$loop.'_4_4_3'));
@@ -1714,10 +1869,10 @@ class Main extends CI_Controller {
 			$this->load->helper('download');
 			$this->load->model("datamodel");
 
-			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, p.create_by, p.Create_DTM, p.update_by, p.Update_DTM 
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_C1`, p.`1_1_7_C2`, p.`1_1_7_C3`, p.`1_1_7_C4`, p.`1_1_7_C5`, p.`1_1_7_C6`, p.`1_1_7_C7`, p.`1_1_7_C8`, p.`1_1_7_C9`, p.`1_1_7_C9_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, p.create_by, p.Create_DTM, p.update_by, p.Update_DTM 
 			FROM survey_profile p WHERE p.status = 'complete' 
 			UNION 
-			SELECT m.profile_id, m.master_id, m.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, m.`1_1_1` , m.`1_1_2` , m.`1_1_3` , m.`1_1_4` , m.`1_1_4_text` , m.`1_1_5` , m.`1_1_5_text` , m.`1_1_6` , m.`1_1_7` , m.`1_1_7_text` , m.`1_1_7_1` , m.`1_2` , m.`1_2_text` , m.`1_3` , m.`1_3_text` , m.create_by, m.Create_DTM, m.update_by, m.Update_DTM 
+			SELECT m.profile_id, m.master_id, m.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, m.`1_1_1` , m.`1_1_2` , m.`1_1_3` , m.`1_1_4` , m.`1_1_4_text` , m.`1_1_5` , m.`1_1_5_text` , m.`1_1_6` , m.`1_1_7` , m.`1_1_7_C1`, m.`1_1_7_C2`, m.`1_1_7_C3`, m.`1_1_7_C4`, m.`1_1_7_C5`, m.`1_1_7_C6`, m.`1_1_7_C7`, m.`1_1_7_C8`, m.`1_1_7_C9`, m.`1_1_7_C9_text`, m.`1_1_7_1` , m.`1_2` , m.`1_2_text` , m.`1_3` , m.`1_3_text` , m.create_by, m.Create_DTM, m.update_by, m.Update_DTM 
 			FROM survey_profile p, survey_profile m WHERE p.status = 'complete' AND m.master_id = p.profile_id 
 			ORDER BY profile_id;";
 			$profileQueryData=$this->datamodel->list_data_sql_export();
@@ -1730,43 +1885,43 @@ class Main extends CI_Controller {
 			$victimsData = $this->dbutil->csv_from_result($victimsQueryData);
 			write_file('./temp/survey_victims.csv', $victimsData);
 
-			$this->datamodel->sql="SELECT svc.profile_id, svc.master_id, svc.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, svc.Create_DTM, svc.Update_DTM, svc.S4_4_1, svc.S4_4_1_text, svc.S4_4_2, svc.S4_4_2_text, svc.S4_4_3, svc.S4_4_3_1, svc.S4_4_3_2, svc.S4_4_3_2_text, svc.S4_4_3_3, svc.S4_4_3_3_text, svc.S4_4_4_1, svc.S4_4_4_2, svc.S4_4_4_3, svc.S4_4_4_4, svc.S4_4_4_5, svc.S4_4_4_6, svc.S4_4_5, svc.S4_4_6, svc.S4_4_6_1, svc.S4_4_6_1_text, svc.S4_4_6_2_1, svc.S4_4_6_2_2, svc.S4_4_6_2_3, svc.S4_4_6_2_4, svc.S4_4_6_2_5, svc.S4_4_6_2_6, svc.S4_4_6_2_7, svc.S4_4_6_2_8, svc.S4_4_6_2_9, svc.S4_4_6_2_10, svc.S4_4_6_2_11, svc.S4_4_6_2_12, svc.S4_4_6_2_13, svc.S4_4_6_2_14, svc.S4_4_6_2_15, svc.S4_4_6_2_16, svc.S4_4_6_2_17, svc.S4_4_6_2_18, svc.S4_4_6_2_18_text, svc.S4_4_7, svc.S4_4_7_text
+			$this->datamodel->sql="SELECT svc.profile_id, svc.master_id, svc.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, svc.Create_DTM, svc.Update_DTM, svc.S4_4_1, svc.S4_4_1_text, svc.S4_4_2, svc.S4_4_2_text, svc.S4_4_3, svc.S4_4_3_1_1, svc.S4_4_3_1_2, svc.S4_4_3_1_3, svc.S4_4_3_1_4, svc.S4_4_3_1_5, svc.S4_4_3_1_6, svc.S4_4_3_1_7, svc.S4_4_3_1_8, svc.S4_4_3_1_9, svc.S4_4_3_1_10, svc.S4_4_3_2, svc.S4_4_3_2_text, svc.S4_4_3_3_1, svc.S4_4_3_3_2, svc.S4_4_3_3_3, svc.S4_4_3_3_4, svc.S4_4_3_3_5, svc.S4_4_3_3_6, svc.S4_4_3_3_7, svc.S4_4_3_3_8, svc.S4_4_3_3_1_text, svc.S4_4_3_3_2_text, svc.S4_4_3_3_3_text, svc.S4_4_3_3_4_text, svc.S4_4_3_3_5_text, svc.S4_4_3_3_6_text, svc.S4_4_3_3_7_text, svc.S4_4_4_1, svc.S4_4_4_2, svc.S4_4_4_3, svc.S4_4_4_4, svc.S4_4_4_5, svc.S4_4_4_6, svc.S4_4_5, svc.S4_4_6, svc.S4_4_6_1, svc.S4_4_6_1_text, svc.S4_4_6_2_1, svc.S4_4_6_2_2, svc.S4_4_6_2_3, svc.S4_4_6_2_4, svc.S4_4_6_2_5, svc.S4_4_6_2_6, svc.S4_4_6_2_7, svc.S4_4_6_2_8, svc.S4_4_6_2_9, svc.S4_4_6_2_10, svc.S4_4_6_2_11, svc.S4_4_6_2_12, svc.S4_4_6_2_13, svc.S4_4_6_2_14, svc.S4_4_6_2_15, svc.S4_4_6_2_16, svc.S4_4_6_2_17, svc.S4_4_6_2_18, svc.S4_4_6_2_18_text, svc.S4_4_7, svc.S4_4_7_text
 			FROM survey_victims_crimes svc , survey_profile p where (svc.profile_id = p.profile_id Or svc.master_id = p.profile_id) and svc.S4_4_1 <> '' and p.status = 'complete';";
 			$crimesQueryData=$this->datamodel->list_data_sql_export();
 			$crimesData = $this->dbutil->csv_from_result($crimesQueryData);
 			write_file('./temp/survey_victims_crimes.csv', $crimesData);
 
-			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, kl.S2_1_1, kl.S2_1_2, kl.S2_1_3, kl.S2_1_4, kl.S2_1_5, kl.S2_1_6, kl.S2_1_7, kl.S2_1_8, kl.S2_1_9, kl.S2_1_10, kl.S2_1_11, kl.S2_1_12, kl.S2_2_1, kl.S2_2_2, kl.S2_2_3, kl.S2_2_4, kl.S2_2_5, kl.S2_2_6, kl.S2_2_7, kl.S2_2_8, kl.S2_3_1, kl.S2_3_2, kl.S2_3_3, kl.S2_3_4, kl.S2_3_5, kl.S2_3_6, kl.S2_3_7, kl.S2_3_8, kl.S2_3_9, kl.S2_4, kl.S2_5, kl.Create_DTM, kl.Update_DTM
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_C1`, p.`1_1_7_C2`, p.`1_1_7_C3`, p.`1_1_7_C4`, p.`1_1_7_C5`, p.`1_1_7_C6`, p.`1_1_7_C7`, p.`1_1_7_C8`, p.`1_1_7_C9`, p.`1_1_7_C9_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, kl.S2_1_1, kl.S2_1_2, kl.S2_1_3, kl.S2_1_4, kl.S2_1_5, kl.S2_1_6, kl.S2_1_7, kl.S2_1_8, kl.S2_1_9, kl.S2_1_10, kl.S2_1_11, kl.S2_1_12, kl.S2_2_1, kl.S2_2_2, kl.S2_2_3, kl.S2_2_4, kl.S2_2_5, kl.S2_2_6, kl.S2_2_7, kl.S2_2_8, kl.S2_3_1, kl.S2_3_2, kl.S2_3_3, kl.S2_3_4, kl.S2_3_5, kl.S2_3_6, kl.S2_3_7, kl.S2_3_8, kl.S2_3_9, kl.S2_4, kl.S2_5, kl.Create_DTM, kl.Update_DTM
 			FROM survey_profile p , survey_knowledge_laws kl where p.profile_id = kl.profile_id and p.status = 'complete';";
 			$lawsQueryData=$this->datamodel->list_data_sql_export();
 			$lawsData = $this->dbutil->csv_from_result($lawsQueryData);
 			write_file('./temp/survey_knowledge_laws.csv', $lawsData);
 
-			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, pic.S2_2_1_1, pic.S2_2_1_2, pic.S2_2_1_3, pic.S2_2_1_4, pic.Create_DTM, pic.Update_DTM
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_C1`, p.`1_1_7_C2`, p.`1_1_7_C3`, p.`1_1_7_C4`, p.`1_1_7_C5`, p.`1_1_7_C6`, p.`1_1_7_C7`, p.`1_1_7_C8`, p.`1_1_7_C9`, p.`1_1_7_C9_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, pic.S2_2_1_1, pic.S2_2_1_2, pic.S2_2_1_3, pic.S2_2_1_4, pic.Create_DTM, pic.Update_DTM
 			FROM survey_profile p , survey_panic_in_crimes pic where p.profile_id = pic.profile_id and p.status = 'complete';";
 			$panicQueryData=$this->datamodel->list_data_sql_export();
 			$panicData = $this->dbutil->csv_from_result($panicQueryData);
 			write_file('./temp/survey_panic_in_crimes.csv', $panicData);
 
-			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, tfs.S2_2_1, tfs.S2_2_2, tfs.S2_2_3, tfs.Create_DTM, tfs.Update_DTM
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_C1`, p.`1_1_7_C2`, p.`1_1_7_C3`, p.`1_1_7_C4`, p.`1_1_7_C5`, p.`1_1_7_C6`, p.`1_1_7_C7`, p.`1_1_7_C8`, p.`1_1_7_C9`, p.`1_1_7_C9_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, tfs.S2_2_1, tfs.S2_2_2, tfs.S2_2_3, tfs.Create_DTM, tfs.Update_DTM
 			FROM survey_profile p , survey_trust_for_security tfs where p.profile_id = tfs.profile_id and p.status = 'complete';";
 			$securityQueryData=$this->datamodel->list_data_sql_export();
 			$securityData = $this->dbutil->csv_from_result($securityQueryData);
 			write_file('./temp/survey_trust_for_security.csv', $securityData);
 
-			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, s.S2_2_1, s.S2_2_2, s.Create_DTM, s.Update_DTM
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_C1`, p.`1_1_7_C2`, p.`1_1_7_C3`, p.`1_1_7_C4`, p.`1_1_7_C5`, p.`1_1_7_C6`, p.`1_1_7_C7`, p.`1_1_7_C8`, p.`1_1_7_C9`, p.`1_1_7_C9_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, s.S2_2_1, s.S2_2_2, s.Create_DTM, s.Update_DTM
 			FROM survey_profile p , survey_sdgs s where p.profile_id = s.profile_id and p.status = 'complete';";
 			$sdgsQueryData=$this->datamodel->list_data_sql_export();
 			$sdgsData = $this->dbutil->csv_from_result($sdgsQueryData);
 			write_file('./temp/survey_sdgs.csv', $sdgsData);
 
-			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, tij.S2_1_1, tij.S2_1_2, tij.S2_1_3, tij.S2_1_4, tij.S2_2_1, tij.S2_2_2, tij.S2_2_3, tij.S2_2_4, tij.S2_3_1, tij.S2_3_2, tij.S2_3_3, tij.S2_3_4, tij.S2_4_1, tij.S2_4_2, tij.S2_4_3, tij.S2_4_4, tij.S2_5, tij.S3_1_1, tij.S3_1_2, tij.S3_1_3, tij.S3_1_4, tij.S3_1_5, tij.S3_2_1, tij.S3_2_2, tij.S3_2_3, tij.S3_2_4, tij.S3_2_5, tij.S3_3_1, tij.S3_3_2, tij.S3_3_3, tij.S3_3_4, tij.S3_3_5, tij.S3_4_1, tij.S3_4_2, tij.S3_4_3, tij.S3_4_4, tij.S3_4_5, tij.S3_5_1, tij.S3_5_2, tij.S3_5_3, tij.S3_5_4, tij.S3_5_5, tij.S3_6, tij.Create_DTM, tij.Update_DTM
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_C1`, p.`1_1_7_C2`, p.`1_1_7_C3`, p.`1_1_7_C4`, p.`1_1_7_C5`, p.`1_1_7_C6`, p.`1_1_7_C7`, p.`1_1_7_C8`, p.`1_1_7_C9`, p.`1_1_7_C9_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, tij.S2_1_1, tij.S2_1_2, tij.S2_1_3, tij.S2_1_4, tij.S2_2_1, tij.S2_2_2, tij.S2_2_3, tij.S2_2_4, tij.S2_3_1, tij.S2_3_2, tij.S2_3_3, tij.S2_3_4, tij.S2_4_1, tij.S2_4_2, tij.S2_4_3, tij.S2_4_4, tij.S2_5, tij.S3_1_1, tij.S3_1_2, tij.S3_1_3, tij.S3_1_4, tij.S3_1_5, tij.S3_2_1, tij.S3_2_2, tij.S3_2_3, tij.S3_2_4, tij.S3_2_5, tij.S3_3_1, tij.S3_3_2, tij.S3_3_3, tij.S3_3_4, tij.S3_3_5, tij.S3_4_1, tij.S3_4_2, tij.S3_4_3, tij.S3_4_4, tij.S3_4_5, tij.S3_5_1, tij.S3_5_2, tij.S3_5_3, tij.S3_5_4, tij.S3_5_5, tij.S3_6, tij.Create_DTM, tij.Update_DTM
 			FROM survey_profile p , survey_trust_in_justic tij where p.profile_id = tij.profile_id and p.status = 'complete';";
 			$justicQueryData=$this->datamodel->list_data_sql_export();
 			$justicData = $this->dbutil->csv_from_result($justicQueryData);
 			write_file('./temp/survey_trust_in_justic.csv', $justicData);
 
-			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, ssf.S2_2_1_1, ssf.S2_2_1_2, ssf.S2_2_1_3, ssf.S2_2_1_4, ssf.S2_2_1_5, ssf.S2_2_1_6, ssf.S2_2_1_7, ssf.S2_2_1_8, ssf.S2_2_1_9, ssf.S2_2_1_10, ssf.S2_2_1_11, ssf.S2_2_1_12, ssf.S2_2_1_13, ssf.S2_2_2, ssf.Create_DTM, ssf.Update_DTM
+			$this->datamodel->sql="SELECT p.profile_id, p.master_id, p.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_1_1`, p.`1_1_2`, p.`1_1_3`, p.`1_1_4`, p.`1_1_4_text`, p.`1_1_5`, p.`1_1_5_text`, p.`1_1_6`, p.`1_1_7`, p.`1_1_7_C1`, p.`1_1_7_C2`, p.`1_1_7_C3`, p.`1_1_7_C4`, p.`1_1_7_C5`, p.`1_1_7_C6`, p.`1_1_7_C7`, p.`1_1_7_C8`, p.`1_1_7_C9`, p.`1_1_7_C9_text`, p.`1_1_7_1`, p.`1_2`, p.`1_2_text`, p.`1_3`, p.`1_3_text`, ssf.S2_2_1_1, ssf.S2_2_1_2, ssf.S2_2_1_3, ssf.S2_2_1_4, ssf.S2_2_1_5, ssf.S2_2_1_6, ssf.S2_2_1_7, ssf.S2_2_1_8, ssf.S2_2_1_9, ssf.S2_2_1_10, ssf.S2_2_1_11, ssf.S2_2_1_12, ssf.S2_2_1_13, ssf.S2_2_2, ssf.Create_DTM, ssf.Update_DTM
 			FROM survey_profile p , survey_satisfaction ssf where p.profile_id = ssf.profile_id and p.status = 'complete';";
 			$satisfactionQueryData=$this->datamodel->list_data_sql_export();
 			$satisfactionData = $this->dbutil->csv_from_result($satisfactionQueryData);
