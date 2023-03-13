@@ -23,8 +23,20 @@ class Main extends CI_Controller {
 		$this->profile();
 	}	
 
+	public function index() {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');		
+			$data['u_level']=$this->session->userdata('u_level');				
+			$data['h_flag']="list";		
+			$data['h_back']="";    	 
 
-    public function index() {
+	        $this->load->view('/private/index', $data);	        
+		}
+    }
+
+
+    public function listSurveyAll() {
 		$user_name=$this->isLogin();
 		if($user_name != false){
 			$data['u_disp']=$this->session->userdata('user_name');		
@@ -34,11 +46,29 @@ class Main extends CI_Controller {
 			
 			$this->load->model("datamodel");
 			$this->datamodel->table_name='survey_profile';
-			$this->datamodel->condition=" where master_id is null and status = 'complete' order by profile_id desc";		
+			$this->datamodel->condition=" where master_id is null and status = 'complete' and survey_form = '1' order by profile_id desc";		
 			$list_data=$this->datamodel->list_data();
 			$data['list_data']=$list_data;
 
-	        $this->load->view('/private/index', $data);	        
+	        $this->load->view('/private/listSurveyAll', $data);	        
+		}
+    }
+
+	public function listSurveySpecial() {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');		
+			$data['u_level']=$this->session->userdata('u_level');				
+			$data['h_flag']="list";		
+			$data['h_back']="";    	    
+			
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->condition=" where master_id is null and status = 'complete' and survey_form = '2'  order by profile_id desc";		
+			$list_data=$this->datamodel->list_data();
+			$data['list_data']=$list_data;
+
+	        $this->load->view('/private/listSurveySpecial', $data);	        
 		}
     }
 
@@ -96,6 +126,33 @@ class Main extends CI_Controller {
 
 			$this->datamodel->table_name='survey_victims_crimes';
 			$this->datamodel->pk_name='master_id';
+			$this->datamodel->pk_value=$profile_id;	
+			$this->datamodel->delete();
+
+			$this->functionhelper->jsonHeader();
+			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/index'));      
+		}
+    }
+
+	public function deleteDataSpecial($profile_id) {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['u_disp']=$this->session->userdata('user_name');					
+			$data['h_flag']="user";		  
+			$data['h_back']="admin/addMember";  	        
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profile_id;	
+			$this->datamodel->delete();
+
+			$this->datamodel->table_name='survey_knowledge_laws';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profile_id;	
+			$this->datamodel->delete();
+
+			$this->datamodel->table_name='survey_trust_in_justic';
+			$this->datamodel->pk_name='profile_id';
 			$this->datamodel->pk_value=$profile_id;	
 			$this->datamodel->delete();
 
@@ -1052,6 +1109,91 @@ class Main extends CI_Controller {
 		$this->load->view('/private/survey', $data);       
 	}
 
+	public function surveySpecial($profile_id) {
+		$user_name=$this->isLogin();
+		if($user_name != false){
+			$data['d_comeback']=$this->session->userdata('comeback');
+			$this->session->unset_userdata('comeback');
+			$data['u_disp']=$this->session->userdata('user_name');
+			$data['u_level']=$this->session->userdata('u_level');					
+			$data['h_flag']="list";		  
+			$data['h_back']="main/index";  	        
+			$this->load->model("datamodel");
+			$this->datamodel->sql=" select * from provinces ";   
+			$data['d_province']=$this->datamodel->list_data_sql();
+			$this->datamodel->sql=" select * from districts ";   
+			$data['d_districts']=$this->datamodel->list_data_sql();
+			$this->datamodel->sql=" select * from amphures ";   
+			$data['d_amphures']=$this->datamodel->list_data_sql();
+			$data['u_send_profile']=$profile_id;
+			if ($profile_id == '0') {
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$u_now_id=$this->datamodel->first_row_data_sql();
+				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
+				
+			}else{
+				$data['u_now_id']=$profile_id;
+			}
+			$profileCode=$this->chkProfileCodeFirst($data['u_now_id']);
+			if($profileCode != null || $profileCode != ''){
+				$data['u_profile_code'] = $profileCode;
+			}else{
+				$data['u_profile_code'] ='';
+			}
+
+			$data['u_check_new_survey_profile']=$this->chkHave($data['u_now_id'],'survey_profile');
+			if($data['u_check_new_survey_profile'] == 0){
+				$objSurveyProfile=new MyDto();
+				$objSurveyProfile->profile_id = $profile_id;
+				$objSurveyProfile->master_id = '';
+				$objSurveyProfile->A2 = '';
+				$objSurveyProfile->A3 = '';
+				$objSurveyProfile->A4 = '';
+				$objSurveyProfile->A4_1 = '';
+				$objSurveyProfile->A4_2 = '';
+				$objSurveyProfile->A4_3 = '';
+				$objSurveyProfile->A4_4 = '';
+				$objSurveyProfile->A4_5 = '';
+				$objSurveyProfile->{'1_1_1'} = '';
+				$objSurveyProfile->{'1_1_2'} = '';
+				$objSurveyProfile->{'1_1_3'} = '';
+				$objSurveyProfile->{'1_1_4'} = '';
+				$objSurveyProfile->{'1_1_4_text'} = '';
+				$objSurveyProfile->{'1_1_5'} = '';
+				$objSurveyProfile->{'1_1_5_text'} = '';
+				$objSurveyProfile->{'1_1_6'} = '';
+				$objSurveyProfile->{'1_1_7'} = '';
+				$objSurveyProfile->{'1_1_7_C1'} = '';
+				$objSurveyProfile->{'1_1_7_C2'} = '';
+				$objSurveyProfile->{'1_1_7_C3'} = '';
+				$objSurveyProfile->{'1_1_7_C4'} = '';
+				$objSurveyProfile->{'1_1_7_C5'} = '';
+				$objSurveyProfile->{'1_1_7_C6'} = '';
+				$objSurveyProfile->{'1_1_7_C7'} = '';
+				$objSurveyProfile->{'1_1_7_C8'} = '';
+				$objSurveyProfile->{'1_1_7_C9'} = '';
+				$objSurveyProfile->{'1_1_7_C9_text'} = '';
+				$objSurveyProfile->{'1_1_7_1'} = '';
+				$objSurveyProfile->{'1_2'} = '';
+				$objSurveyProfile->{'1_2_text'} = '';
+				$objSurveyProfile->{'1_3'} = '';
+				$objSurveyProfile->{'1_3_text'} = '';
+				$data['d_surveyProfile']=$objSurveyProfile;
+			}else{
+				$this->datamodel->sql="select * from survey_profile where profile_id='$profile_id'";
+				$data['d_surveyProfile']=$this->datamodel->first_row_data_sql();
+			}
+			
+			if ($profile_id == '0') {
+				$this->initDataSpecial($data['u_now_id']);
+			}
+
+			
+		
+		}
+		$this->load->view('/private/surveySpecial', $data);       
+	}
+
 	public function initData($u_now_id){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
@@ -1101,6 +1243,7 @@ class Main extends CI_Controller {
 			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
 			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
+			$objProfile->survey_form = "1";
 			if($this->chkHave($u_now_id,'survey_profile')=='0'){
 				$objProfile->create_by = $this->session->userdata('u_am_id');
 				$this->datamodel->insert($objProfile);
@@ -1113,15 +1256,79 @@ class Main extends CI_Controller {
 			$objlist->profile_id = $u_now_id;
 			$this->saveSurvey1($u_now_id,1,$objlist,'');
 			$this->saveSurvey1S4(1,$objlist,'');
-			$this->saveSurvey2($u_now_id,'');
+			$this->saveSurvey2($u_now_id,'',"1");
 			$this->saveSurvey3($u_now_id,'');
 			$this->saveSurvey4($u_now_id,'');
 			$this->saveSurvey5($u_now_id,'');
-			$this->saveSurvey6($u_now_id,'');
+			$this->saveSurvey6($u_now_id,'',"1");
 			$this->saveSurvey7($u_now_id,'');
 
 		} 
     }
+
+	public function initDataSpecial($u_now_id){
+		$user_name=$this->isLogin();
+		if($user_name != false){ 
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$u_now_id;
+			$objProfile=new MyDto();
+			$objProfile->A2 = $this->checkEmpty($this->input->post('A2'));
+			$objProfile->A3 = $this->checkEmpty($this->input->post('A3'));
+			$objProfile->A4 = $this->checkEmpty($this->input->post('A4'));
+			$objProfile->profile_code = '';
+			if($this->checkEmpty($this->input->post('A4'))=='1'){
+				$objProfile->A4_1 = 'กรุงเทพมหานคร';
+				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id_1'));
+				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id_1'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_1_text_3'));
+				$objProfile->A4_5 = '';
+			}else{
+				$objProfile->A4_1 = $this->checkEmpty($this->input->post('province_id'));
+				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id'));
+				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_2_text_4'));
+				$objProfile->A4_5 = $this->checkEmpty($this->input->post('A4_2_text_5'));
+			}
+			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_1_1'));
+			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_1_2'));
+			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_1_3'));
+			$objProfile->{'1_1_4'} = $this->checkEmpty($this->input->post('1_1_4'));
+			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_1_4_text'));
+			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_1_5'));
+			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
+			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
+			$objProfile->{'1_1_7'} = $this->checkEmpty($this->input->post('1_1_7'));
+			$objProfile->{'1_1_7_C1'} = $this->checkEmpty($this->input->post('1_1_7_C1'));
+			$objProfile->{'1_1_7_C2'} = $this->checkEmpty($this->input->post('1_1_7_C2'));
+			$objProfile->{'1_1_7_C3'} = $this->checkEmpty($this->input->post('1_1_7_C3'));
+			$objProfile->{'1_1_7_C4'} = $this->checkEmpty($this->input->post('1_1_7_C4'));
+			$objProfile->{'1_1_7_C5'} = $this->checkEmpty($this->input->post('1_1_7_C5'));
+			$objProfile->{'1_1_7_C6'} = $this->checkEmpty($this->input->post('1_1_7_C6'));
+			$objProfile->{'1_1_7_C7'} = $this->checkEmpty($this->input->post('1_1_7_C7'));
+			$objProfile->{'1_1_7_C8'} = $this->checkEmpty($this->input->post('1_1_7_C8'));
+			$objProfile->{'1_1_7_C9'} = $this->checkEmpty($this->input->post('1_1_7_C9'));
+			$objProfile->{'1_1_7_C9_text'} = $this->checkEmpty($this->input->post('1_1_7_C9_text'));
+			$objProfile->{'1_1_7_1'} = $this->checkEmpty($this->input->post('1_1_7_1'));
+			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
+			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
+			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
+			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
+			$objProfile->survey_form = "2";
+			if($this->chkHave($u_now_id,'survey_profile')=='0'){
+				$objProfile->create_by = $this->session->userdata('u_am_id');
+				$this->datamodel->insert($objProfile);
+			}else{
+				$objProfile->update_by = $this->session->userdata('u_am_id');
+				$this->datamodel->update($objProfile);
+			}	
+			$this->saveSurvey2($u_now_id,'',"2");
+			$this->saveSurvey6($u_now_id,'',"2");
+
+		} 
+    }
+
 	public function checkEmpty($string){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
@@ -1204,6 +1411,7 @@ class Main extends CI_Controller {
 			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
 			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
 			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
+			$objProfile->survey_form = "1";
 			if($hidden == 'false'){
 				$objProfile->status = 'complete';
 			}
@@ -1227,12 +1435,99 @@ class Main extends CI_Controller {
 			for ($i=2; $i <= count($listData)+1; $i++) { 
 				$this->saveSurvey1($profileId,$i,$listData[$i-2],$provinceCode);
 			}
-			$this->saveSurvey2($profileId,$profileCode);
+			$this->saveSurvey2($profileId,$profileCode,"1");
 			$this->saveSurvey3($profileId,$profileCode);
 			$this->saveSurvey4($profileId,$profileCode);
 			$this->saveSurvey5($profileId,$profileCode);
-			$this->saveSurvey6($profileId,$profileCode);
+			$this->saveSurvey6($profileId,$profileCode,"1");
 			$this->saveSurvey7($profileId,$profileCode);
+			
+
+			if($hidden == 'false'){
+				$this->clearProfileCode($profileId);
+			}
+			if($hidden != 'true'){
+				$this->functionhelper->jsonHeader();
+				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/index'),$objProfile);	
+			}
+			
+
+		} 
+    }
+
+	public function saveSurveySpecial($hidden){
+		$user_name=$this->isLogin();
+		if($user_name != false){    
+			$profileCode = '';
+			$provinceCode = '';
+			$profileId = $this->input->post('1_text');
+			$this->load->model("datamodel");
+			$this->datamodel->table_name='survey_profile';
+			$this->datamodel->pk_name='profile_id';
+			$this->datamodel->pk_value=$profileId;
+			$objProfile=new MyDto();
+			
+			$objProfile->A2 = $this->checkEmpty($this->input->post('A2'));
+			$objProfile->A3 = $this->checkEmpty($this->input->post('A3'));
+			$objProfile->A4 = $this->checkEmpty($this->input->post('A4'));
+			if($this->checkEmpty($this->input->post('A4'))=='1'){
+				$objProfile->A4_1 = 'กรุงเทพมหานคร';
+				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id_1'));
+				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id_1'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_1_text_3'));
+				$objProfile->A4_5 = '';
+			}else{
+				$objProfile->A4_1 = $this->checkEmpty($this->input->post('province_id'));
+				$objProfile->A4_2 = $this->checkEmpty($this->input->post('amphure_id'));
+				$objProfile->A4_3 = $this->checkEmpty($this->input->post('district_id'));
+				$objProfile->A4_4 = $this->checkEmpty($this->input->post('A4_2_text_4'));
+				$objProfile->A4_5 = $this->checkEmpty($this->input->post('A4_2_text_5'));
+			}
+			
+			if('' == $this->chkProfileCodeFirst($profileId)){
+				$provinceCode = $this->queryProviceId($objProfile->A4_1);
+				$profileCode = $provinceCode.date("Ymd").$profileId;
+				$objProfile->profile_code = $profileCode;
+			}
+			$objProfile->{'1_1_1'} = $this->checkEmpty($this->input->post('1_1_1'));
+			$objProfile->{'1_1_2'} = $this->checkEmpty($this->input->post('1_1_2'));
+			$objProfile->{'1_1_3'} = $this->checkEmpty($this->input->post('1_1_3'));
+			$objProfile->{'1_1_4'} = $this->checkEmpty($this->input->post('1_1_4'));
+			$objProfile->{'1_1_4_text'} = $this->checkEmpty($this->input->post('1_1_4_text'));
+			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_1_5'));
+			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_1_5_text'));
+			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_1_6'));
+			$objProfile->{'1_1_7'} = $this->checkEmpty($this->input->post('1_1_7'));
+			$objProfile->{'1_1_7_C1'} = $this->checkEmpty($this->input->post('1_1_7_C1'));
+			$objProfile->{'1_1_7_C2'} = $this->checkEmpty($this->input->post('1_1_7_C2'));
+			$objProfile->{'1_1_7_C3'} = $this->checkEmpty($this->input->post('1_1_7_C3'));
+			$objProfile->{'1_1_7_C4'} = $this->checkEmpty($this->input->post('1_1_7_C4'));
+			$objProfile->{'1_1_7_C5'} = $this->checkEmpty($this->input->post('1_1_7_C5'));
+			$objProfile->{'1_1_7_C6'} = $this->checkEmpty($this->input->post('1_1_7_C6'));
+			$objProfile->{'1_1_7_C7'} = $this->checkEmpty($this->input->post('1_1_7_C7'));
+			$objProfile->{'1_1_7_C8'} = $this->checkEmpty($this->input->post('1_1_7_C8'));
+			$objProfile->{'1_1_7_C9'} = $this->checkEmpty($this->input->post('1_1_7_C9'));
+			$objProfile->{'1_1_7_C9_text'} = $this->checkEmpty($this->input->post('1_1_7_C9_text'));
+			$objProfile->{'1_1_7_1'} = $this->checkEmpty($this->input->post('1_1_7_1'));
+			$objProfile->{'1_2'} = $this->checkEmpty($this->input->post('1_2'));
+			$objProfile->{'1_2_text'} = $this->checkEmpty($this->input->post('1_2_text'));
+			$objProfile->{'1_3'} = $this->checkEmpty($this->input->post('1_3'));
+			$objProfile->{'1_3_text'} = $this->checkEmpty($this->input->post('1_3_text'));
+			$objProfile->survey_form = "2";
+			if($hidden == 'false'){
+				$objProfile->status = 'complete';
+			}
+			if($this->chkHave($profileId,'survey_profile')=='0'){
+				$objProfile->create_by = $this->session->userdata('u_am_id');
+				$this->datamodel->insert($objProfile);
+			}else{
+				$objProfile->update_by = $this->session->userdata('u_am_id');
+				$this->datamodel->update($objProfile);
+			}	
+
+
+			$this->saveSurvey2($profileId,$profileCode,"2");
+			$this->saveSurvey6($profileId,$profileCode,"2");
 			
 
 			if($hidden == 'false'){
@@ -1408,6 +1703,7 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_S3_3_5'));
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_3_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_3_6'));
+			$objProfile->survey_form = "1";
 			if($this->chkHave($profileId,'survey_profile')=='0'){
 				$objProfile->create_by = $this->session->userdata('u_am_id');
 				$this->datamodel->insert($objProfile);
@@ -1449,6 +1745,7 @@ class Main extends CI_Controller {
 			$objProfile->{'1_1_5'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_5'));
 			$objProfile->{'1_1_5_text'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_5_text'));
 			$objProfile->{'1_1_6'} = $this->checkEmpty($this->input->post('1_S3_'.$loop.'_3_6'));
+			$objProfile->survey_form = "1";
 			if($this->chkHave($profileId,'survey_profile')=='0'){
 				$objProfile->create_by = $this->session->userdata('u_am_id');
 				$this->datamodel->insert($objProfile);
@@ -1557,7 +1854,7 @@ class Main extends CI_Controller {
 		} 
     }
 
-	public function saveSurvey2($profileId,$profileCode){
+	public function saveSurvey2($profileId,$profileCode,$from){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -1600,6 +1897,7 @@ class Main extends CI_Controller {
 			$objdSurveyKnowledgeLaws->S2_3_9 = $this->checkEmpty($this->input->post('2_S2_3_9'));
 			$objdSurveyKnowledgeLaws->S2_4 = $this->checkEmpty($this->input->post('2_S2_4'));
 			$objdSurveyKnowledgeLaws->S2_5 = $this->checkEmpty($this->input->post('2_S2_5'));
+			$objdSurveyKnowledgeLaws->survey_form = $from;
 			if($this->chkHave($profileId,'survey_knowledge_laws') == 0){
 				$this->datamodel->insert($objdSurveyKnowledgeLaws);
 			}else{
@@ -1681,7 +1979,7 @@ class Main extends CI_Controller {
 
 		} 
     }
-	public function saveSurvey6($profileId,$profileCode){
+	public function saveSurvey6($profileId,$profileCode,$from){
 		$user_name=$this->isLogin();
 		if($user_name != false){ 
 			$this->load->model("datamodel");
@@ -1736,6 +2034,7 @@ class Main extends CI_Controller {
 			$objdSurveyTrustInJustic->S3_5_4 = $this->checkEmpty($this->input->post('6_S3_5_4'));
 			$objdSurveyTrustInJustic->S3_5_5 = $this->checkEmpty($this->input->post('6_S3_5_5'));
 			$objdSurveyTrustInJustic->S3_6 = $this->checkEmpty($this->input->post('6_S3_6'));
+			$objdSurveyTrustInJustic->survey_form = $from;
 
 	
 			if($this->chkHave($profileId,'survey_trust_in_justic') == 0){

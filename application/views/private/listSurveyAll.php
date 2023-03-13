@@ -84,27 +84,38 @@
 		<div class="panel container" style="margin-top : 10px;">
 			<div class="body">
 			</br></br>
-			<div style="float:right;">
-			<a href="<?php echo base_url()."main/exportAll/"?>" class="ui green button " ><i class="share square icon small"></i>Export ข้อมูลแบบสำรวจ</a>
+			<h3>โครงการสำรวจข้อมูลสถิติอาชญากรรมภาคประชาชนและโครงการจัดเก็บข้อมูลตัวชี้วัดและวิเคราะห์สถานการณ์อาชญากรรมและกระบวนการยุติธรรมของประเทศไทย</h3>
+			<a href="<?= site_url('main/survey/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> สำรวจข้อมูลใหม่</a>
+							</br></br>
+				<h1 class="page-header" style="margin-top : 10px;">รายการแบบสำรวจ</h1>
+				<table id="data-table" data-order='[[5,"desc"]]' class="table table-bordered table-hover table-striped table-td-valign-middle" style="width: 100%;">
+					<thead>
+						<tr class="inverse">
+							<th class="text-center">แบบสำรวจลำดับที่</th>
+							<th class="text-center">บ้านเลขที่</th>
+							<th class="text-center">จังหวัด</th>
+							<th class="text-center">เพศ</th>
+							<th class="text-center">อายุ</th>
+							<th class="text-center">แก้ไข</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ($list_data as $row) { ?>
+							<tr>
+								<td class="text-center"><?php echo $row->profile_code; ?></td>
+								<td class="text-center"><?php echo $row->A2; ?></td>
+								<td class="text-center"><?php echo $row->A4_1; ?></td>
+								<td class="text-center"><?php if($row->{'1_1_1'} == '1'){echo 'ชาย';}elseif($row->{'1_1_1'} == '2'){echo 'หญิง';}else{echo 'เพศทางเลือก';} ?></td>
+								<td class="text-center"><?php echo $row->{'1_1_2'}; ?></td>
+								<td class="text-center">
+								<a href="<?= site_url('main/survey/'.$row->profile_id)?>" type="button"><i class="edit icon large" style="color:orange"></i></a>
+								<a href="javascript:void(0)" data-url="<?=site_url('/main/deleteData/'.$row->profile_id)?>" class="btn-form-delete"><i class="delete icon large" style="color:red"></i></a>
+								</td>
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
 			</div>
-							</br></br></br>
-				<div  style="text-align: center;">
-					<a href="<?= site_url('main/listSurveyAll') ?>">
-						<div class="btn btn-lg btn-primary" style="width: 60%;">
-							1. โครงการสำรวจข้อมูลสถิติอาชญากรรมภาคประชาชนและ</br>โครงการจัดเก็บข้อมูลตัวชี้วัดและวิเคราะห์สถานการณ์อาชญากรรม</br>และกระบวนการยุติธรรมของประเทศไทย
-						</div>
-					</a>
-				</div>
-				</br>
-				<div style="text-align: center;">
-					<a href="<?= site_url('main/listSurveySpecial') ?>">
-						<div class="btn btn-lg btn-primary" style="width: 60%;">
-							2. โครงการจัดเก็บข้อมูลตัวชี้วัดและวิเคราะห์สถานการณ์</br>อาชญากรรมและกระบวนการยุติธรรมของประเทศไทย
-						</div>
-					</a>
-				</div>
-			</div>
-			</br></br>
 		</div>
 		<!-- end #content -->
 		
