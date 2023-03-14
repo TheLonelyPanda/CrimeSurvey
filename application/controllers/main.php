@@ -130,7 +130,7 @@ class Main extends CI_Controller {
 			$this->datamodel->delete();
 
 			$this->functionhelper->jsonHeader();
-			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/index'));      
+			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/listSurveyAll'));      
 		}
     }
 
@@ -157,7 +157,7 @@ class Main extends CI_Controller {
 			$this->datamodel->delete();
 
 			$this->functionhelper->jsonHeader();
-			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/index'));      
+			$this->functionhelper->jsonResponseFormSuccess('ลบข้อมูลเรียบร้อยแล้ว', 'ท่านได้ทำการลบข้อมูลเรีบบร้อยแล้ว', '',site_url('main/listSurveySpecial'));      
 		}
     }
 
@@ -1448,7 +1448,7 @@ class Main extends CI_Controller {
 			}
 			if($hidden != 'true'){
 				$this->functionhelper->jsonHeader();
-				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/index'),$objProfile);	
+				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/listSurveyAll'),$objProfile);	
 			}
 			
 
@@ -1535,7 +1535,7 @@ class Main extends CI_Controller {
 			}
 			if($hidden != 'true'){
 				$this->functionhelper->jsonHeader();
-				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/index'),$objProfile);	
+				$this->functionhelper->jsonDataResponseFull(true,'บันทึกข้อมูลเรียบร้อยแล้ว', '', site_url('main/listSurveySpecial'),$objProfile);	
 			}
 			
 

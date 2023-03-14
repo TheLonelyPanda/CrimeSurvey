@@ -601,7 +601,7 @@
 									<a value="Save" data-url="<?= site_url('main/saveSurvey/false') ?>" class="ui basic green button btn-form-varidate-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
-									<a href="<?= site_url('/main/index/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
+									<a href="<?= site_url('/main/listSurveyAll/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
 								</div>
 							</div>
 							</br></br></br></br>

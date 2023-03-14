@@ -83,8 +83,12 @@
 		<!-- begin #content -->
 		<div class="panel container" style="margin-top : 10px;">
 			<div class="body">
+			</br>
+			<div style="float:right;">
+				<a href="<?= site_url('main/index') ?>" class="ui blue button " >หน้าหลัก</a>
+			</div>
 			</br></br>
-			<h3>โครงการจัดเก็บข้อมูลตัวชี้วัดและวิเคราะห์สถานการณ์อาชญากรรมและกระบวนการยุติธรรมของประเทศไทย</h3>
+			<h4>2.โครงการจัดเก็บข้อมูลตัวชี้วัดและวิเคราะห์สถานการณ์อาชญากรรมและกระบวนการยุติธรรมของประเทศไทย</h4>
 			<a href="<?= site_url('main/surveySpecial/0')?>" type="button" class="ui green button "><i class="plus icon small"></i> สำรวจข้อมูลใหม่</a>
 							</br></br>
 				<h1 class="page-header" style="margin-top : 10px;">รายการแบบสำรวจ</h1>

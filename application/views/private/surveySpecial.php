@@ -79,7 +79,7 @@
 		</a>
 		<!-- begin #content -->
 		<div class="panel container" style="margin-top : 10px;">
-			<h1 class="page-header" style="margin-top : 10px;">แบบสำรวจข้อมูลสถิติอาชญากรรมภาคประชาชน</h1>
+			<h1 class="page-header" style="margin-top : 10px;">แบบสำรวจตัวชี้วัดและวิเคราะห์สถานการณ์อาชญากรรมและกระบวนการยุติธรรมของประเทศไทย</h1>
 			<div class="body">
 				<form class="a form app form-horizontal" id="form-data-varidate" data-parsley-errors-messages-disabled data-parsley-inputs="input:not([type='checkbox']), textarea, select" method="post">
 					<div class="line" style="float: right;">
@@ -530,7 +530,7 @@
 									<a value="Save" data-url="<?= site_url('main/saveSurveySpecial/false') ?>" class="ui basic green button btn-form-varidate-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
-									<a href="<?= site_url('/main/index/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
+									<a href="<?= site_url('/main/listSurveySpecial/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
 								</div>
 							</div>
 							</br></br></br></br>
