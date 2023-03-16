@@ -462,22 +462,34 @@
 								<label for="113" class="col-form-label">1.3 ลักษณะบริเวณที่อยู่อาศัย<span class="star"> *</span></label>
 								<div class="col-lg-12">
 									<label class="radio-inline col-form-label  col-lg-8" style="margin-left: 10px;">
-										<input type="radio" id="1131" name="1_3" value="1" data-parsley-required="true"> (1) เขตที่พักอาศัยทั่วไป เช่น หมู่บ้านจัดสรร บ้านเดี่ยว
+										<input type="radio" id="1131" name="1_3" value="1" data-parsley-required="true"> (1) หมู่บ้าน/บ้านจัดสรร (มี รปภ.)
 									</label>
 									<label class="radio-inline col-form-label  col-lg-8">
-										<input type="radio" id="1132" name="1_3" value="2"> (2) เขตธุรกิจ เช่น เขตที่มีบริษัท ห้าง ร้าน อยู่รวมกันเป็นบริเวณกว้าง
+										<input type="radio" id="1132" name="1_3" value="2"> (2) หมู่บ้าน/บ้านจัดสรร (ไม่มี รปภ.)
 									</label>
 									<label class="radio-inline col-form-label  col-lg-8">
-										<input type="radio" id="1133" name="1_3" value="3"> (3) เขตชุมชนแออัด หรือชุมชนที่มีลักษณะบ้านเรือนหนาแน่น และประชากรอยู่อย่างแออัด
+										<input type="radio" id="1133" name="1_3" value="3"> (3) ที่พักอาศัยในเขตเมือง
 									</label>
 									<label class="radio-inline col-form-label  col-lg-8">
-										<input type="radio" id="1134" name="1_3" value="4"> (4) เขตอุตสาหกรรม หรือชุมชนที่อยู่ในบริเวณที่มีโรงงานอุตสาหกรรมหรือนิคมอุตสาหกรรมตั้งอยู่
+										<input type="radio" id="1134" name="1_3" value="4"> (4) ที่พักอาศัยในชนบท
 									</label>
 									<label class="radio-inline col-form-label  col-lg-8">
-										<input type="radio" id="1135" name="1_3" value="5"> (5) เขตเกษตรกรรม หรือชุมชนที่อยู่ในบริเวณพื้นที่เกษตรกรรม
+										<input type="radio" id="1135" name="1_3" value="5"> (5) ชุมชนแออัด
 									</label>
 									<label class="radio-inline col-form-label  col-lg-8">
-										<input type="radio" id="1136" name="1_3" value="6"> (6) อื่นๆ...
+										<input type="radio" id="1136" name="1_3" value="6"> (6) ย่านการค้า/ธุรกิจ
+									</label>
+									<label class="radio-inline col-form-label  col-lg-8">
+										<input type="radio" id="1137" name="1_3" value="7"> (7) เขตอุตสาหกรรม (หรือชุมชนที่อยู่ใกล้โรงงานอุตสาหกรรมหรือนิคมอุตสาหกรรม)
+									</label>
+									<label class="radio-inline col-form-label  col-lg-8">
+										<input type="radio" id="1138" name="1_3" value="8"> (8) เขตเกษตรกร หรือชุมชนที่อยู่ในบริเวณพื้นที่เกษตรกรรม
+									</label>
+									<label class="radio-inline col-form-label  col-lg-8">
+										<input type="radio" id="1139" name="1_3" value="9"> (9) ชุมชนประมง
+									</label>
+									<label class="radio-inline col-form-label  col-lg-8">
+										<input type="radio" id="11310" name="1_3" value="10"> (10) อื่นๆ...
 									</label>
 
 								</div>
@@ -848,7 +860,7 @@
 
 
 		$('input[name="1_3"]').on('change', function() {
-			if ($(this).val() === '6') {
+			if ($(this).val() === '10') {
 				$('input[name="1_3_text"]').prop('readonly', false);
 				document.getElementById("113_text").setAttribute("data-parsley-required", "true");
 			} else {
@@ -1080,7 +1092,7 @@
 				document.getElementById("112_text").value = '<?= $d_surveyProfile->{'1_2_text'} ?>';
 
 				checkId(document.getElementById("113<?= $d_surveyProfile->{'1_3'} ?>"));
-				if ('<?= $d_surveyProfile->{'1_3'} ?>' == '6') {
+				if ('<?= $d_surveyProfile->{'1_3'} ?>' == '10') {
 					$('input[name="1_3_text"]').prop('readonly', false);
 					document.getElementById("113_text").setAttribute("data-parsley-required", "true");
 				} else {
