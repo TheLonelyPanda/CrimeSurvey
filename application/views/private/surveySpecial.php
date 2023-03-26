@@ -904,7 +904,7 @@
 		if ('<?= $u_check_new_survey_profile ?>' != '0') {
 			$(function() {
 				document.getElementById("A2").value = '<?= $d_surveyProfile->A2 ?>';
-				document.getElementById("A3").value = '<?= $d_surveyProfile->A3 ?>';
+				document.getElementById("A3").value = `<?= $d_surveyProfile->A3 ?>`;
 				checkId(document.getElementById("A4<?= $d_surveyProfile->A4 ?>"));
 				if ('<?= $d_surveyProfile->A4 ?>' == '1') {
 					$('select[name="amphure_id_1"]').prop('disabled', false);
