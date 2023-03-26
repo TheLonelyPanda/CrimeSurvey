@@ -100,6 +100,7 @@
 							<th class="text-center">จังหวัด</th>
 							<th class="text-center">เพศ</th>
 							<th class="text-center">อายุ</th>
+							<th class="text-center">ผู้สำรวจ</th>
 							<th class="text-center">แก้ไข</th>
 						</tr>
 					</thead>
@@ -111,9 +112,18 @@
 								<td class="text-center"><?php echo $row->A4_1; ?></td>
 								<td class="text-center"><?php if($row->{'1_1_1'} == '1'){echo 'ชาย';}elseif($row->{'1_1_1'} == '2'){echo 'หญิง';}else{echo 'เพศทางเลือก';} ?></td>
 								<td class="text-center"><?php echo $row->{'1_1_2'}; ?></td>
+								<td class="text-center"><?php foreach($list_user as $usRow) {
+									if($usRow->id == $row->create_by){
+										echo $usRow->name." ".$usRow->surname;
+									}
+								} ?></td>
 								<td class="text-center">
 								<a href="<?= site_url('main/surveySpecial/'.$row->profile_id)?>" type="button"><i class="edit icon large" style="color:orange"></i></a>
+								<? if($u_level == 'ADMIN'){ ?>
 								<a href="javascript:void(0)" data-url="<?=site_url('/main/deleteDataSpecial/'.$row->profile_id)?>" class="btn-form-delete"><i class="delete icon large" style="color:red"></i></a>
+								<? }else{ ?>
+									<a href="javascript:void(0)" ><i class="delete icon large" style="color:gray"></i></a>
+								<? }?>
 								</td>
 							</tr>
 						<?php } ?>

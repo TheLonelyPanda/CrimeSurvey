@@ -82,14 +82,22 @@
 			<h1 class="page-header" style="margin-top : 10px;">แบบสำรวจข้อมูลสถิติอาชญากรรมภาคประชาชน</h1>
 			<div class="body">
 				<form class="a form app form-horizontal" id="form-data-varidate" data-parsley-errors-messages-disabled data-parsley-inputs="input:not([type='checkbox']), textarea, select" method="post">
-					<div class="line" style="float: right;">
-						<label for="2" class="col-form-label nText">แบบสำรวจลำดับที่</label>
-						<div class="col-lg-7">
-							<input type="hidden" name="1_text" value="<?= $u_now_id ?>" readonly />
-							<input type="text" class="form-control" name="2_text" value="<?= $u_profile_code ?>" readonly />
+					<div class="container" style="text-align: right;">
+						<div class="line">
+							<label for="2" class="col-form-label nText">ผู้สำรวจ</label>
+							<div class="col-lg-3">
+								<input type="text" class="form-control" name="user_text" value="<?= $user_name_sur ?>" readonly />
+							</div>
+						</div>
+						</br>
+						<div class="line">
+							<label for="2" class="col-form-label nText">แบบสำรวจลำดับที่</label>
+							<div class="col-lg-2">
+								<input type="hidden" name="1_text" value="<?= $u_now_id ?>" readonly />
+								<input type="text" class="form-control" name="2_text" value="<?= $u_profile_code ?>" readonly />
+							</div>
 						</div>
 					</div>
-					</br>
 
 					<label for="wight">ส่วนที่ 1 ข้อมูลเกี่ยวกับผู้ตอบแบบสอบถาม</label>
 					<div class="p-fluid p-formgrid p-grid">

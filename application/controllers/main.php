@@ -50,6 +50,11 @@ class Main extends CI_Controller {
 			$list_data=$this->datamodel->list_data();
 			$data['list_data']=$list_data;
 
+			$this->datamodel->table_name='p_user';
+			$this->datamodel->condition=" where 1=1";		
+			$list_user=$this->datamodel->list_data();
+			$data['list_user']=$list_user;
+
 	        $this->load->view('/private/listSurveyAll', $data);	        
 		}
     }
@@ -67,6 +72,11 @@ class Main extends CI_Controller {
 			$this->datamodel->condition=" where master_id is null and status = 'complete' and survey_form = '2'  order by profile_id desc";		
 			$list_data=$this->datamodel->list_data();
 			$data['list_data']=$list_data;
+
+			$this->datamodel->table_name='p_user';
+			$this->datamodel->condition=" where 1=1";		
+			$list_user=$this->datamodel->list_data();
+			$data['list_user']=$list_user;
 
 	        $this->load->view('/private/listSurveySpecial', $data);	        
 		}
@@ -1052,7 +1062,19 @@ class Main extends CI_Controller {
 			$profileCode=$this->chkProfileCodeFirst($data['u_now_id']);
 			if($profileCode != null || $profileCode != ''){
 				$data['u_profile_code'] = $profileCode;
+
+				$this->datamodel->sql="select * from survey_profile where profile_code = '".$profileCode."'";		
+				$profile_data=$this->datamodel->first_row_data_sql();
+
+				$this->datamodel->sql="select * from p_user where id = '".$profile_data->create_by."'";		
+				$usernameQuery=$this->datamodel->first_row_data_sql();
+				$data['user_name_sur']=$usernameQuery->name." ".$usernameQuery->surname;
+
 			}else{
+				
+				$this->datamodel->sql="select * from p_user where username = '".$this->session->userdata('user_name')."'";		
+				$usernameQuery=$this->datamodel->first_row_data_sql();
+				$data['user_name_sur']=$usernameQuery->name." ".$usernameQuery->surname;
 				$data['u_profile_code'] ='';
 			}
 
@@ -1137,7 +1159,19 @@ class Main extends CI_Controller {
 			$profileCode=$this->chkProfileCodeFirst($data['u_now_id']);
 			if($profileCode != null || $profileCode != ''){
 				$data['u_profile_code'] = $profileCode;
+
+				$this->datamodel->sql="select * from survey_profile where profile_code = '".$profileCode."'";		
+				$profile_data=$this->datamodel->first_row_data_sql();
+
+				$this->datamodel->sql="select * from p_user where id = '".$profile_data->create_by."'";		
+				$usernameQuery=$this->datamodel->first_row_data_sql();
+				$data['user_name_sur']=$usernameQuery->name." ".$usernameQuery->surname;
+
 			}else{
+				
+				$this->datamodel->sql="select * from p_user where username = '".$this->session->userdata('user_name')."'";		
+				$usernameQuery=$this->datamodel->first_row_data_sql();
+				$data['user_name_sur']=$usernameQuery->name." ".$usernameQuery->surname;
 				$data['u_profile_code'] ='';
 			}
 
