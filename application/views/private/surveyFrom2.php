@@ -350,8 +350,8 @@
 				checkId(document.getElementById("2_238<?=$d_surveyKnowledgeLaws->S2_3_8?>"));
 				checkId(document.getElementById("2_239<?=$d_surveyKnowledgeLaws->S2_3_9?>"));
 
-				document.getElementById("2_24").value = '<?=$d_surveyKnowledgeLaws->S2_4?>';
-				document.getElementById("2_25").value = '<?=$d_surveyKnowledgeLaws->S2_5?>';
+				document.getElementById("2_24").value = '<?=substr(substr(json_encode($d_surveyKnowledgeLaws->S2_4),1),0,-1)?>';
+				document.getElementById("2_25").value = '<?=substr(substr(json_encode($d_surveyKnowledgeLaws->S2_5),1),0,-1)?>';
 				
 			});
 		};

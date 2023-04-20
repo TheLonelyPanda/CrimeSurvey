@@ -495,7 +495,7 @@
 				checkId(document.getElementById("6_242<?=$d_surveyTrustInJustic->S2_4_2?>"));
 				checkId(document.getElementById("6_243<?=$d_surveyTrustInJustic->S2_4_3?>"));
 				checkId(document.getElementById("6_244<?=$d_surveyTrustInJustic->S2_4_4?>"));
-				document.getElementById("6_25").value = '<?=$d_surveyTrustInJustic->S2_5?>';
+				document.getElementById("6_25").value = '<?=substr(substr(json_encode($d_surveyTrustInJustic->S2_5),1),0,-1)?>';
 				checkId(document.getElementById("6_311<?=$d_surveyTrustInJustic->S3_1_1?>"));
 				checkId(document.getElementById("6_312<?=$d_surveyTrustInJustic->S3_1_2?>"));
 				checkId(document.getElementById("6_313<?=$d_surveyTrustInJustic->S3_1_3?>"));
@@ -521,7 +521,7 @@
 				checkId(document.getElementById("6_353<?=$d_surveyTrustInJustic->S3_5_3?>"));
 				checkId(document.getElementById("6_354<?=$d_surveyTrustInJustic->S3_5_4?>"));
 				checkId(document.getElementById("6_355<?=$d_surveyTrustInJustic->S3_5_5?>"));
-				document.getElementById("6_36").value = '<?=$d_surveyTrustInJustic->S3_6?>';
+				document.getElementById("6_36").value = '<?=substr(substr(json_encode($d_surveyTrustInJustic->S3_6),1),0,-1)?>';
 				
 			});
 		};

@@ -1784,7 +1784,7 @@
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '444<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_4_4 ?>'));
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '445<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_4_5 ?>'));
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '446<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_4_6 ?>'));
-				document.getElementById('1_4' + '<?= $index ?>' + '45').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_5 ?>';
+				document.getElementById('1_4' + '<?= $index ?>' + '45').value = '<?=substr(substr(json_encode($d_surveyVictimsCrimes[$index - 1]->S4_4_5),1),0,-1)?>';
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '461<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_6 ?>'));
 				checkId(document.getElementById('1_4' + '<?= $index ?>' + '46_11<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_6_1 ?>'));
 				document.getElementById('1_4' + '<?= $index ?>' + '461_text').value = '<?= $d_surveyVictimsCrimes[$index - 1]->S4_4_6_1_text ?>';
