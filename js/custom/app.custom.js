@@ -138,6 +138,11 @@ $(document).ready(function () {
 		} else {
 			formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลที่เป็น <span class="star">* สีแดง</span>ให้ครบก่อนบันทึกข้อมูล');
 		}
+	}).on('click', '.btn-form-crime-not-success', function () {
+		var element = this;
+		var restUrl = $(element).attr('data-url');
+		var $form = $('#form-data-varidate');
+		formMessageValidator('กรอกข้อมูลไม่ครบถ้วน', 'กรุณากรอกข้อมูลของผู้ตกเป็นเหยื่อให้ครบก่อนบันทึกข้อมูล');
 	}).on('click', '.btn-form-varidate-edit', function () {
 		var element = this;
 		var restUrl = $(element).attr('data-url');

@@ -618,7 +618,7 @@
 
 							<div class="row">
 								<div class="col-lg-1.5" style="margin-left: auto; margin-right: 0;">
-									<a value="Save" data-url="<?= site_url('main/saveSurvey/false') ?>" class="ui basic green button btn-form-varidate-save"><i class="save icon large"></i> บันทึก</a>
+									<a value="Save" id='buttonSaveLast' data-url="<?= site_url('main/saveSurvey/false') ?>" class="ui basic green button btn-form-varidate-save"><i class="save icon large"></i> บันทึก</a>
 								</div>
 								<div class="col-lg-1.5">
 									<a href="<?= site_url('/main/listSurveyAll/') ?>" class="ui basic red button "><i class="cancel  icon large"></i> ยกเลิก</a>
@@ -658,8 +658,17 @@
 				formele.scrollIntoView();
 				
 			}
+			
 	
 		});
+
+		var intervalId = window.setInterval(function(){
+			if('<?=$countCrime?>' >= localStorage.getItem('countCrimeIn1')){
+				document.getElementById("buttonSaveLast").className = document.getElementById("buttonSaveLast").className.replace(/(?:^|\s)btn-form-crime-not-success(?!\S)/g, ' btn-form-varidate-save ');
+			}else{
+				document.getElementById("buttonSaveLast").className = document.getElementById("buttonSaveLast").className.replace(/(?:^|\s)btn-form-varidate-save(?!\S)/g, ' btn-form-crime-not-success ');
+			}
+		}, 1000);
 
 		var A4_41 = $('#A4_41');
 		var A4_42   = $('#A4_42');
@@ -711,7 +720,7 @@
 				$(this).load(file + '/<?= $u_now_id ?>')
 			})
 		});
-
+		
 		$('#form1').on('shown.bs.collapse', function() {
 			$('#form2').collapse('hide');
 			$('#form3').collapse('hide');
@@ -719,6 +728,7 @@
 			$('#form5').collapse('hide');
 			$('#form6').collapse('hide');
 			$('#form7').collapse('hide');
+			
 		})
 
 		$('#form2').on('shown.bs.collapse', function() {

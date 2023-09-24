@@ -83,7 +83,8 @@
 
 		<script>
 			var i = 1;
-
+			var countCrimeIn = 0;
+			
 			$(document).ready(function() {
 				const place = document.querySelector("#placeTemplate");
 				const tModal = document.querySelector('#templateModal');
@@ -103,12 +104,14 @@
 
 			if ('<?= $u_check_new_survey_victims ?>' != '0') {
 				$(function() {
+					localStorage.setItem('countCrimeIn1','0');
 					checkId(document.getElementById("1_211<?= $d_surveyVictims->S2_1 ?>"));
 					document.getElementById("1_212").value = '<?= $d_surveyVictims->S2_2 ?>';
 					checkId(document.getElementById("1_213<?= $d_surveyVictims->S2_3 ?>"));
 					document.getElementById("1_214").value = '<?= $d_surveyVictims->S2_4 ?>';
 
 					if ('<?= $d_surveyVictims->S2_3 ?>' == '1') {
+						countCrimeFunction('add');
 						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)disabled(?!\S)/g, '');
 						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)black(?!\S)/g, ' green ');
 						document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)disabled(?!\S)/g, ' green ');
@@ -126,6 +129,7 @@
 						document.getElementById("1_2" + <?= $index ?> + "4").value = '<?= $d_surveyVictimslist[$index - 2]->S2_4 ?>';
 
 						if ('<?= $d_surveyVictimslist[$index - 2]->S2_3 ?>' == '1') {
+							countCrimeFunction('add');
 							document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)disabled(?!\S)/g, '');
 							document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)black(?!\S)/g, ' green ');
 							document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)disabled(?!\S)/g, ' green ');
@@ -145,10 +149,12 @@
 			function createDetech(i) {
 				$('input[name="1_S2_' + i + '_3"]').on('change', function() {
 					if ($(this).val() === '1') {
+						countCrimeFunction('add');
 						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)disabled(?!\S)/g, '');
 						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)black(?!\S)/g, ' green ');
 						document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)disabled(?!\S)/g, ' green ');
 					} else {
+						countCrimeFunction('odd');
 						document.getElementById("1_2" + i + "51_a").className = document.getElementById("1_2" + i + "51_a").className.replace(/(?:^|\s)green(?!\S)/g, ' black disabled ');
 						document.getElementById("1_2" + i + "51_i").className = document.getElementById("1_2" + i + "51_i").className.replace(/(?:^|\s)green(?!\S)/g, ' disabled ');
 					}
@@ -269,14 +275,27 @@
 
 			$('input[name="1_S2_1_3"]').on('change', function() {
 				if ($(this).val() === '1') {
+					countCrimeFunction('add');
 					document.getElementById("1_2151_a").className = document.getElementById("1_2151_a").className.replace(/(?:^|\s)disabled(?!\S)/g, '');
 					document.getElementById("1_2151_a").className = document.getElementById("1_2151_a").className.replace(/(?:^|\s)black(?!\S)/g, ' green ');
 					document.getElementById("1_2151_i").className = document.getElementById("1_2151_i").className.replace(/(?:^|\s)disabled(?!\S)/g, ' green ');
 				} else {
+					countCrimeFunction('odd');
 					document.getElementById("1_2151_a").className = document.getElementById("1_2151_a").className.replace(/(?:^|\s)green(?!\S)/g, ' black disabled ');
 					document.getElementById("1_2151_i").className = document.getElementById("1_2151_i").className.replace(/(?:^|\s)green(?!\S)/g, ' disabled ');
 				}
 			});
+
+			function countCrimeFunction(diff) {
+				
+				if(diff=='add'){
+					countCrimeIn = countCrimeIn+1;
+				}else if(diff=='odd'){
+					countCrimeIn = countCrimeIn-1;
+				}
+				localStorage.setItem('countCrimeIn1',countCrimeIn.toString());
+				
+			};
 
 
 			function checkId(id) {
@@ -318,6 +337,9 @@
 						// apparently if you do it immediatelly, it will be overriden, hence wait a tiny bit
 						setTimeout(function() { 
 							radio.checked = false; 
+							if("1_2131,1_2231,1_2331,1_2431,1_2531,1_2631,1_2731,1_2831,1_2931".includes(radio.id)){
+								countCrimeFunction('odd');
+							}
 						}, 5); 
 						// don't handle mouseup anymore unless bound again
 						$(this).unbind('mouseup');

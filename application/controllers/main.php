@@ -306,7 +306,7 @@ class Main extends CI_Controller {
 				$data['d_surveyVictimsCrimes']=$this->datamodel->list_data();
 			}
 
-			$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_victims_crimes'; ";   
+			$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_victims_crimes'; ";   
 			$u_now_id=$this->datamodel->first_row_data_sql();
 			$data['u_now_runing_num']=$u_now_id->AUTO_INCREMENT;
 
@@ -605,7 +605,7 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");	 
 
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 			}else{
@@ -746,7 +746,7 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");	 
 
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 			}else{
@@ -809,7 +809,7 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");	 
 
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 			}else{
@@ -847,7 +847,7 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");	 
 
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 			}else{
@@ -884,7 +884,7 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");	 
 
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 			}else{
@@ -919,7 +919,7 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");	 
 
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 			}else{
@@ -996,7 +996,7 @@ class Main extends CI_Controller {
 			$this->load->model("datamodel");	 
 
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 			}else{
@@ -1052,7 +1052,7 @@ class Main extends CI_Controller {
 			$data['d_amphures']=$this->datamodel->list_data_sql();
 			$data['u_send_profile']=$profile_id;
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 				
@@ -1125,7 +1125,9 @@ class Main extends CI_Controller {
 				$this->initData($data['u_now_id']);
 			}
 
-			
+			$this->datamodel->sql="SELECT count(distinct(profile_id)) as cc FROM survey_victims_crimes where (profile_id = '$profile_id' or master_id = '$profile_id') and (S4_4_1 != null or S4_4_1 != '')";   
+			$count=$this->datamodel->first_row_data_sql();
+			$data['countCrime'] = $count->cc;
 		
 		}
 		$this->load->view('/private/survey', $data);       
@@ -1149,7 +1151,7 @@ class Main extends CI_Controller {
 			$data['d_amphures']=$this->datamodel->list_data_sql();
 			$data['u_send_profile']=$profile_id;
 			if ($profile_id == '0') {
-				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+				$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 				$u_now_id=$this->datamodel->first_row_data_sql();
 				$data['u_now_id']=$u_now_id->AUTO_INCREMENT;
 				
@@ -1660,7 +1662,7 @@ class Main extends CI_Controller {
 					$objdSurveyVictims->master_id = $list->master_id;
 					$objdSurveyVictims->profile_id = $list->profile_id;
 				}else{
-					$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+					$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 					$u_now_id=$this->datamodel->first_row_data_sql();
 					$newProfileId=$u_now_id->AUTO_INCREMENT;
 					$master_id = $profileId;
@@ -2212,13 +2214,13 @@ class Main extends CI_Controller {
 			$profileData = $this->dbutil->csv_from_result($profileQueryData);
 			write_file('./temp/survey_profile.csv', $profileData);
 
-			$this->datamodel->sql="SELECT sv.profile_id, sv.master_id, sv.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, sv.Create_DTM, sv.Update_DTM, sv.S2_1, sv.S2_2, sv.S2_3, sv.S2_4
+			$this->datamodel->sql="SELECT sv.profile_id, sv.master_id, sv.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_3`, sv.Create_DTM, sv.Update_DTM, sv.S2_1, sv.S2_2, sv.S2_3, sv.S2_4
 			FROM survey_victims sv , survey_profile p where (sv.profile_id = p.profile_id Or sv.master_id = p.profile_id) and p.status = 'complete';";
 			$victimsQueryData=$this->datamodel->list_data_sql_export();
 			$victimsData = $this->dbutil->csv_from_result($victimsQueryData);
 			write_file('./temp/survey_victims.csv', $victimsData);
 
-			$this->datamodel->sql="SELECT svc.profile_id, svc.master_id, svc.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, svc.Create_DTM, svc.Update_DTM, svc.S4_4_1, svc.S4_4_1_text, svc.S4_4_2, svc.S4_4_2_text, svc.S4_4_3, svc.S4_4_3_1_1, svc.S4_4_3_1_2, svc.S4_4_3_1_3, svc.S4_4_3_1_4, svc.S4_4_3_1_5, svc.S4_4_3_1_6, svc.S4_4_3_1_7, svc.S4_4_3_1_8, svc.S4_4_3_1_9, svc.S4_4_3_1_10, svc.S4_4_3_2, svc.S4_4_3_2_text, svc.S4_4_3_3_1, svc.S4_4_3_3_2, svc.S4_4_3_3_3, svc.S4_4_3_3_4, svc.S4_4_3_3_5, svc.S4_4_3_3_6, svc.S4_4_3_3_7, svc.S4_4_3_3_8, svc.S4_4_3_3_1_text, svc.S4_4_3_3_2_text, svc.S4_4_3_3_3_text, svc.S4_4_3_3_4_text, svc.S4_4_3_3_5_text, svc.S4_4_3_3_6_text, svc.S4_4_3_3_7_text, svc.S4_4_4_1, svc.S4_4_4_2, svc.S4_4_4_3, svc.S4_4_4_4, svc.S4_4_4_5, svc.S4_4_4_6, svc.S4_4_5, svc.S4_4_6, svc.S4_4_6_1, svc.S4_4_6_1_text, svc.S4_4_6_2_1, svc.S4_4_6_2_2, svc.S4_4_6_2_3, svc.S4_4_6_2_4, svc.S4_4_6_2_5, svc.S4_4_6_2_6, svc.S4_4_6_2_7, svc.S4_4_6_2_8, svc.S4_4_6_2_9, svc.S4_4_6_2_10, svc.S4_4_6_2_11, svc.S4_4_6_2_12, svc.S4_4_6_2_13, svc.S4_4_6_2_14, svc.S4_4_6_2_15, svc.S4_4_6_2_16, svc.S4_4_6_2_17, svc.S4_4_6_2_18, svc.S4_4_6_2_18_text, svc.S4_4_7, svc.S4_4_7_text
+			$this->datamodel->sql="SELECT svc.profile_id, svc.master_id, svc.profile_code, p.A2, p.A3, p.A4, p.A4_1, p.A4_2, p.A4_3, p.A4_4, p.A4_5, p.`1_3`, svc.Create_DTM, svc.Update_DTM, svc.S4_4_1, svc.S4_4_1_text, svc.S4_4_2, svc.S4_4_2_text, svc.S4_4_3, svc.S4_4_3_1_1, svc.S4_4_3_1_2, svc.S4_4_3_1_3, svc.S4_4_3_1_4, svc.S4_4_3_1_5, svc.S4_4_3_1_6, svc.S4_4_3_1_7, svc.S4_4_3_1_8, svc.S4_4_3_1_9, svc.S4_4_3_1_10, svc.S4_4_3_2, svc.S4_4_3_2_text, svc.S4_4_3_3_1, svc.S4_4_3_3_2, svc.S4_4_3_3_3, svc.S4_4_3_3_4, svc.S4_4_3_3_5, svc.S4_4_3_3_6, svc.S4_4_3_3_7, svc.S4_4_3_3_8, svc.S4_4_3_3_1_text, svc.S4_4_3_3_2_text, svc.S4_4_3_3_3_text, svc.S4_4_3_3_4_text, svc.S4_4_3_3_5_text, svc.S4_4_3_3_6_text, svc.S4_4_3_3_7_text, svc.S4_4_4_1, svc.S4_4_4_2, svc.S4_4_4_3, svc.S4_4_4_4, svc.S4_4_4_5, svc.S4_4_4_6, svc.S4_4_5, svc.S4_4_6, svc.S4_4_6_1, svc.S4_4_6_1_text, svc.S4_4_6_2_1, svc.S4_4_6_2_2, svc.S4_4_6_2_3, svc.S4_4_6_2_4, svc.S4_4_6_2_5, svc.S4_4_6_2_6, svc.S4_4_6_2_7, svc.S4_4_6_2_8, svc.S4_4_6_2_9, svc.S4_4_6_2_10, svc.S4_4_6_2_11, svc.S4_4_6_2_12, svc.S4_4_6_2_13, svc.S4_4_6_2_14, svc.S4_4_6_2_15, svc.S4_4_6_2_16, svc.S4_4_6_2_17, svc.S4_4_6_2_18, svc.S4_4_6_2_18_text, svc.S4_4_7, svc.S4_4_7_text
 			FROM survey_victims_crimes svc , survey_profile p where (svc.profile_id = p.profile_id Or svc.master_id = p.profile_id) and svc.S4_4_1 <> '' and p.status = 'complete';";
 			$crimesQueryData=$this->datamodel->list_data_sql_export();
 			$crimesData = $this->dbutil->csv_from_result($crimesQueryData);
@@ -2382,7 +2384,7 @@ class Main extends CI_Controller {
 		$profileId = '';
 		if($user_name != false){
 			$this->load->model("datamodel");
-			$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'lawdb' AND TABLE_NAME = 'survey_profile'; ";   
+			$this->datamodel->sql=" select `AUTO_INCREMENT` from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'siamjobit_tjsurvey' AND TABLE_NAME = 'survey_profile'; ";   
 			$u_now_id=$this->datamodel->first_row_data_sql();
 			$profileId=$u_now_id->AUTO_INCREMENT;
 		}
